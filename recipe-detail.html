@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Details - Broccobae | Vegan Recipe Collection</title>
+    <meta name="description" content="Detailed vegan recipe with ingredients, instructions, and nutritional information.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/recipe-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../images/logo.png" alt="Broccobae Logo" class="logo">
+                    <span class="logo-text">Broccobae</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="src/pages/recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="src/pages/meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="src/pages/cuisine.html" class="nav-link">Cuisine</a></li>
+                    <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Breadcrumb -->
+        <section class="breadcrumb">
+            <div class="container">
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">Home</a>
+                    <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                    <a href="src/pages/recipes.html">Recipes</a>
+                    <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+                    <span class="breadcrumb-current" id="breadcrumb-recipe">Recipe</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Recipe Header -->
+        <section class="recipe-header">
+            <div class="container">
+                <div class="recipe-header-content">
+                    <div class="recipe-image-container">
+                        <img id="recipe-image" src="" alt="Recipe Image" class="recipe-main-image">
+                        <button class="favorite-btn-large" id="favorite-btn-large">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="recipe-category-badge" id="recipe-category"></div>
+                        <h1 class="recipe-title" id="recipe-title"></h1>
+                        <p class="recipe-description" id="recipe-description"></p>
+                        
+                        <div class="recipe-meta-grid">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span class="meta-label">Prep Time</span>
+                                <span class="meta-value" id="prep-time"></span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span class="meta-label">Difficulty</span>
+                                <span class="meta-value" id="difficulty"></span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span class="meta-label">Servings</span>
+                                <span class="meta-value">4</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-fire"></i>
+                                <span class="meta-label">Calories</span>
+                                <span class="meta-value" id="calories"></span>
+                            </div>
+                        </div>
+
+                        <div class="recipe-actions">
+                            <button class="btn btn-primary" id="save-recipe">
+                                <i class="fas fa-bookmark"></i> Save Recipe
+                            </button>
+                            <button class="btn btn-outline" id="share-recipe">
+                                <i class="fas fa-share"></i> Share
+                            </button>
+                            <button class="btn btn-outline" id="print-recipe">
+                                <i class="fas fa-print"></i> Print
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vegan Restaurant Ad -->
+        <section class="restaurant-ad">
+            <div class="container">
+                <div class="ad-banner-large">
+                    <div class="ad-content">
+                        <div class="ad-text">
+                            <h3>🌱 Green Garden Vegan Restaurant</h3>
+                            <p>Experience these recipes in our restaurant! Fresh, organic, locally-sourced vegan cuisine.</p>
+                            <div class="ad-features">
+                                <span class="ad-feature">📍 Downtown Location</span>
+                                <span class="ad-feature">🚚 Delivery Available</span>
+                                <span class="ad-feature">⭐ 4.9/5 Rating</span>
+                            </div>
+                        </div>
+                        <div class="ad-cta-container">
+                            <button class="ad-cta-btn" onclick="window.open('https://www.greengardenvegan.com', '_blank')">
+                                Visit Restaurant <i class="fas fa-external-link-alt"></i>
+                            </button>
+                            <button class="ad-cta-btn secondary" onclick="window.open('tel:+15551234567')">
+                                <i class="fas fa-phone"></i> Order Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Content -->
+        <section class="recipe-content">
+            <div class="container">
+                <div class="recipe-content-grid">
+                    <!-- Ingredients -->
+                    <div class="ingredients-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-list"></i> Ingredients
+                        </h2>
+                        <div class="servings-adjuster">
+                            <label>Servings:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn" onclick="adjustServings(-1)">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <span class="quantity-display" id="servings-count">4</span>
+                                <button class="quantity-btn" onclick="adjustServings(1)">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="ingredients-list" id="ingredients-list">
+                            <!-- Ingredients will be populated by JavaScript -->
+                        </ul>
+                        <button class="btn btn-outline shopping-list-btn" id="add-to-shopping-list">
+                            <i class="fas fa-shopping-cart"></i> Add to Shopping List
+                        </button>
+                    </div>
+
+                    <!-- Instructions -->
+                    <div class="instructions-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-clipboard-list"></i> Instructions
+                        </h2>
+                        <ol class="instructions-list" id="instructions-list">
+                            <!-- Instructions will be populated by JavaScript -->
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Nutrition Info -->
+                <div class="nutrition-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-chart-pie"></i> Nutrition Information
+                        <span class="nutrition-subtitle">Per serving</span>
+                    </h2>
+                    <div class="nutrition-grid" id="nutrition-grid">
+                        <!-- Nutrition info will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Recipe Tags -->
+                <div class="tags-section">
+                    <h3>Recipe Tags</h3>
+                    <div class="recipe-tags" id="recipe-tags">
+                        <!-- Tags will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Recipes -->
+        <section class="related-recipes">
+            <div class="container">
+                <h2 class="section-title">You Might Also Like</h2>
+                <div class="related-recipes-grid" id="related-recipes-grid">
+                    <!-- Related recipes will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Restaurant Promotion -->
+        <section class="restaurant-promotion">
+            <div class="container">
+                <div class="promotion-content">
+                    <h2>🍽️ Try This Recipe at Our Partner Restaurants!</h2>
+                    <div class="restaurants-grid">
+                        <div class="restaurant-card">
+                            <div class="restaurant-info">
+                                <h3>Green Garden Vegan</h3>
+                                <p>📍 123 Plant Street, Vegan City</p>
+                                <p>⭐ 4.9/5 • 🚚 Delivery Available</p>
+                            </div>
+                            <button class="restaurant-btn" onclick="window.open('https://www.greengardenvegan.com', '_blank')">
+                                Visit Menu
+                            </button>
+                        </div>
+                        <div class="restaurant-card">
+                            <div class="restaurant-info">
+                                <h3>Plant Paradise</h3>
+                                <p>📍 456 Green Avenue, Plant City</p>
+                                <p>⭐ 4.8/5 • 🥡 Takeout Available</p>
+                            </div>
+                            <button class="restaurant-btn" onclick="window.open('https://www.plantparadise.com', '_blank')">
+                                Order Now
+                            </button>
+                        </div>
+                        <div class="restaurant-card">
+                            <div class="restaurant-info">
+                                <h3>Veggie Delights</h3>
+                                <p>📍 789 Healthy Lane, Green Town</p>
+                                <p>⭐ 4.7/5 • 🎉 Catering Available</p>
+                            </div>
+                            <button class="restaurant-btn" onclick="window.open('https://www.veggiedelights.com', '_blank')">
+                                Book Table
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../images/logo.png" alt="Broccobae Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">Broccobae</span>
+                </div>
+                <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="src/pages/recipes.html">Recipes</a></li>
+                    <li><a href="src/pages/meal-plan.html">Meal Plan</a></li>
+                    <li><a href="src/pages/cuisine.html">Cuisine</a></li>
+                    <li><a href="community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">About Us</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="values.html">Our Values</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i> +8170-4032-4312</li>
+                    <li><i class="fas fa-envelope"></i> broccobae@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gaia-Recipe Inc @ broccobae.com All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/recipe-detail.js"></script>
+</body>
+</html>

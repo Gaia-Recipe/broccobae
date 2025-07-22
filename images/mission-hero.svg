@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#33a13b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d5a3d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#grad1)"/>
+  <circle cx="300" cy="200" r="100" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="900" cy="600" r="133" fill="rgba(255,255,255,0.1)"/>
+  <rect x="300" y="266" width="600" height="266" rx="26" fill="rgba(255,255,255,0.15)"/>
+  <text x="600" y="400" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">Mission Hero</text>
+  <title>Mission Hero</title>
+</svg>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Broccobae | Connect with Fellow Vegans</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Join the Broccobae community! Share vegan recipes, connect with fellow plant-based enthusiasts, and discover seasonal vegan dishes for every occasion.">
+    <meta name="keywords" content="vegan community, plant-based recipes, festive vegan, seasonal recipes, vegan sharing, community recipes, broccobae">
+    <meta name="author" content="Broccobae">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Community - Broccobae | Connect with Fellow Vegans">
+    <meta property="og:description" content="Join the Broccobae community! Share vegan recipes, connect with fellow plant-based enthusiasts, and discover seasonal vegan dishes.">
+    <meta property="og:image" content="./images/community-hero.svg">
+    <meta property="og:url" content="https://broccobae.com/community">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Community - Broccobae | Connect with Fellow Vegans">
+    <meta name="twitter:description" content="Join the Broccobae community! Share vegan recipes, connect with fellow plant-based enthusiasts.">
+    <meta name="twitter:image" content="./images/community-hero.svg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/community.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Community - Broccobae",
+        "description": "Join the Broccobae community! Share vegan recipes, connect with fellow plant-based enthusiasts, and discover seasonal vegan dishes.",
+        "url": "https://broccobae.com/community",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Broccobae",
+            "url": "https://broccobae.com",
+            "description": "Your ultimate destination for delicious vegan recipes and plant-based lifestyle"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./images/logo.png" alt="Broccobae Logo" class="logo">
+                    <span class="logo-text">broccobae</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./src/pages/recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="./src/pages/meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="./src/pages/cuisine.html" class="nav-link">Cuisine</a></li>
+                    <li class="nav-item"><a href="./community.html" class="nav-link active">Community</a></li>
+                    <li class="nav-item"><a href="./shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+
+                </ul>
+                
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Join Our Vegan Community</h1>
+                    <p class="hero-description">Connect with fellow plant-based enthusiasts, share your favorite recipes, and discover seasonal vegan delights from around the world.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">50K+</span>
+                            <span class="stat-label">Community Members</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-label">Shared Recipes</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Daily Posts</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="document.getElementById('shareRecipeForm').scrollIntoView({behavior: 'smooth'})">Share Your Recipe</button>
+                        <button class="btn btn-secondary" onclick="document.getElementById('communityRecipes').scrollIntoView({behavior: 'smooth'})">Browse Community</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/community-hero.svg" alt="Vegan Community" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertisement Section -->
+        <section class="advertisement">
+            <div class="ad-container">
+                <h3 class="ad-title">Discover Amazing Vegan Restaurants</h3>
+                <div class="ad-grid">
+                    <a href="https://www.happycow.net" target="_blank" class="ad-card" rel="noopener">
+                        <img src="images/ads/happycow-restaurant.svg" alt="HappyCow - Find Vegan Restaurants">
+                        <div class="ad-content">
+                            <h4>HappyCow</h4>
+                            <p>Find vegan restaurants worldwide</p>
+                        </div>
+                    </a>
+                    <a href="https://www.veganrestaurants.com" target="_blank" class="ad-card" rel="noopener">
+                        <img src="images/ads/vegan-restaurants.svg" alt="Vegan Restaurants Directory">
+                        <div class="ad-content">
+                            <h4>Vegan Restaurants</h4>
+                            <p>Discover local plant-based dining</p>
+                        </div>
+                    </a>
+                    <a href="https://www.plantbasednews.org/restaurants" target="_blank" class="ad-card" rel="noopener">
+                        <img src="images/ads/plant-based-dining.svg" alt="Plant-Based Dining Guide">
+                        <div class="ad-content">
+                            <h4>Plant-Based Dining</h4>
+                            <p>Your guide to vegan cuisine</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Recipe Categories -->
+        <section class="community-categories" id="communityRecipes">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Community Recipe Collections</h2>
+                    <p class="section-description">Discover seasonal favorites and festive delights shared by our amazing community</p>
+                    <div class="recipe-count">Showing 10 of 500 community recipes</div>
+                </div>
+                
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Recipes</button>
+                    <button class="filter-btn" data-filter="festive">Festive Vegan</button>
+                    <button class="filter-btn" data-filter="summer">Summer Special</button>
+                    <button class="filter-btn" data-filter="monsoon">Monsoon Comforts</button>
+                    <button class="filter-btn" data-filter="winter">Winter Warmer</button>
+                </div>
+                
+                <div class="community-grid" id="communityGrid">
+                    <!-- Festive Vegan Examples -->
+                    <div class="community-card" data-category="festive" data-static="true">
+                        <img src="./images/placeholder-recipe.svg" alt="Festive Vegan Roast" class="community-image">
+                        <div class="community-content">
+                            <div class="community-author">
+                                <img src="images/avatars/sarah.svg" alt="Sarah M." class="author-avatar">
+                                <div class="author-info">
+                                    <span class="author-name">Sarah M.</span>
+                                    <span class="post-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <h3 class="community-title">Holiday Stuffed Portobello Roast</h3>
+                            <p class="community-description">Perfect centerpiece for your festive table with herbs, nuts, and seasonal vegetables.</p>
+                            <div class="community-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 45 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Medium</span>
+                                <span class="season"><i class="fas fa-snowflake"></i> Festive</span>
+                            </div>
+                            <div class="community-engagement">
+                                <button class="engagement-btn"><i class="fas fa-heart"></i> 234</button>
+                                <button class="engagement-btn"><i class="fas fa-comment"></i> 45</button>
+                                <button class="engagement-btn"><i class="fas fa-share"></i> 12</button>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Summer Special Examples -->
+                    <div class="community-card" data-category="summer" data-static="true">
+                        <img src="./images/placeholder-recipe.svg" alt="Tropical Smoothie Bowl" class="community-image">
+                        <div class="community-content">
+                            <div class="community-author">
+                                <img src="images/avatars/mike.svg" alt="Mike R." class="author-avatar">
+                                <div class="author-info">
+                                    <span class="author-name">Mike R.</span>
+                                    <span class="post-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            <h3 class="community-title">Tropical Paradise Smoothie Bowl</h3>
+                            <p class="community-description">Refreshing blend of mango, pineapple, and coconut topped with fresh fruits and granola.</p>
+                            <div class="community-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 15 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
+                                <span class="season"><i class="fas fa-sun"></i> Summer</span>
+                            </div>
+                            <div class="community-engagement">
+                                <button class="engagement-btn"><i class="fas fa-heart"></i> 189</button>
+                                <button class="engagement-btn"><i class="fas fa-comment"></i> 32</button>
+                                <button class="engagement-btn"><i class="fas fa-share"></i> 8</button>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Monsoon Comforts Examples -->
+                    <div class="community-card" data-category="monsoon" data-static="true">
+                        <img src="./images/placeholder-recipe.svg" alt="Spicy Lentil Soup" class="community-image">
+                        <div class="community-content">
+                            <div class="community-author">
+                                <img src="images/avatars/user-3.svg" alt="Priya K." class="author-avatar">
+                                <div class="author-info">
+                                    <span class="author-name">Priya K.</span>
+                                    <span class="post-time">1 day ago</span>
+                                </div>
+                            </div>
+                            <h3 class="community-title">Monsoon Spiced Lentil Soup</h3>
+                            <p class="community-description">Warming soup with aromatic spices, perfect for rainy days and cozy evenings.</p>
+                            <div class="community-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 35 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
+                                <span class="season"><i class="fas fa-cloud-rain"></i> Monsoon</span>
+                            </div>
+                            <div class="community-engagement">
+                                <button class="engagement-btn"><i class="fas fa-heart"></i> 156</button>
+                                <button class="engagement-btn"><i class="fas fa-comment"></i> 28</button>
+                                <button class="engagement-btn"><i class="fas fa-share"></i> 15</button>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Winter Warmer Examples -->
+                    <div class="community-card" data-category="winter" data-static="true">
+                        <img src="./images/placeholder-recipe.svg" alt="Hearty Vegetable Stew" class="community-image">
+                        <div class="community-content">
+                            <div class="community-author">
+                                <img src="images/avatars/emma.svg" alt="Emma L." class="author-avatar">
+                                <div class="author-info">
+                                    <span class="author-name">Emma L.</span>
+                                    <span class="post-time">2 days ago</span>
+                                </div>
+                            </div>
+                            <h3 class="community-title">Hearty Root Vegetable Stew</h3>
+                            <p class="community-description">Comforting winter stew with seasonal root vegetables, herbs, and warming spices.</p>
+                            <div class="community-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 50 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Medium</span>
+                                <span class="season"><i class="fas fa-snowflake"></i> Winter</span>
+                            </div>
+                            <div class="community-engagement">
+                                <button class="engagement-btn"><i class="fas fa-heart"></i> 298</button>
+                                <button class="engagement-btn"><i class="fas fa-comment"></i> 67</button>
+                                <button class="engagement-btn"><i class="fas fa-share"></i> 23</button>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="load-more-section">
+                    <button class="btn btn-secondary" id="loadMoreBtn">Load More Community Recipes</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share Recipe Form -->
+        <section class="share-recipe" id="shareRecipeForm">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Share Your Vegan Recipe</h2>
+                    <p class="section-description">Join our community by sharing your favorite plant-based creations</p>
+                </div>
+                
+                <form class="recipe-form" id="recipeSubmissionForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="recipeName">Recipe Name *</label>
+                            <input type="text" id="recipeName" name="recipeName" required placeholder="Enter your recipe name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipeCategory">Category *</label>
+                            <select id="recipeCategory" name="recipeCategory" required>
+                                <option value="">Select category</option>
+                                <option value="festive">Festive Vegan</option>
+                                <option value="summer">Summer Special</option>
+                                <option value="monsoon">Monsoon Comforts</option>
+                                <option value="winter">Winter Warmer</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prepTime">Prep Time (minutes) *</label>
+                            <input type="number" id="prepTime" name="prepTime" required min="1" placeholder="15">
+                        </div>
+                        <div class="form-group">
+                            <label for="cookTime">Cook Time (minutes) *</label>
+                            <input type="number" id="cookTime" name="cookTime" required min="1" placeholder="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="servings">Servings *</label>
+                            <input type="number" id="servings" name="servings" required min="1" placeholder="4">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="recipeDescription">Description *</label>
+                        <textarea id="recipeDescription" name="recipeDescription" required rows="3" placeholder="Describe your recipe in a few sentences..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ingredients">Ingredients *</label>
+                        <textarea id="ingredients" name="ingredients" required rows="6" placeholder="List ingredients (one per line):\n• 2 cups quinoa\n• 1 cup black beans\n• 1 avocado, diced"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="instructions">Instructions *</label>
+                        <textarea id="instructions" name="instructions" required rows="8" placeholder="Step-by-step instructions:\n1. Cook quinoa according to package directions\n2. Heat beans in a pan\n3. Combine and serve"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="difficulty">Difficulty Level *</label>
+                            <select id="difficulty" name="difficulty" required>
+                                <option value="">Select difficulty</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipeImage">Recipe Image</label>
+                            <input type="file" id="recipeImage" name="recipeImage" accept="image/*">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tags">Tags (optional)</label>
+                        <input type="text" id="tags" name="tags" placeholder="gluten-free, high-protein, quick (separate with commas)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tips">Cooking Tips (optional)</label>
+                        <textarea id="tips" name="tips" rows="3" placeholder="Any special tips or variations for this recipe?"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="resetForm()">Clear Form</button>
+                        <button type="submit" class="btn btn-primary">Share Recipe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Community Features -->
+        <section class="community-features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Join Our Community?</h2>
+                    <p class="section-description">Connect, share, and grow with fellow vegan enthusiasts</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="feature-title">Connect with Like-minded People</h3>
+                        <p class="feature-description">Join a supportive community of vegan enthusiasts from around the world.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Share Your Creations</h3>
+                        <p class="feature-description">Upload your favorite recipes and inspire others with your culinary creativity.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="feature-title">Discover New Favorites</h3>
+                        <p class="feature-description">Find amazing recipes shared by community members and expand your cooking repertoire.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Seasonal Collections</h3>
+                        <p class="feature-description">Explore recipes perfect for every season and special occasion.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="feature-title">Get Feedback & Tips</h3>
+                        <p class="feature-description">Receive helpful comments and cooking tips from experienced community members.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-title">Featured Recipes</h3>
+                        <p class="feature-description">Get your recipes featured on our homepage and gain recognition in the community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Guidelines -->
+        <section class="community-guidelines">
+            <div class="container">
+                <div class="guidelines-content">
+                    <h2 class="guidelines-title">Community Guidelines</h2>
+                    <div class="guidelines-grid">
+                        <div class="guideline-item">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Plant-Based Only</h3>
+                            <p>All recipes must be 100% vegan with no animal products.</p>
+                        </div>
+                        <div class="guideline-item">
+                            <i class="fas fa-heart"></i>
+                            <h3>Be Respectful</h3>
+                            <p>Treat all community members with kindness and respect.</p>
+                        </div>
+                        <div class="guideline-item">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Original Content</h3>
+                            <p>Share your own recipes or properly credit the original source.</p>
+                        </div>
+                        <div class="guideline-item">
+                            <i class="fas fa-camera"></i>
+                            <h3>Quality Photos</h3>
+                            <p>Include clear, appetizing photos of your finished dishes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo.png" alt="Broccobae Logo" class="footer-logo-img">
+                        <span class="footer-logo-text">broccobae</span>
+                    </div>
+                    <p class="footer-description">Your ultimate destination for delicious vegan recipes and plant-based lifestyle inspiration.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./src/pages/recipes.html">Recipes</a></li>
+                        <li><a href="./src/pages/meal-plan.html">Meal Plan</a></li>
+                        <li><a href="./src/pages/cuisine.html">Cuisine</a></li>
+                        <li><a href="./community.html">Community</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">About Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./mission.html">Our Mission</a></li>
+                        <li><a href="./story.html">Our Story</a></li>
+                        <li><a href="./values.html">Our Values</a></li>
+                        <li><a href="./team.html">Our Team</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="./terms.html">Terms and Conditions</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="./cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> +8170-4032-4312</p>
+                        <p><i class="fas fa-envelope"></i> broccobae@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gaia-Recipe Inc @ broccobae.com all rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/community.js"></script>
+</body>
+</html>

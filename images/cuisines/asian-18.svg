@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Bowl -->
+  <ellipse cx="200" cy="180" rx="120" ry="40" fill="#eeeeee" stroke="#333" stroke-width="2"/>
+  <path d="M80 180 Q 200 120 320 180" fill="none" stroke="#333" stroke-width="2"/>
+  
+  <!-- Noodles -->
+  <path d="M140 160 Q 170 140 200 160 Q 230 180 260 160" fill="none" stroke="#ffecb3" stroke-width="6" stroke-linecap="round"/>
+  <path d="M130 170 Q 160 150 190 170 Q 220 190 250 170" fill="none" stroke="#ffecb3" stroke-width="6" stroke-linecap="round"/>
+  <path d="M150 180 Q 180 160 210 180 Q 240 200 270 180" fill="none" stroke="#ffecb3" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Vegetables -->
+  <circle cx="170" cy="150" r="10" fill="#A5D6A7"/>
+  <circle cx="230" cy="150" r="10" fill="#FF5722"/>
+  <circle cx="200" cy="140" r="10" fill="#AB47BC"/>
+  
+  <!-- Chopsticks -->
+  <line x1="100" y1="100" x2="180" y2="160" stroke="#8D6E63" stroke-width="4" stroke-linecap="round"/>
+  <line x1="110" y1="95" x2="190" y2="155" stroke="#8D6E63" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Steam -->
+  <path d="M180 120 Q 190 100 200 120" fill="none" stroke="#BDBDBD" stroke-width="2"/>
+  <path d="M200 110 Q 210 90 220 110" fill="none" stroke="#BDBDBD" stroke-width="2"/>
+  <path d="M160 130 Q 170 110 180 130" fill="none" stroke="#BDBDBD" stroke-width="2"/>
+  
+  <!-- Text -->
+  <text x="200" y="250" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Tempura Vegetables</text>
+</svg>

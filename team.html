@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Broccobae | Meet the Passionate People Behind Broccobae</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Meet the passionate team behind Broccobae - food lovers, tech innovators, and sustainability advocates working to make plant-based eating delicious and accessible.">
+    <meta name="keywords" content="broccobae team, vegan platform team, plant-based experts, food tech innovators, culinary team">
+    <meta name="author" content="Broccobae">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Team - Broccobae | Meet the Passionate People Behind Broccobae">
+    <meta property="og:description" content="Meet the passionate team behind Broccobae - food lovers, tech innovators, and sustainability advocates working to make plant-based eating delicious and accessible.">
+    <meta property="og:url" content="https://broccobae.com/team">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://broccobae.com/images/team-hero.svg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Team page specific styles */
+        .team-hero {
+            background-color: #f5f9f5;
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        
+        .team-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .team-title {
+            font-size: 3rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+        
+        .team-subtitle {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+        }
+        
+        .team-section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .team-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .team-section-title {
+            font-size: 2.2rem;
+            color: #2e7d32;
+            margin-bottom: 15px;
+        }
+        
+        .team-section-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .member-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .team-member:hover .member-img {
+            transform: scale(1.05);
+        }
+        
+        .team-member-content {
+            padding: 20px;
+        }
+        
+        .team-member-name {
+            font-size: 1.4rem;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
+        
+        .team-member-role {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .team-member-bio {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .team-member-social {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            color: #2e7d32;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: #2e7d32;
+            color: #fff;
+        }
+        
+        .team-values {
+            text-align: center;
+            padding: 60px 0;
+            background-color: #f5f9f5;
+        }
+        
+        .values-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .values-title {
+            font-size: 2.2rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+        
+        .values-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        
+        .join-team {
+            padding: 80px 0;
+            text-align: center;
+            background-color: #2e7d32;
+            color: #fff;
+        }
+        
+        .join-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .join-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .join-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .join-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #2e7d32;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .join-button:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-5px);
+        }
+        
+        @media screen and (max-width: 768px) {
+            .team-title {
+                font-size: 2.5rem;
+            }
+            
+            .team-section-title {
+                font-size: 2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./images/logo.png" alt="Broccobae Logo" class="logo">
+                    <span class="logo-text">broccobae</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./src/pages/recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="./src/pages/meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="./src/pages/cuisine.html" class="nav-link">Cuisine</a></li>
+                    <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="./shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+
+                </ul>
+                
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="team-hero">
+            <div class="team-hero-content">
+                <h1 class="team-title">Meet Our Team</h1>
+                <p class="team-subtitle">We're a diverse group of food lovers, tech enthusiasts, and sustainability advocates working together to make plant-based eating delightful and accessible for everyone.</p>
+            </div>
+        </section>
+        
+        <!-- Leadership Team Section -->
+        <section class="team-section">
+            <div class="team-container">
+                <div class="team-header">
+                    <h2 class="team-section-title">Leadership Team</h2>
+                    <p class="team-section-description">Meet the visionaries guiding Broccobae's mission and growth.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/yuki.svg" alt="Yuki Tanaka" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">Yuki Tanaka</h3>
+                            <p class="team-member-role">Founder & CEO</p>
+                            <p class="team-member-bio">Former chef turned tech entrepreneur with a passion for making plant-based eating accessible to all. Yuki founded Broccobae after seeing how difficult it was for people to maintain a plant-based diet without sacrificing flavor or convenience.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/carlos.svg" alt="Carlos Rodriguez" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">Carlos Rodriguez</h3>
+                            <p class="team-member-role">Chief Technology Officer</p>
+                            <p class="team-member-bio">Tech innovator focused on creating intuitive tools that make plant-based living easier. Carlos leads our engineering team and is passionate about using technology to solve real-world problems in food sustainability.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/aisha.svg" alt="Aisha Patel" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">Aisha Patel</h3>
+                            <p class="team-member-role">Community Manager</p>
+                            <p class="team-member-bio">Social media expert and long-time vegan who loves building connections between food enthusiasts. Aisha oversees our thriving online community and ensures that every member feels welcome and supported.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Culinary Team Section -->
+        <section class="team-section">
+            <div class="team-container">
+                <div class="team-header">
+                    <h2 class="team-section-title">Culinary Team</h2>
+                    <p class="team-section-description">The creative minds behind our delicious recipes and culinary innovations.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/marcus.svg" alt="Marcus Chen" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">Marcus Chen</h3>
+                            <p class="team-member-role">Head of Recipe Development</p>
+                            <p class="team-member-bio">Culinary school graduate with expertise in transforming classic dishes into plant-based masterpieces. Marcus leads our recipe development team and ensures that every dish we share is both delicious and accessible.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/sofia.svg" alt="Sofia Martinez" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">Sofia Martinez</h3>
+                            <p class="team-member-role">Global Cuisine Specialist</p>
+                            <p class="team-member-bio">Trained chef with a background in international cuisines who specializes in authentic plant-based adaptations of traditional dishes from around the world. Sofia ensures our global recipes are both authentic and accessible.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/james.svg" alt="James Wilson" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">James Wilson</h3>
+                            <p class="team-member-role">Nutrition Specialist</p>
+                            <p class="team-member-bio">Registered dietitian with a focus on plant-based nutrition who ensures our recipes are not only delicious but also nutritionally balanced. James helps our users understand how to meet their nutritional needs through plant-based eating.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-medium"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tech Team Section -->
+        <section class="team-section">
+            <div class="team-container">
+                <div class="team-header">
+                    <h2 class="team-section-title">Technology Team</h2>
+                    <p class="team-section-description">The innovative minds building the digital tools that power your Broccobae experience.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/priya.svg" alt="Priya Sharma" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">Priya Sharma</h3>
+                            <p class="team-member-role">Lead Developer</p>
+                            <p class="team-member-bio">Full-stack developer with a passion for creating intuitive, accessible user experiences. Priya leads our development team and is committed to building tools that make plant-based eating easier for everyone.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/david.svg" alt="David Kim" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">David Kim</h3>
+                            <p class="team-member-role">UX/UI Designer</p>
+                            <p class="team-member-bio">User experience specialist with a background in both design and psychology. David ensures that our platform is not only beautiful but also intuitive and accessible for users of all technical abilities.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <img src="./images/avatars/olivia.svg" alt="Olivia Jackson" class="member-img">
+                        </div>
+                        <div class="team-member-content">
+                            <h3 class="team-member-name">Olivia Jackson</h3>
+                            <p class="team-member-role">Data Scientist</p>
+                            <p class="team-member-bio">AI and machine learning specialist who helps personalize the Broccobae experience for each user. Olivia works on our recommendation algorithms to help users discover recipes they'll love based on their preferences and past behavior.</p>
+                            <div class="team-member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-kaggle"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Our Values Section -->
+        <section class="team-values">
+            <div class="values-container">
+                <h2 class="values-title">United by Shared Values</h2>
+                <p class="values-description">Despite our diverse backgrounds and expertise, our team is united by a common set of values that guide everything we do at Broccobae.</p>
+                <a href="./values.html" class="btn btn-primary">Explore Our Values</a>
+            </div>
+        </section>
+        
+        <!-- Join Our Team Section -->
+        <section class="join-team">
+            <div class="join-container">
+                <h2 class="join-title">Join Our Team</h2>
+                <p class="join-description">Passionate about plant-based food, technology, or sustainability? We're always looking for talented individuals to join our mission of making plant-based eating delicious and accessible for everyone.</p>
+                <a href="mailto:careers@broccobae.com" class="join-button">View Open Positions</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="Broccobae Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">broccobae</span>
+                </div>
+                <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./src/pages/recipes.html">Recipes</a></li>
+                    <li><a href="./src/pages/meal-plan.html">Meal Plan</a></li>
+                    <li><a href="./src/pages/cuisine.html">Cuisine</a></li>
+                    <li><a href="./community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">About Us</h4>
+                <ul class="footer-links">
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./mission.html">Our Mission</a></li>
+                    <li><a href="./story.html">Our Story</a></li>
+                    <li><a href="./values.html">Our Values</a></li>
+                    <li><a href="./team.html">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="./terms.html">Terms & Conditions</a></li>
+                    <li><a href="./privacy.html">Privacy Policy</a></li>
+                    <li><a href="./cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i> +8170-4032-4312</li>
+                    <li><i class="fas fa-envelope"></i> broccobae@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gaia-Recipe Inc @ broccobae.com All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan Recipes - Broccobae | 500+ Plant-Based Recipe Collection</title>
+    <meta name="description" content="Discover 500+ delicious vegan recipes organized by meal type. From breakfast smoothies to dinner entrees and desserts - find your perfect plant-based dish.">
+    <meta name="keywords" content="vegan recipes, plant-based cooking, breakfast recipes, lunch recipes, dinner recipes, vegan desserts, smoothie recipes">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/recipes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../../images/logo.png" alt="Broccobae Logo" class="logo">
+                    <span class="logo-text">broccobae</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link active">Recipes</a></li>
+                    <li class="nav-item"><a href="meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="cuisine.html" class="nav-link">Cuisine</a></li>
+                    <li class="nav-item"><a href="../../community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="../../shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="recipes-hero">
+            <div class="container">
+                <h1 class="page-title">Vegan Recipes</h1>
+                <p class="page-subtitle">Discover 500+ delicious plant-based recipes for every meal and occasion</p>
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search recipes...">
+                    <button class="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertisement -->
+        <section class="advertisement">
+            <div class="container">
+                <div class="ad-banner" onclick="window.open('https://www.greenchef.com/vegan-meals', '_blank')">
+                    <img src="../../images/ads/green-chef-restaurant.svg" alt="Green Chef - Vegan Restaurant" class="ad-image">
+                    <div class="ad-content">
+                        <h3>Green Chef Vegan Restaurant</h3>
+                        <p>Experience gourmet plant-based dining. Fresh, organic ingredients crafted into extraordinary vegan dishes.</p>
+                        <span class="ad-cta">Visit Restaurant <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Vegan Restaurant Ads -->
+        <section class="restaurant-ads">
+            <div class="container">
+                <h2 class="section-title">Featured Vegan Restaurants</h2>
+                <div class="restaurant-ads-grid">
+                    <div class="restaurant-ad-card" onclick="window.open('https://www.plantpowerfastfood.com', '_blank')">
+                        <img src="../../images/ads/plant-power-restaurant.svg" alt="Plant Power Fast Food" class="restaurant-ad-image">
+                        <div class="restaurant-ad-content">
+                            <h4>Plant Power Fast Food</h4>
+                            <p>100% plant-based fast food that tastes amazing!</p>
+                            <div class="restaurant-features">
+                                <span class="feature-tag">Fast Delivery</span>
+                                <span class="feature-tag">Organic</span>
+                                <span class="feature-tag">Gluten-Free Options</span>
+                            </div>
+                            <button class="restaurant-cta-btn">Order Now</button>
+                        </div>
+                    </div>
+                    
+                    <div class="restaurant-ad-card" onclick="window.open('https://www.verdegrill.com', '_blank')">
+                        <img src="../../images/ads/verde-grill-restaurant.svg" alt="Verde Grill" class="restaurant-ad-image">
+                        <div class="restaurant-ad-content">
+                            <h4>Verde Grill & Bar</h4>
+                            <p>Upscale vegan dining with craft cocktails and live music.</p>
+                            <div class="restaurant-features">
+                                <span class="feature-tag">Fine Dining</span>
+                                <span class="feature-tag">Craft Cocktails</span>
+                                <span class="feature-tag">Live Music</span>
+                            </div>
+                            <button class="restaurant-cta-btn">Make Reservation</button>
+                        </div>
+                    </div>
+                    
+                    <div class="restaurant-ad-card" onclick="window.open('https://www.sproutcafe.com', '_blank')">
+                        <img src="../../images/ads/sprout-cafe-restaurant.svg" alt="Sprout Cafe" class="restaurant-ad-image">
+                        <div class="restaurant-ad-content">
+                            <h4>Sprout Organic Cafe</h4>
+                            <p>Fresh, local, and organic vegan meals in a cozy atmosphere.</p>
+                            <div class="restaurant-features">
+                                <span class="feature-tag">Local Sourced</span>
+                                <span class="feature-tag">Raw Options</span>
+                                <span class="feature-tag">Smoothie Bar</span>
+                            </div>
+                            <button class="restaurant-cta-btn">Visit Menu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Categories -->
+        <section class="recipe-categories">
+            <div class="container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Recipes (500)</button>
+                    <button class="filter-btn" data-filter="breakfast">Breakfast (100)</button>
+                    <button class="filter-btn" data-filter="lunch">Lunch (100)</button>
+                    <button class="filter-btn" data-filter="dinner">Dinner (100)</button>
+                    <button class="filter-btn" data-filter="dessert">Desserts (100)</button>
+                    <button class="filter-btn" data-filter="smoothie">Smoothies (100)</button>
+                </div>
+
+                <!-- Recipe Grid -->
+                <div class="recipe-grid" id="recipeGrid">
+                    <!-- Breakfast Recipes -->
+                    <div class="recipe-card" data-category="breakfast">
+                        <img src="../../images/recipes/breakfast-1.svg" alt="Overnight Oats" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Chocolate Peanut Butter Overnight Oats</h3>
+                            <p class="recipe-description">Creamy overnight oats with rich chocolate and peanut butter flavors.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 5 min prep</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Breakfast</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-category="breakfast">
+                        <img src="../../images/recipes/breakfast-2.svg" alt="Chia Pudding" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Vanilla Berry Chia Pudding</h3>
+                            <p class="recipe-description">Nutritious chia pudding topped with fresh berries and coconut flakes.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 10 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Breakfast</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-category="breakfast">
+                        <img src="../../images/recipes/breakfast-3.svg" alt="Avocado Toast" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Everything Bagel Avocado Toast</h3>
+                            <p class="recipe-description">Sourdough toast topped with smashed avocado and everything bagel seasoning.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 8 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Breakfast</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Lunch Recipes -->
+                    <div class="recipe-card" data-category="lunch">
+                        <img src="../../images/recipes/lunch-1.svg" alt="Quinoa Salad" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Mediterranean Quinoa Salad</h3>
+                            <p class="recipe-description">Fresh quinoa salad with cucumber, tomatoes, olives, and lemon dressing.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 20 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Lunch</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-category="lunch">
+                        <img src="../../images/recipes/lunch-2.svg" alt="Veggie Wrap" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Rainbow Veggie Wrap</h3>
+                            <p class="recipe-description">Colorful wrap filled with fresh vegetables and hummus.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 15 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Lunch</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Dinner Recipes -->
+                    <div class="recipe-card" data-category="dinner">
+                        <img src="../../images/recipes/dinner-1.svg" alt="Lentil Bolognese" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Hearty Lentil Bolognese</h3>
+                            <p class="recipe-description">Rich and savory lentil bolognese served over whole wheat pasta.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 45 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Medium</span>
+                                <span class="category">Dinner</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-category="dinner">
+                        <img src="../../images/recipes/dinner-2.svg" alt="Stuffed Bell Peppers" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Quinoa Stuffed Bell Peppers</h3>
+                            <p class="recipe-description">Bell peppers stuffed with quinoa, vegetables, and herbs.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 50 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Medium</span>
+                                <span class="category">Dinner</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Dessert Recipes -->
+                    <div class="recipe-card" data-category="dessert">
+                        <img src="../../images/recipes/dessert-1.svg" alt="Chocolate Mousse" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Chocolate Avocado Mousse</h3>
+                            <p class="recipe-description">Silky smooth chocolate mousse made with ripe avocados.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 15 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Dessert</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-category="dessert">
+                        <img src="../../images/recipes/dessert-2.svg" alt="Banana Nice Cream" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Banana Nice Cream</h3>
+                            <p class="recipe-description">Creamy frozen banana ice cream with endless flavor possibilities.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 10 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Dessert</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Smoothie Recipes -->
+                    <div class="recipe-card" data-category="smoothie">
+                        <img src="../../images/recipes/smoothie-1.svg" alt="Green Smoothie" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Green Goddess Smoothie</h3>
+                            <p class="recipe-description">Nutrient-packed green smoothie with spinach, banana, and mango.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 5 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Smoothie</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card" data-category="smoothie">
+                        <img src="../../images/recipes/smoothie-2.svg" alt="Berry Smoothie" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Mixed Berry Protein Smoothie</h3>
+                            <p class="recipe-description">Antioxidant-rich berry smoothie with plant-based protein powder.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 5 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                                <span class="category">Smoothie</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn btn-outline" id="loadMoreBtn">Load More Recipes</button>
+                    <p class="recipe-count">Showing 12 of 500 recipes</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../../images/logo.png" alt="Broccobae Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">broccobae</span>
+                </div>
+                <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="meal-plan.html">Meal Plan</a></li>
+                    <li><a href="cuisine.html">Cuisine</a></li>
+                    <li><a href="../../community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">About Us</h4>
+                <ul class="footer-links">
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../mission.html">Our Mission</a></li>
+                    <li><a href="../../story.html">Our Story</a></li>
+                    <li><a href="../../values.html">Our Values</a></li>
+                    <li><a href="../../team.html">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="../../terms.html">Terms & Conditions</a></li>
+                    <li><a href="../../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../../cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i> +8170-4032-4312</li>
+                    <li><i class="fas fa-envelope"></i> broccobae@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gaia-Recipe Inc @ broccobae.com All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/recipes.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broccobae - Your Ultimate Vegan Recipe Destination</title>
+    <meta name="description" content="Discover delicious vegan recipes, meal plans, and connect with a vibrant plant-based community. From breakfast to dinner, find your perfect vegan dish at Broccobae.">
+    <meta name="keywords" content="vegan recipes, plant-based meals, vegan meal plans, healthy cooking, vegan community, vegetarian food">
+    <meta name="author" content="Gaia-Recipe Inc">
+    <meta property="og:title" content="Broccobae - Your Ultimate Vegan Recipe Destination">
+    <meta property="og:description" content="Discover delicious vegan recipes, meal plans, and connect with a vibrant plant-based community.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://broccobae.com">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/logo.png" alt="broccobae Logo" class="logo">
+                    <span class="logo-text">broccobae</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="src/pages/recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="src/pages/meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="src/pages/cuisine.html" class="nav-link">Cuisine</a></li>
+                    <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to broccobae</h1>
+                <p class="hero-tagline">Your Ultimate Vegan Recipe Destination</p>
+                <p class="hero-description">Discover thousands of delicious plant-based recipes, create personalized meal plans, and join a vibrant community of vegan food lovers. From quick breakfast smoothies to gourmet dinner dishes, we've got everything you need for a healthy, sustainable lifestyle.</p>
+                <div class="hero-buttons">
+                    <a href="src/pages/recipes.html" class="btn btn-primary">Explore Recipes</a>
+                    <a href="src/pages/meal-plan.html" class="btn btn-secondary">Start Meal Planning</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-main.svg" alt="Delicious Vegan Bowl" class="hero-img">
+            </div>
+        </section>
+
+        <!-- Featured Recipes -->
+        <section class="featured-recipes">
+            <div class="container">
+                <h2 class="section-title">Featured Recipes</h2>
+                <div class="recipe-grid">
+                    <div class="recipe-card">
+                        <img src="images/recipes/lunch-1.svg" alt="Quinoa Buddha Bowl" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Quinoa Buddha Bowl</h3>
+                            <p class="recipe-description">A colorful, nutrient-packed bowl with quinoa, roasted vegetables, and tahini dressing.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 25 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="images/recipes/dinner-1.svg" alt="Creamy Lentil Curry" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Creamy Lentil Curry</h3>
+                            <p class="recipe-description">Rich and flavorful curry with red lentils, coconut milk, and aromatic spices.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 30 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Medium</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="images/recipes/breakfast-1.svg" alt="Gourmet Avocado Toast" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Gourmet Avocado Toast</h3>
+                            <p class="recipe-description">Elevated avocado toast with hemp seeds, cherry tomatoes, and balsamic glaze.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 10 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="recipe-card">
+                        <img src="images/recipes/smoothie-1.svg" alt="Chocolate Protein Smoothie" class="recipe-image">
+                        <div class="recipe-content">
+                            <h3 class="recipe-title">Chocolate Protein Smoothie</h3>
+                            <p class="recipe-description">Decadent yet healthy smoothie with banana, cacao, and plant-based protein.</p>
+                            <div class="recipe-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 5 min</span>
+                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="src/pages/recipes.html" class="btn btn-outline">See More Recipes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meal Plan Highlights -->
+        <section class="meal-plan-highlights">
+            <div class="container">
+                <h2 class="section-title">Meal Plan Highlights</h2>
+                <div class="meal-plan-content">
+                    <div class="meal-plan-text">
+                        <h3>Personalized Vegan Meal Planning</h3>
+                        <p>Take the guesswork out of meal planning with our curated weekly meal plans. Whether you're looking for high-protein options, budget-friendly meals, or gluten-free alternatives, we've got you covered.</p>
+                        <ul class="meal-plan-features">
+                            <li><i class="fas fa-check"></i> Weekly meal plans for every lifestyle</li>
+                            <li><i class="fas fa-check"></i> Automated shopping lists</li>
+                            <li><i class="fas fa-check"></i> Nutritional information included</li>
+                            <li><i class="fas fa-check"></i> Customizable portion sizes</li>
+                        </ul>
+                    </div>
+                    <div class="meal-plan-image">
+                        <img src="images/meal-plan.svg" alt="Meal Plan Calendar" class="meal-plan-img">
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="src/pages/meal-plan.html" class="btn btn-outline">See More Meal Plans</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertisement 1 -->
+        <section class="advertisement">
+            <div class="container">
+                <div class="ad-banner" onclick="window.open('https://www.thrivemarket.com/vegan', '_blank')">
+                    <img src="images/ads/thrive-market-ad.svg" alt="Thrive Market - Premium Vegan Products" class="ad-image">
+                    <div class="ad-content">
+                        <h3>Premium Vegan Products Delivered</h3>
+                        <p>Shop organic, non-GMO vegan products at wholesale prices. Free shipping on orders over $49!</p>
+                        <span class="ad-cta">Shop Now <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuisine Variety -->
+        <section class="cuisine-variety">
+            <div class="container">
+                <h2 class="section-title">Cuisine Variety</h2>
+                <p class="section-subtitle">Explore vegan flavors from around the world</p>
+                <div class="cuisine-grid">
+                    <div class="cuisine-card">
+                        <img src="images/cuisine-indian.svg" alt="Indian Dal Curry" class="cuisine-image">
+                        <div class="cuisine-overlay">
+                            <h3 class="cuisine-title">Indian</h3>
+                            <p class="cuisine-description">Spiced Dal with Basmati Rice</p>
+                        </div>
+                    </div>
+                    <div class="cuisine-card">
+                        <img src="images/cuisine-asian.svg" alt="Asian Vegan Ramen" class="cuisine-image">
+                        <div class="cuisine-overlay">
+                            <h3 class="cuisine-title">Asian</h3>
+                            <p class="cuisine-description">Miso Ramen with Tofu</p>
+                        </div>
+                    </div>
+                    <div class="cuisine-card">
+                        <img src="images/cuisine-mexican.svg" alt="Mexican Jackfruit Tacos" class="cuisine-image">
+                        <div class="cuisine-overlay">
+                            <h3 class="cuisine-title">Mexican</h3>
+                            <p class="cuisine-description">Jackfruit Carnitas Tacos</p>
+                        </div>
+                    </div>
+                    <div class="cuisine-card">
+                        <img src="images/cuisine-american.svg" alt="American Plant-Based Burger" class="cuisine-image">
+                        <div class="cuisine-overlay">
+                            <h3 class="cuisine-title">American</h3>
+                            <p class="cuisine-description">Classic Plant-Based Burger</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="src/pages/cuisine.html" class="btn btn-outline">See More Cuisines</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Picks -->
+        <section class="community-picks">
+            <div class="container">
+                <h2 class="section-title">Community Picks</h2>
+                <div class="community-content">
+                    <div class="community-text">
+                        <h3>Join Our Vibrant Vegan Community</h3>
+                        <p>Connect with fellow plant-based food enthusiasts, share your favorite recipes, and discover new culinary adventures. Our community is a supportive space where vegans of all levels can learn, grow, and inspire each other.</p>
+                        <div class="community-stats">
+                            <div class="stat">
+                                <span class="stat-number">50K+</span>
+                                <span class="stat-label">Active Members</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">10K+</span>
+                                <span class="stat-label">Shared Recipes</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-label">Daily Posts</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="community-image">
+                        <img src="images/community/cooking-together.svg" alt="Community Cooking Together" class="community-img">
+                    </div>
+                </div>
+                <div class="section-footer">
+                    <a href="community.html" class="btn btn-outline">Join Community</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles -->
+        <section class="latest-articles">
+            <div class="container">
+                <h2 class="section-title">Latest Articles</h2>
+                <div class="articles-grid">
+                    <article class="article-card" onclick="window.open('https://www.healthline.com/nutrition/vegan-diet-benefits', '_blank')">
+                        <img src="images/articles/vegan-health.svg" alt="Vegan Health Benefits" class="article-image">
+                        <div class="article-content">
+                            <span class="article-category">Vegan Health</span>
+                            <h3 class="article-title">10 Science-Backed Health Benefits of a Vegan Diet</h3>
+                            <p class="article-excerpt">Discover how plant-based eating can improve your health, boost energy levels, and reduce disease risk.</p>
+                            <span class="article-link">Read More <i class="fas fa-external-link-alt"></i></span>
+                        </div>
+                    </article>
+                    <article class="article-card" onclick="window.open('https://www.happycow.net/vegtopics/travel', '_blank')">
+                        <img src="images/articles/vegan-travel.svg" alt="Vegan Travel Guide" class="article-image">
+                        <div class="article-content">
+                            <span class="article-category">Vegan Travel</span>
+                            <h3 class="article-title">The Ultimate Guide to Vegan Travel</h3>
+                            <p class="article-excerpt">Tips and tricks for maintaining a plant-based diet while exploring the world's most amazing destinations.</p>
+                            <span class="article-link">Read More <i class="fas fa-external-link-alt"></i></span>
+                        </div>
+                    </article>
+                    <article class="article-card" onclick="window.open('https://www.veganlifestylemagazine.com/lifestyle-tips', '_blank')">
+                        <img src="images/articles/vegan-lifestyle.svg" alt="Vegan Lifestyle Tips" class="article-image">
+                        <div class="article-content">
+                            <span class="article-category">Vegan Lifestyle</span>
+                            <h3 class="article-title">Transitioning to a Vegan Lifestyle: A Beginner's Guide</h3>
+                            <p class="article-excerpt">Everything you need to know about making the switch to a compassionate, sustainable way of living.</p>
+                            <span class="article-link">Read More <i class="fas fa-external-link-alt"></i></span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertisement 2 -->
+        <section class="advertisement">
+            <div class="container">
+                <div class="ad-banner" onclick="window.open('https://www.purplecarrot.com', '_blank')">
+                    <img src="images/ads/purple-carrot-ad.svg" alt="Purple Carrot - Plant-Based Meal Kits" class="ad-image">
+                    <div class="ad-content">
+                        <h3>Plant-Based Meal Kits Delivered Weekly</h3>
+                        <p>Skip the meal planning and get chef-designed vegan meals delivered to your door. Fresh ingredients included!</p>
+                        <span class="ad-cta">Order Now <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Broccobae Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">broccobae</span>
+                </div>
+                <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="src/pages/recipes.html">Recipes</a></li>
+                    <li><a href="src/pages/meal-plan.html">Meal Plan</a></li>
+                    <li><a href="src/pages/cuisine.html">Cuisine</a></li>
+                    <li><a href="community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">About Us</h4>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="story.html">Our Story</a></li>
+                    <li><a href="values.html">Our Values</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i> +8170-4032-4312</li>
+                    <li><i class="fas fa-envelope"></i> broccobae@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gaia-Recipe Inc @ broccobae.com All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg width="60" height="40" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Indian Flag -->
+  <rect x="0" y="0" width="60" height="13.33" fill="#ff9933"/>
+  <rect x="0" y="13.33" width="60" height="13.33" fill="#ffffff"/>
+  <rect x="0" y="26.66" width="60" height="13.34" fill="#138808"/>
+  
+  <!-- Ashoka Chakra (Wheel) -->
+  <g transform="translate(30,20)">
+    <!-- Outer Circle -->
+    <circle cx="0" cy="0" r="6" fill="none" stroke="#000080" stroke-width="0.5"/>
+    <!-- Inner Circle -->
+    <circle cx="0" cy="0" r="1" fill="#000080"/>
+    <!-- Spokes -->
+    <g stroke="#000080" stroke-width="0.3">
+      <line x1="0" y1="-6" x2="0" y2="6"/>
+      <line x1="-6" y1="0" x2="6" y2="0"/>
+      <line x1="-4.24" y1="-4.24" x2="4.24" y2="4.24"/>
+      <line x1="4.24" y1="-4.24" x2="-4.24" y2="4.24"/>
+      <line x1="-5.2" y1="-3" x2="5.2" y2="3"/>
+      <line x1="5.2" y1="-3" x2="-5.2" y2="3"/>
+      <line x1="-3" y1="-5.2" x2="3" y2="5.2"/>
+      <line x1="3" y1="-5.2" x2="-3" y2="5.2"/>
+      <line x1="-5.8" y1="-1.5" x2="5.8" y2="1.5"/>
+      <line x1="5.8" y1="-1.5" x2="-5.8" y2="1.5"/>
+      <line x1="-1.5" y1="-5.8" x2="1.5" y2="5.8"/>
+      <line x1="1.5" y1="-5.8" x2="-1.5" y2="5.8"/>
+    </g>
+  </g>
+  
+  <!-- Flag Border -->
+  <rect x="0" y="0" width="60" height="40" fill="none" stroke="#cccccc" stroke-width="1"/>
+</svg>

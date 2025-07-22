@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <defs>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5016;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a7c59;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="300" height="200" fill="url(#greenGrad)" rx="10"/>
+  
+  <!-- Logo/Icon -->
+  <circle cx="60" cy="60" r="25" fill="#8bc34a" stroke="#ffffff" stroke-width="2"/>
+  <path d="M45 60 L60 45 L75 60 L60 75 Z" fill="#ffffff"/>
+  
+  <!-- Restaurant Name -->
+  <text x="110" y="45" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">Verde Grill</text>
+  <text x="110" y="65" font-family="Arial, sans-serif" font-size="14" fill="#c8e6c9">Fresh • Organic • Plant-Based</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="250" cy="40" r="8" fill="#8bc34a" opacity="0.7"/>
+  <circle cx="270" cy="55" r="6" fill="#a5d6a7" opacity="0.8"/>
+  <circle cx="230" cy="65" r="5" fill="#c8e6c9" opacity="0.6"/>
+  
+  <!-- Call to Action -->
+  <rect x="110" y="85" width="140" height="30" fill="#8bc34a" rx="15"/>
+  <text x="180" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2d5016" text-anchor="middle">Visit Today!</text>
+  
+  <!-- Address/Info -->
+  <text x="110" y="135" font-family="Arial, sans-serif" font-size="12" fill="#e8f5e8">123 Green Street</text>
+  <text x="110" y="150" font-family="Arial, sans-serif" font-size="12" fill="#e8f5e8">Downtown • (555) 123-VERDE</text>
+  
+  <!-- Rating Stars -->
+  <g transform="translate(110, 160)">
+    <polygon points="6,2 8,8 14,8 9,12 11,18 6,14 1,18 3,12 -2,8 4,8" fill="#ffd700"/>
+    <polygon points="22,2 24,8 30,8 25,12 27,18 22,14 17,18 19,12 14,8 20,8" fill="#ffd700"/>
+    <polygon points="38,2 40,8 46,8 41,12 43,18 38,14 33,18 35,12 30,8 36,8" fill="#ffd700"/>
+    <polygon points="54,2 56,8 62,8 57,12 59,18 54,14 49,18 51,12 46,8 52,8" fill="#ffd700"/>
+    <polygon points="70,2 72,8 78,8 73,12 75,18 70,14 65,18 67,12 62,8 68,8" fill="#ffd700"/>
+  </g>
+</svg>

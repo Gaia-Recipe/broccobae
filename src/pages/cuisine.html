@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Vegan Cuisines - Broccobae | Global Plant-Based Recipes</title>
+    <meta name="description" content="Explore 500+ vegan recipes from around the world. Asian, Indian, American, Mediterranean, and Mexican plant-based cuisines.">
+    <meta name="keywords" content="vegan cuisine, international vegan recipes, asian vegan, indian vegan, mediterranean vegan, mexican vegan, american vegan">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/cuisine.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../../images/logo.png" alt="Broccobae Logo" class="logo">
+                    <span class="logo-text">broccobae</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="cuisine.html" class="nav-link active">Cuisine</a></li>
+                    <li class="nav-item"><a href="../../community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="../../shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="cuisine-hero">
+            <div class="container">
+                <h1 class="page-title">World Vegan Cuisines</h1>
+                <p class="page-subtitle">Discover authentic plant-based flavors from around the globe with 500+ international vegan recipes</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Global Recipes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Cuisines</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Plant-Based</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertisement -->
+        <section class="advertisement">
+            <div class="container">
+                <div class="ad-banner" onclick="window.open('https://www.worldveganrestaurants.com', '_blank')">
+                    <img src="../../images/ads/vegan-restaurants.svg" alt="World Vegan Restaurants" class="ad-image">
+                    <div class="ad-content">
+                        <h3>World Vegan Restaurants Directory</h3>
+                        <p>Find authentic vegan restaurants from every cuisine around the world. From street food to fine dining.</p>
+                        <span class="ad-cta">Explore Restaurants <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuisine Categories -->
+        <section class="cuisine-categories">
+            <div class="container">
+                <h2 class="section-title">Explore Global Flavors</h2>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Cuisines (500)</button>
+                    <button class="filter-btn" data-filter="asian">Asian (100)</button>
+                    <button class="filter-btn" data-filter="indian">Indian (100)</button>
+                    <button class="filter-btn" data-filter="american">American (100)</button>
+                    <button class="filter-btn" data-filter="mediterranean">Mediterranean (100)</button>
+                    <button class="filter-btn" data-filter="mexican">Mexican (100)</button>
+                </div>
+
+                <!-- Cuisine Grid -->
+                <div class="cuisine-grid" id="cuisineGrid">
+                    <!-- Asian Cuisine -->
+                    <div class="cuisine-card" data-category="asian" data-static="true">
+                        <img src="../../images/cuisines/asian-1.svg" alt="Asian Vegetable Stir Fry" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/asia.svg" alt="Asian Flag" class="flag-icon">
+                                <span class="cuisine-region">Asian</span>
+                            </div>
+                            <h3 class="cuisine-title">Rainbow Vegetable Stir Fry</h3>
+                            <p class="cuisine-description">Colorful Asian-style stir fry with crisp vegetables, tofu, and savory soy-ginger sauce.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 20 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Mild</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Gluten-Free</span>
+                                <span class="tag">High Protein</span>
+                                <span class="tag">Quick</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cuisine-card" data-category="asian" data-static="true">
+                        <img src="../../images/cuisines/asian-2.svg" alt="Thai Green Curry" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/thailand.svg" alt="Thai Flag" class="flag-icon">
+                                <span class="cuisine-region">Thai</span>
+                            </div>
+                            <h3 class="cuisine-title">Coconut Green Curry</h3>
+                            <p class="cuisine-description">Aromatic Thai green curry with coconut milk, vegetables, and fresh herbs.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 35 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Medium</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Spicy</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Coconut</span>
+                                <span class="tag">Aromatic</span>
+                                <span class="tag">Traditional</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Indian Cuisine -->
+                    <div class="cuisine-card" data-category="indian" data-static="true">
+                        <img src="../../images/cuisines/indian-1.svg" alt="Indian Dal Curry" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/india.svg" alt="Indian Flag" class="flag-icon">
+                                <span class="cuisine-region">Indian</span>
+                            </div>
+                            <h3 class="cuisine-title">Masala Dal Tadka</h3>
+                            <p class="cuisine-description">Rich and creamy lentil curry with aromatic Indian spices and fresh herbs.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 45 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Medium</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Medium</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">High Protein</span>
+                                <span class="tag">Comfort Food</span>
+                                <span class="tag">Spiced</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cuisine-card" data-category="indian" data-static="true">
+                        <img src="../../images/cuisines/indian-2.svg" alt="Vegetable Biryani" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/india.svg" alt="Indian Flag" class="flag-icon">
+                                <span class="cuisine-region">Indian</span>
+                            </div>
+                            <h3 class="cuisine-title">Vegetable Biryani</h3>
+                            <p class="cuisine-description">Fragrant basmati rice layered with spiced vegetables and aromatic herbs.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 60 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Advanced</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Medium</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Festive</span>
+                                <span class="tag">Aromatic</span>
+                                <span class="tag">Special</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- American Cuisine -->
+                    <div class="cuisine-card" data-category="american" data-static="true">
+                        <img src="../../images/cuisines/american-1.svg" alt="Plant-Based Burger" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/usa.svg" alt="American Flag" class="flag-icon">
+                                <span class="cuisine-region">American</span>
+                            </div>
+                            <h3 class="cuisine-title">Ultimate Plant Burger</h3>
+                            <p class="cuisine-description">Juicy plant-based burger with all the classic fixings and crispy fries.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 25 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Mild</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Comfort Food</span>
+                                <span class="tag">BBQ Style</span>
+                                <span class="tag">Classic</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cuisine-card" data-category="american" data-static="true">
+                        <img src="../../images/cuisines/american-2.svg" alt="Vegan Mac and Cheese" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/usa.svg" alt="American Flag" class="flag-icon">
+                                <span class="cuisine-region">American</span>
+                            </div>
+                            <h3 class="cuisine-title">Creamy Mac & Cheese</h3>
+                            <p class="cuisine-description">Rich and creamy plant-based mac and cheese with nutritional yeast and cashews.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 30 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Mild</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Comfort Food</span>
+                                <span class="tag">Creamy</span>
+                                <span class="tag">Kid-Friendly</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Mediterranean Cuisine -->
+                    <div class="cuisine-card" data-category="mediterranean" data-static="true">
+                        <img src="../../images/cuisines/mediterranean-1.svg" alt="Mediterranean Bowl" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/greece.svg" alt="Greek Flag" class="flag-icon">
+                                <span class="cuisine-region">Mediterranean</span>
+                            </div>
+                            <h3 class="cuisine-title">Mediterranean Power Bowl</h3>
+                            <p class="cuisine-description">Fresh Mediterranean bowl with hummus, olives, vegetables, and tahini dressing.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 15 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Mild</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Fresh</span>
+                                <span class="tag">Healthy</span>
+                                <span class="tag">No Cook</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cuisine-card" data-category="mediterranean" data-static="true">
+                        <img src="../../images/cuisines/mediterranean-2.svg" alt="Mediterranean Pasta" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/italy.svg" alt="Italian Flag" class="flag-icon">
+                                <span class="cuisine-region">Italian</span>
+                            </div>
+                            <h3 class="cuisine-title">Herb-Crusted Pasta Primavera</h3>
+                            <p class="cuisine-description">Fresh pasta with seasonal vegetables, herbs, and olive oil-based sauce.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 25 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Mild</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Fresh Herbs</span>
+                                <span class="tag">Seasonal</span>
+                                <span class="tag">Light</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Mexican Cuisine -->
+                    <div class="cuisine-card" data-category="mexican" data-static="true">
+                        <img src="../../images/cuisines/mexican-1.svg" alt="Vegan Tacos" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/mexico.svg" alt="Mexican Flag" class="flag-icon">
+                                <span class="cuisine-region">Mexican</span>
+                            </div>
+                            <h3 class="cuisine-title">Spicy Black Bean Tacos</h3>
+                            <p class="cuisine-description">Authentic Mexican tacos with seasoned black beans, fresh salsa, and avocado.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 20 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Spicy</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Authentic</span>
+                                <span class="tag">Spicy</span>
+                                <span class="tag">Street Food</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cuisine-card" data-category="mexican" data-static="true">
+                        <img src="../../images/cuisines/mexican-2.svg" alt="Veggie Burrito Bowl" class="cuisine-image">
+                        <div class="cuisine-content">
+                            <div class="cuisine-flag">
+                                <img src="../../images/flags/mexico.svg" alt="Mexican Flag" class="flag-icon">
+                                <span class="cuisine-region">Mexican</span>
+                            </div>
+                            <h3 class="cuisine-title">Loaded Burrito Bowl</h3>
+                            <p class="cuisine-description">Hearty burrito bowl with cilantro rice, beans, vegetables, and cashew crema.</p>
+                            <div class="cuisine-meta">
+                                <span class="prep-time"><i class="fas fa-clock"></i> 30 mins</span>
+                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Medium</span>
+                                <span class="spice-level"><i class="fas fa-pepper-hot"></i> Medium</span>
+                            </div>
+                            <div class="cuisine-tags">
+                                <span class="tag">Filling</span>
+                                <span class="tag">Customizable</span>
+                                <span class="tag">Protein-Rich</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn btn-outline" id="loadMoreBtn">Load More Recipes</button>
+                    <p class="cuisine-count">Showing 10 of 500 recipes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuisine Spotlight -->
+        <section class="cuisine-spotlight">
+            <div class="container">
+                <h2 class="section-title">Cuisine Spotlight</h2>
+                <div class="spotlight-content">
+                    <div class="spotlight-text">
+                        <h3>This Month: Indian Cuisine</h3>
+                        <p>Discover the rich and diverse world of Indian vegan cuisine. From aromatic curries to flavorful dals, Indian cooking offers an incredible variety of plant-based dishes that are both nutritious and delicious.</p>
+                        <div class="spotlight-features">
+                            <div class="feature">
+                                <i class="fas fa-leaf"></i>
+                                <div>
+                                    <h4>Spice Blends</h4>
+                                    <p>Learn about traditional Indian spice combinations</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-seedling"></i>
+                                <div>
+                                    <h4>Legume Varieties</h4>
+                                    <p>Explore different types of lentils and beans</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <h4>Cooking Techniques</h4>
+                                    <p>Master traditional Indian cooking methods</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Explore Indian Recipes</button>
+                    </div>
+                    <div class="spotlight-image">
+                        <img src="../../images/cuisine-spotlight/indian-thali.svg" alt="Indian Thali" class="spotlight-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Stories -->
+        <section class="cultural-stories">
+            <div class="container">
+                <h2 class="section-title">Cultural Stories & Traditions</h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <img src="../../images/stories/asian-tea.svg" alt="Asian Tea Ceremony" class="story-image">
+                        <div class="story-content">
+                            <h3>The Art of Asian Tea Ceremonies</h3>
+                            <p>Discover how traditional Asian tea ceremonies complement plant-based meals and create mindful eating experiences.</p>
+                            <a href="#" class="story-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <img src="../../images/stories/mediterranean-olives.svg" alt="Mediterranean Olive Harvest" class="story-image">
+                        <div class="story-content">
+                            <h3>Mediterranean Olive Traditions</h3>
+                            <p>Learn about the ancient traditions of olive cultivation and how it shapes Mediterranean vegan cuisine.</p>
+                            <a href="#" class="story-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <img src="../../images/stories/mexican-corn.svg" alt="Mexican Corn Heritage" class="story-image">
+                        <div class="story-content">
+                            <h3>Sacred Corn in Mexican Culture</h3>
+                            <p>Explore the cultural significance of corn in Mexican cuisine and its role in traditional plant-based dishes.</p>
+                            <a href="#" class="story-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../../images/logo.png" alt="Broccobae Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">broccobae</span>
+                </div>
+                <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="meal-plan.html">Meal Plan</a></li>
+                    <li><a href="cuisine.html">Cuisine</a></li>
+                    <li><a href="../../community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">About Us</h4>
+                <ul class="footer-links">
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../mission.html">Our Mission</a></li>
+                    <li><a href="../../story.html">Our Story</a></li>
+                    <li><a href="../../values.html">Our Values</a></li>
+                    <li><a href="../../team.html">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="../../terms.html">Terms & Conditions</a></li>
+                    <li><a href="../../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../../cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i> +8170-4032-4312</li>
+                    <li><i class="fas fa-envelope"></i> broccobae@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gaia-Recipe Inc @ broccobae.com All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/cuisine.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="verdeGrillBgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f8f0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e8f5e8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#verdeGrillBgGradient)"/>
+  
+  <!-- Restaurant Building -->
+  <rect x="50" y="60" width="120" height="80" fill="#8b4513"/>
+  <rect x="55" y="65" width="110" height="70" fill="#daa520"/>
+  <rect x="60" y="70" width="100" height="60" fill="#f5deb3"/>
+  
+  <!-- Roof -->
+  <path d="M 45 60 L 110 30 L 175 60 Z" fill="#654321"/>
+  <path d="M 50 60 L 110 35 L 170 60 Z" fill="#8b4513"/>
+  
+  <!-- Windows -->
+  <rect x="70" y="80" width="15" height="20" fill="#87ceeb" stroke="#654321" stroke-width="1"/>
+  <rect x="90" y="80" width="15" height="20" fill="#87ceeb" stroke="#654321" stroke-width="1"/>
+  <rect x="130" y="80" width="15" height="20" fill="#87ceeb" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Door -->
+  <rect x="110" y="105" width="20" height="25" fill="#654321" rx="2"/>
+  <circle cx="125" cy="117" r="1" fill="#ffd700"/>
+  
+  <!-- Restaurant Sign -->
+  <rect x="80" y="45" width="60" height="20" fill="#228b22" rx="5"/>
+  <rect x="85" y="50" width="50" height="10" fill="#ffffff" rx="3"/>
+  <text x="110" y="58" text-anchor="middle" fill="#228b22" font-family="Arial, sans-serif" font-size="10" font-weight="bold">VERDE GRILL</text>
+  
+  <!-- Outdoor Seating -->
+  <!-- Table 1 -->
+  <ellipse cx="200" cy="120" rx="15" ry="8" fill="#8b4513"/>
+  <rect x="198" y="115" width="4" height="15" fill="#654321"/>
+  <!-- Chairs -->
+  <rect x="185" y="115" width="8" height="12" fill="#654321" rx="2"/>
+  <rect x="207" y="115" width="8" height="12" fill="#654321" rx="2"/>
+  
+  <!-- Table 2 -->
+  <ellipse cx="240" cy="120" rx="15" ry="8" fill="#8b4513"/>
+  <rect x="238" y="115" width="4" height="15" fill="#654321"/>
+  <!-- Chairs -->
+  <rect x="225" y="115" width="8" height="12" fill="#654321" rx="2"/>
+  <rect x="247" y="115" width="8" height="12" fill="#654321" rx="2"/>
+  
+  <!-- Umbrellas -->
+  <circle cx="200" cy="100" r="12" fill="#32cd32"/>
+  <rect x="199" y="100" width="2" height="20" fill="#8b4513"/>
+  <circle cx="240" cy="100" r="12" fill="#ff6347"/>
+  <rect x="239" y="100" width="2" height="20" fill="#8b4513"/>
+  
+  <!-- Menu Board -->
+  <rect x="280" y="80" width="30" height="40" fill="#654321" rx="3"/>
+  <rect x="285" y="85" width="20" height="30" fill="#000000"/>
+  <text x="295" y="95" text-anchor="middle" fill="#32cd32" font-family="Arial, sans-serif" font-size="6" font-weight="bold">MENU</text>
+  <text x="295" y="102" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="4">Vegan Burgers</text>
+  <text x="295" y="107" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="4">Plant Steaks</text>
+  <text x="295" y="112" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="4">Fresh Salads</text>
+  
+  <!-- Grill Smoke -->
+  <path d="M 320 70 Q 315 60 320 50" stroke="#d3d3d3" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 330 75 Q 325 65 330 55" stroke="#d3d3d3" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 340 70 Q 335 60 340 50" stroke="#d3d3d3" stroke-width="2" fill="none" opacity="0.7"/>
+  
+  <!-- Grill -->
+  <rect x="315" y="90" width="30" height="15" fill="#333" rx="3"/>
+  <rect x="318" y="93" width="24" height="9" fill="#654321"/>
+  <circle cx="325" cy="97" r="2" fill="#ff6347"/>
+  <circle cx="335" cy="97" r="2" fill="#ff6347"/>
+  
+  <!-- Plants/Greenery -->
+  <g transform="translate(30,130)">
+    <rect x="0" y="0" width="8" height="15" fill="#8b4513"/>
+    <circle cx="4" cy="-5" r="8" fill="#228b22"/>
+    <circle cx="0" cy="-8" r="4" fill="#32cd32"/>
+    <circle cx="8" cy="-8" r="4" fill="#32cd32"/>
+  </g>
+  
+  <g transform="translate(350,130)">
+    <rect x="0" y="0" width="6" height="12" fill="#8b4513"/>
+    <circle cx="3" cy="-4" r="6" fill="#228b22"/>
+    <circle cx="-2" cy="-6" r="3" fill="#32cd32"/>
+    <circle cx="8" cy="-6" r="3" fill="#32cd32"/>
+  </g>
+  
+  <!-- Main Headline -->
+  <text x="200" y="160" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="20" font-weight="bold">Verde Grill</text>
+  <text x="200" y="175" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14">Plant-Based BBQ Experience</text>
+  
+  <!-- Star Rating -->
+  <g transform="translate(150,180)">
+    <text x="0" y="0" fill="#ffd700" font-family="Arial, sans-serif" font-size="12">★★★★★</text>
+    <text x="60" y="0" fill="#333" font-family="Arial, sans-serif" font-size="10">4.8/5 (324 reviews)</text>
+  </g>
+  
+  <!-- Location Pin -->
+  <g transform="translate(320,160)">
+    <path d="M 0 0 Q -5 -8 0 -15 Q 5 -8 0 0" fill="#dc143c"/>
+    <circle cx="0" cy="-10" r="3" fill="#ffffff"/>
+    <text x="10" y="-5" fill="#333" font-family="Arial, sans-serif" font-size="10">Downtown</text>
+  </g>
+  
+  <!-- Hours -->
+  <text x="50" y="185" fill="#666" font-family="Arial, sans-serif" font-size="10">Open Daily 11AM-10PM</text>
+  
+  <!-- Vegan Symbol -->
+  <circle cx="30" cy="30" r="15" fill="#32cd32"/>
+  <text x="30" y="35" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="bold">V</text>
+  
+  <!-- Award Badge -->
+  <circle cx="350" cy="30" r="18" fill="#ffd700"/>
+  <text x="350" y="25" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8" font-weight="bold">BEST</text>
+  <text x="350" y="33" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="8" font-weight="bold">VEGAN</text>
+  <text x="350" y="41" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="6">2024</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="380" cy="180" r="3" fill="#32cd32" opacity="0.5"/>
+  <circle cx="20" cy="180" r="2" fill="#228b22" opacity="0.5"/>
+  <circle cx="370" cy="160" r="2" fill="#32cd32" opacity="0.5"/>
+</svg>

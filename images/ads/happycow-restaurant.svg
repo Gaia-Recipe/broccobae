@@ -1,0 +1,92 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="200" fill="#f8f9fa"/>
+  
+  <!-- HappyCow Logo Background -->
+  <circle cx="150" cy="100" r="80" fill="#28a745"/>
+  
+  <!-- Cow Face -->
+  <ellipse cx="150" cy="90" rx="35" ry="30" fill="#ffffff"/>
+  
+  <!-- Cow Spots -->
+  <ellipse cx="130" cy="80" rx="8" ry="6" fill="#333333"/>
+  <ellipse cx="170" cy="85" rx="6" ry="8" fill="#333333"/>
+  <ellipse cx="155" cy="75" rx="5" ry="4" fill="#333333"/>
+  
+  <!-- Eyes -->
+  <circle cx="140" cy="85" r="4" fill="#333333"/>
+  <circle cx="160" cy="85" r="4" fill="#333333"/>
+  <circle cx="141" cy="84" r="1" fill="#ffffff"/>
+  <circle cx="161" cy="84" r="1" fill="#ffffff"/>
+  
+  <!-- Nose -->
+  <ellipse cx="150" cy="95" rx="6" ry="4" fill="#ffb6c1"/>
+  <ellipse cx="148" cy="94" rx="1" ry="1" fill="#333333"/>
+  <ellipse cx="152" cy="94" rx="1" ry="1" fill="#333333"/>
+  
+  <!-- Mouth -->
+  <path d="M 145 100 Q 150 105 155 100" stroke="#333333" stroke-width="2" fill="none"/>
+  
+  <!-- Ears -->
+  <ellipse cx="125" cy="70" rx="8" ry="12" fill="#ffffff"/>
+  <ellipse cx="175" cy="70" rx="8" ry="12" fill="#ffffff"/>
+  <ellipse cx="125" cy="70" rx="4" ry="6" fill="#ffb6c1"/>
+  <ellipse cx="175" cy="70" rx="4" ry="6" fill="#ffb6c1"/>
+  
+  <!-- Horns -->
+  <path d="M 120 65 Q 115 55 118 50" stroke="#8b4513" stroke-width="3" fill="none"/>
+  <path d="M 180 65 Q 185 55 182 50" stroke="#8b4513" stroke-width="3" fill="none"/>
+  
+  <!-- Happy Expression Lines -->
+  <path d="M 135 78 Q 140 75 145 78" stroke="#333333" stroke-width="1" fill="none"/>
+  <path d="M 155 78 Q 160 75 165 78" stroke="#333333" stroke-width="1" fill="none"/>
+  
+  <!-- Restaurant Elements -->
+  <!-- Fork -->
+  <rect x="80" y="130" width="2" height="25" fill="#6c757d"/>
+  <rect x="78" y="130" width="6" height="3" fill="#6c757d"/>
+  <line x1="79" y1="133" x2="79" y2="138" stroke="#6c757d" stroke-width="1"/>
+  <line x1="81" y1="133" x2="81" y2="138" stroke="#6c757d" stroke-width="1"/>
+  <line x1="83" y1="133" x2="83" y2="138" stroke="#6c757d" stroke-width="1"/>
+  
+  <!-- Knife -->
+  <rect x="90" y="130" width="2" height="25" fill="#6c757d"/>
+  <rect x="89" y="130" width="4" height="8" fill="#c0c0c0"/>
+  
+  <!-- Plate -->
+  <ellipse cx="220" cy="140" rx="20" ry="8" fill="#ffffff"/>
+  <ellipse cx="220" cy="138" rx="18" ry="6" fill="#f8f9fa"/>
+  
+  <!-- Vegan Food on Plate -->
+  <circle cx="215" cy="138" r="3" fill="#28a745"/>
+  <circle cx="225" cy="138" r="3" fill="#fd7e14"/>
+  <circle cx="220" cy="135" r="2" fill="#dc3545"/>
+  
+  <!-- Location Pin -->
+  <path d="M 50 50 C 50 40, 60 30, 70 30 C 80 30, 90 40, 90 50 C 90 60, 70 80, 70 80 C 70 80, 50 60, 50 50 Z" fill="#dc3545"/>
+  <circle cx="70" cy="45" r="8" fill="#ffffff"/>
+  <circle cx="70" cy="45" r="4" fill="#dc3545"/>
+  
+  <!-- Stars Rating -->
+  <g transform="translate(200,50)">
+    <path d="M 0 0 L 2 6 L 8 6 L 3 10 L 5 16 L 0 12 L -5 16 L -3 10 L -8 6 L -2 6 Z" fill="#ffc107"/>
+    <path d="M 15 0 L 17 6 L 23 6 L 18 10 L 20 16 L 15 12 L 10 16 L 12 10 L 7 6 L 13 6 Z" fill="#ffc107"/>
+    <path d="M 30 0 L 32 6 L 38 6 L 33 10 L 35 16 L 30 12 L 25 16 L 27 10 L 22 6 L 28 6 Z" fill="#ffc107"/>
+    <path d="M 45 0 L 47 6 L 53 6 L 48 10 L 50 16 L 45 12 L 40 16 L 42 10 L 37 6 L 43 6 Z" fill="#ffc107"/>
+    <path d="M 60 0 L 62 6 L 68 6 L 63 10 L 65 16 L 60 12 L 55 16 L 57 10 L 52 6 L 58 6 Z" fill="#ffc107"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="150" y="180" text-anchor="middle" fill="#333333" font-family="Arial, sans-serif" font-size="16" font-weight="bold">HappyCow</text>
+  <text x="150" y="195" text-anchor="middle" fill="#6c757d" font-family="Arial, sans-serif" font-size="12">Find Vegan Restaurants Worldwide</text>
+  
+  <!-- Decorative Leaves -->
+  <path d="M 30 170 Q 35 165 40 170 Q 35 175 30 170" fill="#28a745"/>
+  <path d="M 260 170 Q 265 165 270 170 Q 265 175 260 170" fill="#28a745"/>
+  
+  <!-- Globe Icon -->
+  <circle cx="150" cy="40" r="15" fill="none" stroke="#007bff" stroke-width="2"/>
+  <path d="M 135 40 Q 150 30 165 40" stroke="#007bff" stroke-width="1" fill="none"/>
+  <path d="M 135 40 Q 150 50 165 40" stroke="#007bff" stroke-width="1" fill="none"/>
+  <line x1="150" y1="25" x2="150" y2="55" stroke="#007bff" stroke-width="1"/>
+</svg>

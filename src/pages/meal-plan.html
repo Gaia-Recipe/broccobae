@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegan Meal Plans - Broccobae | Personalized Plant-Based Meal Planning</title>
+    <meta name="description" content="Create personalized vegan meal plans with 500+ recipes. High protein, low carb, gluten-free, budget-friendly, and weight loss meal plans available.">
+    <meta name="keywords" content="vegan meal plans, plant-based meal planning, high protein vegan, low carb vegan, gluten-free vegan, budget vegan meals, weight loss vegan">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/meal-plan.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="../../images/logo.png" alt="Broccobae Logo" class="logo">
+                    <span class="logo-text">broccobae</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="meal-plan.html" class="nav-link active">Meal Plan</a></li>
+                    <li class="nav-item"><a href="cuisine.html" class="nav-link">Cuisine</a></li>
+                    <li class="nav-item"><a href="../../community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="../../shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="meal-plan-hero">
+            <div class="container">
+                <h1 class="page-title">Vegan Meal Plans</h1>
+                <p class="page-subtitle">Personalized plant-based meal planning made easy with 500+ specialized recipes</p>
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Weekly Plans</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shopping-list"></i>
+                        <span>Auto Shopping Lists</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Nutrition Tracking</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-utensils"></i>
+                        <span>Custom Portions</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advertisement -->
+        <section class="advertisement">
+            <div class="container">
+                <div class="ad-banner" onclick="window.open('https://www.freshly.com/vegan-meals', '_blank')">
+                    <img src="../../images/ads/freshly-vegan-restaurant.svg" alt="Freshly Vegan Restaurant" class="ad-image">
+                    <div class="ad-content">
+                        <h3>Freshly Vegan Restaurant & Meal Delivery</h3>
+                        <p>Chef-prepared vegan meals delivered fresh to your door. Perfect for busy lifestyles and meal planning.</p>
+                        <span class="ad-cta">Order Now <i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meal Plan Categories -->
+        <section class="meal-plan-categories">
+            <div class="container">
+                <h2 class="section-title">Choose Your Meal Plan Type</h2>
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Plans (500)</button>
+                    <button class="filter-btn" data-filter="high-protein">High Protein (100)</button>
+                    <button class="filter-btn" data-filter="low-carb">Low Carb (100)</button>
+                    <button class="filter-btn" data-filter="gluten-free">Gluten Free (100)</button>
+                    <button class="filter-btn" data-filter="budget-friendly">Budget Friendly (100)</button>
+                    <button class="filter-btn" data-filter="weight-loss">Weight Loss (100)</button>
+                </div>
+
+                <!-- Meal Plan Grid -->
+                <div class="meal-plan-grid" id="mealPlanGrid">
+                    <!-- High Protein Plans -->
+                    <div class="meal-plan-card" data-category="high-protein">
+                        <img src="../../images/meal-plans/protein-power-bowl.svg" alt="Protein Power Bowl" class="meal-plan-image">
+                        <div class="meal-plan-content">
+                            <h3 class="meal-plan-title">Protein Power Bowl Meal Plan</h3>
+                            <p class="meal-plan-description">High-protein vegan meals featuring legumes, quinoa, and plant-based proteins.</p>
+                            <div class="meal-plan-meta">
+                                <span class="protein-content"><i class="fas fa-dumbbell"></i> 25g+ protein</span>
+                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
+                                <span class="category">High Protein</span>
+                            </div>
+                            <div class="nutrition-highlights">
+                                <span class="nutrition-item">Protein: 25-35g</span>
+                                <span class="nutrition-item">Calories: 400-600</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="meal-plan-card" data-category="high-protein">
+                        <img src="../../images/meal-plans/lentil-muscle-builder.svg" alt="Lentil Muscle Builder" class="meal-plan-image">
+                        <div class="meal-plan-content">
+                            <h3 class="meal-plan-title">Lentil Muscle Builder Plan</h3>
+                            <p class="meal-plan-description">Lentil-focused meal plan designed for muscle building and recovery.</p>
+                            <div class="meal-plan-meta">
+                                <span class="protein-content"><i class="fas fa-dumbbell"></i> 30g+ protein</span>
+                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
+                                <span class="category">High Protein</span>
+                            </div>
+                            <div class="nutrition-highlights">
+                                <span class="nutrition-item">Protein: 30-40g</span>
+                                <span class="nutrition-item">Calories: 500-700</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Low Carb Plans -->
+                    <div class="meal-plan-card" data-category="low-carb">
+                        <img src="../../images/meal-plans/keto-vegan-delight.svg" alt="Keto Vegan Delight" class="meal-plan-image">
+                        <div class="meal-plan-content">
+                            <h3 class="meal-plan-title">Keto Vegan Delight Plan</h3>
+                            <p class="meal-plan-description">Low-carb, high-fat vegan meals perfect for ketogenic lifestyle.</p>
+                            <div class="meal-plan-meta">
+                                <span class="carb-content"><i class="fas fa-leaf"></i> <20g carbs</span>
+                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
+                                <span class="category">Low Carb</span>
+                            </div>
+                            <div class="nutrition-highlights">
+                                <span class="nutrition-item">Carbs: 15-20g</span>
+                                <span class="nutrition-item">Fat: 60-70%</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Gluten Free Plans -->
+                    <div class="meal-plan-card" data-category="gluten-free">
+                        <img src="../../images/meal-plans/gluten-free-goodness.svg" alt="Gluten Free Goodness" class="meal-plan-image">
+                        <div class="meal-plan-content">
+                            <h3 class="meal-plan-title">Gluten-Free Goodness Plan</h3>
+                            <p class="meal-plan-description">Delicious gluten-free vegan meals using naturally gluten-free ingredients.</p>
+                            <div class="meal-plan-meta">
+                                <span class="gluten-free"><i class="fas fa-check-circle"></i> 100% GF</span>
+                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
+                                <span class="category">Gluten Free</span>
+                            </div>
+                            <div class="nutrition-highlights">
+                                <span class="nutrition-item">Certified GF</span>
+                                <span class="nutrition-item">Balanced nutrition</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Budget Friendly Plans -->
+                    <div class="meal-plan-card" data-category="budget-friendly">
+                        <img src="../../images/meal-plans/budget-bean-bonanza.svg" alt="Budget Bean Bonanza" class="meal-plan-image">
+                        <div class="meal-plan-content">
+                            <h3 class="meal-plan-title">Budget Bean Bonanza Plan</h3>
+                            <p class="meal-plan-description">Affordable vegan meals using budget-friendly ingredients like beans and grains.</p>
+                            <div class="meal-plan-meta">
+                                <span class="cost"><i class="fas fa-dollar-sign"></i> <$5/meal</span>
+                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
+                                <span class="category">Budget Friendly</span>
+                            </div>
+                            <div class="nutrition-highlights">
+                                <span class="nutrition-item">Cost: $3-5/meal</span>
+                                <span class="nutrition-item">Bulk ingredients</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Weight Loss Plans -->
+                    <div class="meal-plan-card" data-category="weight-loss">
+                        <img src="../../images/meal-plans/lean-green-machine.svg" alt="Lean Green Machine" class="meal-plan-image">
+                        <div class="meal-plan-content">
+                            <h3 class="meal-plan-title">Lean Green Machine Plan</h3>
+                            <p class="meal-plan-description">Calorie-controlled vegan meals designed to support healthy weight loss.</p>
+                            <div class="meal-plan-meta">
+                                <span class="calories"><i class="fas fa-fire"></i> 1200-1500 cal</span>
+                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
+                                <span class="category">Weight Loss</span>
+                            </div>
+                            <div class="nutrition-highlights">
+                                <span class="nutrition-item">Low calorie</span>
+                                <span class="nutrition-item">High fiber</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn btn-outline" id="loadMoreBtn">Load More Meal Plans</button>
+                    <p class="meal-plan-count">Showing 6 of 500 meal plans</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meal Plan Builder -->
+        <section class="meal-plan-builder">
+            <div class="container">
+                <h2 class="section-title">Create Your Custom Meal Plan</h2>
+                <div class="builder-content">
+                    <div class="builder-form">
+                        <h3>Personalize Your Plan</h3>
+                        <form id="mealPlanForm">
+                            <div class="form-group">
+                                <label for="planType">Plan Type</label>
+                                <select id="planType" name="planType" required>
+                                    <option value="">Select plan type</option>
+                                    <option value="high-protein">High Protein</option>
+                                    <option value="low-carb">Low Carb</option>
+                                    <option value="gluten-free">Gluten Free</option>
+                                    <option value="budget-friendly">Budget Friendly</option>
+                                    <option value="weight-loss">Weight Loss</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="duration">Plan Duration</label>
+                                <select id="duration" name="duration" required>
+                                    <option value="">Select duration</option>
+                                    <option value="3">3 Days</option>
+                                    <option value="7">1 Week</option>
+                                    <option value="14">2 Weeks</option>
+                                    <option value="30">1 Month</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="servings">Number of Servings</label>
+                                <select id="servings" name="servings" required>
+                                    <option value="">Select servings</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="6">6 People</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="allergies">Allergies/Restrictions</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="allergies" value="nuts"> Nuts</label>
+                                    <label><input type="checkbox" name="allergies" value="soy"> Soy</label>
+                                    <label><input type="checkbox" name="allergies" value="gluten"> Gluten</label>
+                                    <label><input type="checkbox" name="allergies" value="seeds"> Seeds</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Generate My Meal Plan</button>
+                        </form>
+                    </div>
+                    <div class="builder-preview">
+                        <h3>What You'll Get</h3>
+                        <div class="preview-features">
+                            <div class="preview-feature">
+                                <i class="fas fa-calendar-week"></i>
+                                <h4>Weekly Calendar</h4>
+                                <p>Organized meal schedule with breakfast, lunch, and dinner</p>
+                            </div>
+                            <div class="preview-feature">
+                                <i class="fas fa-list-ul"></i>
+                                <h4>Shopping List</h4>
+                                <p>Automatically generated grocery list with quantities</p>
+                            </div>
+                            <div class="preview-feature">
+                                <i class="fas fa-chart-pie"></i>
+                                <h4>Nutrition Info</h4>
+                                <p>Complete nutritional breakdown for each meal</p>
+                            </div>
+                            <div class="preview-feature">
+                                <i class="fas fa-clock"></i>
+                                <h4>Prep Times</h4>
+                                <p>Estimated preparation and cooking times</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories -->
+        <section class="success-stories">
+            <div class="container">
+                <h2 class="section-title">Success Stories</h2>
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <div class="story-avatar">
+                            <img src="../../images/avatars/sarah.svg" alt="Sarah M." class="avatar">
+                        </div>
+                        <div class="story-content">
+                            <h4>Sarah M.</h4>
+                            <p>"The high-protein meal plans helped me build muscle while staying completely plant-based. Lost 15 pounds and gained so much energy!"</p>
+                            <div class="story-stats">
+                                <span><i class="fas fa-weight"></i> -15 lbs</span>
+                                <span><i class="fas fa-calendar"></i> 3 months</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-avatar">
+                            <img src="../../images/avatars/mike.svg" alt="Mike R." class="avatar">
+                        </div>
+                        <div class="story-content">
+                            <h4>Mike R.</h4>
+                            <p>"Budget-friendly plans saved me $200/month on groceries while eating healthier than ever. The meal prep tips are game-changers!"</p>
+                            <div class="story-stats">
+                                <span><i class="fas fa-dollar-sign"></i> $200 saved</span>
+                                <span><i class="fas fa-heart"></i> Healthier</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-avatar">
+                            <img src="../../images/avatars/emma.svg" alt="Emma L." class="avatar">
+                        </div>
+                        <div class="story-content">
+                            <h4>Emma L.</h4>
+                            <p>"Gluten-free meal plans made my transition to vegan so much easier. No more wondering what to cook - everything is planned!"</p>
+                            <div class="story-stats">
+                                <span><i class="fas fa-check"></i> Gluten-free</span>
+                                <span><i class="fas fa-smile"></i> Stress-free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="../../images/logo.png" alt="Broccobae Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">broccobae</span>
+                </div>
+                <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="meal-plan.html">Meal Plan</a></li>
+                    <li><a href="cuisine.html">Cuisine</a></li>
+                    <li><a href="../../community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">About Us</h4>
+                <ul class="footer-links">
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../mission.html">Our Mission</a></li>
+                    <li><a href="../../story.html">Our Story</a></li>
+                    <li><a href="../../values.html">Our Values</a></li>
+                    <li><a href="../../team.html">Our Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="../../terms.html">Terms & Conditions</a></li>
+                    <li><a href="../../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../../cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i> +8170-4032-4312</li>
+                    <li><i class="fas fa-envelope"></i> broccobae@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gaia-Recipe Inc @ broccobae.com All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../../scripts/main.js"></script>
+    <script src="../../scripts/meal-plan.js"></script>
+</body>
+</html>

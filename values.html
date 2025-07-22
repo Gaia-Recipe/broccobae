@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Values - Broccobae | The Principles That Guide Us</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Discover the core values that drive Broccobae's mission to make plant-based eating delicious, accessible, and sustainable for everyone.">
+    <meta name="keywords" content="broccobae values, plant-based principles, vegan platform ethics, food sustainability, inclusive community">
+    <meta name="author" content="Broccobae">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Our Values - Broccobae | The Principles That Guide Us">
+    <meta property="og:description" content="Discover the core values that drive Broccobae's mission to make plant-based eating delicious, accessible, and sustainable for everyone.">
+    <meta property="og:url" content="https://broccobae.com/values">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://broccobae.com/images/values-hero.svg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Values page specific styles */
+        .value-section {
+            padding: 80px 0;
+        }
+        
+        .value-section:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .value-section:nth-child(odd) {
+            background-color: #fff;
+        }
+        
+        .value-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .value-content {
+            flex: 1;
+        }
+        
+        .value-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .value-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-title {
+            font-size: 2rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .value-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #2e7d32;
+        }
+        
+        .value-description {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 25px;
+        }
+        
+        .value-principles {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .value-principles li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .value-principles li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #2e7d32;
+        }
+        
+        .value-section:nth-child(even) .value-container {
+            flex-direction: row-reverse;
+        }
+        
+        .value-section:nth-child(even) .value-title::after {
+            left: 0;
+        }
+        
+        .values-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+        
+        .values-intro p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        @media screen and (max-width: 992px) {
+            .value-container {
+                flex-direction: column !important;
+            }
+            
+            .value-content {
+                order: 2;
+            }
+            
+            .value-image {
+                order: 1;
+                margin-bottom: 30px;
+            }
+            
+            .value-title {
+                text-align: center;
+            }
+            
+            .value-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./images/logo.png" alt="Broccobae Logo" class="logo">
+                    <span class="logo-text">broccobae</span>
+                </div>
+                
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="./src/pages/recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="./src/pages/meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="./src/pages/cuisine.html" class="nav-link">Cuisine</a></li>
+                    <li class="nav-item"><a href="./community.html" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="./shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
+
+                </ul>
+                
+                <div class="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="about-hero-content">
+                    <h1 class="about-title">Our Values</h1>
+                    <p class="about-subtitle">The core principles that guide everything we do at Broccobae, from recipe development to community building.</p>
+                </div>
+                <div class="about-hero-image">
+                    <img src="./images/values-hero.svg" alt="Broccobae Values" class="hero-img">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Values Introduction -->
+        <section class="value-section">
+            <div class="values-intro">
+                <div class="section-header">
+                    <h2 class="section-title">Our Guiding Principles</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <p>At Broccobae, our values aren't just words on a page—they're the principles that guide every decision we make, from the recipes we develop to the partnerships we form. These six core values reflect our commitment to making plant-based eating delicious, accessible, and joyful for everyone while promoting sustainability and cultural appreciation.</p>
+            </div>
+        </section>
+        
+        <!-- Deliciousness First Value -->
+        <section class="value-section">
+            <div class="value-container">
+                <div class="value-content">
+                    <h2 class="value-title">Deliciousness First</h2>
+                    <p class="value-description">We believe plant-based food should be chosen for its flavor, not just its ethics. Every recipe we share is designed to delight the taste buds and satisfy cravings, proving that plant-based eating can be the most delicious choice on the table.</p>
+                    <ul class="value-principles">
+                        <li>We test each recipe multiple times to ensure it delivers on flavor, texture, and satisfaction</li>
+                        <li>We prioritize techniques that maximize the natural flavors of plant ingredients</li>
+                        <li>We're not afraid to recreate comfort foods and indulgent treats in plant-based forms</li>
+                        <li>We value user feedback and continuously improve our recipes based on community input</li>
+                        <li>We believe that if food doesn't taste good, it doesn't matter how healthy or ethical it is—people won't eat it</li>
+                    </ul>
+                </div>
+                <div class="value-image">
+                    <img src="./images/values-delicious.svg" alt="Deliciousness First" class="value-img">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cultural Appreciation Value -->
+        <section class="value-section">
+            <div class="value-container">
+                <div class="value-content">
+                    <h2 class="value-title">Cultural Appreciation</h2>
+                    <p class="value-description">We celebrate the rich diversity of plant-based culinary traditions from around the world, honoring their origins and authentic flavors while recognizing that many cultures have long histories of plant-forward cooking.</p>
+                    <ul class="value-principles">
+                        <li>We research the cultural context and history behind traditional recipes</li>
+                        <li>We collaborate with chefs and food experts from diverse backgrounds</li>
+                        <li>We properly credit the cultural origins of dishes and techniques</li>
+                        <li>We avoid appropriation by approaching global cuisines with respect and authenticity</li>
+                        <li>We highlight indigenous and traditional plant-based cooking methods that have existed for generations</li>
+                    </ul>
+                </div>
+                <div class="value-image">
+                    <img src="./images/values-cultural.svg" alt="Cultural Appreciation" class="value-img">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Inclusive Community Value -->
+        <section class="value-section">
+            <div class="value-container">
+                <div class="value-content">
+                    <h2 class="value-title">Inclusive Community</h2>
+                    <p class="value-description">We welcome everyone on their plant-based journey, whether they're vegan, flexitarian, or simply curious about adding more plants to their diet. We believe in progress over perfection and meeting people wherever they are.</p>
+                    <ul class="value-principles">
+                        <li>We create a judgment-free space where all questions and perspectives are welcome</li>
+                        <li>We provide options for different dietary needs, skill levels, and equipment access</li>
+                        <li>We celebrate small steps toward more plant-based eating rather than demanding perfection</li>
+                        <li>We design our platform to be accessible to users with different abilities</li>
+                        <li>We moderate our community spaces to ensure they remain supportive and respectful</li>
+                    </ul>
+                </div>
+                <div class="value-image">
+                    <img src="./images/values-inclusive.svg" alt="Inclusive Community" class="value-img">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Environmental Stewardship Value -->
+        <section class="value-section">
+            <div class="value-container">
+                <div class="value-content">
+                    <h2 class="value-title">Environmental Stewardship</h2>
+                    <p class="value-description">We're committed to promoting sustainable food choices and implementing eco-friendly practices throughout our business, recognizing the profound impact our food system has on the planet.</p>
+                    <ul class="value-principles">
+                        <li>We highlight seasonal and locally-adaptable ingredients in our recipes</li>
+                        <li>We provide information about the environmental impact of different food choices</li>
+                        <li>We partner with organizations working to create a more sustainable food system</li>
+                        <li>We implement sustainable practices in our own operations, from green hosting to carbon offsetting</li>
+                        <li>We promote food waste reduction through storage tips, preservation techniques, and creative leftover recipes</li>
+                    </ul>
+                </div>
+                <div class="value-image">
+                    <img src="./images/values-environmental.svg" alt="Environmental Stewardship" class="value-img">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Continuous Innovation Value -->
+        <section class="value-section">
+            <div class="value-container">
+                <div class="value-content">
+                    <h2 class="value-title">Continuous Innovation</h2>
+                    <p class="value-description">We constantly explore new ways to make plant-based eating more delicious, convenient, and accessible through technology and creativity, pushing boundaries and challenging conventions.</p>
+                    <ul class="value-principles">
+                        <li>We invest in research and development to create innovative tools and features</li>
+                        <li>We stay current with emerging food technologies and ingredients</li>
+                        <li>We experiment with new cooking techniques and flavor combinations</li>
+                        <li>We regularly update our platform based on user feedback and changing needs</li>
+                        <li>We collaborate with food scientists, chefs, and technologists to pioneer new approaches</li>
+                    </ul>
+                </div>
+                <div class="value-image">
+                    <img src="./images/values-innovation.svg" alt="Continuous Innovation" class="value-img">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Transparency Value -->
+        <section class="value-section">
+            <div class="value-container">
+                <div class="value-content">
+                    <h2 class="value-title">Transparency</h2>
+                    <p class="value-description">We're honest about our ingredients, processes, and partnerships, building trust through clear communication and ethical practices. We believe in being forthright about both our successes and our areas for improvement.</p>
+                    <ul class="value-principles">
+                        <li>We clearly disclose sponsored content and affiliate relationships</li>
+                        <li>We provide detailed information about ingredients and their sources</li>
+                        <li>We share our business practices and decision-making processes with our community</li>
+                        <li>We acknowledge when we make mistakes and explain how we're addressing them</li>
+                        <li>We're open about the challenges of plant-based eating and don't make exaggerated claims</li>
+                    </ul>
+                </div>
+                <div class="value-image">
+                    <img src="./images/values-transparency.svg" alt="Transparency" class="value-img">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Join Us Section -->
+        <section class="about-join">
+            <div class="container">
+                <div class="join-content">
+                    <h2 class="join-title">Share Our Values?</h2>
+                    <p class="join-description">Join our community of like-minded food enthusiasts who believe in delicious, inclusive, and sustainable plant-based eating.</p>
+                    <div class="join-buttons">
+                        <a href="./community.html" class="btn btn-primary">Join Community</a>
+                        <a href="./src/pages/recipes.html" class="btn btn-secondary">Explore Recipes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="./images/logo.png" alt="Broccobae Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">broccobae</span>
+                </div>
+                <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./src/pages/recipes.html">Recipes</a></li>
+                    <li><a href="./src/pages/meal-plan.html">Meal Plan</a></li>
+                    <li><a href="./src/pages/cuisine.html">Cuisine</a></li>
+                    <li><a href="./community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">About Us</h4>
+                <ul class="footer-links">
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./mission.html">Our Mission</a></li>
+                    <li><a href="./story.html">Our Story</a></li>
+                    <li><a href="./values.html">Our Values</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <ul class="footer-links">
+                    <li><a href="./terms.html">Terms & Conditions</a></li>
+                    <li><a href="./privacy.html">Privacy Policy</a></li>
+                    <li><a href="./cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-phone"></i> +8170-4032-4312</li>
+                    <li><i class="fas fa-envelope"></i> broccobae@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Tokyo, Japan</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gaia-Recipe Inc @ broccobae.com All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

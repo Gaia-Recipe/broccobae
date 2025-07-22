@@ -1,0 +1,33 @@
+<svg width="60" height="40" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background representing Asia -->
+  <defs>
+    <linearGradient id="asiaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f7931e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="60" height="40" fill="url(#asiaGradient)"/>
+  
+  <!-- Symbolic elements representing Asian culture -->
+  <!-- Yin Yang symbol -->
+  <g transform="translate(30,20)">
+    <circle cx="0" cy="0" r="8" fill="#ffffff"/>
+    <path d="M 0 -8 A 4 4 0 0 1 0 0 A 4 4 0 0 0 0 8 A 8 8 0 0 0 0 -8" fill="#000000"/>
+    <circle cx="0" cy="-4" r="2" fill="#000000"/>
+    <circle cx="0" cy="4" r="2" fill="#ffffff"/>
+    <circle cx="0" cy="-4" r="0.8" fill="#ffffff"/>
+    <circle cx="0" cy="4" r="0.8" fill="#000000"/>
+  </g>
+  
+  <!-- Decorative border -->
+  <rect x="1" y="1" width="58" height="38" fill="none" stroke="#8b4513" stroke-width="2"/>
+  
+  <!-- Corner decorations -->
+  <g fill="#8b4513">
+    <circle cx="5" cy="5" r="1"/>
+    <circle cx="55" cy="5" r="1"/>
+    <circle cx="5" cy="35" r="1"/>
+    <circle cx="55" cy="35" r="1"/>
+  </g>
+</svg>

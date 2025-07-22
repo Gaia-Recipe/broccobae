@@ -21,4 +21,4 @@ echo "Press Ctrl+C to stop the server"
 echo ""
 
 # Start the Python HTTP server
-python -m http.server $PORT
+python3 -m http.server $PORT

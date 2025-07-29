@@ -28,8 +28,8 @@
     <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/community.css">
+    <link rel="stylesheet" href="./styles/main.css?v=3">
+    <link rel="stylesheet" href="./styles/community.css?v=3">
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -55,26 +55,22 @@
     </script>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Navigation -->
     <header class="header">
-        <nav class="nav">
+        <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
                     <img src="./images/logo.png" alt="Broccobae Logo" class="logo">
                     <span class="logo-text">broccobae</span>
                 </div>
-                
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="./src/pages/recipes.html" class="nav-link">Recipes</a></li>
                     <li class="nav-item"><a href="./src/pages/meal-plan.html" class="nav-link">Meal Plan</a></li>
                     <li class="nav-item"><a href="./src/pages/cuisine.html" class="nav-link">Cuisine</a></li>
                     <li class="nav-item"><a href="./community.html" class="nav-link active">Community</a></li>
-                    <li class="nav-item"><a href="./shop.html" class="nav-link"><i class="fas fa-shopping-cart"></i></a></li>
-
                 </ul>
-                
-                <div class="nav-toggle">
+                <div class="hamburger">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -91,23 +87,9 @@
                 <div class="hero-text">
                     <h1 class="hero-title">Join Our Vegan Community</h1>
                     <p class="hero-description">Connect with fellow plant-based enthusiasts, share your favorite recipes, and discover seasonal vegan delights from around the world.</p>
-                    <div class="hero-stats">
-                        <div class="stat">
-                            <span class="stat-number">50K+</span>
-                            <span class="stat-label">Community Members</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">10K+</span>
-                            <span class="stat-label">Shared Recipes</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Daily Posts</span>
-                        </div>
-                    </div>
+
                     <div class="hero-buttons">
                         <button class="btn btn-primary" onclick="document.getElementById('shareRecipeForm').scrollIntoView({behavior: 'smooth'})">Share Your Recipe</button>
-                        <button class="btn btn-secondary" onclick="document.getElementById('communityRecipes').scrollIntoView({behavior: 'smooth'})">Browse Community</button>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -116,35 +98,7 @@
             </div>
         </section>
 
-        <!-- Advertisement Section -->
-        <section class="advertisement">
-            <div class="ad-container">
-                <h3 class="ad-title">Discover Amazing Vegan Restaurants</h3>
-                <div class="ad-grid">
-                    <a href="https://www.happycow.net" target="_blank" class="ad-card" rel="noopener">
-                        <img src="images/ads/happycow-restaurant.svg" alt="HappyCow - Find Vegan Restaurants">
-                        <div class="ad-content">
-                            <h4>HappyCow</h4>
-                            <p>Find vegan restaurants worldwide</p>
-                        </div>
-                    </a>
-                    <a href="https://www.veganrestaurants.com" target="_blank" class="ad-card" rel="noopener">
-                        <img src="images/ads/vegan-restaurants.svg" alt="Vegan Restaurants Directory">
-                        <div class="ad-content">
-                            <h4>Vegan Restaurants</h4>
-                            <p>Discover local plant-based dining</p>
-                        </div>
-                    </a>
-                    <a href="https://www.plantbasednews.org/restaurants" target="_blank" class="ad-card" rel="noopener">
-                        <img src="images/ads/plant-based-dining.svg" alt="Plant-Based Dining Guide">
-                        <div class="ad-content">
-                            <h4>Plant-Based Dining</h4>
-                            <p>Your guide to vegan cuisine</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Community Recipe Categories -->
         <section class="community-categories" id="communityRecipes">
@@ -152,7 +106,6 @@
                 <div class="section-header">
                     <h2 class="section-title">Community Recipe Collections</h2>
                     <p class="section-description">Discover seasonal favorites and festive delights shared by our amazing community</p>
-                    <div class="recipe-count">Showing 10 of 500 community recipes</div>
                 </div>
                 
                 <div class="category-filters">
@@ -164,117 +117,11 @@
                 </div>
                 
                 <div class="community-grid" id="communityGrid">
-                    <!-- Festive Vegan Examples -->
-                    <div class="community-card" data-category="festive" data-static="true">
-                        <img src="./images/placeholder-recipe.svg" alt="Festive Vegan Roast" class="community-image">
-                        <div class="community-content">
-                            <div class="community-author">
-                                <img src="images/avatars/sarah.svg" alt="Sarah M." class="author-avatar">
-                                <div class="author-info">
-                                    <span class="author-name">Sarah M.</span>
-                                    <span class="post-time">2 hours ago</span>
-                                </div>
-                            </div>
-                            <h3 class="community-title">Holiday Stuffed Portobello Roast</h3>
-                            <p class="community-description">Perfect centerpiece for your festive table with herbs, nuts, and seasonal vegetables.</p>
-                            <div class="community-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 45 mins</span>
-                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Medium</span>
-                                <span class="season"><i class="fas fa-snowflake"></i> Festive</span>
-                            </div>
-                            <div class="community-engagement">
-                                <button class="engagement-btn"><i class="fas fa-heart"></i> 234</button>
-                                <button class="engagement-btn"><i class="fas fa-comment"></i> 45</button>
-                                <button class="engagement-btn"><i class="fas fa-share"></i> 12</button>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
+                    <div class="empty-state">
+                        <i class="fas fa-users"></i>
+                        <h3>Community Recipes Coming Soon</h3>
+                        <p>Our community is growing! Share your recipe below to be among the first contributors.</p>
                     </div>
-                    
-                    <!-- Summer Special Examples -->
-                    <div class="community-card" data-category="summer" data-static="true">
-                        <img src="./images/placeholder-recipe.svg" alt="Tropical Smoothie Bowl" class="community-image">
-                        <div class="community-content">
-                            <div class="community-author">
-                                <img src="images/avatars/mike.svg" alt="Mike R." class="author-avatar">
-                                <div class="author-info">
-                                    <span class="author-name">Mike R.</span>
-                                    <span class="post-time">5 hours ago</span>
-                                </div>
-                            </div>
-                            <h3 class="community-title">Tropical Paradise Smoothie Bowl</h3>
-                            <p class="community-description">Refreshing blend of mango, pineapple, and coconut topped with fresh fruits and granola.</p>
-                            <div class="community-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 15 mins</span>
-                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
-                                <span class="season"><i class="fas fa-sun"></i> Summer</span>
-                            </div>
-                            <div class="community-engagement">
-                                <button class="engagement-btn"><i class="fas fa-heart"></i> 189</button>
-                                <button class="engagement-btn"><i class="fas fa-comment"></i> 32</button>
-                                <button class="engagement-btn"><i class="fas fa-share"></i> 8</button>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-                    
-                    <!-- Monsoon Comforts Examples -->
-                    <div class="community-card" data-category="monsoon" data-static="true">
-                        <img src="./images/placeholder-recipe.svg" alt="Spicy Lentil Soup" class="community-image">
-                        <div class="community-content">
-                            <div class="community-author">
-                                <img src="images/avatars/user-3.svg" alt="Priya K." class="author-avatar">
-                                <div class="author-info">
-                                    <span class="author-name">Priya K.</span>
-                                    <span class="post-time">1 day ago</span>
-                                </div>
-                            </div>
-                            <h3 class="community-title">Monsoon Spiced Lentil Soup</h3>
-                            <p class="community-description">Warming soup with aromatic spices, perfect for rainy days and cozy evenings.</p>
-                            <div class="community-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 35 mins</span>
-                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Easy</span>
-                                <span class="season"><i class="fas fa-cloud-rain"></i> Monsoon</span>
-                            </div>
-                            <div class="community-engagement">
-                                <button class="engagement-btn"><i class="fas fa-heart"></i> 156</button>
-                                <button class="engagement-btn"><i class="fas fa-comment"></i> 28</button>
-                                <button class="engagement-btn"><i class="fas fa-share"></i> 15</button>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-                    
-                    <!-- Winter Warmer Examples -->
-                    <div class="community-card" data-category="winter" data-static="true">
-                        <img src="./images/placeholder-recipe.svg" alt="Hearty Vegetable Stew" class="community-image">
-                        <div class="community-content">
-                            <div class="community-author">
-                                <img src="images/avatars/emma.svg" alt="Emma L." class="author-avatar">
-                                <div class="author-info">
-                                    <span class="author-name">Emma L.</span>
-                                    <span class="post-time">2 days ago</span>
-                                </div>
-                            </div>
-                            <h3 class="community-title">Hearty Root Vegetable Stew</h3>
-                            <p class="community-description">Comforting winter stew with seasonal root vegetables, herbs, and warming spices.</p>
-                            <div class="community-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 50 mins</span>
-                                <span class="difficulty"><i class="fas fa-chart-bar"></i> Medium</span>
-                                <span class="season"><i class="fas fa-snowflake"></i> Winter</span>
-                            </div>
-                            <div class="community-engagement">
-                                <button class="engagement-btn"><i class="fas fa-heart"></i> 298</button>
-                                <button class="engagement-btn"><i class="fas fa-comment"></i> 67</button>
-                                <button class="engagement-btn"><i class="fas fa-share"></i> 23</button>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="load-more-section">
-                    <button class="btn btn-secondary" id="loadMoreBtn">Load More Community Recipes</button>
                 </div>
             </div>
         </section>
@@ -521,7 +368,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/community.js"></script>
+    <script src="./scripts/main.js?v=3"></script>
+    <script src="./scripts/community.js?v=3"></script>
 </body>
 </html>

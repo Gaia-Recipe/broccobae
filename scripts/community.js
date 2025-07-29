@@ -10,162 +10,9 @@ class CommunityManager {
     }
 
     init() {
-        this.generateRecipes();
         this.setupEventListeners();
         this.displayRecipes();
         this.updateRecipeCount();
-    }
-
-    generateRecipes() {
-        const categories = {
-            'festive': {
-                names: [
-                    'Holiday Stuffed Portobello Roast', 'Festive Cranberry Quinoa Salad', 'Christmas Spiced Lentil Loaf', 'New Year Rainbow Bowl',
-                    'Valentine\'s Heart Beet Salad', 'Easter Carrot Cake Smoothie', 'Halloween Pumpkin Curry', 'Thanksgiving Sweet Potato Casserole',
-                    'Diwali Coconut Laddu', 'Holi Colorful Fruit Chaat', 'Eid Date and Nut Balls', 'Chinese New Year Dumplings',
-                    'Hanukkah Potato Latkes', 'Kwanzaa Black-Eyed Pea Stew', 'Cinco de Mayo Avocado Tacos', 'St. Patrick\'s Green Smoothie',
-                    'Independence Day Berry Parfait', 'Mother\'s Day Flower Salad', 'Father\'s Day BBQ Jackfruit', 'Birthday Celebration Cake'
-                ],
-                descriptions: [
-                    'Perfect centerpiece for your festive table with herbs, nuts, and seasonal vegetables.',
-                    'Colorful quinoa salad with cranberries, nuts, and festive herbs for special occasions.',
-                    'Hearty lentil loaf spiced with traditional holiday flavors and aromatic herbs.',
-                    'Vibrant bowl packed with colorful vegetables to celebrate the new year healthily.'
-                ],
-                occasions: ['Christmas', 'New Year', 'Valentine\'s Day', 'Easter', 'Halloween', 'Thanksgiving', 'Diwali', 'Holi'],
-                themes: ['Holiday', 'Celebration', 'Traditional', 'Festive']
-            },
-            'summer': {
-                names: [
-                    'Tropical Paradise Smoothie Bowl', 'Watermelon Mint Gazpacho', 'Grilled Vegetable Skewers', 'Coconut Mango Ice Cream',
-                    'Fresh Cucumber Salad', 'Chilled Avocado Soup', 'Berry Quinoa Salad', 'Frozen Fruit Popsicles',
-                    'Cold Brew Coffee Smoothie', 'Peach Basil Salad', 'Zucchini Noodle Bowl', 'Iced Green Tea Latte',
-                    'Tomato Basil Bruschetta', 'Lemon Herb Quinoa', 'Grilled Corn Salad', 'Pineapple Chia Pudding',
-                    'Refreshing Mint Water', 'Summer Vegetable Wrap', 'Frozen Yogurt Bark', 'Citrus Fruit Salad'
-                ],
-                descriptions: [
-                    'Refreshing blend of mango, pineapple, and coconut topped with fresh fruits and granola.',
-                    'Cool and refreshing gazpacho perfect for hot summer days with fresh watermelon and mint.',
-                    'Colorful grilled vegetables on skewers with herbs and summer seasonings.',
-                    'Creamy coconut-based ice cream with fresh mango chunks for the perfect summer treat.'
-                ],
-                ingredients: ['Tropical Fruits', 'Fresh Herbs', 'Coconut', 'Citrus', 'Berries', 'Melons'],
-                preparations: ['Chilled', 'Grilled', 'Fresh', 'Frozen']
-            },
-            'monsoon': {
-                names: [
-                    'Monsoon Spiced Lentil Soup', 'Ginger Turmeric Tea', 'Warm Quinoa Porridge', 'Spicy Chickpea Curry',
-                    'Hot Chocolate with Spices', 'Steamed Vegetable Dumplings', 'Warming Golden Milk', 'Spiced Pumpkin Soup',
-                    'Herbal Immunity Tea', 'Cozy Oat Porridge', 'Spiced Apple Cider', 'Warming Vegetable Stew',
-                    'Ginger Carrot Soup', 'Spiced Chai Latte', 'Turmeric Rice Bowl', 'Warming Bone Broth Alternative',
-                    'Spiced Sweet Potato Soup', 'Herbal Detox Tea', 'Warming Miso Soup', 'Spiced Quinoa Khichdi'
-                ],
-                descriptions: [
-                    'Warming soup with aromatic spices, perfect for rainy days and cozy evenings.',
-                    'Soothing tea blend with fresh ginger and turmeric to boost immunity during monsoons.',
-                    'Comforting quinoa porridge with warming spices and seasonal fruits.',
-                    'Hearty chickpea curry with monsoon spices to warm you from the inside out.'
-                ],
-                spices: ['Ginger', 'Turmeric', 'Cinnamon', 'Cardamom', 'Black Pepper', 'Cloves'],
-                benefits: ['Immunity Boosting', 'Warming', 'Digestive', 'Anti-inflammatory']
-            },
-            'winter': {
-                names: [
-                    'Hearty Root Vegetable Stew', 'Warming Butternut Squash Soup', 'Spiced Hot Chocolate', 'Winter Vegetable Curry',
-                    'Cozy Lentil Dal', 'Roasted Winter Vegetables', 'Warming Ginger Tea', 'Spiced Pear Compote',
-                    'Hot Mulled Cider', 'Winter Minestrone Soup', 'Roasted Chestnut Soup', 'Spiced Quinoa Pilaf',
-                    'Warming Bone Broth', 'Winter Squash Risotto', 'Spiced Carrot Cake', 'Hot Herbal Tea Blend',
-                    'Roasted Beet Salad', 'Winter Vegetable Gratin', 'Spiced Apple Crisp', 'Warming Turmeric Latte'
-                ],
-                descriptions: [
-                    'Comforting winter stew with seasonal root vegetables, herbs, and warming spices.',
-                    'Creamy butternut squash soup with coconut milk and winter spices for cold days.',
-                    'Rich hot chocolate made with plant-based milk and warming winter spices.',
-                    'Hearty curry with winter vegetables and aromatic spices to keep you warm.'
-                ],
-                vegetables: ['Root Vegetables', 'Winter Squash', 'Brussels Sprouts', 'Kale', 'Cabbage', 'Leeks'],
-                preparations: ['Roasted', 'Stewed', 'Braised', 'Slow-cooked']
-            }
-        };
-
-        // Generate 125 recipes for each category (500 total)
-        Object.keys(categories).forEach(category => {
-            const categoryData = categories[category];
-            for (let i = 0; i < 125; i++) {
-                const nameIndex = i % categoryData.names.length;
-                const descIndex = i % categoryData.descriptions.length;
-                
-                const recipe = {
-                    id: `community-${category}-${i + 1}`,
-                    title: `${categoryData.names[nameIndex]} ${Math.floor(i / categoryData.names.length) + 1}`,
-                    description: categoryData.descriptions[descIndex],
-                    category: category,
-                    image: `./images/community/${category}-${(i % 20) + 1}.svg`,
-                    author: this.generateRandomAuthor(),
-                    postTime: this.generateRandomTime(i),
-                    prepTime: `${10 + (i % 50)} mins`,
-                    cookTime: `${15 + (i % 45)} mins`,
-                    totalTime: `${25 + (i % 95)} mins`,
-                    servings: [2, 4, 6, 8][i % 4],
-                    difficulty: ['Easy', 'Medium', 'Advanced'][i % 3],
-                    calories: 150 + (i % 350),
-                    protein: `${8 + (i % 20)}g`,
-                    carbs: `${15 + (i % 35)}g`,
-                    fat: `${3 + (i % 15)}g`,
-                    likes: 50 + (i % 300),
-                    comments: 5 + (i % 70),
-                    shares: 1 + (i % 25)
-                };
-
-                // Add category-specific properties
-                if (category === 'festive') {
-                    recipe.occasion = categoryData.occasions[i % categoryData.occasions.length];
-                    recipe.theme = categoryData.themes[i % categoryData.themes.length];
-                } else if (category === 'summer') {
-                    recipe.keyIngredient = categoryData.ingredients[i % categoryData.ingredients.length];
-                    recipe.preparation = categoryData.preparations[i % categoryData.preparations.length];
-                } else if (category === 'monsoon') {
-                    recipe.keySpice = categoryData.spices[i % categoryData.spices.length];
-                    recipe.benefit = categoryData.benefits[i % categoryData.benefits.length];
-                } else if (category === 'winter') {
-                    recipe.mainVegetable = categoryData.vegetables[i % categoryData.vegetables.length];
-                    recipe.preparation = categoryData.preparations[i % categoryData.preparations.length];
-                }
-
-                // Add random tags
-                const allTags = ['Healthy', 'Quick', 'Comfort Food', 'Seasonal', 'Traditional', 'Modern', 'Spicy', 'Mild', 'Gluten-Free', 'High Protein'];
-                recipe.tags = [];
-                for (let j = 0; j < 3; j++) {
-                    const tag = allTags[(i + j) % allTags.length];
-                    if (!recipe.tags.includes(tag)) {
-                        recipe.tags.push(tag);
-                    }
-                }
-
-                this.recipes.push(recipe);
-            }
-        });
-    }
-
-    generateRandomAuthor() {
-        const firstNames = ['Sarah', 'Mike', 'Priya', 'Emma', 'David', 'Lisa', 'Raj', 'Anna', 'Tom', 'Maya', 'Alex', 'Nina', 'Sam', 'Zoe', 'Ben'];
-        const lastInitials = ['M', 'R', 'K', 'L', 'S', 'P', 'T', 'W', 'H', 'C', 'D', 'B', 'G', 'F', 'J'];
-        
-        const firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
-        const lastInitial = lastInitials[Math.floor(Math.random() * lastInitials.length)];
-        
-        return {
-            name: `${firstName} ${lastInitial}.`,
-            avatar: `./images/avatars/user-${Math.floor(Math.random() * 20) + 1}.svg`
-        };
-    }
-
-    generateRandomTime(index) {
-        const timeOptions = [
-            '2 hours ago', '5 hours ago', '1 day ago', '2 days ago', '3 days ago',
-            '1 week ago', '2 weeks ago', '3 weeks ago', '1 month ago', '2 months ago'
-        ];
-        return timeOptions[index % timeOptions.length];
     }
 
     setupEventListeners() {
@@ -563,7 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Add notification styles
-const notificationStyles = `
+const communityNotificationStyles = `
 .notification {
     position: fixed;
     top: 20px;
@@ -619,6 +466,6 @@ const notificationStyles = `
 `;
 
 // Inject notification styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = notificationStyles;
-document.head.appendChild(styleSheet);
+const communityStyleSheet = document.createElement('style');
+communityStyleSheet.textContent = communityNotificationStyles;
+document.head.appendChild(communityStyleSheet);

@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Add notification styles
-const notificationStyles = `
+const cuisineNotificationStyles = `
 .notification {
     position: fixed;
     top: 20px;
@@ -248,6 +248,6 @@ const notificationStyles = `
 `;
 
 // Inject notification styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = notificationStyles;
-document.head.appendChild(styleSheet);
+const cuisineStyleSheet = document.createElement('style');
+cuisineStyleSheet.textContent = cuisineNotificationStyles;
+document.head.appendChild(cuisineStyleSheet);

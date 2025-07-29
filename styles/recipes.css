@@ -10,7 +10,7 @@
 .page-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #2d5a3d;
+    color: #2E7D32;
     margin-bottom: 1rem;
 }
 
@@ -45,7 +45,7 @@
 
 .search-button {
     padding: 15px 20px;
-    background: #4a7c59;
+    background: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
@@ -53,7 +53,7 @@
 }
 
 .search-button:hover {
-    background: #2d5a3d;
+    background: #2E7D32;
 }
 
 /* Category Filters */
@@ -71,9 +71,9 @@
 
 .filter-btn {
     padding: 12px 24px;
-    border: 2px solid #4a7c59;
+    border: 2px solid #4CAF50;
     background: transparent;
-    color: #4a7c59;
+    color: #4CAF50;
     border-radius: 25px;
     cursor: pointer;
     font-weight: 500;
@@ -83,10 +83,10 @@
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: #4a7c59;
+    background: #4CAF50;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(74, 124, 89, 0.3);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
 }
 
 /* Recipe Grid Enhancements */
@@ -158,7 +158,7 @@
 }
 
 .recipe-meta .category {
-    background: #4a7c59;
+    background: #4CAF50;
     color: white;
     padding: 0.2rem 0.6rem;
     border-radius: 12px;
@@ -439,7 +439,7 @@
 }
 
 .restaurant-cta-btn:hover {
-    background: #2d5a3d;
+    background: #2E7D32;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(74, 124, 89, 0.3);
 }

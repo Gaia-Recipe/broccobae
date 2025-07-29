@@ -97,117 +97,12 @@
 
                 <!-- Meal Plan Grid -->
                 <div class="meal-plan-grid" id="mealPlanGrid">
-                    <!-- High Protein Plans -->
-                    <div class="meal-plan-card" data-category="high-protein">
-                        <img src="../../images/meal-plans/protein-power-bowl.svg" alt="Protein Power Bowl" class="meal-plan-image">
-                        <div class="meal-plan-content">
-                            <h3 class="meal-plan-title">Protein Power Bowl Meal Plan</h3>
-                            <p class="meal-plan-description">High-protein vegan meals featuring legumes, quinoa, and plant-based proteins.</p>
-                            <div class="meal-plan-meta">
-                                <span class="protein-content"><i class="fas fa-dumbbell"></i> 25g+ protein</span>
-                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
-                                <span class="category">High Protein</span>
-                            </div>
-                            <div class="nutrition-highlights">
-                                <span class="nutrition-item">Protein: 25-35g</span>
-                                <span class="nutrition-item">Calories: 400-600</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <div class="empty-state">
+                        <div class="empty-state-icon">
+                            <i class="fas fa-calendar-alt"></i>
                         </div>
-                    </div>
-
-                    <div class="meal-plan-card" data-category="high-protein">
-                        <img src="../../images/meal-plans/lentil-muscle-builder.svg" alt="Lentil Muscle Builder" class="meal-plan-image">
-                        <div class="meal-plan-content">
-                            <h3 class="meal-plan-title">Lentil Muscle Builder Plan</h3>
-                            <p class="meal-plan-description">Lentil-focused meal plan designed for muscle building and recovery.</p>
-                            <div class="meal-plan-meta">
-                                <span class="protein-content"><i class="fas fa-dumbbell"></i> 30g+ protein</span>
-                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
-                                <span class="category">High Protein</span>
-                            </div>
-                            <div class="nutrition-highlights">
-                                <span class="nutrition-item">Protein: 30-40g</span>
-                                <span class="nutrition-item">Calories: 500-700</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Low Carb Plans -->
-                    <div class="meal-plan-card" data-category="low-carb">
-                        <img src="../../images/meal-plans/keto-vegan-delight.svg" alt="Keto Vegan Delight" class="meal-plan-image">
-                        <div class="meal-plan-content">
-                            <h3 class="meal-plan-title">Keto Vegan Delight Plan</h3>
-                            <p class="meal-plan-description">Low-carb, high-fat vegan meals perfect for ketogenic lifestyle.</p>
-                            <div class="meal-plan-meta">
-                                <span class="carb-content"><i class="fas fa-leaf"></i> <20g carbs</span>
-                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
-                                <span class="category">Low Carb</span>
-                            </div>
-                            <div class="nutrition-highlights">
-                                <span class="nutrition-item">Carbs: 15-20g</span>
-                                <span class="nutrition-item">Fat: 60-70%</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Gluten Free Plans -->
-                    <div class="meal-plan-card" data-category="gluten-free">
-                        <img src="../../images/meal-plans/gluten-free-goodness.svg" alt="Gluten Free Goodness" class="meal-plan-image">
-                        <div class="meal-plan-content">
-                            <h3 class="meal-plan-title">Gluten-Free Goodness Plan</h3>
-                            <p class="meal-plan-description">Delicious gluten-free vegan meals using naturally gluten-free ingredients.</p>
-                            <div class="meal-plan-meta">
-                                <span class="gluten-free"><i class="fas fa-check-circle"></i> 100% GF</span>
-                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
-                                <span class="category">Gluten Free</span>
-                            </div>
-                            <div class="nutrition-highlights">
-                                <span class="nutrition-item">Certified GF</span>
-                                <span class="nutrition-item">Balanced nutrition</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Budget Friendly Plans -->
-                    <div class="meal-plan-card" data-category="budget-friendly">
-                        <img src="../../images/meal-plans/budget-bean-bonanza.svg" alt="Budget Bean Bonanza" class="meal-plan-image">
-                        <div class="meal-plan-content">
-                            <h3 class="meal-plan-title">Budget Bean Bonanza Plan</h3>
-                            <p class="meal-plan-description">Affordable vegan meals using budget-friendly ingredients like beans and grains.</p>
-                            <div class="meal-plan-meta">
-                                <span class="cost"><i class="fas fa-dollar-sign"></i> <$5/meal</span>
-                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
-                                <span class="category">Budget Friendly</span>
-                            </div>
-                            <div class="nutrition-highlights">
-                                <span class="nutrition-item">Cost: $3-5/meal</span>
-                                <span class="nutrition-item">Bulk ingredients</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Weight Loss Plans -->
-                    <div class="meal-plan-card" data-category="weight-loss">
-                        <img src="../../images/meal-plans/lean-green-machine.svg" alt="Lean Green Machine" class="meal-plan-image">
-                        <div class="meal-plan-content">
-                            <h3 class="meal-plan-title">Lean Green Machine Plan</h3>
-                            <p class="meal-plan-description">Calorie-controlled vegan meals designed to support healthy weight loss.</p>
-                            <div class="meal-plan-meta">
-                                <span class="calories"><i class="fas fa-fire"></i> 1200-1500 cal</span>
-                                <span class="meal-count"><i class="fas fa-utensils"></i> 7 days</span>
-                                <span class="category">Weight Loss</span>
-                            </div>
-                            <div class="nutrition-highlights">
-                                <span class="nutrition-item">Low calorie</span>
-                                <span class="nutrition-item">High fiber</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
+                        <h3 class="empty-state-title">No Meal Plans Available</h3>
+                        <p class="empty-state-description">We're currently updating our meal plan collection. Please check back soon for personalized plant-based meal plans!</p>
                     </div>
                 </div>
 

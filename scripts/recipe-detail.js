@@ -12,235 +12,24 @@ class RecipeDetailManager {
     }
 
     init() {
-        this.loadRecipeFromURL();
         this.setupEventListeners();
-        this.generateRelatedRecipes();
-        this.updateFavoriteButton();
+        this.showNotFound();
         this.injectNotificationStyles();
     }
 
     loadRecipeFromURL() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const recipeId = urlParams.get('id');
-        
-        if (recipeId) {
-            this.currentRecipe = this.getRecipeById(recipeId);
-            if (this.currentRecipe) {
-                this.renderRecipeDetails();
-            } else {
-                this.showNotFound();
-            }
-        } else {
-            this.showNotFound();
-        }
+        // Recipe loading removed - showing not found state
+        this.showNotFound();
     }
 
     getRecipeById(id) {
-        // This would typically fetch from a database or API
-        // For now, we'll generate a recipe based on the ID
-        const recipes = this.generateSampleRecipes();
-        return recipes.find(recipe => recipe.id === parseInt(id)) || this.generateRecipeFromId(id);
+        // Recipe generation removed
+        return null;
     }
 
-    generateRecipeFromId(id) {
-        const categories = ['breakfast', 'lunch', 'dinner', 'dessert', 'smoothie'];
-        const category = categories[parseInt(id) % categories.length];
-        
-        const recipeNames = {
-            breakfast: [
-                'Avocado Toast Supreme', 'Quinoa Breakfast Bowl', 'Chia Seed Pudding',
-                'Vegan Pancakes', 'Smoothie Bowl', 'Oatmeal Delight', 'Tofu Scramble',
-                'Breakfast Burrito', 'Granola Parfait', 'Acai Bowl'
-            ],
-            lunch: [
-                'Buddha Bowl', 'Quinoa Salad', 'Veggie Wrap', 'Lentil Soup',
-                'Chickpea Curry', 'Stuffed Bell Peppers', 'Veggie Burger',
-                'Mediterranean Bowl', 'Falafel Plate', 'Ramen Bowl'
-            ],
-            dinner: [
-                'Pasta Primavera', 'Stuffed Eggplant', 'Veggie Stir Fry', 'Lentil Bolognese',
-                'Mushroom Risotto', 'Cauliflower Steaks', 'Veggie Lasagna',
-                'Thai Curry', 'Stuffed Portobello', 'Quinoa Stuffed Peppers'
-            ],
-            dessert: [
-                'Chocolate Avocado Mousse', 'Vegan Cheesecake', 'Fruit Tart',
-                'Coconut Ice Cream', 'Chia Pudding', 'Raw Brownies',
-                'Banana Bread', 'Apple Crisp', 'Chocolate Truffles', 'Berry Parfait'
-            ],
-            smoothie: [
-                'Green Goddess', 'Tropical Paradise', 'Berry Blast', 'Chocolate Protein',
-                'Mango Lassi', 'Peanut Butter Banana', 'Antioxidant Boost',
-                'Vanilla Dream', 'Detox Green', 'Strawberry Banana'
-            ]
-        };
+    // Recipe generation methods removed
 
-        const names = recipeNames[category];
-        const name = names[parseInt(id) % names.length];
-        
-        return {
-            id: parseInt(id),
-            title: name,
-            category: category,
-            description: this.generateDescription(name, category),
-            image: `../../images/recipes/${category}-${(parseInt(id) % 20) + 1}.svg`,
-            prepTime: Math.floor(Math.random() * 45) + 15,
-            difficulty: ['Easy', 'Medium', 'Hard'][Math.floor(Math.random() * 3)],
-            servings: 4,
-            calories: Math.floor(Math.random() * 400) + 200,
-            ingredients: this.generateIngredients(category),
-            instructions: this.generateInstructions(category),
-            nutrition: this.generateNutrition(),
-            tags: this.generateTags(category)
-        };
-    }
-
-    generateDescription(name, category) {
-        const descriptions = {
-            breakfast: `Start your day with this nutritious and delicious ${name.toLowerCase()}. Packed with plant-based protein and essential nutrients to fuel your morning.`,
-            lunch: `A satisfying and wholesome ${name.toLowerCase()} that's perfect for your midday meal. Fresh, flavorful, and completely plant-based.`,
-            dinner: `End your day with this comforting and nourishing ${name.toLowerCase()}. A complete meal that's both satisfying and healthy.`,
-            dessert: `Indulge in this guilt-free ${name.toLowerCase()} that satisfies your sweet tooth while keeping it healthy and vegan.`,
-            smoothie: `Refresh and energize with this nutrient-packed ${name.toLowerCase()}. Perfect for any time of day when you need a healthy boost.`
-        };
-        return descriptions[category];
-    }
-
-    generateIngredients(category) {
-        const baseIngredients = {
-            breakfast: [
-                '2 slices whole grain bread',
-                '1 ripe avocado',
-                '1 tbsp lemon juice',
-                '1/4 cup cherry tomatoes',
-                '2 tbsp hemp seeds',
-                'Salt and pepper to taste',
-                '1 tbsp olive oil',
-                'Fresh herbs for garnish'
-            ],
-            lunch: [
-                '1 cup quinoa',
-                '2 cups vegetable broth',
-                '1 can chickpeas',
-                '2 cups mixed vegetables',
-                '1/4 cup tahini',
-                '2 tbsp lemon juice',
-                '1 tbsp olive oil',
-                'Fresh herbs and spices'
-            ],
-            dinner: [
-                '12 oz whole wheat pasta',
-                '2 cups mixed vegetables',
-                '1 can diced tomatoes',
-                '3 cloves garlic',
-                '1 onion, diced',
-                '2 tbsp olive oil',
-                'Fresh basil and oregano',
-                'Nutritional yeast'
-            ],
-            dessert: [
-                '2 ripe avocados',
-                '1/4 cup cocoa powder',
-                '1/4 cup maple syrup',
-                '1 tsp vanilla extract',
-                '1/4 cup coconut milk',
-                'Pinch of salt',
-                'Fresh berries for topping',
-                'Mint leaves for garnish'
-            ],
-            smoothie: [
-                '1 frozen banana',
-                '1 cup spinach',
-                '1/2 cup coconut milk',
-                '1 tbsp almond butter',
-                '1 tbsp chia seeds',
-                '1 tsp maple syrup',
-                '1/2 cup ice',
-                'Fresh fruit for topping'
-            ]
-        };
-        return baseIngredients[category] || baseIngredients.lunch;
-    }
-
-    generateInstructions(category) {
-        const baseInstructions = {
-            breakfast: [
-                'Toast the bread slices until golden brown.',
-                'Mash the avocado with lemon juice, salt, and pepper.',
-                'Spread the avocado mixture evenly on toast.',
-                'Top with cherry tomatoes and hemp seeds.',
-                'Drizzle with olive oil and garnish with fresh herbs.',
-                'Serve immediately while toast is still warm.'
-            ],
-            lunch: [
-                'Rinse quinoa and cook in vegetable broth until fluffy.',
-                'Drain and rinse chickpeas, then roast until crispy.',
-                'Steam or sauté mixed vegetables until tender.',
-                'Whisk together tahini, lemon juice, and olive oil for dressing.',
-                'Combine quinoa, chickpeas, and vegetables in a bowl.',
-                'Drizzle with dressing and garnish with fresh herbs.'
-            ],
-            dinner: [
-                'Cook pasta according to package directions until al dente.',
-                'Heat olive oil in a large pan and sauté garlic and onion.',
-                'Add mixed vegetables and cook until tender.',
-                'Stir in diced tomatoes and simmer for 10 minutes.',
-                'Toss cooked pasta with vegetable sauce.',
-                'Garnish with fresh herbs and nutritional yeast.'
-            ],
-            dessert: [
-                'Scoop avocado flesh into a food processor.',
-                'Add cocoa powder, maple syrup, and vanilla.',
-                'Blend until smooth and creamy.',
-                'Add coconut milk gradually until desired consistency.',
-                'Taste and adjust sweetness as needed.',
-                'Chill for 30 minutes before serving with berries.'
-            ],
-            smoothie: [
-                'Add all ingredients to a high-speed blender.',
-                'Blend on high until smooth and creamy.',
-                'Add more liquid if needed for desired consistency.',
-                'Taste and adjust sweetness with maple syrup.',
-                'Pour into glasses and top with fresh fruit.',
-                'Serve immediately for best texture.'
-            ]
-        };
-        return baseInstructions[category] || baseInstructions.lunch;
-    }
-
-    generateNutrition() {
-        return {
-            calories: Math.floor(Math.random() * 400) + 200,
-            protein: Math.floor(Math.random() * 20) + 10,
-            carbs: Math.floor(Math.random() * 50) + 30,
-            fat: Math.floor(Math.random() * 15) + 8,
-            fiber: Math.floor(Math.random() * 10) + 5,
-            sugar: Math.floor(Math.random() * 15) + 5
-        };
-    }
-
-    generateTags(category) {
-        const allTags = {
-            breakfast: ['quick', 'energizing', 'protein-rich', 'gluten-free'],
-            lunch: ['filling', 'balanced', 'fresh', 'colorful'],
-            dinner: ['comfort-food', 'family-friendly', 'hearty', 'satisfying'],
-            dessert: ['sweet', 'indulgent', 'guilt-free', 'creamy'],
-            smoothie: ['refreshing', 'nutritious', 'antioxidant-rich', 'energizing']
-        };
-        
-        const baseTags = ['vegan', 'healthy', 'plant-based'];
-        const categoryTags = allTags[category] || [];
-        
-        return [...baseTags, ...categoryTags.slice(0, 3)];
-    }
-
-    generateSampleRecipes() {
-        // Generate a few sample recipes for demonstration
-        const recipes = [];
-        for (let i = 1; i <= 20; i++) {
-            recipes.push(this.generateRecipeFromId(i.toString()));
-        }
-        return recipes;
-    }
+    // All recipe generation methods removed
 
     renderRecipeDetails() {
         if (!this.currentRecipe) return;

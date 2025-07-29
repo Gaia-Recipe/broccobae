@@ -6,272 +6,31 @@ class RecipeManager {
         this.currentFilter = 'all';
         this.recipesPerPage = 12;
         this.currentPage = 1;
-        this.generateAllRecipes();
+        this.init();
     }
 
-    generateAllRecipes() {
-        // Generate 500 recipes across categories
-        const categories = {
-            breakfast: this.generateBreakfastRecipes(100),
-            lunch: this.generateLunchRecipes(100),
-            dinner: this.generateDinnerRecipes(100),
-            dessert: this.generateDessertRecipes(100),
-            smoothie: this.generateSmoothieRecipes(100)
-        };
-
-        // Combine all recipes
-        this.allRecipes = [
-            ...categories.breakfast,
-            ...categories.lunch,
-            ...categories.dinner,
-            ...categories.dessert,
-            ...categories.smoothie
-        ];
-
-        // Shuffle the array for variety
-        this.shuffleArray(this.allRecipes);
+    init() {
+        // Recipes removed - no longer generating recipes
+        this.displayedRecipes = [];
+        this.setupEventListeners();
+        this.renderEmptyState();
+        this.updateRecipeCount();
     }
 
-    generateBreakfastRecipes(count) {
-        const breakfastNames = [
-            'Overnight Oats', 'Chia Pudding', 'Avocado Toast', 'Smoothie Bowl', 'Pancakes',
-            'French Toast', 'Granola', 'Muesli', 'Breakfast Burrito', 'Tofu Scramble',
-            'Breakfast Quinoa', 'Oatmeal', 'Breakfast Bars', 'Muffins', 'Breakfast Cookies',
-            'Chia Parfait', 'Breakfast Wrap', 'Hash Browns', 'Breakfast Salad', 'Porridge'
-        ];
-        
-        const flavors = [
-            'Chocolate Peanut Butter', 'Vanilla Berry', 'Tropical Mango', 'Cinnamon Apple',
-            'Blueberry Lemon', 'Strawberry Banana', 'Coconut Almond', 'Maple Pecan',
-            'Orange Cranberry', 'Raspberry Chia', 'Banana Walnut', 'Cherry Vanilla',
-            'Pumpkin Spice', 'Matcha Green Tea', 'Chocolate Chip', 'Caramel Date',
-            'Mixed Berry', 'Peach Ginger', 'Lime Coconut', 'Espresso Chocolate'
-        ];
-
-        return this.generateRecipeVariations(breakfastNames, flavors, 'breakfast', count);
-    }
-
-    generateLunchRecipes(count) {
-        const lunchNames = [
-            'Buddha Bowl', 'Quinoa Salad', 'Veggie Wrap', 'Soup', 'Sandwich',
-            'Pasta Salad', 'Rice Bowl', 'Stuffed Peppers', 'Salad', 'Grain Bowl',
-            'Noodle Soup', 'Flatbread', 'Stuffed Avocado', 'Veggie Burger', 'Spring Rolls',
-            'Poke Bowl', 'Falafel Bowl', 'Hummus Plate', 'Veggie Sushi', 'Power Bowl'
-        ];
-        
-        const styles = [
-            'Mediterranean', 'Asian-Inspired', 'Mexican-Style', 'Thai-Flavored',
-            'Indian-Spiced', 'Italian-Style', 'Greek-Style', 'Moroccan-Inspired',
-            'Japanese-Style', 'Korean-Inspired', 'Middle Eastern', 'Tex-Mex',
-            'Vietnamese-Style', 'Chinese-Inspired', 'Lebanese-Style', 'Turkish-Style',
-            'Ethiopian-Inspired', 'Peruvian-Style', 'Brazilian-Inspired', 'French-Style'
-        ];
-
-        return this.generateRecipeVariations(lunchNames, styles, 'lunch', count);
-    }
-
-    generateDinnerRecipes(count) {
-        const dinnerNames = [
-            'Pasta', 'Curry', 'Stir Fry', 'Risotto', 'Casserole',
-            'Stuffed Vegetables', 'Grain Bowl', 'Pizza', 'Tacos', 'Burrito Bowl',
-            'Ramen', 'Pad Thai', 'Biryani', 'Paella', 'Lasagna',
-            'Enchiladas', 'Shepherd\'s Pie', 'Chili', 'Soup', 'Roasted Vegetables'
-        ];
-        
-        const proteins = [
-            'Lentil', 'Chickpea', 'Tofu', 'Tempeh', 'Black Bean',
-            'Quinoa', 'Mushroom', 'Walnut', 'Cashew', 'Hemp Seed',
-            'Jackfruit', 'Cauliflower', 'Eggplant', 'Portobello', 'Seitan',
-            'Edamame', 'Pinto Bean', 'White Bean', 'Kidney Bean', 'Split Pea'
-        ];
-
-        return this.generateRecipeVariations(dinnerNames, proteins, 'dinner', count);
-    }
-
-    generateDessertRecipes(count) {
-        const dessertNames = [
-            'Chocolate Mousse', 'Nice Cream', 'Energy Balls', 'Brownies', 'Cookies',
-            'Cake', 'Pudding', 'Tart', 'Pie', 'Cheesecake',
-            'Truffles', 'Fudge', 'Bars', 'Muffins', 'Donuts',
-            'Ice Cream', 'Sorbet', 'Parfait', 'Tiramisu', 'Panna Cotta'
-        ];
-        
-        const flavors = [
-            'Chocolate Avocado', 'Vanilla Coconut', 'Strawberry Cashew', 'Lemon Tahini',
-            'Peanut Butter', 'Almond Butter', 'Coconut Lime', 'Raspberry Chia',
-            'Banana Walnut', 'Date Caramel', 'Matcha White Chocolate', 'Orange Cardamom',
-            'Cinnamon Spice', 'Maple Pecan', 'Cherry Chocolate', 'Mint Chocolate',
-            'Salted Caramel', 'Espresso', 'Lavender Honey', 'Rose Pistachio'
-        ];
-
-        return this.generateRecipeVariations(dessertNames, flavors, 'dessert', count);
-    }
-
-    generateSmoothieRecipes(count) {
-        const smoothieNames = [
-            'Green Smoothie', 'Protein Smoothie', 'Tropical Smoothie', 'Berry Smoothie', 'Chocolate Smoothie',
-            'Detox Smoothie', 'Breakfast Smoothie', 'Post-Workout Smoothie', 'Antioxidant Smoothie', 'Immunity Smoothie',
-            'Energy Smoothie', 'Recovery Smoothie', 'Superfood Smoothie', 'Cleanse Smoothie', 'Power Smoothie',
-            'Wellness Smoothie', 'Vitality Smoothie', 'Refresh Smoothie', 'Boost Smoothie', 'Glow Smoothie'
-        ];
-        
-        const ingredients = [
-            'Spinach Mango', 'Kale Pineapple', 'Spirulina Banana', 'Acai Berry',
-            'Cacao Almond', 'Matcha Coconut', 'Turmeric Ginger', 'Beetroot Cherry',
-            'Carrot Orange', 'Cucumber Mint', 'Celery Apple', 'Avocado Lime',
-            'Blueberry Vanilla', 'Strawberry Basil', 'Peach Ginger', 'Pear Cinnamon',
-            'Pomegranate Grape', 'Watermelon Mint', 'Papaya Lime', 'Dragon Fruit'
-        ];
-
-        return this.generateRecipeVariations(smoothieNames, ingredients, 'smoothie', count);
-    }
-
-    generateRecipeVariations(baseNames, modifiers, category, count) {
-        const recipes = [];
-        const difficulties = ['Easy', 'Medium', 'Hard'];
-        const prepTimes = ['5 min', '10 min', '15 min', '20 min', '25 min', '30 min', '45 min', '60 min'];
-        
-        for (let i = 0; i < count; i++) {
-            const baseName = baseNames[i % baseNames.length];
-            const modifier = modifiers[i % modifiers.length];
-            const title = `${modifier} ${baseName}`;
-            
-            recipes.push({
-                id: `${category}-${i + 1}`,
-                title: title,
-                description: this.generateDescription(title, category),
-                category: category,
-                prepTime: prepTimes[Math.floor(Math.random() * prepTimes.length)],
-                difficulty: difficulties[Math.floor(Math.random() * difficulties.length)],
-                image: `../../images/recipes/${category}-${(i % 20) + 1}.svg`,
-                ingredients: this.generateIngredients(category),
-                instructions: this.generateInstructions(category),
-                nutrition: this.generateNutrition(),
-                tags: this.generateTags(category)
-            });
+    renderEmptyState() {
+        const recipeGrid = document.getElementById('recipeGrid');
+        if (recipeGrid) {
+            recipeGrid.innerHTML = `
+                <div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;">
+                    <i class="fas fa-utensils" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #666; margin-bottom: 1rem;">No Recipes Available</h3>
+                    <p style="color: #999;">Recipes have been removed from this section.</p>
+                </div>
+            `;
         }
-        
-        return recipes;
     }
 
-    generateDescription(title, category) {
-        const descriptions = {
-            breakfast: [
-                'A nutritious and energizing way to start your day.',
-                'Perfect morning fuel packed with plant-based goodness.',
-                'Quick and easy breakfast that will keep you satisfied.',
-                'Wholesome breakfast option loaded with nutrients.',
-                'Delicious morning treat that\'s both healthy and satisfying.'
-            ],
-            lunch: [
-                'A satisfying midday meal packed with fresh ingredients.',
-                'Perfect lunch option that\'s both nutritious and delicious.',
-                'Wholesome lunch that will fuel your afternoon.',
-                'Fresh and vibrant meal perfect for lunch time.',
-                'Balanced lunch option with amazing flavors.'
-            ],
-            dinner: [
-                'A hearty and comforting dinner for the whole family.',
-                'Perfect evening meal that\'s both satisfying and nutritious.',
-                'Delicious dinner option packed with plant-based protein.',
-                'Comforting dinner that will end your day perfectly.',
-                'Flavorful dinner dish that\'s sure to impress.'
-            ],
-            dessert: [
-                'Indulgent yet healthy dessert that satisfies your sweet tooth.',
-                'Guilt-free dessert made with wholesome ingredients.',
-                'Sweet treat that\'s both delicious and nutritious.',
-                'Perfect dessert for any special occasion.',
-                'Decadent dessert that\'s surprisingly healthy.'
-            ],
-            smoothie: [
-                'Refreshing and nutritious smoothie packed with vitamins.',
-                'Perfect blend of fruits and vegetables for optimal nutrition.',
-                'Energizing smoothie that\'s perfect any time of day.',
-                'Delicious and healthy smoothie loaded with superfoods.',
-                'Creamy and satisfying smoothie that\'s naturally sweet.'
-            ]
-        };
-        
-        const categoryDescriptions = descriptions[category];
-        return categoryDescriptions[Math.floor(Math.random() * categoryDescriptions.length)];
-    }
-
-    generateIngredients(category) {
-        const baseIngredients = {
-            breakfast: ['oats', 'almond milk', 'chia seeds', 'maple syrup', 'vanilla extract'],
-            lunch: ['quinoa', 'mixed greens', 'cherry tomatoes', 'cucumber', 'olive oil'],
-            dinner: ['brown rice', 'vegetables', 'herbs', 'spices', 'plant-based protein'],
-            dessert: ['dates', 'nuts', 'coconut oil', 'vanilla', 'natural sweetener'],
-            smoothie: ['banana', 'berries', 'plant milk', 'spinach', 'protein powder']
-        };
-        
-        return baseIngredients[category] || [];
-    }
-
-    generateInstructions(category) {
-        const baseInstructions = {
-            breakfast: [
-                'Combine all dry ingredients in a bowl.',
-                'Add wet ingredients and mix well.',
-                'Let sit for 5 minutes to thicken.',
-                'Top with your favorite fruits and nuts.',
-                'Enjoy immediately or refrigerate overnight.'
-            ],
-            lunch: [
-                'Prepare all vegetables by washing and chopping.',
-                'Cook grains according to package instructions.',
-                'Combine all ingredients in a large bowl.',
-                'Drizzle with dressing and toss gently.',
-                'Serve immediately or store for later.'
-            ],
-            dinner: [
-                'Preheat oven to 375°F (190°C).',
-                'Prepare all ingredients and seasonings.',
-                'Cook according to recipe instructions.',
-                'Season to taste with salt and pepper.',
-                'Serve hot with your favorite sides.'
-            ],
-            dessert: [
-                'Combine all ingredients in a food processor.',
-                'Process until smooth and creamy.',
-                'Taste and adjust sweetness if needed.',
-                'Chill in refrigerator for at least 2 hours.',
-                'Serve chilled and enjoy!'
-            ],
-            smoothie: [
-                'Add all ingredients to a high-speed blender.',
-                'Blend on high until smooth and creamy.',
-                'Add more liquid if needed for consistency.',
-                'Taste and adjust sweetness if desired.',
-                'Pour into glasses and serve immediately.'
-            ]
-        };
-        
-        return baseInstructions[category] || [];
-    }
-
-    generateNutrition() {
-        return {
-            calories: Math.floor(Math.random() * 400) + 100,
-            protein: Math.floor(Math.random() * 20) + 5,
-            carbs: Math.floor(Math.random() * 50) + 10,
-            fat: Math.floor(Math.random() * 15) + 2,
-            fiber: Math.floor(Math.random() * 10) + 2
-        };
-    }
-
-    generateTags(category) {
-        const allTags = {
-            breakfast: ['quick', 'healthy', 'energizing', 'make-ahead', 'protein-rich'],
-            lunch: ['fresh', 'satisfying', 'portable', 'colorful', 'balanced'],
-            dinner: ['hearty', 'comforting', 'family-friendly', 'one-pot', 'filling'],
-            dessert: ['sweet', 'indulgent', 'guilt-free', 'no-bake', 'celebration'],
-            smoothie: ['refreshing', 'nutritious', 'energizing', 'detox', 'superfood']
-        };
-        
-        return allTags[category] || [];
-    }
+    // Recipe generation methods removed
 
     shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -282,15 +41,9 @@ class RecipeManager {
 
     filterRecipes(category) {
         this.currentFilter = category;
-        this.currentPage = 1;
-        
-        if (category === 'all') {
-            this.displayedRecipes = [...this.allRecipes];
-        } else {
-            this.displayedRecipes = this.allRecipes.filter(recipe => recipe.category === category);
-        }
-        
-        this.renderRecipes();
+        // No recipes to filter - show empty state
+        this.displayedRecipes = [];
+        this.renderEmptyState();
         this.updateRecipeCount();
     }
 
@@ -301,62 +54,17 @@ class RecipeManager {
     }
 
     renderRecipes(clearExisting = true) {
-        const recipeGrid = document.getElementById('recipeGrid');
+        // Recipes removed - show empty state
+        this.renderEmptyState();
         
-        if (clearExisting) {
-            recipeGrid.innerHTML = '';
-        }
-        
-        const startIndex = clearExisting ? 0 : (this.currentPage - 1) * this.recipesPerPage;
-        const endIndex = this.currentPage * this.recipesPerPage;
-        const recipesToShow = this.displayedRecipes.slice(startIndex, endIndex);
-        
-        recipesToShow.forEach((recipe, index) => {
-            const recipeCard = this.createRecipeCard(recipe);
-            recipeCard.style.animationDelay = `${(index % 6) * 0.1}s`;
-            recipeGrid.appendChild(recipeCard);
-        });
-        
-        // Update load more button visibility
+        // Hide load more button
         const loadMoreBtn = document.getElementById('loadMoreBtn');
-        if (endIndex >= this.displayedRecipes.length) {
+        if (loadMoreBtn) {
             loadMoreBtn.style.display = 'none';
-        } else {
-            loadMoreBtn.style.display = 'inline-block';
         }
     }
 
-    createRecipeCard(recipe) {
-        const card = document.createElement('div');
-        card.className = 'recipe-card';
-        card.setAttribute('data-category', recipe.category);
-        card.setAttribute('data-recipe-id', recipe.id);
-        
-        card.innerHTML = `
-            <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" onerror="this.src='../../images/placeholder-recipe.svg'">
-            <div class="recipe-content">
-                <h3 class="recipe-title">${recipe.title}</h3>
-                <p class="recipe-description">${recipe.description}</p>
-                <div class="recipe-meta">
-                    <span class="prep-time"><i class="fas fa-clock"></i> ${recipe.prepTime}</span>
-                    <span class="difficulty"><i class="fas fa-star"></i> ${recipe.difficulty}</span>
-                    <span class="category">${recipe.category.charAt(0).toUpperCase() + recipe.category.slice(1)}</span>
-                </div>
-                <button class="favorite-btn" onclick="toggleFavorite(this)" data-recipe='${JSON.stringify(recipe).replace(/'/g, "&apos;")}'>
-                    <i class="far fa-heart"></i>
-                </button>
-            </div>
-        `;
-        
-        // Add click handler for recipe details
-        card.addEventListener('click', (e) => {
-            if (!e.target.closest('.favorite-btn')) {
-                this.showRecipeDetails(recipe);
-            }
-        });
-        
-        return card;
-    }
+    // Recipe card creation removed
 
     showRecipeDetails(recipe) {
         // Navigate to the recipe detail page with the recipe ID
@@ -366,22 +74,14 @@ class RecipeManager {
 
     updateRecipeCount() {
         const recipeCount = document.querySelector('.recipe-count');
-        const totalShown = Math.min(this.currentPage * this.recipesPerPage, this.displayedRecipes.length);
-        const totalAvailable = this.displayedRecipes.length;
         
-        recipeCount.textContent = `Showing ${totalShown} of ${totalAvailable} recipes`;
+        recipeCount.textContent = `Showing 0 of 0 recipes`;
     }
 
     searchRecipes(query) {
-        const searchTerm = query.toLowerCase();
-        this.displayedRecipes = this.allRecipes.filter(recipe => 
-            recipe.title.toLowerCase().includes(searchTerm) ||
-            recipe.description.toLowerCase().includes(searchTerm) ||
-            recipe.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-        );
-        
-        this.currentPage = 1;
-        this.renderRecipes();
+        // No recipes to search - show empty state
+        this.displayedRecipes = [];
+        this.renderEmptyState();
         this.updateRecipeCount();
     }
 }

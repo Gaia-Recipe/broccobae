@@ -93,31 +93,7 @@ function performSearch() {
     }
 }
 
-// Filter functionality for recipe pages
-function initializeFilters() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const recipeCards = document.querySelectorAll('.recipe-card');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Update active filter button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter recipe cards
-            recipeCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                if (filter === 'all' || category === filter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-}
+// Filter functionality removed - no recipes to filter
 
 // Lazy loading for images
 function initializeLazyLoading() {
@@ -137,32 +113,7 @@ function initializeLazyLoading() {
     images.forEach(img => imageObserver.observe(img));
 }
 
-// Recipe card click handler
-function initializeRecipeCards() {
-    const recipeCards = document.querySelectorAll('.recipe-card');
-    
-    recipeCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            // Don't navigate if clicking on favorite button
-            if (e.target.closest('.favorite-btn')) {
-                return;
-            }
-            
-            const recipeTitle = this.querySelector('.recipe-title').textContent;
-            const recipeSlug = recipeTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-            window.location.href = `src/pages/recipe-detail?recipe=${recipeSlug}`;
-        });
-    });
-    
-    // Add event listeners for favorite buttons
-    const favoriteButtons = document.querySelectorAll('.favorite-btn');
-    favoriteButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.stopPropagation();
-            handleFavoriteClick(this);
-        });
-    });
-}
+// Recipe card functionality removed - no recipe cards to handle
 
 // Form validation
 function validateForm(form) {
@@ -202,30 +153,13 @@ function initializeNewsletter() {
     }
 }
 
-// Recipe sharing functionality
-function shareRecipe(title, url) {
-    if (navigator.share) {
-        navigator.share({
-            title: title,
-            url: url
-        }).catch(console.error);
-    } else {
-        // Fallback: copy to clipboard
-        navigator.clipboard.writeText(url).then(() => {
-            showNotification('Recipe link copied to clipboard!', 'success');
-        }).catch(() => {
-            showNotification('Unable to copy link. Please copy manually.', 'error');
-        });
-    }
-}
+// Recipe sharing functionality removed
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     smoothScroll();
     initializeSearch();
-    initializeFilters();
     initializeLazyLoading();
-    initializeRecipeCards();
     initializeNewsletter();
     
     // Add scroll effect to header

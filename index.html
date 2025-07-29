@@ -66,55 +66,12 @@
         <section class="featured-recipes">
             <div class="container">
                 <h2 class="section-title">Featured Recipes</h2>
-                <div class="recipe-grid">
-                    <div class="recipe-card">
-                        <img src="images/recipes/lunch-1.svg" alt="Quinoa Buddha Bowl" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Quinoa Buddha Bowl</h3>
-                            <p class="recipe-description">A colorful, nutrient-packed bowl with quinoa, roasted vegetables, and tahini dressing.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 25 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
+                <div class="empty-state">
+                    <div class="empty-state-icon">
+                        <i class="fas fa-utensils"></i>
                     </div>
-                    <div class="recipe-card">
-                        <img src="images/recipes/dinner-1.svg" alt="Creamy Lentil Curry" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Creamy Lentil Curry</h3>
-                            <p class="recipe-description">Rich and flavorful curry with red lentils, coconut milk, and aromatic spices.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 30 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Medium</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-                    <div class="recipe-card">
-                        <img src="images/recipes/breakfast-1.svg" alt="Gourmet Avocado Toast" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Gourmet Avocado Toast</h3>
-                            <p class="recipe-description">Elevated avocado toast with hemp seeds, cherry tomatoes, and balsamic glaze.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 10 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-                    <div class="recipe-card">
-                        <img src="images/recipes/smoothie-1.svg" alt="Chocolate Protein Smoothie" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Chocolate Protein Smoothie</h3>
-                            <p class="recipe-description">Decadent yet healthy smoothie with banana, cacao, and plant-based protein.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 5 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
+                    <h3 class="empty-state-title">No Recipes Available</h3>
+                    <p class="empty-state-description">We're currently updating our recipe collection. Please check back soon for delicious plant-based recipes!</p>
                 </div>
                 <div class="section-footer">
                     <a href="src/pages/recipes.html" class="btn btn-outline">See More Recipes</a>
@@ -126,23 +83,10 @@
         <section class="meal-plan-highlights">
             <div class="container">
                 <h2 class="section-title">Meal Plan Highlights</h2>
-                <div class="meal-plan-content">
-                    <div class="meal-plan-text">
-                        <h3>Personalized Vegan Meal Planning</h3>
-                        <p>Take the guesswork out of meal planning with our curated weekly meal plans. Whether you're looking for high-protein options, budget-friendly meals, or gluten-free alternatives, we've got you covered.</p>
-                        <ul class="meal-plan-features">
-                            <li><i class="fas fa-check"></i> Weekly meal plans for every lifestyle</li>
-                            <li><i class="fas fa-check"></i> Automated shopping lists</li>
-                            <li><i class="fas fa-check"></i> Nutritional information included</li>
-                            <li><i class="fas fa-check"></i> Customizable portion sizes</li>
-                        </ul>
-                    </div>
-                    <div class="meal-plan-image">
-                        <img src="images/meal-plan.svg" alt="Meal Plan Calendar" class="meal-plan-img">
-                    </div>
-                </div>
-                <div class="section-footer">
-                    <a href="src/pages/meal-plan.html" class="btn btn-outline">See More Meal Plans</a>
+                <div class="empty-state" style="text-align: center; padding: 4rem 2rem;">
+                    <i class="fas fa-calendar-alt" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #666; margin-bottom: 1rem;">No Meal Plans Available</h3>
+                    <p style="color: #999;">Meal planning features have been removed from this section.</p>
                 </div>
             </div>
         </section>
@@ -166,38 +110,10 @@
             <div class="container">
                 <h2 class="section-title">Cuisine Variety</h2>
                 <p class="section-subtitle">Explore vegan flavors from around the world</p>
-                <div class="cuisine-grid">
-                    <div class="cuisine-card">
-                        <img src="images/cuisine-indian.svg" alt="Indian Dal Curry" class="cuisine-image">
-                        <div class="cuisine-overlay">
-                            <h3 class="cuisine-title">Indian</h3>
-                            <p class="cuisine-description">Spiced Dal with Basmati Rice</p>
-                        </div>
-                    </div>
-                    <div class="cuisine-card">
-                        <img src="images/cuisine-asian.svg" alt="Asian Vegan Ramen" class="cuisine-image">
-                        <div class="cuisine-overlay">
-                            <h3 class="cuisine-title">Asian</h3>
-                            <p class="cuisine-description">Miso Ramen with Tofu</p>
-                        </div>
-                    </div>
-                    <div class="cuisine-card">
-                        <img src="images/cuisine-mexican.svg" alt="Mexican Jackfruit Tacos" class="cuisine-image">
-                        <div class="cuisine-overlay">
-                            <h3 class="cuisine-title">Mexican</h3>
-                            <p class="cuisine-description">Jackfruit Carnitas Tacos</p>
-                        </div>
-                    </div>
-                    <div class="cuisine-card">
-                        <img src="images/cuisine-american.svg" alt="American Plant-Based Burger" class="cuisine-image">
-                        <div class="cuisine-overlay">
-                            <h3 class="cuisine-title">American</h3>
-                            <p class="cuisine-description">Classic Plant-Based Burger</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-footer">
-                    <a href="src/pages/cuisine.html" class="btn btn-outline">See More Cuisines</a>
+                <div class="empty-state" style="text-align: center; padding: 4rem 2rem;">
+                    <i class="fas fa-globe" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
+                    <h3 style="color: #666; margin-bottom: 1rem;">No Cuisine Recipes Available</h3>
+                    <p style="color: #999;">Cuisine recipes have been removed from this section.</p>
                 </div>
             </div>
         </section>

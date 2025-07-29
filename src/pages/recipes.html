@@ -122,180 +122,29 @@
         <section class="recipe-categories">
             <div class="container">
                 <div class="category-filters">
-                    <button class="filter-btn active" data-filter="all">All Recipes (500)</button>
-                    <button class="filter-btn" data-filter="breakfast">Breakfast (100)</button>
-                    <button class="filter-btn" data-filter="lunch">Lunch (100)</button>
-                    <button class="filter-btn" data-filter="dinner">Dinner (100)</button>
-                    <button class="filter-btn" data-filter="dessert">Desserts (100)</button>
-                    <button class="filter-btn" data-filter="smoothie">Smoothies (100)</button>
+                    <button class="filter-btn active" data-filter="all">All Recipes</button>
+                    <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+                    <button class="filter-btn" data-filter="lunch">Lunch</button>
+                    <button class="filter-btn" data-filter="dinner">Dinner</button>
+                    <button class="filter-btn" data-filter="dessert">Desserts</button>
+                    <button class="filter-btn" data-filter="smoothie">Smoothies</button>
                 </div>
 
                 <!-- Recipe Grid -->
                 <div class="recipe-grid" id="recipeGrid">
-                    <!-- Breakfast Recipes -->
-                    <div class="recipe-card" data-category="breakfast">
-                        <img src="../../images/recipes/breakfast-1.svg" alt="Overnight Oats" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Chocolate Peanut Butter Overnight Oats</h3>
-                            <p class="recipe-description">Creamy overnight oats with rich chocolate and peanut butter flavors.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 5 min prep</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Breakfast</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+                    <div class="empty-state">
+                        <div class="empty-state-icon">
+                            <i class="fas fa-utensils"></i>
                         </div>
-                    </div>
-
-                    <div class="recipe-card" data-category="breakfast">
-                        <img src="../../images/recipes/breakfast-2.svg" alt="Chia Pudding" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Vanilla Berry Chia Pudding</h3>
-                            <p class="recipe-description">Nutritious chia pudding topped with fresh berries and coconut flakes.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 10 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Breakfast</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="recipe-card" data-category="breakfast">
-                        <img src="../../images/recipes/breakfast-3.svg" alt="Avocado Toast" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Everything Bagel Avocado Toast</h3>
-                            <p class="recipe-description">Sourdough toast topped with smashed avocado and everything bagel seasoning.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 8 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Breakfast</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Lunch Recipes -->
-                    <div class="recipe-card" data-category="lunch">
-                        <img src="../../images/recipes/lunch-1.svg" alt="Quinoa Salad" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Mediterranean Quinoa Salad</h3>
-                            <p class="recipe-description">Fresh quinoa salad with cucumber, tomatoes, olives, and lemon dressing.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 20 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Lunch</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="recipe-card" data-category="lunch">
-                        <img src="../../images/recipes/lunch-2.svg" alt="Veggie Wrap" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Rainbow Veggie Wrap</h3>
-                            <p class="recipe-description">Colorful wrap filled with fresh vegetables and hummus.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 15 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Lunch</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Dinner Recipes -->
-                    <div class="recipe-card" data-category="dinner">
-                        <img src="../../images/recipes/dinner-1.svg" alt="Lentil Bolognese" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Hearty Lentil Bolognese</h3>
-                            <p class="recipe-description">Rich and savory lentil bolognese served over whole wheat pasta.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 45 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Medium</span>
-                                <span class="category">Dinner</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="recipe-card" data-category="dinner">
-                        <img src="../../images/recipes/dinner-2.svg" alt="Stuffed Bell Peppers" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Quinoa Stuffed Bell Peppers</h3>
-                            <p class="recipe-description">Bell peppers stuffed with quinoa, vegetables, and herbs.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 50 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Medium</span>
-                                <span class="category">Dinner</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Dessert Recipes -->
-                    <div class="recipe-card" data-category="dessert">
-                        <img src="../../images/recipes/dessert-1.svg" alt="Chocolate Mousse" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Chocolate Avocado Mousse</h3>
-                            <p class="recipe-description">Silky smooth chocolate mousse made with ripe avocados.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 15 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Dessert</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="recipe-card" data-category="dessert">
-                        <img src="../../images/recipes/dessert-2.svg" alt="Banana Nice Cream" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Banana Nice Cream</h3>
-                            <p class="recipe-description">Creamy frozen banana ice cream with endless flavor possibilities.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 10 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Dessert</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Smoothie Recipes -->
-                    <div class="recipe-card" data-category="smoothie">
-                        <img src="../../images/recipes/smoothie-1.svg" alt="Green Smoothie" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Green Goddess Smoothie</h3>
-                            <p class="recipe-description">Nutrient-packed green smoothie with spinach, banana, and mango.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 5 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Smoothie</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="recipe-card" data-category="smoothie">
-                        <img src="../../images/recipes/smoothie-2.svg" alt="Berry Smoothie" class="recipe-image">
-                        <div class="recipe-content">
-                            <h3 class="recipe-title">Mixed Berry Protein Smoothie</h3>
-                            <p class="recipe-description">Antioxidant-rich berry smoothie with plant-based protein powder.</p>
-                            <div class="recipe-meta">
-                                <span class="prep-time"><i class="fas fa-clock"></i> 5 min</span>
-                                <span class="difficulty"><i class="fas fa-star"></i> Easy</span>
-                                <span class="category">Smoothie</span>
-                            </div>
-                            <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
-                        </div>
+                        <h3 class="empty-state-title">No Recipes Available</h3>
+                        <p class="empty-state-description">We're currently updating our recipe collection. Please check back soon for delicious plant-based recipes!</p>
                     </div>
                 </div>
 
                 <!-- Load More Button -->
                 <div class="load-more-container">
-                    <button class="btn btn-outline" id="loadMoreBtn">Load More Recipes</button>
-                    <p class="recipe-count">Showing 12 of 500 recipes</p>
+                    <button class="btn btn-outline" id="loadMoreBtn" style="display: none;">Load More Recipes</button>
+                    <p class="recipe-count">No recipes available</p>
                 </div>
             </div>
         </section>

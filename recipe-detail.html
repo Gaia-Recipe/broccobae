@@ -54,56 +54,14 @@
             </div>
         </section>
 
-        <!-- Recipe Header -->
+        <!-- Recipe Not Available -->
         <section class="recipe-header">
             <div class="container">
-                <div class="recipe-header-content">
-                    <div class="recipe-image-container">
-                        <img id="recipe-image" src="" alt="Recipe Image" class="recipe-main-image">
-                        <button class="favorite-btn-large" id="favorite-btn-large">
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="recipe-info">
-                        <div class="recipe-category-badge" id="recipe-category"></div>
-                        <h1 class="recipe-title" id="recipe-title"></h1>
-                        <p class="recipe-description" id="recipe-description"></p>
-                        
-                        <div class="recipe-meta-grid">
-                            <div class="meta-item">
-                                <i class="fas fa-clock"></i>
-                                <span class="meta-label">Prep Time</span>
-                                <span class="meta-value" id="prep-time"></span>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-star"></i>
-                                <span class="meta-label">Difficulty</span>
-                                <span class="meta-value" id="difficulty"></span>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-users"></i>
-                                <span class="meta-label">Servings</span>
-                                <span class="meta-value">4</span>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-fire"></i>
-                                <span class="meta-label">Calories</span>
-                                <span class="meta-value" id="calories"></span>
-                            </div>
-                        </div>
-
-                        <div class="recipe-actions">
-                            <button class="btn btn-primary" id="save-recipe">
-                                <i class="fas fa-bookmark"></i> Save Recipe
-                            </button>
-                            <button class="btn btn-outline" id="share-recipe">
-                                <i class="fas fa-share"></i> Share
-                            </button>
-                            <button class="btn btn-outline" id="print-recipe">
-                                <i class="fas fa-print"></i> Print
-                            </button>
-                        </div>
-                    </div>
+                <div class="empty-state" style="text-align: center; padding: 4rem 2rem;">
+                    <i class="fas fa-utensils" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
+                    <h1 style="color: #666; margin-bottom: 1rem;">Recipe Not Available</h1>
+                    <p style="color: #999; margin-bottom: 2rem;">This recipe is no longer available. Please browse our other sections for restaurant recommendations.</p>
+                    <a href="src/pages/recipes.html" class="btn btn-primary">Browse Recipes</a>
                 </div>
             </div>
         </section>
@@ -135,76 +93,8 @@
             </div>
         </section>
 
-        <!-- Recipe Content -->
-        <section class="recipe-content">
-            <div class="container">
-                <div class="recipe-content-grid">
-                    <!-- Ingredients -->
-                    <div class="ingredients-section">
-                        <h2 class="section-title">
-                            <i class="fas fa-list"></i> Ingredients
-                        </h2>
-                        <div class="servings-adjuster">
-                            <label>Servings:</label>
-                            <div class="quantity-controls">
-                                <button class="quantity-btn" onclick="adjustServings(-1)">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <span class="quantity-display" id="servings-count">4</span>
-                                <button class="quantity-btn" onclick="adjustServings(1)">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <ul class="ingredients-list" id="ingredients-list">
-                            <!-- Ingredients will be populated by JavaScript -->
-                        </ul>
-                        <button class="btn btn-outline shopping-list-btn" id="add-to-shopping-list">
-                            <i class="fas fa-shopping-cart"></i> Add to Shopping List
-                        </button>
-                    </div>
-
-                    <!-- Instructions -->
-                    <div class="instructions-section">
-                        <h2 class="section-title">
-                            <i class="fas fa-clipboard-list"></i> Instructions
-                        </h2>
-                        <ol class="instructions-list" id="instructions-list">
-                            <!-- Instructions will be populated by JavaScript -->
-                        </ol>
-                    </div>
-                </div>
-
-                <!-- Nutrition Info -->
-                <div class="nutrition-section">
-                    <h2 class="section-title">
-                        <i class="fas fa-chart-pie"></i> Nutrition Information
-                        <span class="nutrition-subtitle">Per serving</span>
-                    </h2>
-                    <div class="nutrition-grid" id="nutrition-grid">
-                        <!-- Nutrition info will be populated by JavaScript -->
-                    </div>
-                </div>
-
-                <!-- Recipe Tags -->
-                <div class="tags-section">
-                    <h3>Recipe Tags</h3>
-                    <div class="recipe-tags" id="recipe-tags">
-                        <!-- Tags will be populated by JavaScript -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Related Recipes -->
-        <section class="related-recipes">
-            <div class="container">
-                <h2 class="section-title">You Might Also Like</h2>
-                <div class="related-recipes-grid" id="related-recipes-grid">
-                    <!-- Related recipes will be populated by JavaScript -->
-                </div>
-            </div>
-        </section>
+        <!-- Recipe Content Removed -->
+        <!-- Content has been removed as recipes are no longer available -->
 
         <!-- Restaurant Promotion -->
         <section class="restaurant-promotion">

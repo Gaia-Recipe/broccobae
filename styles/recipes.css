@@ -71,9 +71,9 @@
 
 .filter-btn {
     padding: 12px 24px;
-    border: 2px solid #4CAF50;
+    border: 2px solid #09713D;
     background: transparent;
-    color: #4CAF50;
+    color: #09713D;
     border-radius: 25px;
     cursor: pointer;
     font-weight: 500;
@@ -83,10 +83,10 @@
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: #4CAF50;
+    background: #09713D;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 5px 15px rgba(9, 113, 61, 0.3);
 }
 
 /* Recipe Grid Enhancements */

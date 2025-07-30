@@ -161,10 +161,12 @@ body {
     background: #ffffff;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     min-height: 70vh;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    gap: 2rem;
 }
 
 .hero-content {
@@ -175,7 +177,7 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #000000;
+    color: #09713D;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
@@ -201,14 +203,16 @@ body {
 }
 
 .hero-image {
-    flex: 1;
-    text-align: center;
+    flex: 0 0 auto;
+    text-align: right;
+    max-width: 500px;
 }
 
 .hero-img {
     max-width: 100%;
     height: auto;
     width: 500px;
+    border-radius: 15px;
 }
 
 /* Section Styles */

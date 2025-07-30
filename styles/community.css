@@ -2,8 +2,8 @@
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
-    color: white;
+    background: white;
+    color: #333;
     padding: 6rem 2rem 4rem;
     min-height: 70vh;
     display: flex;
@@ -26,6 +26,7 @@
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
+    color: #09713D;
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -47,21 +48,21 @@
 .stat {
     text-align: center;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: #f8f9fa;
     border-radius: 12px;
-    backdrop-filter: blur(10px);
+    border: 1px solid #e9ecef;
 }
 
 .stat-number {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: #FFD54F;
+    color: #2E7D32;
 }
 
 .stat-label {
     font-size: 0.9rem;
-    opacity: 0.8;
+    color: #666;
 }
 
 .hero-buttons {

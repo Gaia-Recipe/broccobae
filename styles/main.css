@@ -258,12 +258,13 @@ section {
 }
 
 .recipe-card {
+    position: relative;
     background: #ffffff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    cursor: pointer;
 }
 
 .recipe-card:hover {
@@ -277,28 +278,41 @@ section {
     object-fit: cover;
 }
 
-.recipe-content {
+.recipe-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .recipe-title {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: #000000;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.recipe-description {
-    color: #000000;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.recipe-meta {
-    display: flex;
-    gap: 1rem;
+.recipe-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
     font-size: 0.9rem;
-    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.recipe-link:hover {
+    background: linear-gradient(135deg, #45a049, #3d8b40);
+    transform: translateY(-2px);
 }
 
 .favorite-btn {
@@ -342,12 +356,13 @@ section {
 }
 
 .meal-plan-card {
+    position: relative;
     background: #ffffff;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    cursor: pointer;
 }
 
 .meal-plan-card:hover {
@@ -361,43 +376,41 @@ section {
     object-fit: cover;
 }
 
-.meal-plan-content {
+.meal-plan-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .meal-plan-title {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: #09713D;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.meal-plan-description {
-    color: #666;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.meal-plan-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
+.meal-plan-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
     font-size: 0.9rem;
+    transition: all 0.3s ease;
 }
 
-.meal-plan-meta span {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    color: #666;
-    background: #f8f9fa;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-}
-
-.meal-plan-meta i {
-    color: #09713D;
+.meal-plan-link:hover {
+    background: linear-gradient(135deg, #45a049, #3d8b40);
+    transform: translateY(-2px);
 }
 
 .meal-plan-content-old {
@@ -493,24 +506,27 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 .cuisine-card {
     position: relative;
+    background: white;
     border-radius: 15px;
     overflow: hidden;
-    height: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
 
 .cuisine-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .cuisine-image {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -519,21 +535,36 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(9,113,61,0.9));
-    color: #ffffff;
-    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
 .cuisine-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
-.cuisine-description {
-    font-size: 1rem;
-    opacity: 0.9;
+.cuisine-link {
+    display: inline-block;
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.cuisine-link:hover {
+    background: linear-gradient(135deg, #45a049, #3d8b40);
+    transform: translateY(-2px);
 }
 
 /* Community Picks */

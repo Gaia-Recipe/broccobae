@@ -84,8 +84,6 @@ class RecipeManager {
         }
     }
 
-    // Recipe generation methods removed
-
     shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -118,8 +116,6 @@ class RecipeManager {
         }
     }
 
-    // Recipe card creation removed
-
     showRecipeDetails(recipe) {
         // Navigate to the recipe detail page with the recipe ID
         const recipeSlug = recipe.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -128,8 +124,9 @@ class RecipeManager {
 
     updateRecipeCount() {
         const recipeCount = document.querySelector('.recipe-count');
-        
-        recipeCount.textContent = `Showing 0 of 0 recipes`;
+        if (recipeCount) {
+            recipeCount.textContent = `Showing 0 of 0 recipes`;
+        }
     }
 
     searchRecipes(query) {
@@ -174,7 +171,9 @@ function addFavoriteRecipe(recipe) {
     if (!favorites.find(fav => fav.id === recipe.id)) {
         favorites.push(recipe);
         localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
-        showNotification('Added to favorites!', 'success');
+        if (typeof showNotification === 'function') {
+            showNotification('Added to favorites!', 'success');
+        }
     }
 }
 
@@ -182,7 +181,9 @@ function removeFavoriteRecipe(recipe) {
     let favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
     favorites = favorites.filter(fav => fav.id !== recipe.id);
     localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
-    showNotification('Removed from favorites!', 'info');
+    if (typeof showNotification === 'function') {
+        showNotification('Removed from favorites!', 'info');
+    }
 }
 
 // Load favorite states
@@ -200,11 +201,3 @@ function loadFavoriteStates() {
         }
     });
 }
-
-// Update load favorite states to run after recipes are rendered
-const originalRenderRecipes = RecipeManager.prototype.renderRecipes;
-RecipeManager.prototype.renderRecipes = function(clearExisting = true) {
-    originalRenderRecipes.call(this, clearExisting);
-    // Small delay to ensure DOM is updated
-    setTimeout(loadFavoriteStates, 100);
-};

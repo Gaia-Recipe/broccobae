@@ -195,10 +195,10 @@
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: #4CAF50;
+    background: #09713D;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 4px 15px rgba(9, 113, 61, 0.3);
 }
 
 /* Community Grid */

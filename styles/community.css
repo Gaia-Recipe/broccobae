@@ -389,7 +389,7 @@
 /* Share Recipe Form */
 .share-recipe {
     padding: 4rem 2rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+    background: white;
 }
 
 .recipe-form {

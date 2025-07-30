@@ -159,17 +159,19 @@ body {
     margin-top: 80px;
     padding: 80px 20px;
     background: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     min-height: 70vh;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    gap: 2rem;
 }
 
 .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.hero-text {
     flex: 1;
     max-width: 600px;
 }

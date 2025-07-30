@@ -17,6 +17,60 @@ class RecipeManager {
         this.updateRecipeCount();
     }
 
+    setupEventListeners() {
+        // Set up filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Filter recipes
+                this.filterRecipes(filter);
+            });
+        });
+        
+        // Set up load more button
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                this.loadMoreRecipes();
+            });
+        }
+        
+        // Set up search functionality
+        const searchInput = document.querySelector('.search-input');
+        const searchButton = document.querySelector('.search-button');
+        
+        if (searchInput && searchButton) {
+            searchButton.addEventListener('click', () => {
+                const query = searchInput.value.trim();
+                if (query) {
+                    this.searchRecipes(query);
+                }
+            });
+            
+            searchInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        this.searchRecipes(query);
+                    }
+                }
+            });
+            
+            // Clear search
+            searchInput.addEventListener('input', () => {
+                if (searchInput.value === '') {
+                    this.filterRecipes(this.currentFilter);
+                }
+            });
+        }
+    }
+
     renderEmptyState() {
         const recipeGrid = document.getElementById('recipeGrid');
         if (recipeGrid) {

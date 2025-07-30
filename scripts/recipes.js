@@ -148,58 +148,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize with all recipes
     recipeManager.filterRecipes('all');
-    
-    // Set up filter buttons
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter recipes
-            recipeManager.filterRecipes(filter);
-        });
-    });
-    
-    // Set up load more button
-    const loadMoreBtn = document.getElementById('loadMoreBtn');
-    if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
-            recipeManager.loadMoreRecipes();
-        });
-    }
-    
-    // Set up search functionality
-    const searchInput = document.querySelector('.search-input');
-    const searchButton = document.querySelector('.search-button');
-    
-    if (searchInput && searchButton) {
-        searchButton.addEventListener('click', function() {
-            const query = searchInput.value.trim();
-            if (query) {
-                recipeManager.searchRecipes(query);
-            }
-        });
-        
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                const query = this.value.trim();
-                if (query) {
-                    recipeManager.searchRecipes(query);
-                }
-            }
-        });
-        
-        // Clear search
-        searchInput.addEventListener('input', function() {
-            if (this.value === '') {
-                recipeManager.filterRecipes(recipeManager.currentFilter);
-            }
-        });
-    }
 });
 
 // Enhanced favorite functionality

@@ -10,8 +10,6 @@
     overflow: hidden;
 }
 
-
-
 .cuisine-hero .container {
     position: relative;
     z-index: 2;
@@ -58,7 +56,7 @@
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #09713D;
+    color: white;
     margin-bottom: 0.5rem;
 }
 

@@ -182,14 +182,14 @@
 }
 
 .filter-btn {
-    padding: 0.75rem 1.5rem;
-    border: 2px solid #4CAF50;
+    padding: 12px 24px;
+    border: 2px solid #09713D;
     background: transparent;
-    color: #4CAF50;
+    color: #09713D;
     border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease;
     font-weight: 500;
+    transition: all 0.3s ease;
     font-size: 0.9rem;
 }
 
@@ -198,7 +198,7 @@
     background: #09713D;
     color: white;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(9, 113, 61, 0.3);
+    box-shadow: 0 5px 15px rgba(9, 113, 61, 0.3);
 }
 
 /* Community Grid */

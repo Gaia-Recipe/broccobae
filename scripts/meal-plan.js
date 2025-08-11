@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Add notification styles
-const notificationStyles = `
+const mealPlanNotificationStyles = `
 .notification {
     position: fixed;
     top: 20px;
@@ -318,5 +318,5 @@ const notificationStyles = `
 
 // Inject notification styles
 const styleSheet = document.createElement('style');
-styleSheet.textContent = notificationStyles;
+styleSheet.textContent = mealPlanNotificationStyles;
 document.head.appendChild(styleSheet);

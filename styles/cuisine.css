@@ -2,8 +2,12 @@
 
 /* Hero Section */
 .cuisine-hero {
-    background: #09713D;
-    color: white;
+    background: linear-gradient(135deg, #f8f5e4 0%, #e8f5e8 50%, #f0f8f0 100%);
+    background-image: url('../images/vegan-background.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #2E7D32;
     padding: 120px 0 80px;
     text-align: center;
     position: relative;
@@ -19,16 +23,22 @@
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    color: #2E7D32;
+    position: relative;
+    z-index: 2;
 }
 
 .page-subtitle {
     font-size: 1.3rem;
     margin-bottom: 3rem;
-    opacity: 0.9;
+    color: #1B5E20;
+    font-weight: 500;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-stats {
@@ -42,10 +52,11 @@
 .stat {
     text-align: center;
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     backdrop-filter: blur(10px);
     transition: transform 0.3s ease;
+    border: 1px solid rgba(76, 175, 80, 0.3);
 }
 
 .stat:hover {
@@ -56,13 +67,13 @@
     display: block;
     font-size: 2.5rem;
     font-weight: 700;
-    color: white;
+    color: #2E7D32;
     margin-bottom: 0.5rem;
 }
 
 .stat-label {
     font-size: 0.9rem;
-    opacity: 0.9;
+    color: #1B5E20;
     font-weight: 500;
 }
 

@@ -43,31 +43,40 @@
     <main>
         <!-- Hero Section -->
         <section class="recipes-hero">
-            <div class="container">
-                <h1 class="page-title">Vegan Recipes</h1>
-                <p class="page-subtitle">Discover our curated collection of delicious plant-based recipes that will transform your kitchen into a vegan paradise!</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Vegan Recipes</h1>
+                    <p class="hero-description">Discover our curated collection of delicious plant-based recipes that will transform your kitchen into a vegan paradise!</p>
+                    
 
+                    
+                    <div class="hero-buttons">
+                        <a href="#recipe-categories" class="btn btn-primary">Browse Recipes</a>
+                        <a href="../../community.html" class="btn btn-outline">Join Community</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="../../images/vegan_recipes.jpeg" alt="Delicious Vegan Recipes Collection" class="hero-img">
+                </div>
             </div>
         </section>
 
         <!-- Advertisement -->
         <section class="advertisement">
             <div class="container">
-                <div class="ad-banner" onclick="window.open('https://www.greenchef.com/vegan-meals', '_blank')">
-                    <img src="../../images/ads/green-chef-restaurant.svg" alt="Green Chef - Vegan Restaurant" class="ad-image">
+                <div class="ad-banner" onclick="window.open('https://www.thrivemarket.com/vegan', '_blank')">
+                    <img src="../../images/stories/Thrivemarket.png" alt="Thrive Market - Premium Vegan Products" class="ad-image">
                     <div class="ad-content">
-                        <h3>Green Chef Vegan Restaurant</h3>
-                        <p>Experience gourmet plant-based dining. Fresh, organic ingredients crafted into extraordinary vegan dishes.</p>
-                        <span class="ad-cta">Visit Restaurant <i class="fas fa-external-link-alt"></i></span>
+                        <h3>Premium Vegan Products Delivered</h3>
+                        <p>Shop organic, non-GMO vegan products at wholesale prices. Free shipping on orders over $49!</p>
+                        <span class="ad-cta">Shop Now <i class="fas fa-external-link-alt"></i></span>
                     </div>
                 </div>
             </div>
         </section>
 
-
-
         <!-- Recipe Categories -->
-        <section class="recipe-categories">
+        <section class="recipe-categories" id="recipe-categories">
             <div class="container">
                 <div class="category-filters">
                     <button class="filter-btn active" data-filter="all">All Recipes</button>

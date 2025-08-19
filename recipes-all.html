@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipes - Broccobae | Complete Vegan Recipe Collection</title>
+    <meta name="description" content="Browse our complete collection of vegan recipes including breakfast, lunch, dinner, desserts, and smoothies. Find your perfect plant-based dish.">
+    <meta name="keywords" content="all vegan recipes, plant-based cooking, complete recipe collection, vegan meal ideas">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/recipes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* All Category Specific Styles */
+        .all-recipes-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .all-recipe-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .all-recipe-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .all-recipe-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .all-recipe-card:hover .all-recipe-image {
+            transform: scale(1.05);
+        }
+        
+        .all-recipe-content {
+            padding: 1.2rem;
+        }
+        
+        .all-recipe-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d5a3d;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .all-recipe-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .all-recipes-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .all-recipes-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .all-recipes-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .all-recipes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/stories/Logo.png?v=1" alt="Broccobae Logo" class="logo">
+                    <span class="logo-text">broccobae</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="src/pages/recipes.html" class="nav-link active">Recipes</a></li>
+                    <li class="nav-item"><a href="src/pages/meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="src/pages/cuisine.html" class="nav-link">Cuisine</a></li>
+                    <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="recipes-hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">All Recipes</h1>
+                    <p class="hero-description">Explore our complete collection of delicious vegan recipes from every category!</p>
+                    
+                    <div class="hero-buttons">
+                        <a href="#recipe-categories" class="btn btn-primary">Browse Categories</a>
+                        <a href="community.html" class="btn btn-outline">Join Community</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/vegan_recipes.jpeg" alt="All Vegan Recipes Collection" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Recipe Categories -->
+        <section class="recipe-categories" id="recipe-categories">
+            <div class="container">
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="breakfast" onclick="window.location.href='recipes-breakfast.html'">Breakfast</button>
+                    <button class="filter-btn" data-filter="lunch" onclick="window.location.href='recipes-lunch.html'">Lunch</button>
+                    <button class="filter-btn" data-filter="dinner" onclick="window.location.href='recipes-dinner.html'">Dinner</button>
+                    <button class="filter-btn" data-filter="dessert" onclick="window.location.href='recipes-dessert.html'">Dessert</button>
+                    <button class="filter-btn" data-filter="smoothie" onclick="window.location.href='recipes-smoothie.html'">Smoothie</button>
+                </div>
+
+                <!-- All Recipes Grid -->
+                <div class="all-recipes-grid" id="allRecipesGrid">
+                    <!-- Avocado Toast -->
+                    <a href="recipe-detail.html?id=avocado-toast" class="all-recipe-card">
+                        <img src="images/stories/Recipes/All/all1.png" alt="Avocado Toast with Everything Bagel Seasoning" class="all-recipe-image">
+                        <div class="all-recipe-content">
+                            <h3 class="all-recipe-title">Avocado Toast with Everything Bagel Seasoning</h3>
+                            <p class="all-recipe-description">Crispy whole-grain toast topped with creamy avocado and everything bagel seasoning.</p>
+                        </div>
+                    </a>
+
+                    <!-- Quinoa Salad -->
+                    <a href="recipe-detail.html?id=quinoa-salad" class="all-recipe-card">
+                        <img src="images/stories/Recipes/All/all2.png" alt="Quinoa Salad with Lemon Vinaigrette" class="all-recipe-image">
+                        <div class="all-recipe-content">
+                            <h3 class="all-recipe-title">Quinoa Salad with Lemon Vinaigrette</h3>
+                            <p class="all-recipe-description">A refreshing quinoa salad with cucumber, tomatoes, fresh herbs, and a zesty lemon vinaigrette.</p>
+                        </div>
+                    </a>
+
+                    <!-- Black Bean Burgers -->
+                    <a href="recipe-detail.html?id=black-bean-burgers" class="all-recipe-card">
+                        <img src="images/stories/Recipes/All/all3.png" alt="Spicy Black Bean Burgers" class="all-recipe-image">
+                        <div class="all-recipe-content">
+                            <h3 class="all-recipe-title">Spicy Black Bean Burgers</h3>
+                            <p class="all-recipe-description">Protein-packed black bean patties with quinoa, spices, and fresh cilantro.</p>
+                        </div>
+                    </a>
+
+                    <!-- Chocolate Avocado Mousse -->
+                    <a href="recipe-detail.html?id=chocolate-avocado-mousse" class="all-recipe-card">
+                        <img src="images/stories/Recipes/All/all4.png" alt="Chocolate Avocado Mousse" class="all-recipe-image">
+                        <div class="all-recipe-content">
+                            <h3 class="all-recipe-title">Chocolate Avocado Mousse</h3>
+                            <p class="all-recipe-description">A creamy, rich, and healthy chocolate mousse made with avocado and cocoa.</p>
+                        </div>
+                    </a>
+
+                    <!-- Avocado Banana Smoothie -->
+                    <a href="recipe-detail.html?id=avocado-banana-smoothie" class="all-recipe-card">
+                        <img src="images/stories/Recipes/All/all5.png" alt="Avocado Banana Smoothie" class="all-recipe-image">
+                        <div class="all-recipe-content">
+                            <h3 class="all-recipe-title">Avocado Banana Smoothie</h3>
+                            <p class="all-recipe-description">A nutrient-rich smoothie with avocado, banana, spinach, and chia seeds.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="images/stories/Logo.png?v=1" alt="Broccobae Logo" class="footer-logo-img">
+                    <span class="footer-logo-text">broccobae</span>
+                </div>
+                <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="src/pages/recipes.html">Recipes</a></li>
+                    <li><a href="src/pages/meal-plan.html">Meal Plan</a></li>
+                    <li><a href="community.html">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Recipe Categories</h3>
+                <ul class="footer-links">
+                    <li><a href="recipes-breakfast.html">Breakfast</a></li>
+                    <li><a href="recipes-lunch.html">Lunch</a></li>
+                    <li><a href="recipes-dinner.html">Dinner</a></li>
+                    <li><a href="recipes-dessert.html">Desserts</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Connect</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Broccobae. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

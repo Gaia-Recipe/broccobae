@@ -222,61 +222,22 @@ class RecipeDetailManager {
         `).join('');
     }
 
-    updateNutrition() {
-        const nutritionGrid = document.querySelector('.nutrition-grid');
-        if (!nutritionGrid) return;
-
-        const nutrition = this.currentRecipe.nutrition;
-        const nutritionItems = [
-            { label: 'Calories', value: nutrition.calories, unit: 'kcal' },
-            { label: 'Protein', value: nutrition.protein, unit: 'g' },
-            { label: 'Carbs', value: nutrition.carbs, unit: 'g' },
-            { label: 'Fat', value: nutrition.fat, unit: 'g' },
-            { label: 'Fiber', value: nutrition.fiber, unit: 'g' },
-            { label: 'Sugar', value: nutrition.sugar, unit: 'g' }
-        ];
-
-        nutritionGrid.innerHTML = '';
-        
-        nutritionItems.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'nutrition-item';
-            div.innerHTML = `
-                <span class="nutrition-value">${item.value}<span class="nutrition-unit">${item.unit}</span></span>
-                <span class="nutrition-label">${item.label}</span>
-            `;
-            nutritionGrid.appendChild(div);
-        });
+    // Method to add a new recipe to the database
+    addRecipe(recipe) {
+        // This method can be used to dynamically add recipes
+        // For now, it's a placeholder for future functionality
+        console.log('Recipe added:', recipe);
     }
 
-    updateTags() {
-        const tagsContainer = document.querySelector('.recipe-tags');
-        if (!tagsContainer) return;
-
-        tagsContainer.innerHTML = '';
-        
-        this.currentRecipe.tags.forEach(tag => {
-            const span = document.createElement('span');
-            span.className = 'recipe-tag';
-            span.textContent = tag;
-            tagsContainer.appendChild(span);
-        });
+    // Method to create a recipe URL
+    createRecipeUrl(recipeId) {
+        return `recipe-detail.html?id=${recipeId}`;
     }
 
-    generateRelatedRecipes() {
-        const relatedGrid = document.querySelector('.related-recipes-grid');
-        if (!relatedGrid) return;
-
-        const relatedRecipes = [];
-        const currentCategory = this.currentRecipe?.category || 'lunch';
-        
-        // Generate 3 related recipes
-        for (let i = 0; i < 3; i++) {
-            const id = Math.floor(Math.random() * 100) + 1;
-            const recipe = this.generateRecipeFromId(id.toString());
-            recipe.category = currentCategory; // Keep same category for related recipes
-            relatedRecipes.push(recipe);
-        }
+    // Method to navigate to a specific recipe
+    navigateToRecipe(recipeId) {
+        window.location.href = this.createRecipeUrl(recipeId);
+    }
 
         relatedGrid.innerHTML = '';
         

@@ -301,12 +301,15 @@ function loadFavoriteStates() {
     const favoriteButtons = document.querySelectorAll('.favorite-btn');
     
     favoriteButtons.forEach(button => {
-        const recipeData = JSON.parse(button.getAttribute('data-recipe').replace(/&apos;/g, "'"));
-        const isFavorite = favorites.some(fav => fav.id === recipeData.id);
-        
-        if (isFavorite) {
-            button.classList.add('active');
-            button.querySelector('i').className = 'fas fa-heart';
+        const recipeDataAttr = button.getAttribute('data-recipe');
+        if (recipeDataAttr) {
+            const recipeData = JSON.parse(recipeDataAttr.replace(/&apos;/g, "'"));
+            const isFavorite = favorites.some(fav => fav.id === recipeData.id);
+            
+            if (isFavorite) {
+                button.classList.add('active');
+                button.querySelector('i').className = 'fas fa-heart';
+            }
         }
     });
 }

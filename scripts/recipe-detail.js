@@ -41,120 +41,29 @@ class RecipeDetailManager {
             'avocado-toast': this.getDefaultRecipe(),
             'quinoa-salad': {
                 id: 'quinoa-salad',
-                title: 'Quinoa Salad with Lemon Vinaigrette',
-                category: 'Lunch',
-                image: './images/stories/Recipes/All/all2.png',
+                title: 'Mediterranean Quinoa Salad',
+                category: 'Salads',
+                image: './images/stories/featuredrecipe2.png',
                 prepTime: '15 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
                 ingredients: [
                     { amount: '1 cup', name: 'quinoa, cooked and cooled' },
-                    { amount: '1/2 cup', name: 'cucumber, diced' },
                     { amount: '1/2 cup', name: 'cherry tomatoes, halved' },
-                    { amount: '1/4 cup', name: 'red onion, finely diced' },
-                    { amount: '1/4 cup', name: 'fresh herbs (parsley, mint)' },
-                    { amount: '3 tbsp', name: 'olive oil' },
-                    { amount: '2 tbsp', name: 'fresh lemon juice' },
-                    { amount: '1 tsp', name: 'lemon zest' },
-                    { amount: 'To taste', name: 'salt and pepper' }
+                    { amount: '1/4 cup', name: 'red onion, diced' },
+                    { amount: '1/4 cup', name: 'kalamata olives, pitted' },
+                    { amount: '2 tbsp', name: 'olive oil' },
+                    { amount: '1 tbsp', name: 'lemon juice' },
+                    { amount: 'Optional:', name: 'fresh herbs, cucumber' }
                 ],
                 instructions: [
-                    'Cook quinoa according to package directions and let cool completely.',
-                    'Dice cucumber and red onion, halve cherry tomatoes.',
-                    'Chop fresh herbs finely.',
-                    'In a large bowl, combine quinoa, cucumber, tomatoes, onion, and herbs.',
-                    'In a small bowl, whisk together olive oil, lemon juice, and lemon zest.',
-                    'Pour dressing over salad and toss gently to combine.',
+                    'Cook quinoa according to package directions and let cool.',
+                    'Dice the red onion and halve the cherry tomatoes.',
+                    'Combine quinoa, tomatoes, onion, and olives in a large bowl.',
+                    'Whisk together olive oil and lemon juice.',
+                    'Pour dressing over salad and toss to combine.',
                     'Season with salt and pepper to taste.',
-                    'Let sit for 10 minutes before serving to allow flavors to meld.'
-                ]
-            },
-            'black-bean-burgers': {
-                id: 'black-bean-burgers',
-                title: 'Spicy Black Bean Burgers',
-                category: 'Dinner',
-                image: './images/stories/Recipes/All/all3.png',
-                prepTime: '20 minutes',
-                servings: '4 servings',
-                difficulty: 'Medium',
-                ingredients: [
-                    { amount: '2 cans', name: 'black beans, drained and rinsed' },
-                    { amount: '1/2 cup', name: 'cooked quinoa' },
-                    { amount: '1/4 cup', name: 'breadcrumbs' },
-                    { amount: '1/4 cup', name: 'red onion, finely diced' },
-                    { amount: '2 cloves', name: 'garlic, minced' },
-                    { amount: '1/4 cup', name: 'fresh cilantro, chopped' },
-                    { amount: '1 tsp', name: 'cumin' },
-                    { amount: '1/2 tsp', name: 'chili powder' },
-                    { amount: '1/4 tsp', name: 'cayenne pepper' },
-                    { amount: '2 tbsp', name: 'olive oil' }
-                ],
-                instructions: [
-                    'In a large bowl, mash black beans with a fork, leaving some chunks.',
-                    'Add cooked quinoa, breadcrumbs, onion, garlic, and cilantro.',
-                    'Mix in cumin, chili powder, cayenne, salt, and pepper.',
-                    'Combine all ingredients until mixture holds together.',
-                    'Form into 4 patties and refrigerate for 15 minutes.',
-                    'Heat olive oil in a large skillet over medium heat.',
-                    'Cook patties for 4-5 minutes per side until crispy.',
-                    'Serve on buns with your favorite toppings.'
-                ]
-            },
-            'chocolate-avocado-mousse': {
-                id: 'chocolate-avocado-mousse',
-                title: 'Chocolate Avocado Mousse',
-                category: 'Dessert',
-                image: './images/stories/Recipes/All/all4.png',
-                prepTime: '10 minutes',
-                servings: '4 servings',
-                difficulty: 'Easy',
-                ingredients: [
-                    { amount: '2 large', name: 'ripe avocados' },
-                    { amount: '1/4 cup', name: 'unsweetened cocoa powder' },
-                    { amount: '1/4 cup', name: 'maple syrup' },
-                    { amount: '2 tbsp', name: 'almond milk' },
-                    { amount: '1 tsp', name: 'vanilla extract' },
-                    { amount: '1/4 tsp', name: 'salt' },
-                    { amount: 'Optional:', name: 'berries, mint for garnish' }
-                ],
-                instructions: [
-                    'Cut avocados in half, remove pits, and scoop flesh into a food processor.',
-                    'Add cocoa powder, maple syrup, almond milk, vanilla, and salt.',
-                    'Process until completely smooth and creamy, about 2-3 minutes.',
-                    'Scrape down sides as needed and process again.',
-                    'Taste and adjust sweetness with more maple syrup if desired.',
-                    'Divide into serving bowls and refrigerate for at least 30 minutes.',
-                    'Garnish with fresh berries and mint before serving.',
-                    'Best enjoyed within 2 days of making.'
-                ]
-            },
-            'avocado-banana-smoothie': {
-                id: 'avocado-banana-smoothie',
-                title: 'Avocado Banana Smoothie',
-                category: 'Smoothie',
-                image: './images/stories/Recipes/All/all5.png',
-                prepTime: '5 minutes',
-                servings: '2 servings',
-                difficulty: 'Easy',
-                ingredients: [
-                    { amount: '1/2', name: 'ripe avocado' },
-                    { amount: '1 large', name: 'frozen banana' },
-                    { amount: '1 cup', name: 'fresh spinach' },
-                    { amount: '1 cup', name: 'almond milk' },
-                    { amount: '1 tbsp', name: 'chia seeds' },
-                    { amount: '1 tbsp', name: 'almond butter' },
-                    { amount: '1 tsp', name: 'vanilla extract' },
-                    { amount: '1 cup', name: 'ice cubes' }
-                ],
-                instructions: [
-                    'Add almond milk to blender first for easier blending.',
-                    'Add avocado, frozen banana, and spinach.',
-                    'Add chia seeds, almond butter, and vanilla extract.',
-                    'Blend on high speed for 60-90 seconds until completely smooth.',
-                    'Add ice cubes and blend again until desired consistency.',
-                    'Taste and adjust sweetness if needed.',
-                    'Pour into glasses and serve immediately.',
-                    'Garnish with extra chia seeds or sliced banana if desired.'
+                    'Garnish with fresh herbs if desired and serve.'
                 ]
             }
         };
@@ -167,7 +76,7 @@ class RecipeDetailManager {
             id: 'avocado-toast',
             title: 'Avocado Toast with Everything Bagel Seasoning',
             category: 'Breakfast',
-            image: './images/stories/Recipes/All/all1.png',
+            image: './images/stories/Breakfast1.png',
             prepTime: '10 minutes',
             servings: '1 serving',
             difficulty: 'Easy',

@@ -302,9 +302,10 @@ class RecipeDetailManager {
         const instructionsList = document.getElementById('instructions-list');
         if (!instructionsList || !this.currentRecipe) return;
 
-        instructionsList.innerHTML = this.currentRecipe.instructions.map((instruction) => `
+        instructionsList.innerHTML = this.currentRecipe.instructions.map((instruction, index) => `
             <li class="instruction-step">
-                ${instruction}
+                <div class="step-number">${index + 1}</div>
+                <div class="step-content">${instruction}</div>
             </li>
         `).join('');
     }

@@ -3,8 +3,8 @@
 class RecipeDetailManager {
     constructor() {
         this.currentRecipe = null;
-        this.currentServings = 4;
-        this.originalServings = 4;
+        this.currentServings = 1;
+        this.originalServings = 1;
         this.checkedIngredients = new Set();
         this.favoriteRecipes = this.loadFavoriteRecipes();
         
@@ -13,34 +13,100 @@ class RecipeDetailManager {
 
     init() {
         this.setupEventListeners();
-        this.showNotFound();
+        this.loadRecipeFromURL();
         this.injectNotificationStyles();
     }
 
     loadRecipeFromURL() {
-        // Recipe loading removed - showing not found state
-        this.showNotFound();
+        // Get recipe ID from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipeId = urlParams.get('id');
+        
+        if (recipeId) {
+            this.currentRecipe = this.getRecipeById(recipeId);
+            if (this.currentRecipe) {
+                this.renderRecipeDetails();
+                return;
+            }
+        }
+        
+        // Default to Avocado Toast recipe if no ID or recipe not found
+        this.currentRecipe = this.getDefaultRecipe();
+        this.renderRecipeDetails();
     }
 
     getRecipeById(id) {
-        // Recipe generation removed
-        return null;
+        // Sample recipe database - can be expanded
+        const recipes = {
+            'avocado-toast': this.getDefaultRecipe(),
+            'quinoa-salad': {
+                id: 'quinoa-salad',
+                title: 'Mediterranean Quinoa Salad',
+                category: 'Salads',
+                image: './images/stories/featuredrecipe2.png',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                ingredients: [
+                    { amount: '1 cup', name: 'quinoa, cooked and cooled' },
+                    { amount: '1/2 cup', name: 'cherry tomatoes, halved' },
+                    { amount: '1/4 cup', name: 'red onion, diced' },
+                    { amount: '1/4 cup', name: 'kalamata olives, pitted' },
+                    { amount: '2 tbsp', name: 'olive oil' },
+                    { amount: '1 tbsp', name: 'lemon juice' },
+                    { amount: 'Optional:', name: 'fresh herbs, cucumber' }
+                ],
+                instructions: [
+                    'Cook quinoa according to package directions and let cool.',
+                    'Dice the red onion and halve the cherry tomatoes.',
+                    'Combine quinoa, tomatoes, onion, and olives in a large bowl.',
+                    'Whisk together olive oil and lemon juice.',
+                    'Pour dressing over salad and toss to combine.',
+                    'Season with salt and pepper to taste.',
+                    'Garnish with fresh herbs if desired and serve.'
+                ]
+            }
+        };
+        
+        return recipes[id] || null;
     }
 
-    // Recipe generation methods removed
-
-    // All recipe generation methods removed
+    getDefaultRecipe() {
+        return {
+            id: 'avocado-toast',
+            title: 'Avocado Toast with Everything Bagel Seasoning',
+            category: 'Breakfast',
+            image: './images/stories/Breakfast1.png',
+            prepTime: '10 minutes',
+            servings: '1 serving',
+            difficulty: 'Easy',
+            ingredients: [
+                { amount: '1 slice', name: 'whole-grain bread' },
+                { amount: '1/2', name: 'ripe avocado' },
+                { amount: '1/4 teaspoon', name: 'everything bagel seasoning' },
+                { amount: 'Optional:', name: 'red pepper flakes, microgreens' }
+            ],
+            instructions: [
+                'Toast the bread to your desired level of crispiness.',
+                'While the bread is toasting, mash the avocado in a small bowl.',
+                'Spread the mashed avocado evenly over the toasted bread.',
+                'Sprinkle with everything bagel seasoning.',
+                'Optional: Garnish with red pepper flakes and microgreens.',
+                'Serve immediately and enjoy!'
+            ]
+        };
+    }
 
     renderRecipeDetails() {
         if (!this.currentRecipe) return;
 
         // Update page title
-        document.title = `${this.currentRecipe.title} - Vegan Recipe`;
+        document.title = `${this.currentRecipe.title} - Broccobae | Vegan Recipe Collection`;
 
         // Update breadcrumb
-        const breadcrumbCurrent = document.querySelector('.breadcrumb-current');
-        if (breadcrumbCurrent) {
-            breadcrumbCurrent.textContent = this.currentRecipe.title;
+        const breadcrumbCategory = document.getElementById('breadcrumb-category');
+        if (breadcrumbCategory) {
+            breadcrumbCategory.textContent = this.currentRecipe.category;
         }
 
         // Update recipe header

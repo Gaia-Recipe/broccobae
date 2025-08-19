@@ -18,109 +18,323 @@ class RecipeManager {
 
     generateRecipes() {
         this.allRecipes = [
+            // Breakfast Recipes
             {
-                id: 'recipe-all1',
-                title: 'Avocado Banana Smoothie',
-                category: 'smoothie',
-                image: '../../images/stories/Recipes/All/Avocado Banana Smoothie  .png',
-                prepTime: '25 minutes',
-                servings: '2 servings',
-                difficulty: 'Medium',
-                description: 'A vibrant and nourishing Buddha bowl featuring quinoa, roasted vegetables, and creamy tahini dressing.',
-                ingredients: ['1 cup quinoa', '1 sweet potato', '1 cup broccoli', '1/2 cup chickpeas', '2 tbsp tahini', 'Mixed greens', 'Pumpkin seeds']
-            },
-            {
-                id: 'recipe-all2',
-                title: 'Avocado Toast with Everything Bagel Seasoning',
-                category: 'breakfast',
-                image: '../../images/stories/Recipes/All/Avocado Toast with Everything Bagel Seasoning .png',
-                prepTime: '35 minutes',
-                servings: '4 servings',
-                difficulty: 'Hard',
-                description: 'Luxurious and velvety mushroom risotto with arborio rice, mixed mushrooms, and nutritional yeast.',
-                ingredients: ['1.5 cups arborio rice', '4 cups vegetable broth', '300g mixed mushrooms', '1/2 cup white wine', '1/4 cup nutritional yeast', 'Fresh herbs']
-            },
-            {
-                id: 'recipe-all3',
-                title: 'Banana Nice Cream',
-                category: 'dessert',
-                image: '../../images/stories/Recipes/All/Banana Nice Cream.png',
-                prepTime: '10 minutes',
-                servings: '1 serving',
-                difficulty: 'Easy',
-                description: 'Refreshing tropical smoothie bowl with spinach, banana, and coconut, topped with fresh fruits and granola.',
-                ingredients: ['1 frozen banana', '1 cup spinach', '1/2 avocado', '1 cup coconut milk', 'Chia seeds', 'Fresh berries', 'Granola']
-            },
-            {
-                id: 'recipe-all4',
-                title: 'Chocolate Avocado Mousse',
-                category: 'dessert',
-                image: '../../images/stories/Recipes/All/Chocolate Avocado Mousse .png',
-                prepTime: '45 minutes',
-                servings: '4 servings',
-                difficulty: 'Medium',
-                description: 'Colorful bell peppers filled with aromatic Mediterranean rice, vegetables, and fresh herbs.',
-                ingredients: ['4 bell peppers', '1 cup brown rice', '1 zucchini', '1/2 cup sun-dried tomatoes', '1/4 cup pine nuts', 'Fresh basil', 'Olive oil']
-            },
-            {
-                id: 'recipe-all5',
-                title: 'Creamy Vegan Pasta',
-                category: 'dinner',
-                image: '../../images/stories/Recipes/All/Creamy Vgean Pasta.png',
-                prepTime: '15 minutes',
-                servings: '4 servings',
-                difficulty: 'Easy',
-                description: 'Rich and silky chocolate mousse made with ripe avocados, cocoa, and natural maple sweetness.',
-                ingredients: ['2 ripe avocados', '1/4 cup cocoa powder', '3 tbsp maple syrup', '1 tsp vanilla extract', 'Pinch of salt', 'Fresh berries for garnish']
-            },
-            {
-                id: 'recipe-all6',
+                id: 'breakfast-1',
                 title: 'Fresh Vegan Salad',
                 category: 'breakfast',
                 image: '../../images/stories/Recipes/All/Fresh Vegan Salad.png',
-                prepTime: '20 minutes',
-                servings: '3 servings',
+                prepTime: '15 minutes',
+                servings: '2 servings',
                 difficulty: 'Easy',
-                description: 'Protein-rich quinoa salad with crisp vegetables, fresh herbs, and zesty lemon vinaigrette.',
-                ingredients: ['1 cup quinoa', '1 cucumber', '2 tomatoes', '1/4 cup red onion', '1/4 cup fresh parsley', 'Lemon juice', 'Olive oil']
+                description: 'A refreshing morning salad packed with crisp vegetables, leafy greens, and a zesty lemon dressing.',
+                ingredients: ['Mixed greens', 'Cherry tomatoes', 'Cucumber', 'Bell peppers', 'Red onion', 'Lemon juice', 'Olive oil', 'Salt', 'Pepper']
             },
             {
-                id: 'recipe-all7',
-                title: 'Quinoa Salad with Lemon Vinaigrette',
+                id: 'breakfast-2',
+                title: 'Vegan Pancakes',
                 category: 'breakfast',
-                image: '../../images/stories/Recipes/All/Quinoa Salad with Lemon Vinaigrette  .png',
-                prepTime: '30 minutes',
+                image: '../../images/stories/Recipes/All/all1.png',
+                prepTime: '20 minutes',
                 servings: '4 servings',
-                difficulty: 'Medium',
-                description: 'Warming and fragrant lentil curry with creamy coconut milk, exotic spices, and fresh vegetables.',
-                ingredients: ['1 cup red lentils', '1 can coconut milk', '1 onion', '2 cloves garlic', '1 tbsp curry powder', 'Fresh spinach', 'Basmati rice']
+                difficulty: 'Easy',
+                description: 'Fluffy and delicious plant-based pancakes made with oat flour and topped with fresh berries.',
+                ingredients: ['2 cups oat flour', '2 tbsp sugar', '2 tsp baking powder', '1 cup almond milk', '2 tbsp coconut oil', 'Fresh berries', 'Maple syrup']
             },
             {
-                id: 'recipe-all8',
-                title: 'Spicy Black Bean Burgers',
+                id: 'breakfast-3',
+                title: 'Tofu Scramble',
                 category: 'breakfast',
-                image: '../../images/stories/Recipes/All/Spicy Black Bean Burgers .png',
+                image: '../../images/stories/Recipes/All/all2.png',
+                prepTime: '15 minutes',
+                servings: '3 servings',
+                difficulty: 'Medium',
+                description: 'Protein-rich tofu scramble with vegetables and nutritional yeast for a savory breakfast.',
+                ingredients: ['1 block firm tofu', '1 bell pepper', '1 onion', '2 cloves garlic', 'Nutritional yeast', 'Turmeric', 'Spinach', 'Olive oil']
+            },
+            {
+                id: 'breakfast-4',
+                title: 'Smoothie Bowl',
+                category: 'breakfast',
+                image: '../../images/stories/Recipes/All/all3.png',
+                prepTime: '10 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                description: 'Thick and creamy smoothie bowl topped with fresh fruits, nuts, and seeds for a nutritious start.',
+                ingredients: ['1 frozen banana', '1/2 cup berries', '1/2 cup almond milk', 'Granola', 'Chia seeds', 'Fresh fruits', 'Coconut flakes']
+            },
+            {
+                id: 'breakfast-5',
+                title: 'Avocado Toast',
+                category: 'breakfast',
+                image: '../../images/stories/Recipes/All/Avocado Toast with Everything Bagel Seasoning .png',
+                prepTime: '10 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Classic avocado toast with everything bagel seasoning on whole grain bread.',
+                ingredients: ['2 slices whole grain bread', '1 ripe avocado', 'Everything bagel seasoning', 'Lemon juice', 'Salt', 'Red pepper flakes']
+            },
+            {
+                id: 'breakfast-6',
+                title: 'Chia Seed Pudding',
+                category: 'breakfast',
+                image: '../../images/stories/Recipes/All/all4.png',
                 prepTime: '5 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
-                description: 'Creamy overnight chia pudding with vanilla and almond milk, topped with fresh seasonal berries.',
-                ingredients: ['1/4 cup chia seeds', '1 cup almond milk', '2 tbsp maple syrup', '1 tsp vanilla extract', 'Fresh fruits', 'Nuts for topping']
+                description: 'Creamy overnight chia pudding with vanilla and almond milk, topped with fresh berries.',
+                ingredients: ['1/4 cup chia seeds', '1 cup almond milk', '2 tbsp maple syrup', '1 tsp vanilla extract', 'Fresh berries', 'Nuts']
             },
+            // Lunch Recipes
             {
-                id: 'recipe-all9',
-                title: 'The Ultimate Vegan Burger',
-                category: 'breakfast',
-                image: '../../images/stories/Recipes/All/The Ultimate Vegan Burger.png',
-                prepTime: '40 minutes',
+                id: 'lunch-1',
+                title: 'Mediterranean Quinoa Salad',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/Quinoa Salad with Lemon Vinaigrette  .png',
+                prepTime: '25 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
-                description: 'Colorful roasted seasonal vegetables tossed with whole grain pasta and aromatic fresh herbs.',
-                ingredients: ['300g whole grain pasta', '1 zucchini', '1 bell pepper', '1 eggplant', '2 tbsp olive oil', 'Fresh basil', 'Nutritional yeast']
-            }
-        ];
-    }
+                description: 'Fresh Mediterranean quinoa salad with olives, tomatoes, and herbs in a lemon vinaigrette.',
+                ingredients: ['1 cup quinoa', 'Cherry tomatoes', 'Cucumber', 'Kalamata olives', 'Red onion', 'Fresh herbs', 'Lemon juice', 'Olive oil']
+            },
+            {
+                id: 'lunch-2',
+                title: 'Spicy Tofu Scramble',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/all5.png',
+                prepTime: '20 minutes',
+                servings: '3 servings',
+                difficulty: 'Medium',
+                description: 'Spicy and flavorful tofu scramble with jalapeños and bell peppers for a hearty lunch.',
+                ingredients: ['1 block firm tofu', 'Jalapeños', 'Bell peppers', 'Onion', 'Garlic', 'Cumin', 'Paprika', 'Nutritional yeast']
+            },
+            {
+                id: 'lunch-3',
+                title: 'Avocado & Chickpea Sandwich',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/all6.png',
+                prepTime: '15 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Protein-packed sandwich with mashed chickpeas, avocado, and fresh vegetables.',
+                ingredients: ['1 can chickpeas', '1 ripe avocado', 'Whole grain bread', 'Lettuce', 'Tomato', 'Red onion', 'Lemon juice', 'Dijon mustard']
+            },
+            {
+                id: 'lunch-4',
+                title: 'Lentil Soup with Kale',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/all7.png',
+                prepTime: '35 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                description: 'Hearty and nutritious lentil soup with kale, carrots, and aromatic herbs.',
+                ingredients: ['1 cup red lentils', 'Kale', 'Carrots', 'Celery', 'Onion', 'Garlic', 'Vegetable broth', 'Bay leaves', 'Thyme']
+            },
+            {
+                id: 'lunch-5',
+                title: 'Vegan Burrito Bowl',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/all8.png',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                description: 'Colorful burrito bowl with black beans, quinoa, and fresh toppings.',
+                ingredients: ['Black beans', 'Quinoa', 'Brown rice', 'Corn', 'Bell peppers', 'Avocado', 'Salsa', 'Lime', 'Cilantro']
+            },
+            {
+                id: 'lunch-6',
+                title: 'The Ultimate Vegan Burger',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/The Ultimate Vegan Burger.png',
+                prepTime: '25 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                description: 'Juicy and flavorful plant-based burger with all the classic toppings.',
+                 ingredients: ['Black beans', 'Quinoa', 'Mushrooms', 'Onion', 'Garlic', 'Burger buns', 'Lettuce', 'Tomato', 'Vegan mayo']
+             },
+             // Dinner Recipes
+             {
+                 id: 'dinner-1',
+                 title: 'Creamy Tomato Pasta',
+                 category: 'dinner',
+                 image: '../../images/stories/Recipes/All/Creamy Vgean Pasta.png',
+                 prepTime: '25 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 description: 'Rich and creamy tomato pasta with fresh basil and nutritional yeast.',
+                 ingredients: ['Pasta', 'Canned tomatoes', 'Coconut cream', 'Garlic', 'Onion', 'Fresh basil', 'Nutritional yeast', 'Olive oil']
+             },
+             {
+                 id: 'dinner-2',
+                 title: 'Lentil Shepherd\'s Pie',
+                 category: 'dinner',
+                 image: '../../images/stories/Recipes/All/all9.png',
+                 prepTime: '45 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Medium',
+                 description: 'Hearty lentil shepherd\'s pie topped with creamy mashed potatoes.',
+                 ingredients: ['Green lentils', 'Potatoes', 'Carrots', 'Peas', 'Onion', 'Garlic', 'Vegetable broth', 'Thyme', 'Rosemary']
+             },
+             {
+                 id: 'dinner-3',
+                 title: 'Spicy Tofu Stir-Fry',
+                 category: 'dinner',
+                 image: '../../images/stories/Recipes/All/all1.png',
+                 prepTime: '20 minutes',
+                 servings: '3 servings',
+                 difficulty: 'Medium',
+                 description: 'Quick and flavorful tofu stir-fry with mixed vegetables and spicy sauce.',
+                 ingredients: ['Firm tofu', 'Bell peppers', 'Broccoli', 'Snap peas', 'Garlic', 'Ginger', 'Soy sauce', 'Chili flakes']
+             },
+             {
+                 id: 'dinner-4',
+                 title: 'Black Bean Burgers',
+                 category: 'dinner',
+                 image: '../../images/stories/Recipes/All/Spicy Black Bean Burgers .png',
+                 prepTime: '30 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 description: 'Protein-rich black bean burgers with spices and fresh herbs.',
+                 ingredients: ['Black beans', 'Breadcrumbs', 'Onion', 'Garlic', 'Cumin', 'Paprika', 'Fresh cilantro', 'Burger buns']
+             },
+             {
+                 id: 'dinner-5',
+                 title: 'Vegan Lasagna',
+                 category: 'dinner',
+                 image: '../../images/stories/Recipes/All/all2.png',
+                 prepTime: '60 minutes',
+                 servings: '8 servings',
+                 difficulty: 'Hard',
+                 description: 'Layered vegan lasagna with cashew ricotta and marinara sauce.',
+                 ingredients: ['Lasagna noodles', 'Cashews', 'Spinach', 'Marinara sauce', 'Nutritional yeast', 'Garlic', 'Herbs']
+             },
+             {
+                 id: 'dinner-6',
+                 title: 'Creamy Vegan Pasta',
+                 category: 'dinner',
+                 image: '../../images/stories/Recipes/All/all3.png',
+                 prepTime: '25 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 description: 'Silky smooth vegan pasta with cashew cream sauce and herbs.',
+                 ingredients: ['Pasta', 'Cashews', 'Nutritional yeast', 'Garlic', 'Lemon juice', 'Fresh herbs', 'Olive oil']
+             },
+             // Dessert Recipes
+             {
+                 id: 'dessert-1',
+                 title: 'Chocolate Avocado Mousse',
+                 category: 'dessert',
+                 image: '../../images/stories/Recipes/All/Chocolate Avocado Mousse .png',
+                 prepTime: '15 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 description: 'Rich and creamy chocolate mousse made with ripe avocados.',
+                 ingredients: ['Ripe avocados', 'Cocoa powder', 'Maple syrup', 'Vanilla extract', 'Coconut cream', 'Dark chocolate']
+             },
+             {
+                 id: 'dessert-2',
+                 title: 'Berry Coconut Panna Cotta',
+                 category: 'dessert',
+                 image: '../../images/stories/Recipes/All/all4.png',
+                 prepTime: '20 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Medium',
+                 description: 'Silky coconut panna cotta topped with fresh mixed berries.',
+                 ingredients: ['Coconut milk', 'Agar powder', 'Maple syrup', 'Vanilla', 'Mixed berries', 'Mint leaves']
+             },
+             {
+                 id: 'dessert-3',
+                 title: 'Mango Sticky Rice',
+                 category: 'dessert',
+                 image: '../../images/stories/Recipes/All/all5.png',
+                 prepTime: '40 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 description: 'Traditional Thai-inspired mango sticky rice with coconut sauce.',
+                 ingredients: ['Glutinous rice', 'Coconut milk', 'Palm sugar', 'Fresh mango', 'Salt', 'Toasted sesame seeds']
+             },
+             {
+                 id: 'dessert-4',
+                 title: 'Banana Nice Cream',
+                 category: 'dessert',
+                 image: '../../images/stories/Recipes/All/Banana Nice Cream.png',
+                 prepTime: '5 minutes',
+                 servings: '2 servings',
+                 difficulty: 'Easy',
+                 description: 'Healthy frozen banana ice cream with natural sweetness.',
+                 ingredients: ['Frozen bananas', 'Almond milk', 'Vanilla extract', 'Cinnamon', 'Chopped nuts', 'Dark chocolate chips']
+             },
+             {
+                 id: 'dessert-5',
+                 title: 'Vegan Chocolate Chip Cookies',
+                 category: 'dessert',
+                 image: '../../images/stories/Recipes/All/all6.png',
+                 prepTime: '25 minutes',
+                 servings: '12 cookies',
+                 difficulty: 'Easy',
+                 description: 'Soft and chewy vegan chocolate chip cookies with perfect texture.',
+                 ingredients: ['Flour', 'Vegan butter', 'Brown sugar', 'Vanilla', 'Baking soda', 'Vegan chocolate chips', 'Almond milk']
+             },
+             // Smoothie Recipes
+             {
+                 id: 'smoothie-1',
+                 title: 'Green Detox Smoothie',
+                 category: 'smoothie',
+                 image: '../../images/stories/Recipes/All/Avocado Banana Smoothie  .png',
+                 prepTime: '5 minutes',
+                 servings: '1 serving',
+                 difficulty: 'Easy',
+                 description: 'Refreshing green smoothie packed with nutrients and natural detox ingredients.',
+                 ingredients: ['Spinach', 'Cucumber', 'Green apple', 'Lemon juice', 'Ginger', 'Coconut water', 'Mint']
+             },
+             {
+                 id: 'smoothie-2',
+                 title: 'Berry Blast Smoothie',
+                 category: 'smoothie',
+                 image: '../../images/stories/Recipes/All/all7.png',
+                 prepTime: '5 minutes',
+                 servings: '1 serving',
+                 difficulty: 'Easy',
+                 description: 'Antioxidant-rich berry smoothie with creamy banana base.',
+                 ingredients: ['Mixed berries', 'Banana', 'Almond milk', 'Chia seeds', 'Maple syrup', 'Vanilla extract']
+             },
+             {
+                 id: 'smoothie-3',
+                 title: 'Tropical Sunrise Smoothie',
+                 category: 'smoothie',
+                 image: '../../images/stories/Recipes/All/all8.png',
+                 prepTime: '7 minutes',
+                 servings: '1 serving',
+                 difficulty: 'Easy',
+                 description: 'Tropical smoothie with mango, pineapple, and coconut flavors.',
+                 ingredients: ['Mango', 'Pineapple', 'Coconut milk', 'Banana', 'Lime juice', 'Coconut flakes']
+             },
+             {
+                 id: 'smoothie-4',
+                 title: 'Chocolate Peanut Butter Smoothie',
+                 category: 'smoothie',
+                 image: '../../images/stories/Recipes/All/all9.png',
+                 prepTime: '5 minutes',
+                 servings: '1 serving',
+                 difficulty: 'Easy',
+                 description: 'Indulgent chocolate peanut butter smoothie that tastes like dessert.',
+                 ingredients: ['Banana', 'Peanut butter', 'Cocoa powder', 'Almond milk', 'Dates', 'Ice cubes']
+             },
+             {
+                 id: 'smoothie-5',
+                 title: 'Mango Lassi Smoothie',
+                 category: 'smoothie',
+                 image: '../../images/stories/Recipes/All/all1.png',
+                 prepTime: '5 minutes',
+                 servings: '1 serving',
+                 difficulty: 'Easy',
+                 description: 'Creamy mango lassi-inspired smoothie with cardamom and coconut.',
+                 ingredients: ['Mango', 'Coconut yogurt', 'Coconut milk', 'Cardamom', 'Honey or maple syrup', 'Ice']
+             }
+         ];
+     }
 
-    setupEventListeners() {
+     setupEventListeners() {
         // Set up filter buttons
         const filterButtons = document.querySelectorAll('.filter-btn');
         filterButtons.forEach(button => {

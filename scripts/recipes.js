@@ -157,7 +157,7 @@ class RecipeManager {
                  id: 'dinner-1',
                  title: 'Creamy Tomato Pasta',
                  category: 'dinner',
-                 image: '../../images/stories/Recipes/All/Creamy Vegan Pasta.png',
+                 image: '../../images/stories/Recipes/All/Creamy Tomato Pasta.png',
                  prepTime: '25 minutes',
                  servings: '4 servings',
                  difficulty: 'Easy',

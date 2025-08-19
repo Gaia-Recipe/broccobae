@@ -72,6 +72,50 @@ class RecipeManager {
                 difficulty: 'Easy',
                 description: 'Decadent and healthy chocolate mousse made with ripe avocados, cocoa, and natural sweeteners.',
                 ingredients: ['2 ripe avocados', '1/4 cup cocoa powder', '3 tbsp maple syrup', '1 tsp vanilla extract', 'Pinch of salt', 'Fresh berries for garnish']
+            },
+            {
+                id: 'recipe-all6',
+                title: 'Quinoa Power Salad',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/all6.png',
+                prepTime: '20 minutes',
+                servings: '3 servings',
+                difficulty: 'Easy',
+                description: 'Protein-packed quinoa salad with fresh vegetables, herbs, and a zesty lemon dressing.',
+                ingredients: ['1 cup quinoa', '1 cucumber', '2 tomatoes', '1/4 cup red onion', '1/4 cup fresh parsley', 'Lemon juice', 'Olive oil']
+            },
+            {
+                id: 'recipe-all7',
+                title: 'Coconut Curry Lentils',
+                category: 'dinner',
+                image: '../../images/stories/Recipes/All/all7.png',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                description: 'Warming and aromatic lentil curry with coconut milk, spices, and fresh vegetables.',
+                ingredients: ['1 cup red lentils', '1 can coconut milk', '1 onion', '2 cloves garlic', '1 tbsp curry powder', 'Fresh spinach', 'Basmati rice']
+            },
+            {
+                id: 'recipe-all8',
+                title: 'Overnight Chia Pudding',
+                category: 'breakfast',
+                image: '../../images/stories/Recipes/All/all8.png',
+                prepTime: '5 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Creamy and nutritious chia pudding prepared overnight with plant milk and natural sweeteners.',
+                ingredients: ['1/4 cup chia seeds', '1 cup almond milk', '2 tbsp maple syrup', '1 tsp vanilla extract', 'Fresh fruits', 'Nuts for topping']
+            },
+            {
+                id: 'recipe-all9',
+                title: 'Roasted Vegetable Pasta',
+                category: 'dinner',
+                image: '../../images/stories/Recipes/All/all9.png',
+                prepTime: '40 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                description: 'Colorful roasted vegetables tossed with whole grain pasta and fresh herbs.',
+                ingredients: ['300g whole grain pasta', '1 zucchini', '1 bell pepper', '1 eggplant', '2 tbsp olive oil', 'Fresh basil', 'Nutritional yeast']
             }
         ];
     }
@@ -192,19 +236,11 @@ class RecipeManager {
             recipeCard.innerHTML = `
                 <div class="recipe-image-container">
                     <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
-                    <button class="favorite-btn" onclick="toggleFavorite(this)" data-recipe-id="${recipe.id}">
-                        <i class="far fa-heart"></i>
-                    </button>
                     <div class="recipe-category-badge">${recipe.category}</div>
                 </div>
                 <div class="recipe-content">
                     <h3 class="recipe-title">${recipe.title}</h3>
                     <p class="recipe-description">${recipe.description}</p>
-                    <div class="recipe-meta">
-                        <span class="recipe-time"><i class="far fa-clock"></i> ${recipe.prepTime}</span>
-                        <span class="recipe-servings"><i class="fas fa-users"></i> ${recipe.servings}</span>
-                        <span class="recipe-difficulty"><i class="fas fa-signal"></i> ${recipe.difficulty}</span>
-                    </div>
                     <button class="recipe-btn" onclick="recipeManager.showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">
                         View Recipe <i class="fas fa-arrow-right"></i>
                     </button>

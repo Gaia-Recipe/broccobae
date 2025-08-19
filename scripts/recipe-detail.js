@@ -120,34 +120,42 @@ class RecipeDetailManager {
     }
 
     updateRecipeHeader() {
-        const recipe = this.currentRecipe;
-        
-        // Update image
-        const mainImage = document.querySelector('.recipe-main-image');
-        if (mainImage) {
-            mainImage.src = recipe.image;
-            mainImage.alt = recipe.title;
+        if (!this.currentRecipe) return;
+
+        // Update recipe image
+        const recipeImage = document.getElementById('recipe-image');
+        if (recipeImage) {
+            recipeImage.src = this.currentRecipe.image;
+            recipeImage.alt = this.currentRecipe.title;
+        }
+
+        // Update recipe title
+        const recipeTitle = document.getElementById('recipe-title');
+        if (recipeTitle) {
+            recipeTitle.textContent = this.currentRecipe.title;
         }
 
         // Update category badge
-        const categoryBadge = document.querySelector('.recipe-category-badge');
+        const categoryBadge = document.getElementById('recipe-category');
         if (categoryBadge) {
-            categoryBadge.textContent = recipe.category;
-        }
-
-        // Update title and description
-        const title = document.querySelector('.recipe-title');
-        if (title) {
-            title.textContent = recipe.title;
-        }
-
-        const description = document.querySelector('.recipe-description');
-        if (description) {
-            description.textContent = recipe.description;
+            categoryBadge.textContent = this.currentRecipe.category;
         }
 
         // Update meta information
-        this.updateMetaInfo();
+        const prepTime = document.getElementById('prep-time');
+        if (prepTime) {
+            prepTime.textContent = this.currentRecipe.prepTime;
+        }
+
+        const servings = document.getElementById('servings');
+        if (servings) {
+            servings.textContent = this.currentRecipe.servings;
+        }
+
+        const difficulty = document.getElementById('difficulty');
+        if (difficulty) {
+            difficulty.textContent = this.currentRecipe.difficulty;
+        }
     }
 
     updateMetaInfo() {
@@ -174,24 +182,21 @@ class RecipeDetailManager {
     updateRecipeContent() {
         this.updateIngredients();
         this.updateInstructions();
-        this.updateNutrition();
-        this.updateTags();
     }
 
     updateIngredients() {
-        const ingredientsList = document.querySelector('.ingredients-list');
-        if (!ingredientsList) return;
+        const ingredientsList = document.getElementById('ingredients-list');
+        if (!ingredientsList || !this.currentRecipe) return;
 
-        ingredientsList.innerHTML = '';
-        
-        this.currentRecipe.ingredients.forEach((ingredient, index) => {
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <div class="ingredient-checkbox" data-index="${index}"></div>
-                <span class="ingredient-text">${this.adjustIngredientQuantity(ingredient)}</span>
+        ingredientsList.innerHTML = this.currentRecipe.ingredients.map((ingredient, index) => {
+            const isOptional = ingredient.amount.toLowerCase().includes('optional');
+            return `
+                <li class="ingredient-item ${isOptional ? 'optional' : ''}">
+                    <span class="ingredient-amount">${ingredient.amount}</span>
+                    <span class="ingredient-name">${ingredient.name}</span>
+                </li>
             `;
-            ingredientsList.appendChild(li);
-        });
+        }).join('');
     }
 
     adjustIngredientQuantity(ingredient) {
@@ -206,16 +211,15 @@ class RecipeDetailManager {
     }
 
     updateInstructions() {
-        const instructionsList = document.querySelector('.instructions-list');
-        if (!instructionsList) return;
+        const instructionsList = document.getElementById('instructions-list');
+        if (!instructionsList || !this.currentRecipe) return;
 
-        instructionsList.innerHTML = '';
-        
-        this.currentRecipe.instructions.forEach(instruction => {
-            const li = document.createElement('li');
-            li.textContent = instruction;
-            instructionsList.appendChild(li);
-        });
+        instructionsList.innerHTML = this.currentRecipe.instructions.map((instruction, index) => `
+            <li class="instruction-step">
+                <div class="step-number">${index + 1}</div>
+                <div class="step-content">${instruction}</div>
+            </li>
+        `).join('');
     }
 
     updateNutrition() {

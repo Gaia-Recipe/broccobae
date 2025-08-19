@@ -220,13 +220,36 @@
     gap: 0.3rem;
 }
 
-.recipe-meta .category {
-    background: #4CAF50;
+.recipe-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.recipe-category-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     color: white;
-    padding: 0.2rem 0.6rem;
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 500;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+/* Unified green color for all categories */
+.recipe-category-badge {
+    background: #09713D;
+}
+
+.recipe-card:hover .recipe-category-badge {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
 .favorite-btn {

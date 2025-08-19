@@ -20,101 +20,101 @@ class RecipeManager {
         this.allRecipes = [
             {
                 id: 'recipe-all1',
-                title: 'Plant-Based Buddha Bowl',
-                category: 'lunch',
-                image: '../../images/stories/Recipes/All/all1.png',
+                title: 'Avocado Banana Smoothie',
+                category: 'smoothie',
+                image: '../../images/stories/Recipes/All/Avocado Banana Smoothie  .png',
                 prepTime: '25 minutes',
                 servings: '2 servings',
                 difficulty: 'Medium',
-                description: 'A colorful and nutritious Buddha bowl packed with quinoa, roasted vegetables, and tahini dressing.',
+                description: 'A vibrant and nourishing Buddha bowl featuring quinoa, roasted vegetables, and creamy tahini dressing.',
                 ingredients: ['1 cup quinoa', '1 sweet potato', '1 cup broccoli', '1/2 cup chickpeas', '2 tbsp tahini', 'Mixed greens', 'Pumpkin seeds']
             },
             {
                 id: 'recipe-all2',
-                title: 'Vegan Mushroom Risotto',
-                category: 'dinner',
-                image: '../../images/stories/Recipes/All/all2.png',
+                title: 'Avocado Toast with Everything Bagel Seasoning',
+                category: 'breakfast',
+                image: '../../images/stories/Recipes/All/Avocado Toast with Everything Bagel Seasoning .png',
                 prepTime: '35 minutes',
                 servings: '4 servings',
                 difficulty: 'Hard',
-                description: 'Creamy and rich mushroom risotto made with arborio rice, mixed mushrooms, and nutritional yeast.',
+                description: 'Luxurious and velvety mushroom risotto with arborio rice, mixed mushrooms, and nutritional yeast.',
                 ingredients: ['1.5 cups arborio rice', '4 cups vegetable broth', '300g mixed mushrooms', '1/2 cup white wine', '1/4 cup nutritional yeast', 'Fresh herbs']
             },
             {
                 id: 'recipe-all3',
-                title: 'Green Smoothie Power Bowl',
-                category: 'breakfast',
-                image: '../../images/stories/Recipes/All/all3.png',
+                title: 'Banana Nice Cream',
+                category: 'dessert',
+                image: '../../images/stories/Recipes/All/Banana Nice Cream.png',
                 prepTime: '10 minutes',
                 servings: '1 serving',
                 difficulty: 'Easy',
-                description: 'Energizing green smoothie bowl topped with fresh fruits, nuts, and seeds for a perfect morning boost.',
-                ingredients: ['1 frozen banana', '1 cup spinach', '1/2 avocado', '1 cup almond milk', 'Chia seeds', 'Fresh berries', 'Granola']
+                description: 'Refreshing tropical smoothie bowl with spinach, banana, and coconut, topped with fresh fruits and granola.',
+                ingredients: ['1 frozen banana', '1 cup spinach', '1/2 avocado', '1 cup coconut milk', 'Chia seeds', 'Fresh berries', 'Granola']
             },
             {
                 id: 'recipe-all4',
-                title: 'Mediterranean Stuffed Peppers',
-                category: 'dinner',
-                image: '../../images/stories/Recipes/All/all4.png',
+                title: 'Chocolate Avocado Mousse',
+                category: 'dessert',
+                image: '../../images/stories/Recipes/All/Chocolate Avocado Mousse .png',
                 prepTime: '45 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
-                description: 'Colorful bell peppers stuffed with a Mediterranean mixture of rice, vegetables, and herbs.',
+                description: 'Colorful bell peppers filled with aromatic Mediterranean rice, vegetables, and fresh herbs.',
                 ingredients: ['4 bell peppers', '1 cup brown rice', '1 zucchini', '1/2 cup sun-dried tomatoes', '1/4 cup pine nuts', 'Fresh basil', 'Olive oil']
             },
             {
                 id: 'recipe-all5',
-                title: 'Raw Chocolate Avocado Mousse',
-                category: 'dessert',
-                image: '../../images/stories/Recipes/All/all5.png',
+                title: 'Creamy Vegan Pasta',
+                category: 'dinner',
+                image: '../../images/stories/Recipes/All/Creamy Vgean Pasta.png',
                 prepTime: '15 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
-                description: 'Decadent and healthy chocolate mousse made with ripe avocados, cocoa, and natural sweeteners.',
+                description: 'Rich and silky chocolate mousse made with ripe avocados, cocoa, and natural maple sweetness.',
                 ingredients: ['2 ripe avocados', '1/4 cup cocoa powder', '3 tbsp maple syrup', '1 tsp vanilla extract', 'Pinch of salt', 'Fresh berries for garnish']
             },
             {
                 id: 'recipe-all6',
-                title: 'Quinoa Power Salad',
+                title: 'Fresh Vegan Salad',
                 category: 'lunch',
-                image: '../../images/stories/Recipes/All/all6.png',
+                image: '../../images/stories/Recipes/All/Fresh Vegan Salad.png',
                 prepTime: '20 minutes',
                 servings: '3 servings',
                 difficulty: 'Easy',
-                description: 'Protein-packed quinoa salad with fresh vegetables, herbs, and a zesty lemon dressing.',
+                description: 'Protein-rich quinoa salad with crisp vegetables, fresh herbs, and zesty lemon vinaigrette.',
                 ingredients: ['1 cup quinoa', '1 cucumber', '2 tomatoes', '1/4 cup red onion', '1/4 cup fresh parsley', 'Lemon juice', 'Olive oil']
             },
             {
                 id: 'recipe-all7',
-                title: 'Coconut Curry Lentils',
-                category: 'dinner',
-                image: '../../images/stories/Recipes/All/all7.png',
+                title: 'Quinoa Salad with Lemon Vinaigrette',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/Quinoa Salad with Lemon Vinaigrette  .png',
                 prepTime: '30 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
-                description: 'Warming and aromatic lentil curry with coconut milk, spices, and fresh vegetables.',
+                description: 'Warming and fragrant lentil curry with creamy coconut milk, exotic spices, and fresh vegetables.',
                 ingredients: ['1 cup red lentils', '1 can coconut milk', '1 onion', '2 cloves garlic', '1 tbsp curry powder', 'Fresh spinach', 'Basmati rice']
             },
             {
                 id: 'recipe-all8',
-                title: 'Overnight Chia Pudding',
-                category: 'breakfast',
-                image: '../../images/stories/Recipes/All/all8.png',
+                title: 'Spicy Black Bean Burgers',
+                category: 'dinner',
+                image: '../../images/stories/Recipes/All/Spicy Black Bean Burgers .png',
                 prepTime: '5 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
-                description: 'Creamy and nutritious chia pudding prepared overnight with plant milk and natural sweeteners.',
+                description: 'Creamy overnight chia pudding with vanilla and almond milk, topped with fresh seasonal berries.',
                 ingredients: ['1/4 cup chia seeds', '1 cup almond milk', '2 tbsp maple syrup', '1 tsp vanilla extract', 'Fresh fruits', 'Nuts for topping']
             },
             {
                 id: 'recipe-all9',
-                title: 'Roasted Vegetable Pasta',
+                title: 'The Ultimate Vegan Burger',
                 category: 'dinner',
-                image: '../../images/stories/Recipes/All/all9.png',
+                image: '../../images/stories/Recipes/All/The Ultimate Vegan Burger.png',
                 prepTime: '40 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
-                description: 'Colorful roasted vegetables tossed with whole grain pasta and fresh herbs.',
+                description: 'Colorful roasted seasonal vegetables tossed with whole grain pasta and aromatic fresh herbs.',
                 ingredients: ['300g whole grain pasta', '1 zucchini', '1 bell pepper', '1 eggplant', '2 tbsp olive oil', 'Fresh basil', 'Nutritional yeast']
             }
         ];
@@ -236,7 +236,7 @@ class RecipeManager {
             recipeCard.innerHTML = `
                 <div class="recipe-image-container">
                     <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
-                    <div class="recipe-category-badge">${recipe.category}</div>
+                    <div class="recipe-category-badge" data-category="${recipe.category}">${recipe.category}</div>
                 </div>
                 <div class="recipe-content">
                     <h3 class="recipe-title">${recipe.title}</h3>

@@ -114,9 +114,6 @@ class RecipeDetailManager {
         
         // Update recipe content
         this.updateRecipeContent();
-        
-        // Update related recipes
-        this.generateRelatedRecipes();
     }
 
     updateRecipeHeader() {

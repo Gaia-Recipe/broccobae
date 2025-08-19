@@ -54,84 +54,98 @@
             </div>
         </section>
 
-        <!-- Recipe Not Available -->
+        <!-- Recipe Header -->
         <section class="recipe-header">
             <div class="container">
-                <div class="empty-state" style="text-align: center; padding: 4rem 2rem;">
-                    <i class="fas fa-utensils" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
-                    <h1 style="color: #666; margin-bottom: 1rem;">Recipe Not Available</h1>
-                    <p style="color: #999; margin-bottom: 2rem;">This recipe is no longer available. Please browse our other sections for restaurant recommendations.</p>
-                    <a href="src/pages/recipes.html" class="btn btn-primary">Browse Recipes</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Vegan Restaurant Ad -->
-        <section class="restaurant-ad">
-            <div class="container">
-                <div class="ad-banner-large">
-                    <div class="ad-content">
-                        <div class="ad-text">
-                            <h3>🌱 Green Garden Vegan Restaurant</h3>
-                            <p>Experience these recipes in our restaurant! Fresh, organic, locally-sourced vegan cuisine.</p>
-                            <div class="ad-features">
-                                <span class="ad-feature">📍 Downtown Location</span>
-                                <span class="ad-feature">🚚 Delivery Available</span>
-                                <span class="ad-feature">⭐ 4.9/5 Rating</span>
+                <div class="recipe-header-content">
+                    <div class="recipe-image-container">
+                        <img src="./images/stories/Breakfast1.png" alt="Avocado Toast with Everything Bagel Seasoning" class="recipe-main-image" id="recipe-image">
+                        <button class="back-btn" onclick="history.back()" title="Go back">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </div>
+                    <div class="recipe-info">
+                        <div class="recipe-category-badge" id="recipe-category">Breakfast</div>
+                        <h1 class="recipe-title" id="recipe-title">Avocado Toast with Everything Bagel Seasoning</h1>
+                        <div class="recipe-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span id="prep-time">10 minutes</span>
                             </div>
-                        </div>
-                        <div class="ad-cta-container">
-                            <button class="ad-cta-btn" onclick="window.open('https://www.greengardenvegan.com', '_blank')">
-                                Visit Restaurant <i class="fas fa-external-link-alt"></i>
-                            </button>
-                            <button class="ad-cta-btn secondary" onclick="window.open('tel:+15551234567')">
-                                <i class="fas fa-phone"></i> Order Now
-                            </button>
+                            <div class="meta-item">
+                                <i class="fas fa-utensils"></i>
+                                <span id="servings">1 serving</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span id="difficulty">Easy</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Recipe Content Removed -->
-        <!-- Content has been removed as recipes are no longer available -->
-
-        <!-- Restaurant Promotion -->
-        <section class="restaurant-promotion">
+        <!-- Recipe Content -->
+        <section class="recipe-content">
             <div class="container">
-                <div class="promotion-content">
-                    <h2>🍽️ Try This Recipe at Our Partner Restaurants!</h2>
-                    <div class="restaurants-grid">
-                        <div class="restaurant-card">
-                            <div class="restaurant-info">
-                                <h3>Green Garden Vegan</h3>
-                                <p>📍 123 Plant Street, Vegan City</p>
-                                <p>⭐ 4.9/5 • 🚚 Delivery Available</p>
-                            </div>
-                            <button class="restaurant-btn" onclick="window.open('https://www.greengardenvegan.com', '_blank')">
-                                Visit Menu
-                            </button>
-                        </div>
-                        <div class="restaurant-card">
-                            <div class="restaurant-info">
-                                <h3>Plant Paradise</h3>
-                                <p>📍 456 Green Avenue, Plant City</p>
-                                <p>⭐ 4.8/5 • 🥡 Takeout Available</p>
-                            </div>
-                            <button class="restaurant-btn" onclick="window.open('https://www.plantparadise.com', '_blank')">
-                                Order Now
-                            </button>
-                        </div>
-                        <div class="restaurant-card">
-                            <div class="restaurant-info">
-                                <h3>Veggie Delights</h3>
-                                <p>📍 789 Healthy Lane, Green Town</p>
-                                <p>⭐ 4.7/5 • 🎉 Catering Available</p>
-                            </div>
-                            <button class="restaurant-btn" onclick="window.open('https://www.veggiedelights.com', '_blank')">
-                                Book Table
-                            </button>
-                        </div>
+                <div class="recipe-details">
+                    <div class="ingredients-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-list-ul"></i>
+                            Ingredients
+                        </h2>
+                        <ul class="ingredients-list" id="ingredients-list">
+                            <li class="ingredient-item">
+                                <span class="ingredient-amount">1 slice</span>
+                                <span class="ingredient-name">whole-grain bread</span>
+                            </li>
+                            <li class="ingredient-item">
+                                <span class="ingredient-amount">1/2</span>
+                                <span class="ingredient-name">ripe avocado</span>
+                            </li>
+                            <li class="ingredient-item">
+                                <span class="ingredient-amount">1/4 teaspoon</span>
+                                <span class="ingredient-name">everything bagel seasoning</span>
+                            </li>
+                            <li class="ingredient-item optional">
+                                <span class="ingredient-amount">Optional:</span>
+                                <span class="ingredient-name">red pepper flakes, microgreens</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="instructions-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-clipboard-list"></i>
+                            Instructions
+                        </h2>
+                        <ol class="instructions-list" id="instructions-list">
+                            <li class="instruction-step">
+                                <div class="step-number">1</div>
+                                <div class="step-content">Toast the bread to your desired level of crispiness.</div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">2</div>
+                                <div class="step-content">While the bread is toasting, mash the avocado in a small bowl.</div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">3</div>
+                                <div class="step-content">Spread the mashed avocado evenly over the toasted bread.</div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">4</div>
+                                <div class="step-content">Sprinkle with everything bagel seasoning.</div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">5</div>
+                                <div class="step-content">Optional: Garnish with red pepper flakes and microgreens.</div>
+                            </li>
+                            <li class="instruction-step">
+                                <div class="step-number">6</div>
+                                <div class="step-content">Serve immediately and enjoy!</div>
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>

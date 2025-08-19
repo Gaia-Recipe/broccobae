@@ -239,6 +239,6 @@ const notificationStyles = `
 `;
 
 // Inject notification styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = notificationStyles;
-document.head.appendChild(styleSheet);
+const mainStyleSheet = document.createElement('style');
+mainStyleSheet.textContent = notificationStyles;
+document.head.appendChild(mainStyleSheet);

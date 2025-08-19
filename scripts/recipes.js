@@ -224,7 +224,7 @@ class RecipeManager {
                  id: 'dessert-1',
                  title: 'Chocolate Avocado Mousse',
                  category: 'dessert',
-                 image: '../../images/stories/Recipes/All/Chocolate Avocado Mousse.png',
+                 image: '../../images/stories/Recipes/All/Chocolate Avocado Mousse .png',
                  prepTime: '15 minutes',
                  servings: '4 servings',
                  difficulty: 'Easy',

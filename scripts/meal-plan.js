@@ -317,6 +317,6 @@ const mealPlanNotificationStyles = `
 `;
 
 // Inject notification styles
-const styleSheet = document.createElement('style');
-styleSheet.textContent = mealPlanNotificationStyles;
-document.head.appendChild(styleSheet);
+const mealPlanStyleSheet = document.createElement('style');
+mealPlanStyleSheet.textContent = mealPlanNotificationStyles;
+document.head.appendChild(mealPlanStyleSheet);

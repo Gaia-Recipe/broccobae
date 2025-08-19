@@ -76,7 +76,7 @@ class RecipeManager {
             {
                 id: 'recipe-all6',
                 title: 'Fresh Vegan Salad',
-                category: 'lunch',
+                category: 'breakfast',
                 image: '../../images/stories/Recipes/All/Fresh Vegan Salad.png',
                 prepTime: '20 minutes',
                 servings: '3 servings',
@@ -87,7 +87,7 @@ class RecipeManager {
             {
                 id: 'recipe-all7',
                 title: 'Quinoa Salad with Lemon Vinaigrette',
-                category: 'lunch',
+                category: 'breakfast',
                 image: '../../images/stories/Recipes/All/Quinoa Salad with Lemon Vinaigrette  .png',
                 prepTime: '30 minutes',
                 servings: '4 servings',
@@ -98,7 +98,7 @@ class RecipeManager {
             {
                 id: 'recipe-all8',
                 title: 'Spicy Black Bean Burgers',
-                category: 'dinner',
+                category: 'breakfast',
                 image: '../../images/stories/Recipes/All/Spicy Black Bean Burgers .png',
                 prepTime: '5 minutes',
                 servings: '2 servings',
@@ -109,7 +109,7 @@ class RecipeManager {
             {
                 id: 'recipe-all9',
                 title: 'The Ultimate Vegan Burger',
-                category: 'dinner',
+                category: 'breakfast',
                 image: '../../images/stories/Recipes/All/The Ultimate Vegan Burger.png',
                 prepTime: '40 minutes',
                 servings: '4 servings',

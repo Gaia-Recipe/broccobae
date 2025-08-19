@@ -10,11 +10,59 @@ class RecipeManager {
     }
 
     init() {
-        // Recipes removed - no longer generating recipes
-        this.displayedRecipes = [];
+        this.generateRecipes();
         this.setupEventListeners();
-        this.renderEmptyState();
+        this.filterRecipes('all');
         this.updateRecipeCount();
+    }
+
+    generateRecipes() {
+        this.allRecipes = [
+            {
+                id: 'avocado-toast',
+                title: 'Avocado Toast with Everything Bagel Seasoning',
+                category: 'breakfast',
+                image: './images/stories/Breakfast1.png',
+                prepTime: '10 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                description: 'Creamy avocado on toasted bread topped with everything bagel seasoning for a perfect breakfast.',
+                ingredients: ['2 slices whole grain bread', '1 ripe avocado', '1 tbsp everything bagel seasoning', 'Salt and pepper to taste', 'Optional: lemon juice']
+            },
+            {
+                id: 'quinoa-breakfast-bowl',
+                title: 'Quinoa Breakfast Bowl',
+                category: 'breakfast',
+                image: './images/stories/featuredrecipe1.png',
+                prepTime: '15 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Nutritious quinoa bowl with fresh fruits and nuts for a healthy start to your day.',
+                ingredients: ['1 cup cooked quinoa', '1/2 cup berries', '1/4 cup nuts', '2 tbsp maple syrup', 'Plant milk']
+            },
+            {
+                id: 'mediterranean-quinoa-salad',
+                title: 'Mediterranean Quinoa Salad',
+                category: 'lunch',
+                image: './images/stories/featuredrecipe2.png',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                description: 'Fresh and flavorful quinoa salad with Mediterranean vegetables and herbs.',
+                ingredients: ['1 cup quinoa', '1/2 cup cherry tomatoes', '1/4 cup red onion', '1/4 cup olives', 'Olive oil', 'Lemon juice']
+            },
+            {
+                id: 'veggie-stir-fry',
+                title: 'Colorful Veggie Stir Fry',
+                category: 'dinner',
+                image: './images/stories/featuredrecipe3.png',
+                prepTime: '20 minutes',
+                servings: '3 servings',
+                difficulty: 'Medium',
+                description: 'Quick and healthy stir fry packed with colorful vegetables and Asian flavors.',
+                ingredients: ['Mixed vegetables', 'Soy sauce', 'Garlic', 'Ginger', 'Sesame oil', 'Brown rice']
+            }
+        ];
     }
 
     setupEventListeners() {
@@ -93,9 +141,16 @@ class RecipeManager {
 
     filterRecipes(category) {
         this.currentFilter = category;
-        // No recipes to filter - show empty state
-        this.displayedRecipes = [];
-        this.renderEmptyState();
+        this.currentPage = 1;
+        
+        if (category === 'all') {
+            this.displayedRecipes = [...this.allRecipes];
+        } else {
+            this.displayedRecipes = this.allRecipes.filter(recipe => recipe.category === category);
+        }
+        
+        this.shuffleArray(this.displayedRecipes);
+        this.renderRecipes();
         this.updateRecipeCount();
     }
 
@@ -106,14 +161,59 @@ class RecipeManager {
     }
 
     renderRecipes(clearExisting = true) {
-        // Recipes removed - show empty state
-        this.renderEmptyState();
+        const recipeGrid = document.getElementById('recipeGrid');
+        if (!recipeGrid) return;
         
-        // Hide load more button
+        if (clearExisting) {
+            recipeGrid.innerHTML = '';
+        }
+        
+        if (this.displayedRecipes.length === 0) {
+            this.renderEmptyState();
+            return;
+        }
+        
+        const recipesToShow = this.displayedRecipes.slice(0, this.currentPage * this.recipesPerPage);
+        
+        recipesToShow.forEach(recipe => {
+            const recipeCard = document.createElement('div');
+            recipeCard.className = 'recipe-card';
+            recipeCard.innerHTML = `
+                <div class="recipe-image-container">
+                    <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
+                    <button class="favorite-btn" onclick="toggleFavorite(this)" data-recipe-id="${recipe.id}">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <div class="recipe-category-badge">${recipe.category}</div>
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">${recipe.title}</h3>
+                    <p class="recipe-description">${recipe.description}</p>
+                    <div class="recipe-meta">
+                        <span class="recipe-time"><i class="far fa-clock"></i> ${recipe.prepTime}</span>
+                        <span class="recipe-servings"><i class="fas fa-users"></i> ${recipe.servings}</span>
+                        <span class="recipe-difficulty"><i class="fas fa-signal"></i> ${recipe.difficulty}</span>
+                    </div>
+                    <button class="recipe-btn" onclick="recipeManager.showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">
+                        View Recipe <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            `;
+            recipeGrid.appendChild(recipeCard);
+        });
+        
+        // Show/hide load more button
         const loadMoreBtn = document.getElementById('loadMoreBtn');
         if (loadMoreBtn) {
-            loadMoreBtn.style.display = 'none';
+            if (recipesToShow.length < this.displayedRecipes.length) {
+                loadMoreBtn.style.display = 'block';
+            } else {
+                loadMoreBtn.style.display = 'none';
+            }
         }
+        
+        // Load favorite states
+        loadFavoriteStates();
     }
 
     showRecipeDetails(recipe) {
@@ -125,14 +225,23 @@ class RecipeManager {
     updateRecipeCount() {
         const recipeCount = document.querySelector('.recipe-count');
         if (recipeCount) {
-            recipeCount.textContent = `Showing 0 of 0 recipes`;
+            const showing = Math.min(this.currentPage * this.recipesPerPage, this.displayedRecipes.length);
+            const total = this.displayedRecipes.length;
+            recipeCount.textContent = `Showing ${showing} of ${total} recipes`;
         }
     }
 
     searchRecipes(query) {
-        // No recipes to search - show empty state
-        this.displayedRecipes = [];
-        this.renderEmptyState();
+        const searchTerm = query.toLowerCase();
+        this.displayedRecipes = this.allRecipes.filter(recipe => 
+            recipe.title.toLowerCase().includes(searchTerm) ||
+            recipe.description.toLowerCase().includes(searchTerm) ||
+            recipe.category.toLowerCase().includes(searchTerm) ||
+            recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(searchTerm))
+        );
+        
+        this.currentPage = 1;
+        this.renderRecipes();
         this.updateRecipeCount();
     }
 }

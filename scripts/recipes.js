@@ -212,7 +212,7 @@ class RecipeManager {
                  id: 'dinner-6',
                  title: 'Creamy Vegan Pasta',
                  category: 'dinner',
-                 image: '../../images/stories/Recipes/All/Creamy Vegan Pasta 2.png',
+                 image: '../../images/stories/Recipes/All/Creamy Vgean Pasta.png',
                  prepTime: '25 minutes',
                  servings: '4 servings',
                  difficulty: 'Easy',

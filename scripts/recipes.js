@@ -19,48 +19,59 @@ class RecipeManager {
     generateRecipes() {
         this.allRecipes = [
             {
-                id: 'avocado-toast',
-                title: 'Avocado Toast with Everything Bagel Seasoning',
+                id: 'recipe-all1',
+                title: 'Plant-Based Buddha Bowl',
+                category: 'lunch',
+                image: '../../images/stories/Recipes/All/all1.png',
+                prepTime: '25 minutes',
+                servings: '2 servings',
+                difficulty: 'Medium',
+                description: 'A colorful and nutritious Buddha bowl packed with quinoa, roasted vegetables, and tahini dressing.',
+                ingredients: ['1 cup quinoa', '1 sweet potato', '1 cup broccoli', '1/2 cup chickpeas', '2 tbsp tahini', 'Mixed greens', 'Pumpkin seeds']
+            },
+            {
+                id: 'recipe-all2',
+                title: 'Vegan Mushroom Risotto',
+                category: 'dinner',
+                image: '../../images/stories/Recipes/All/all2.png',
+                prepTime: '35 minutes',
+                servings: '4 servings',
+                difficulty: 'Hard',
+                description: 'Creamy and rich mushroom risotto made with arborio rice, mixed mushrooms, and nutritional yeast.',
+                ingredients: ['1.5 cups arborio rice', '4 cups vegetable broth', '300g mixed mushrooms', '1/2 cup white wine', '1/4 cup nutritional yeast', 'Fresh herbs']
+            },
+            {
+                id: 'recipe-all3',
+                title: 'Green Smoothie Power Bowl',
                 category: 'breakfast',
-                image: './images/stories/Breakfast1.png',
+                image: '../../images/stories/Recipes/All/all3.png',
                 prepTime: '10 minutes',
                 servings: '1 serving',
                 difficulty: 'Easy',
-                description: 'Creamy avocado on toasted bread topped with everything bagel seasoning for a perfect breakfast.',
-                ingredients: ['2 slices whole grain bread', '1 ripe avocado', '1 tbsp everything bagel seasoning', 'Salt and pepper to taste', 'Optional: lemon juice']
+                description: 'Energizing green smoothie bowl topped with fresh fruits, nuts, and seeds for a perfect morning boost.',
+                ingredients: ['1 frozen banana', '1 cup spinach', '1/2 avocado', '1 cup almond milk', 'Chia seeds', 'Fresh berries', 'Granola']
             },
             {
-                id: 'quinoa-breakfast-bowl',
-                title: 'Quinoa Breakfast Bowl',
-                category: 'breakfast',
-                image: './images/stories/featuredrecipe1.png',
-                prepTime: '15 minutes',
-                servings: '2 servings',
-                difficulty: 'Easy',
-                description: 'Nutritious quinoa bowl with fresh fruits and nuts for a healthy start to your day.',
-                ingredients: ['1 cup cooked quinoa', '1/2 cup berries', '1/4 cup nuts', '2 tbsp maple syrup', 'Plant milk']
+                id: 'recipe-all4',
+                title: 'Mediterranean Stuffed Peppers',
+                category: 'dinner',
+                image: '../../images/stories/Recipes/All/all4.png',
+                prepTime: '45 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                description: 'Colorful bell peppers stuffed with a Mediterranean mixture of rice, vegetables, and herbs.',
+                ingredients: ['4 bell peppers', '1 cup brown rice', '1 zucchini', '1/2 cup sun-dried tomatoes', '1/4 cup pine nuts', 'Fresh basil', 'Olive oil']
             },
             {
-                id: 'mediterranean-quinoa-salad',
-                title: 'Mediterranean Quinoa Salad',
-                category: 'lunch',
-                image: './images/stories/featuredrecipe2.png',
+                id: 'recipe-all5',
+                title: 'Raw Chocolate Avocado Mousse',
+                category: 'dessert',
+                image: '../../images/stories/Recipes/All/all5.png',
                 prepTime: '15 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
-                description: 'Fresh and flavorful quinoa salad with Mediterranean vegetables and herbs.',
-                ingredients: ['1 cup quinoa', '1/2 cup cherry tomatoes', '1/4 cup red onion', '1/4 cup olives', 'Olive oil', 'Lemon juice']
-            },
-            {
-                id: 'veggie-stir-fry',
-                title: 'Colorful Veggie Stir Fry',
-                category: 'dinner',
-                image: './images/stories/featuredrecipe3.png',
-                prepTime: '20 minutes',
-                servings: '3 servings',
-                difficulty: 'Medium',
-                description: 'Quick and healthy stir fry packed with colorful vegetables and Asian flavors.',
-                ingredients: ['Mixed vegetables', 'Soy sauce', 'Garlic', 'Ginger', 'Sesame oil', 'Brown rice']
+                description: 'Decadent and healthy chocolate mousse made with ripe avocados, cocoa, and natural sweeteners.',
+                ingredients: ['2 ripe avocados', '1/4 cup cocoa powder', '3 tbsp maple syrup', '1 tsp vanilla extract', 'Pinch of salt', 'Fresh berries for garnish']
             }
         ];
     }
@@ -260,7 +271,11 @@ document.addEventListener('DOMContentLoaded', function() {
 function toggleFavorite(button) {
     const icon = button.querySelector('i');
     const isActive = button.classList.contains('active');
-    const recipeData = JSON.parse(button.getAttribute('data-recipe').replace(/&apos;/g, "'"));
+    const recipeId = button.getAttribute('data-recipe-id');
+    
+    // Find the recipe data from the recipe manager
+    const recipeData = recipeManager.allRecipes.find(recipe => recipe.id === recipeId);
+    if (!recipeData) return;
     
     if (isActive) {
         button.classList.remove('active');
@@ -301,12 +316,14 @@ function loadFavoriteStates() {
     const favoriteButtons = document.querySelectorAll('.favorite-btn');
     
     favoriteButtons.forEach(button => {
-        const recipeData = JSON.parse(button.getAttribute('data-recipe').replace(/&apos;/g, "'"));
-        const isFavorite = favorites.some(fav => fav.id === recipeData.id);
-        
-        if (isFavorite) {
-            button.classList.add('active');
-            button.querySelector('i').className = 'fas fa-heart';
+        const recipeId = button.getAttribute('data-recipe-id');
+        if (recipeId) {
+            const isFavorite = favorites.some(fav => fav.id === recipeId);
+            
+            if (isFavorite) {
+                button.classList.add('active');
+                button.querySelector('i').className = 'fas fa-heart';
+            }
         }
     });
 }

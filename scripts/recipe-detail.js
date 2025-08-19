@@ -239,30 +239,6 @@ class RecipeDetailManager {
         window.location.href = this.createRecipeUrl(recipeId);
     }
 
-        relatedGrid.innerHTML = '';
-        
-        relatedRecipes.forEach(recipe => {
-            const card = document.createElement('div');
-            card.className = 'related-recipe-card';
-            card.innerHTML = `
-                <img src="${recipe.image}" alt="${recipe.title}" class="related-recipe-image">
-                <div class="related-recipe-content">
-                    <h4 class="related-recipe-title">${recipe.title}</h4>
-                    <div class="related-recipe-meta">
-                        <span><i class="fas fa-clock"></i> ${recipe.prepTime} min</span>
-                        <span><i class="fas fa-signal"></i> ${recipe.difficulty}</span>
-                    </div>
-                </div>
-            `;
-            
-            card.addEventListener('click', () => {
-                window.location.href = `recipe-detail.html?id=${recipe.id}`;
-            });
-            
-            relatedGrid.appendChild(card);
-        });
-    }
-
     setupEventListeners() {
         // Servings adjuster
         const decreaseBtn = document.querySelector('.quantity-btn[data-action="decrease"]');

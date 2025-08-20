@@ -450,9 +450,9 @@ class RecipeManager {
             recipeCard.innerHTML = `
                 <div class="recipe-image-container">
                     <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
-                    <div class="recipe-category-badge" data-category="${recipe.category}">${recipe.category}</div>
                 </div>
                 <div class="recipe-content">
+                    <div class="recipe-category-badge" data-category="${recipe.category}">${recipe.category}</div>
                     <h3 class="recipe-title">${recipe.title}</h3>
                     <p class="recipe-description">${recipe.description}</p>
                     <button class="recipe-btn" onclick="recipeManager.showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">

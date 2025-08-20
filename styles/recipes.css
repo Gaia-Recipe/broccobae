@@ -226,9 +226,7 @@
 }
 
 .recipe-category-badge {
-    position: absolute;
-    top: 12px;
-    left: 12px;
+    display: inline-block;
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -236,9 +234,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: white;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    z-index: 2;
+    margin-bottom: 0.5rem;
     transition: all 0.3s ease;
 }
 
@@ -249,7 +245,35 @@
 
 .recipe-card:hover .recipe-category-badge {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Recipe Button Styling */
+.recipe-btn {
+    background: transparent;
+    border: none;
+    color: #09713D;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.recipe-btn:hover {
+    color: #075a2f;
+    transform: translateX(5px);
+}
+
+.recipe-btn i {
+    transition: transform 0.3s ease;
+}
+
+.recipe-btn:hover i {
+    transform: translateX(3px);
 }
 
 .favorite-btn {

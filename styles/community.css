@@ -36,6 +36,7 @@
     margin-bottom: 2rem;
     opacity: 0.9;
     line-height: 1.6;
+    color: #333;
 }
 
 .hero-stats {
@@ -79,6 +80,8 @@
 .hero-img {
     max-width: 100%;
     height: auto;
+    width: 500px;
+    border-radius: 15px;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
 }
 

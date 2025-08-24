@@ -183,6 +183,8 @@
     image-rendering: auto;
     image-rendering: high-quality;
     image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     transition: opacity 0.3s ease;
 }
 
@@ -194,6 +196,8 @@
     image-rendering: auto;
     image-rendering: high-quality;
     image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .recipe-card:hover .recipe-image {

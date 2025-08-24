@@ -505,6 +505,21 @@ class RecipeManager {
     }
 }
 
+function loadFavoriteStates() {
+    const favorites = JSON.parse(localStorage.getItem('favoriteRecipes') || '[]');
+    
+    document.querySelectorAll('.recipe-card').forEach(card => {
+        const recipeId = card.dataset.id;
+        const favoriteBtn = card.querySelector('.favorite-btn');
+        const icon = favoriteBtn?.querySelector('i');
+        
+        if (favorites.includes(recipeId) && icon) {
+            icon.className = 'fas fa-heart';
+            favoriteBtn.classList.add('active');
+        }
+    });
+}
+
 // Initialize recipe manager when page loads
 let recipeManager;
 

@@ -220,64 +220,29 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    min-height: 200px;
 }
 
 .recipe-title {
     font-size: 1.3rem;
     font-weight: 600;
     color: #2d5a3d;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.75rem 0;
     line-height: 1.3;
+    flex-shrink: 0;
 }
 
-.recipe-btn {
-    background: linear-gradient(135deg, #4CAF50, #45a049);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 25px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-}
+/* Duplicate button styling removed - using unified styling below */
 
-.recipe-btn:hover {
-    background: linear-gradient(135deg, #45a049, #3d8b40);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
-}
-
-.recipe-btn i {
-    transition: transform 0.3s ease;
-}
-
-.recipe-btn:hover i {
-    transform: translateX(3px);
-}
-
-.recipe-category-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #4CAF50, #45a049);
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin-bottom: 0.5rem;
-}
+/* Badge styling moved to unified section below */
 
 .recipe-description {
     color: #666;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
     line-height: 1.6;
     font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .recipe-meta {
@@ -287,6 +252,8 @@
     font-size: 0.85rem;
     color: #888;
     align-items: center;
+    margin: 0 0 1rem 0;
+    flex-shrink: 0;
 }
 
 .recipe-meta span {
@@ -302,20 +269,22 @@
 
 .recipe-category-badge {
     display: inline-block;
-    padding: 0.4rem 0.8rem;
+    padding: 0.4rem 1.2rem;
     border-radius: 20px;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: white;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.75rem 0;
     transition: all 0.3s ease;
-}
-
-/* Unified green color for all categories */
-.recipe-category-badge {
     background: #09713D;
+    min-width: 80px;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
 }
 
 .recipe-card:hover .recipe-category-badge {
@@ -335,7 +304,8 @@
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    margin-top: 1rem;
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 .recipe-btn:hover {

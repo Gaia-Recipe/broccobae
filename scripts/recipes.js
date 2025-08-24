@@ -468,12 +468,13 @@ class RecipeManager {
                 <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
             </div>
             <div class="recipe-content">
-                <div class="recipe-category-badge" data-category="${recipe.category}">${recipe.category}</div>
+                <div class="recipe-header">
+                    <div class="recipe-category-badge" data-category="${recipe.category}">${recipe.category}</div>
+                    <button class="recipe-btn" onclick="recipeManager.showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">View Recipe <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
                 <h3 class="recipe-title">${recipe.title}</h3>
                 <p class="recipe-description">${recipe.description}</p>
-                <button class="recipe-btn" onclick="recipeManager.showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">
-                    View Recipe <i class="fas fa-arrow-right"></i>
-                </button>
             </div>
         `;
         return recipeCard;

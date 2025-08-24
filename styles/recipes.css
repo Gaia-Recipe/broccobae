@@ -216,12 +216,19 @@
 }
 
 .recipe-content {
-    padding: 1rem;
+    padding: 1.5rem;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     min-height: 200px;
+}
+
+.recipe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
 }
 
 .recipe-title {
@@ -239,28 +246,13 @@
 
 .recipe-description {
     color: #666;
-    margin: 0 0 1rem 0;
+    margin: 0;
     line-height: 1.6;
     font-size: 0.95rem;
     flex-grow: 1;
 }
 
-.recipe-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    font-size: 0.85rem;
-    color: #888;
-    align-items: center;
-    margin: 0 0 1rem 0;
-    flex-shrink: 0;
-}
 
-.recipe-meta span {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-}
 
 .recipe-image-container {
     position: relative;
@@ -276,7 +268,7 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: white;
-    margin: 0 0 0.75rem 0;
+    margin: 0;
     transition: all 0.3s ease;
     background: #09713D;
     min-width: 80px;
@@ -284,7 +276,7 @@
     white-space: nowrap;
     position: relative;
     z-index: 1;
-    align-self: flex-start;
+    flex-shrink: 0;
 }
 
 .recipe-card:hover .recipe-category-badge {
@@ -297,15 +289,16 @@
     border: none;
     color: #09713D;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     padding: 0.5rem 0;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     transition: all 0.3s ease;
-    margin-top: auto;
+    margin: 0;
     flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .recipe-btn:hover {

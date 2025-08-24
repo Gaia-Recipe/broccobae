@@ -424,9 +424,71 @@ class RecipeManager {
     }
 
     loadMoreRecipes() {
+        const recipeGrid = document.getElementById('recipeGrid');
+        if (!recipeGrid) return;
+        
+        const startIndex = this.currentPage * this.recipesPerPage;
+        const endIndex = startIndex + this.recipesPerPage;
+        const newRecipes = this.displayedRecipes.slice(startIndex, endIndex);
+        
+        if (newRecipes.length === 0) return;
+        
+        // Store current scroll position
+        const scrollPosition = window.pageYOffset;
+        
+        // Add new recipes
+        newRecipes.forEach(recipe => {
+            const recipeCard = this.createRecipeCard(recipe);
+            recipeGrid.appendChild(recipeCard);
+        });
+        
         this.currentPage++;
-        this.renderRecipes(false);
+        
+        // Smooth scroll to new content
+        setTimeout(() => {
+            const newCards = recipeGrid.querySelectorAll('.recipe-card');
+            if (newCards.length > startIndex) {
+                newCards[startIndex].scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }
+        }, 100);
+        
         this.updateRecipeCount();
+        this.updateLoadMoreButton();
+        loadFavoriteStates();
+    }
+
+    createRecipeCard(recipe) {
+        const recipeCard = document.createElement('div');
+        recipeCard.className = 'recipe-card';
+        recipeCard.innerHTML = `
+            <div class="recipe-image-container">
+                <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
+            </div>
+            <div class="recipe-content">
+                <div class="recipe-category-badge" data-category="${recipe.category}">${recipe.category}</div>
+                <h3 class="recipe-title">${recipe.title}</h3>
+                <p class="recipe-description">${recipe.description}</p>
+                <button class="recipe-btn" onclick="recipeManager.showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">
+                    View Recipe <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        `;
+        return recipeCard;
+    }
+
+    updateLoadMoreButton() {
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            const totalShown = this.currentPage * this.recipesPerPage;
+            if (totalShown >= this.displayedRecipes.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+            }
+        }
     }
 
     renderRecipes(clearExisting = true) {
@@ -435,6 +497,7 @@ class RecipeManager {
         
         if (clearExisting) {
             recipeGrid.innerHTML = '';
+            this.currentPage = 1;
         }
         
         if (this.displayedRecipes.length === 0) {
@@ -442,38 +505,14 @@ class RecipeManager {
             return;
         }
         
-        const recipesToShow = this.displayedRecipes.slice(0, this.currentPage * this.recipesPerPage);
+        const recipesToShow = this.displayedRecipes.slice(0, this.recipesPerPage);
         
         recipesToShow.forEach(recipe => {
-            const recipeCard = document.createElement('div');
-            recipeCard.className = 'recipe-card';
-            recipeCard.innerHTML = `
-                <div class="recipe-image-container">
-                    <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
-                </div>
-                <div class="recipe-content">
-                    <div class="recipe-category-badge" data-category="${recipe.category}">${recipe.category}</div>
-                    <h3 class="recipe-title">${recipe.title}</h3>
-                    <p class="recipe-description">${recipe.description}</p>
-                    <button class="recipe-btn" onclick="recipeManager.showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">
-                        View Recipe <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-            `;
+            const recipeCard = this.createRecipeCard(recipe);
             recipeGrid.appendChild(recipeCard);
         });
         
-        // Show/hide load more button
-        const loadMoreBtn = document.getElementById('loadMoreBtn');
-        if (loadMoreBtn) {
-            if (recipesToShow.length < this.displayedRecipes.length) {
-                loadMoreBtn.style.display = 'block';
-            } else {
-                loadMoreBtn.style.display = 'none';
-            }
-        }
-        
-        // Load favorite states
+        this.updateLoadMoreButton();
         loadFavoriteStates();
     }
 

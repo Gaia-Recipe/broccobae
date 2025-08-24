@@ -156,8 +156,8 @@
 /* Recipe Grid Enhancements */
 .recipe-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
     margin-bottom: 3rem;
 }
 
@@ -172,8 +172,8 @@
 }
 
 .recipe-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .recipe-image {
@@ -186,6 +186,7 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: opacity 0.3s ease;
+    transform-origin: center;
 }
 
 /* Enhanced image quality for all recipe page images */
@@ -205,7 +206,7 @@
 }
 
 .recipe-content {
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 .recipe-title {

@@ -1,8 +1,18 @@
-/* Reset and Base Styles */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* Image Optimization */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
 }
 
 body {

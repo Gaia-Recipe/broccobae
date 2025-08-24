@@ -346,35 +346,6 @@ class RecipeManager {
             });
         }
         
-        // Set up search functionality
-        const searchInput = document.querySelector('.search-input');
-        const searchButton = document.querySelector('.search-button');
-        
-        if (searchInput && searchButton) {
-            searchButton.addEventListener('click', () => {
-                const query = searchInput.value.trim();
-                if (query) {
-                    this.searchRecipes(query);
-                }
-            });
-            
-            searchInput.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    const query = searchInput.value.trim();
-                    if (query) {
-                        this.searchRecipes(query);
-                    }
-                }
-            });
-            
-            // Clear search
-            searchInput.addEventListener('input', () => {
-                if (searchInput.value === '') {
-                    this.filterRecipes(this.currentFilter);
-                }
-            });
-        }
-    }
 
     renderEmptyState() {
         const recipeGrid = document.getElementById('recipeGrid');
@@ -544,63 +515,6 @@ document.addEventListener('DOMContentLoaded', function() {
     recipeManager.filterRecipes('all');
 });
 
-// Enhanced favorite functionality
-function toggleFavorite(button) {
-    const icon = button.querySelector('i');
-    const isActive = button.classList.contains('active');
-    const recipeId = button.getAttribute('data-recipe-id');
-    
-    // Find the recipe data from the recipe manager
-    const recipeData = recipeManager.allRecipes.find(recipe => recipe.id === recipeId);
-    if (!recipeData) return;
-    
-    if (isActive) {
-        button.classList.remove('active');
-        icon.className = 'far fa-heart';
-        removeFavoriteRecipe(recipeData);
-    } else {
-        button.classList.add('active');
-        icon.className = 'fas fa-heart';
-        addFavoriteRecipe(recipeData);
-    }
-}
 
-function addFavoriteRecipe(recipe) {
-    let favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
-    
-    // Check if recipe is already in favorites
-    if (!favorites.find(fav => fav.id === recipe.id)) {
-        favorites.push(recipe);
-        localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
-        if (typeof showNotification === 'function') {
-            showNotification('Added to favorites!', 'success');
-        }
-    }
-}
 
-function removeFavoriteRecipe(recipe) {
-    let favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
-    favorites = favorites.filter(fav => fav.id !== recipe.id);
-    localStorage.setItem('favoriteRecipes', JSON.stringify(favorites));
-    if (typeof showNotification === 'function') {
-        showNotification('Removed from favorites!', 'info');
-    }
-}
 
-// Load favorite states
-function loadFavoriteStates() {
-    const favorites = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
-    const favoriteButtons = document.querySelectorAll('.favorite-btn');
-    
-    favoriteButtons.forEach(button => {
-        const recipeId = button.getAttribute('data-recipe-id');
-        if (recipeId) {
-            const isFavorite = favorites.some(fav => fav.id === recipeId);
-            
-            if (isFavorite) {
-                button.classList.add('active');
-                button.querySelector('i').className = 'fas fa-heart';
-            }
-        }
-    });
-}

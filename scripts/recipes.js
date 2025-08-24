@@ -451,18 +451,17 @@ class RecipeManager {
     createRecipeCard(recipe) {
         const recipeCard = document.createElement('div');
         recipeCard.className = 'recipe-card';
+        recipeCard.onclick = () => this.showRecipeDetails(recipe);
+        
+        const categoryText = `RECIPE / ${recipe.category.toUpperCase()}`;
+        
         recipeCard.innerHTML = `
             <div class="recipe-image-container">
                 <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
             </div>
             <div class="recipe-content">
-                <div class="recipe-header">
-                    <div class="recipe-category-badge" data-category="${recipe.category}">${recipe.category}</div>
-                    <button class="recipe-btn" onclick="recipeManager.showRecipeDetails(${JSON.stringify(recipe).replace(/"/g, '&quot;')})">View Recipe <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
+                <div class="recipe-category-text">${categoryText}</div>
                 <h3 class="recipe-title">${recipe.title}</h3>
-                <p class="recipe-description">${recipe.description}</p>
             </div>
         `;
         return recipeCard;

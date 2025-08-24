@@ -27,7 +27,6 @@ class RecipeManager {
                 prepTime: '15 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
-                description: 'A refreshing morning salad packed with crisp vegetables, leafy greens, and a zesty lemon dressing.',
                 ingredients: ['Mixed greens', 'Cherry tomatoes', 'Cucumber', 'Bell peppers', 'Red onion', 'Lemon juice', 'Olive oil', 'Salt', 'Pepper']
             },
             {
@@ -38,7 +37,6 @@ class RecipeManager {
                  prepTime: '20 minutes',
                  servings: '4 servings',
                  difficulty: 'Easy',
-                 description: 'Fluffy and delicious plant-based pancakes made with oat flour and topped with fresh berries.',
                  ingredients: ['2 cups oat flour', '2 tbsp sugar', '2 tsp baking powder', '1 cup almond milk', '2 tbsp coconut oil', 'Fresh berries', 'Maple syrup']
              },
              {
@@ -49,7 +47,6 @@ class RecipeManager {
                  prepTime: '15 minutes',
                  servings: '3 servings',
                  difficulty: 'Medium',
-                 description: 'Protein-rich tofu scramble with vegetables and nutritional yeast for a savory breakfast.',
                  ingredients: ['1 block firm tofu', '1 bell pepper', '1 onion', '2 cloves garlic', 'Nutritional yeast', 'Turmeric', 'Spinach', 'Olive oil']
              },
              {
@@ -60,7 +57,6 @@ class RecipeManager {
                  prepTime: '10 minutes',
                  servings: '1 serving',
                  difficulty: 'Easy',
-                 description: 'Thick and creamy smoothie bowl topped with fresh fruits, nuts, and seeds for a nutritious start.',
                  ingredients: ['1 frozen banana', '1/2 cup berries', '1/2 cup almond milk', 'Granola', 'Chia seeds', 'Fresh fruits', 'Coconut flakes']
              },
             {
@@ -71,7 +67,6 @@ class RecipeManager {
                 prepTime: '10 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
-                description: 'Classic avocado toast with everything bagel seasoning on whole grain bread.',
                 ingredients: ['2 slices whole grain bread', '1 ripe avocado', 'Everything bagel seasoning', 'Lemon juice', 'Salt', 'Red pepper flakes']
             },
             {
@@ -82,7 +77,6 @@ class RecipeManager {
                  prepTime: '5 minutes',
                  servings: '2 servings',
                  difficulty: 'Easy',
-                 description: 'Creamy overnight chia pudding with vanilla and almond milk, topped with fresh berries.',
                  ingredients: ['1/4 cup chia seeds', '1 cup almond milk', '2 tbsp maple syrup', '1 tsp vanilla extract', 'Fresh berries', 'Nuts']
              },
             // Lunch Recipes
@@ -94,7 +88,6 @@ class RecipeManager {
                 prepTime: '25 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
-                description: 'Fresh Mediterranean quinoa salad with olives, tomatoes, and herbs in a lemon vinaigrette.',
                 ingredients: ['1 cup quinoa', 'Cherry tomatoes', 'Cucumber', 'Kalamata olives', 'Red onion', 'Fresh herbs', 'Lemon juice', 'Olive oil']
             },
             {
@@ -105,7 +98,6 @@ class RecipeManager {
                  prepTime: '20 minutes',
                  servings: '3 servings',
                  difficulty: 'Medium',
-                 description: 'Spicy and flavorful tofu scramble with jalapeños and bell peppers for a hearty lunch.',
                  ingredients: ['1 block firm tofu', 'Jalapeños', 'Bell peppers', 'Onion', 'Garlic', 'Cumin', 'Paprika', 'Nutritional yeast']
              },
              {
@@ -116,7 +108,6 @@ class RecipeManager {
                  prepTime: '15 minutes',
                  servings: '2 servings',
                  difficulty: 'Easy',
-                 description: 'Protein-packed sandwich with mashed chickpeas, avocado, and fresh vegetables.',
                  ingredients: ['1 can chickpeas', '1 ripe avocado', 'Whole grain bread', 'Lettuce', 'Tomato', 'Red onion', 'Lemon juice', 'Dijon mustard']
              },
              {
@@ -127,7 +118,6 @@ class RecipeManager {
                  prepTime: '35 minutes',
                  servings: '6 servings',
                  difficulty: 'Medium',
-                 description: 'Hearty and nutritious lentil soup with kale, carrots, and aromatic herbs.',
                  ingredients: ['1 cup red lentils', 'Kale', 'Carrots', 'Celery', 'Onion', 'Garlic', 'Vegetable broth', 'Bay leaves', 'Thyme']
              },
              {
@@ -138,7 +128,6 @@ class RecipeManager {
                  prepTime: '30 minutes',
                  servings: '4 servings',
                  difficulty: 'Medium',
-                 description: 'Colorful burrito bowl with black beans, quinoa, and fresh toppings.',
                  ingredients: ['Black beans', 'Quinoa', 'Brown rice', 'Corn', 'Bell peppers', 'Avocado', 'Salsa', 'Lime', 'Cilantro']
              },
             {
@@ -149,7 +138,6 @@ class RecipeManager {
                 prepTime: '25 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
-                description: 'Juicy and flavorful plant-based burger with all the classic toppings.',
                  ingredients: ['Black beans', 'Quinoa', 'Mushrooms', 'Onion', 'Garlic', 'Burger buns', 'Lettuce', 'Tomato', 'Vegan mayo']
              },
              // Dinner Recipes

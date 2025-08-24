@@ -179,12 +179,26 @@
 .recipe-image {
     max-width: 100%;
     height: auto;
-    image-rendering: auto;
-    transition: transform 0.3s ease;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;
+    transition: opacity 0.3s ease;
+}
+
+/* Enhanced image quality for all recipe page images */
+.recipe img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .recipe-card:hover .recipe-image {
-    transform: scale(1.05);
+    opacity: 0.9;
 }
 
 .recipe-content {

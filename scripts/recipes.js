@@ -345,7 +345,7 @@ class RecipeManager {
                 this.loadMoreRecipes();
             });
         }
-        
+    }
 
     renderEmptyState() {
         const recipeGrid = document.getElementById('recipeGrid');

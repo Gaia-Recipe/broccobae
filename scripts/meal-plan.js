@@ -431,7 +431,7 @@ class MealPlanManager {
             this.displayedMealPlans = individualRecipes.filter(plan => plan.category === category);
         }
         
-        this.displayedCount = 28; // Show all 28 recipes initially
+        this.displayedCount = 12; // Show 12 recipes initially, then load more
         this.displayMealPlans();
         this.updateMealPlanCount();
     }

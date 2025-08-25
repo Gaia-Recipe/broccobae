@@ -3,6 +3,7 @@
 class CuisineManager {
     constructor() {
         this.recipes = [];
+        this.filteredRecipes = [];
         this.currentFilter = 'all';
         this.displayedCount = 10;
         this.totalRecipes = 0;
@@ -11,6 +12,7 @@ class CuisineManager {
 
     init() {
         this.generateRecipes();
+        this.filteredRecipes = [...this.recipes];
         this.setupEventListeners();
         this.displayRecipes();
         this.updateRecipeCount();

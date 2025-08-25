@@ -169,6 +169,161 @@ class CuisineManager {
                 rating: 4.7,
                 description: 'Filipino rice noodle stir-fry with vegetables and savory seasonings.'
             },
+            
+            // Mediterranean Vegan Recipes
+            {
+                id: 'vegan-falafel',
+                title: 'Vegan Falafel',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Falafel.png',
+                duration: '30 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Crispy and flavorful Middle Eastern chickpea fritters.'
+            },
+            {
+                id: 'hummus',
+                title: 'Hummus',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Hummus (Classic Chickpea Dip).jpg',
+                duration: '10 mins',
+                difficulty: 'Easy',
+                rating: 4.9,
+                description: 'Creamy and smooth chickpea dip with tahini and lemon.'
+            },
+            {
+                id: 'baba-ganoush',
+                title: 'Baba Ganoush',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Baba Ganoush (Eggplant Dip).jpg',
+                duration: '25 mins',
+                difficulty: 'Easy',
+                rating: 4.7,
+                description: 'Smoky roasted eggplant dip with garlic and tahini.'
+            },
+            {
+                id: 'vegan-tabbouleh',
+                title: 'Vegan Tabbouleh',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Tabbouleh.jpeg',
+                duration: '15 mins',
+                difficulty: 'Easy',
+                rating: 4.6,
+                description: 'Fresh parsley salad with tomatoes, mint, and bulgur wheat.'
+            },
+            {
+                id: 'vegan-stuffed-grape-leaves',
+                title: 'Vegan Stuffed Grape Leaves (Dolmas)',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Stuffed Grape Leaves (Dolmas).jpg',
+                duration: '60 mins',
+                difficulty: 'Hard',
+                rating: 4.8,
+                description: 'Traditional grape leaves stuffed with rice and herbs.'
+            },
+            {
+                id: 'vegan-ratatouille',
+                title: 'Vegan Ratatouille',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Ratatouille (French Provençal Stew).webp',
+                duration: '45 mins',
+                difficulty: 'Medium',
+                rating: 4.7,
+                description: 'Classic French vegetable stew with herbs de Provence.'
+            },
+            {
+                id: 'vegan-greek-salad',
+                title: 'Vegan Greek Salad',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Greek Salad.jpg',
+                duration: '15 mins',
+                difficulty: 'Easy',
+                rating: 4.5,
+                description: 'Fresh Mediterranean salad with olives, tomatoes, and vegan feta.'
+            },
+            {
+                id: 'vegan-spanakopita',
+                title: 'Vegan Spanakopita',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Spanakopita (Spinach Pie).jpg',
+                duration: '50 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Flaky phyllo pastry filled with spinach and herbs.'
+            },
+            {
+                id: 'vegan-pita-olive-tapenade',
+                title: 'Vegan Pita Bread with Olive Tapenade',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Pita Bread with Olive Tapenade.jpg',
+                duration: '20 mins',
+                difficulty: 'Easy',
+                rating: 4.6,
+                description: 'Warm pita bread served with rich olive and herb spread.'
+            },
+            {
+                id: 'vegan-fattoush-salad',
+                title: 'Vegan Fattoush Salad',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Fattoush Salad.jpeg',
+                duration: '20 mins',
+                difficulty: 'Easy',
+                rating: 4.7,
+                description: 'Lebanese bread salad with fresh vegetables and sumac.'
+            },
+            {
+                id: 'mujadara',
+                title: 'Mujadara (Lentils & Rice with Caramelized Onions)',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Mujadara (Lentils & Rice with Caramelized Onions).jpg',
+                duration: '40 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Comforting Middle Eastern dish with lentils, rice, and caramelized onions.'
+            },
+            {
+                id: 'vegan-shawarma',
+                title: 'Vegan Shawarma (Chickpea Style)',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Shawarma (Chickpea Style).webp',
+                duration: '35 mins',
+                difficulty: 'Medium',
+                rating: 4.9,
+                description: 'Spiced chickpea shawarma with tahini sauce and fresh vegetables.'
+            },
+            {
+                id: 'vegan-paella',
+                title: 'Vegan Paella',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Paella (Spanish Rice Dish).jpg',
+                duration: '45 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Spanish rice dish with saffron, vegetables, and plant-based protein.'
+            },
+            {
+                id: 'vegan-bruschetta',
+                title: 'Vegan Bruschetta',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Bruschetta.jpg',
+                duration: '15 mins',
+                difficulty: 'Easy',
+                rating: 4.6,
+                description: 'Toasted bread topped with fresh tomatoes, basil, and garlic.'
+            },
+            {
+                id: 'vegan-roasted-vegetable-couscous',
+                title: 'Vegan Roasted Vegetable Couscous',
+                category: 'mediterranean',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Roasted Vegetable Couscous.webp',
+                duration: '35 mins',
+                difficulty: 'Easy',
+                rating: 4.7,
+                description: 'Fluffy couscous with roasted Mediterranean vegetables and herbs.'
+            }
+        ];
+        this.totalRecipes = this.recipes.length;
+    }
 
     setupEventListeners() {
         // Filter buttons

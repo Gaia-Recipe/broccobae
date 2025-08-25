@@ -1,5 +1,38 @@
 /* Meal Plan Page Styles */
 
+/* Meal Plan Count */
+.meal-plan-count-container {
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+.meal-plan-count {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Load More Button */
+.load-more-container {
+    text-align: center;
+    margin: 3rem 0 2rem;
+}
+
+.load-more-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.load-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
 /* Hero Section */
 .meal-plan-hero {
     background: white;

@@ -921,6 +921,7 @@ class CuisineManager {
         if (newRecipes.length > 0) {
             this.displayedRecipes = [...this.displayedRecipes, ...newRecipes];
             this.renderRecipes();
+            this.updateRecipeCount();
             
             // Hide load more button if no more recipes
             if (endIndex >= this.filteredRecipes.length) {

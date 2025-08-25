@@ -23,7 +23,7 @@ class RecipeManager {
                 id: 'high-protein-1',
                 title: 'Chickpea Flour Omelette with Veggies',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Recipes/Chickpea Flour Omelette.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Chickpea Flour Omelette with Veggies 12.48.16.jpeg',
                 prepTime: '15 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
@@ -34,7 +34,7 @@ class RecipeManager {
                 id: 'high-protein-2',
                 title: 'Quinoa Salad with Black Beans and Avocado',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Recipes/Quinoa Black Bean Salad.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
                 prepTime: '20 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
@@ -45,7 +45,7 @@ class RecipeManager {
                 id: 'high-protein-3',
                 title: 'Tempeh Stir-Fry with Brown Rice',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Recipes/Tempeh Stir Fry.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Tempeh Stir-Fry with Brown Rice.jpg',
                 prepTime: '25 minutes',
                 servings: '3 servings',
                 difficulty: 'Medium',
@@ -56,7 +56,7 @@ class RecipeManager {
                 id: 'high-protein-4',
                 title: 'Roasted Chickpeas with Spices',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Recipes/Roasted Chickpeas.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Roasted Chickpeas with Spices.jpg',
                 prepTime: '30 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
@@ -67,7 +67,7 @@ class RecipeManager {
                 id: 'high-protein-5',
                 title: 'Protein Smoothie with Plant-Based Protein Powder',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Recipes/Protein Smoothie.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
                 prepTime: '5 minutes',
                 servings: '1 serving',
                 difficulty: 'Easy',
@@ -80,7 +80,7 @@ class RecipeManager {
                 id: 'low-carb-1',
                 title: 'Chia Seed Pudding with Berries',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Recipes/Chia Seed Pudding.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Chia Seed Pudding with Berries.jpg',
                 prepTime: '10 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
@@ -91,7 +91,7 @@ class RecipeManager {
                 id: 'low-carb-2',
                 title: 'Spinach and Mushroom Salad with Lemon Vinaigrette',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Recipes/Spinach Mushroom Salad.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
                 prepTime: '15 minutes',
                 servings: '3 servings',
                 difficulty: 'Easy',
@@ -102,7 +102,7 @@ class RecipeManager {
                 id: 'low-carb-3',
                 title: 'Grilled Eggplant Steaks with Roasted Vegetables',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Recipes/Grilled Eggplant.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Grilled Eggplant Steaks with Roasted Vegetables.jpg',
                 prepTime: '35 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
@@ -113,7 +113,7 @@ class RecipeManager {
                 id: 'low-carb-4',
                 title: 'Celery Sticks with Almond Butter',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Recipes/Celery Almond Butter.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Celery Sticks with Almond Butter.jpg',
                 prepTime: '5 minutes',
                 servings: '1 serving',
                 difficulty: 'Easy',
@@ -124,7 +124,7 @@ class RecipeManager {
                 id: 'low-carb-5',
                 title: 'Coconut Cream with Raspberries',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Recipes/Coconut Cream Raspberries.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Coconut Cream with Raspberries.jpeg',
                 prepTime: '10 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
@@ -137,7 +137,7 @@ class RecipeManager {
                 id: 'gluten-free-1',
                 title: 'Gluten-Free Buckwheat Pancakes',
                 category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Recipes/Buckwheat Pancakes.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
                 prepTime: '20 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
@@ -146,20 +146,9 @@ class RecipeManager {
             },
             {
                 id: 'gluten-free-2',
-                title: 'Rainbow Veggie Wraps',
-                category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Recipes/Rainbow Veggie Wraps.jpg',
-                prepTime: '15 minutes',
-                servings: '2 servings',
-                difficulty: 'Easy',
-                description: 'Colorful vegetable wraps using gluten-free tortillas.',
-                ingredients: ['Gluten-free tortillas', 'Bell peppers', 'Carrots', 'Cucumber', 'Avocado', 'Hummus', 'Sprouts']
-            },
-            {
-                id: 'gluten-free-3',
                 title: 'Chickpea Curry with Cauliflower Rice',
                 category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Recipes/Chickpea Curry.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
                 prepTime: '30 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
@@ -167,26 +156,37 @@ class RecipeManager {
                 ingredients: ['Chickpeas', 'Cauliflower', 'Coconut milk', 'Curry powder', 'Turmeric', 'Ginger', 'Garlic']
             },
             {
-                id: 'gluten-free-4',
+                id: 'gluten-free-3',
                 title: 'Trail Mix with Dried Fruits and Nuts',
                 category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Recipes/Trail Mix.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Trail Mix with Dried Fruits and Nuts.webp',
                 prepTime: '5 minutes',
                 servings: '8 servings',
                 difficulty: 'Easy',
-                description: 'Energy-boosting trail mix with nuts, seeds, and dried fruits.',
-                ingredients: ['Almonds', 'Walnuts', 'Pumpkin seeds', 'Dried cranberries', 'Dried apricots', 'Dark chocolate chips']
+                description: 'Energy-boosting trail mix perfect for on-the-go snacking.',
+                ingredients: ['Mixed nuts', 'Dried cranberries', 'Raisins', 'Pumpkin seeds', 'Dark chocolate chips']
+            },
+            {
+                id: 'gluten-free-4',
+                title: 'Coconut Chia Seed Pudding',
+                category: 'gluten-free',
+                image: 'images/stories/Recipes/All Mealplan/Coconut Chia Seed Pudding.jpg',
+                prepTime: '15 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Creamy coconut chia pudding that\'s naturally gluten-free.',
+                ingredients: ['Chia seeds', 'Coconut milk', 'Vanilla extract', 'Maple syrup', 'Shredded coconut']
             },
             {
                 id: 'gluten-free-5',
-                title: 'Coconut Chia Seed Pudding',
+                title: 'Mediterranean Chickpea Salad',
                 category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Recipes/Coconut Chia Pudding.jpg',
-                prepTime: '10 minutes',
-                servings: '3 servings',
+                image: 'images/stories/Recipes/All Mealplan/Mediterranean Chickpea Salad.jpg',
+                prepTime: '15 minutes',
+                servings: '4 servings',
                 difficulty: 'Easy',
-                description: 'Creamy coconut chia pudding that\'s naturally gluten-free.',
-                ingredients: ['Chia seeds', 'Coconut milk', 'Shredded coconut', 'Vanilla extract', 'Maple syrup', 'Fresh fruit']
+                description: 'Fresh Mediterranean-style chickpea salad with herbs and vegetables.',
+                ingredients: ['Chickpeas', 'Cucumber', 'Cherry tomatoes', 'Red onion', 'Olives', 'Lemon juice', 'Olive oil']
             },
 
             // Budget-Friendly Recipes
@@ -194,7 +194,7 @@ class RecipeManager {
                 id: 'budget-friendly-1',
                 title: 'Vegan Chili',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Recipes/Vegan Chili.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
                 prepTime: '45 minutes',
                 servings: '6 servings',
                 difficulty: 'Easy',
@@ -205,45 +205,45 @@ class RecipeManager {
                 id: 'budget-friendly-2',
                 title: 'Vegetable Stir-Fry',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Recipes/Vegetable Stir Fry.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
                 prepTime: '20 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
                 description: 'Quick and economical vegetable stir-fry with seasonal vegetables.',
-                ingredients: ['Mixed vegetables', 'Soy sauce', 'Garlic', 'Ginger', 'Sesame oil', 'Rice', 'Green onions']
+                ingredients: ['Mixed vegetables', 'Soy sauce', 'Garlic', 'Ginger', 'Sesame oil', 'Rice']
             },
             {
                 id: 'budget-friendly-3',
                 title: 'Vegan Tacos',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Recipes/Vegan Tacos.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Vegan Tacos.jpg',
                 prepTime: '25 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
-                description: 'Delicious and affordable vegan tacos with seasoned lentils.',
-                ingredients: ['Lentils', 'Taco shells', 'Lettuce', 'Tomatoes', 'Onions', 'Avocado', 'Lime', 'Spices']
+                description: 'Delicious and budget-friendly vegan tacos with seasoned beans.',
+                ingredients: ['Corn tortillas', 'Black beans', 'Lettuce', 'Tomatoes', 'Avocado', 'Lime', 'Cumin']
             },
             {
                 id: 'budget-friendly-4',
                 title: 'Pasta Primavera',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Recipes/Pasta Primavera.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Pasta Primavera.jpg',
                 prepTime: '30 minutes',
                 servings: '5 servings',
                 difficulty: 'Easy',
                 description: 'Colorful pasta dish with fresh seasonal vegetables.',
-                ingredients: ['Pasta', 'Zucchini', 'Cherry tomatoes', 'Broccoli', 'Garlic', 'Olive oil', 'Basil', 'Nutritional yeast']
+                ingredients: ['Pasta', 'Zucchini', 'Bell peppers', 'Cherry tomatoes', 'Garlic', 'Olive oil', 'Herbs']
             },
             {
                 id: 'budget-friendly-5',
                 title: 'Vegan Shepherd\'s Pie',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Recipes/Vegan Shepherds Pie.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Vegan Shepherd\'s Pie.jpg',
                 prepTime: '60 minutes',
-                servings: '8 servings',
+                servings: '6 servings',
                 difficulty: 'Medium',
-                description: 'Comforting shepherd\'s pie with lentils and mashed potatoes.',
-                ingredients: ['Lentils', 'Potatoes', 'Carrots', 'Peas', 'Onions', 'Vegetable broth', 'Herbs', 'Plant milk']
+                description: 'Comforting vegan shepherd\'s pie with lentils and mashed potatoes.',
+                ingredients: ['Lentils', 'Potatoes', 'Carrots', 'Peas', 'Onions', 'Vegetable broth', 'Thyme']
             },
 
             // Weight Loss Recipes
@@ -251,30 +251,30 @@ class RecipeManager {
                 id: 'weight-loss-1',
                 title: 'Tropical Chia Seed Pudding',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Recipes/Tropical Chia Pudding.jpg',
-                prepTime: '10 minutes',
+                image: 'images/stories/Recipes/All Mealplan/Tropical Chia Seed Pudding.jpg',
+                prepTime: '15 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
                 description: 'Low-calorie tropical chia pudding perfect for weight management.',
-                ingredients: ['Chia seeds', 'Coconut water', 'Mango', 'Pineapple', 'Lime juice', 'Coconut flakes']
+                ingredients: ['Chia seeds', 'Coconut water', 'Mango', 'Pineapple', 'Lime juice', 'Stevia']
             },
             {
                 id: 'weight-loss-2',
                 title: 'Mediterranean Chickpea Salad',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Recipes/Mediterranean Chickpea Salad.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Mediterranean Chickpea Salad.jpg',
                 prepTime: '15 minutes',
                 servings: '3 servings',
                 difficulty: 'Easy',
-                description: 'Light and filling Mediterranean-style chickpea salad.',
-                ingredients: ['Chickpeas', 'Cucumber', 'Cherry tomatoes', 'Red onion', 'Olives', 'Lemon juice', 'Herbs']
+                description: 'Light and filling Mediterranean salad ideal for weight loss.',
+                ingredients: ['Chickpeas', 'Cucumber', 'Tomatoes', 'Red onion', 'Parsley', 'Lemon juice', 'Olive oil']
             },
             {
                 id: 'weight-loss-3',
                 title: 'Spiced Tofu Stir-Fry',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Recipes/Spiced Tofu Stir Fry.jpg',
-                prepTime: '20 minutes',
+                image: 'images/stories/Recipes/All Mealplan/Spiced Tofu Stir-Fry.jpg',
+                prepTime: '25 minutes',
                 servings: '3 servings',
                 difficulty: 'Medium',
                 description: 'Low-calorie spiced tofu stir-fry with plenty of vegetables.',
@@ -284,41 +284,39 @@ class RecipeManager {
                 id: 'weight-loss-4',
                 title: 'Cucumber and Hummus Bites',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Recipes/Cucumber Hummus Bites.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Cucumber and Hummus Bites.jpg',
                 prepTime: '10 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
-                description: 'Light and refreshing cucumber bites with protein-rich hummus.',
-                ingredients: ['Cucumber', 'Hummus', 'Cherry tomatoes', 'Fresh herbs', 'Paprika', 'Lemon zest']
+                description: 'Light and refreshing low-calorie snack.',
+                ingredients: ['Cucumber', 'Hummus', 'Cherry tomatoes', 'Fresh herbs', 'Paprika']
             },
             {
                 id: 'weight-loss-5',
                 title: 'Handful of Mixed Nuts',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Recipes/Mixed Nuts.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Handful of Mixed Nuts.jpg',
                 prepTime: '2 minutes',
                 servings: '1 serving',
                 difficulty: 'Easy',
-                description: 'Portion-controlled mixed nuts for healthy snacking.',
-                ingredients: ['Almonds', 'Walnuts', 'Cashews', 'Brazil nuts', 'Pecans']
+                description: 'Portion-controlled mixed nuts for healthy weight management.',
+                ingredients: ['Almonds', 'Walnuts', 'Cashews', 'Pistachios']
             }
         ];
     }
 
     setupEventListeners() {
-        // Category filter buttons
         const filterButtons = document.querySelectorAll('.filter-btn');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+
         filterButtons.forEach(button => {
             button.addEventListener('click', (e) => {
-                e.preventDefault();
-                const category = button.getAttribute('data-category');
+                const category = e.target.dataset.category;
                 this.filterRecipes(category);
-                this.updateActiveFilter(button);
+                this.updateActiveFilter(e.target);
             });
         });
 
-        // Load more button
-        const loadMoreBtn = document.getElementById('loadMoreBtn');
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener('click', () => {
                 this.loadMoreRecipes();
@@ -341,14 +339,13 @@ class RecipeManager {
     }
 
     updateActiveFilter(activeButton) {
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        filterButtons.forEach(button => button.classList.remove('active'));
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         activeButton.classList.add('active');
     }
 
     displayRecipes() {
-        const recipeGrid = document.getElementById('recipeGrid');
-        if (!recipeGrid) return;
+        const recipesGrid = document.getElementById('recipesGrid');
+        if (!recipesGrid) return;
 
         const startIndex = 0;
         const endIndex = this.currentPage * this.recipesPerPage;
@@ -359,7 +356,7 @@ class RecipeManager {
             return;
         }
 
-        recipeGrid.innerHTML = recipesToShow.map(recipe => `
+        recipesGrid.innerHTML = recipesToShow.map(recipe => `
             <div class="recipe-card" data-recipe-id="${recipe.id}">
                 <div class="recipe-image">
                     <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
@@ -373,14 +370,15 @@ class RecipeManager {
                     <h3 class="recipe-title">${recipe.title}</h3>
                     <div class="recipe-meta">
                         <span class="prep-time">
-                            <i class="icon-clock"></i>
+                            <i class="fas fa-clock"></i>
                             ${recipe.prepTime}
                         </span>
                         <span class="servings">
-                            <i class="icon-users"></i>
+                            <i class="fas fa-users"></i>
                             ${recipe.servings}
                         </span>
                         <span class="difficulty ${recipe.difficulty.toLowerCase()}">
+                            <i class="fas fa-signal"></i>
                             ${recipe.difficulty}
                         </span>
                     </div>
@@ -393,14 +391,13 @@ class RecipeManager {
     }
 
     displayEmptyState() {
-        const recipeGrid = document.getElementById('recipeGrid');
-        recipeGrid.innerHTML = `
+        const recipesGrid = document.getElementById('recipesGrid');
+        recipesGrid.innerHTML = `
             <div class="empty-state">
                 <h3>No recipes found</h3>
                 <p>Try selecting a different category or check back later for new recipes.</p>
             </div>
         `;
-        this.updateLoadMoreButton();
     }
 
     loadMoreRecipes() {
@@ -419,11 +416,11 @@ class RecipeManager {
     }
 
     updateRecipeCount() {
-        const countElement = document.querySelector('.recipe-count');
+        const countElement = document.getElementById('recipeCount');
         if (countElement) {
-            const total = this.filteredRecipes.length;
+            const count = this.filteredRecipes.length;
             const categoryText = this.currentCategory === 'all' ? 'recipes' : `${this.currentCategory} recipes`;
-            countElement.textContent = `Showing ${total} ${categoryText}`;
+            countElement.textContent = `${count} ${categoryText} found`;
         }
     }
 
@@ -432,7 +429,7 @@ class RecipeManager {
     }
 }
 
-// Initialize when DOM is loaded
+// Initialize the recipe manager when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new RecipeManager();
 });

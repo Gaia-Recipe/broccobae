@@ -18,118 +18,220 @@ class MealPlanManager {
 
     generateMealPlans() {
         this.mealPlans = [
-            // High Protein Plans
+            // Main Category Plans
             {
-                id: 'high-protein-1',
+                id: 'high-protein-plan',
                 title: 'High-Protein Vegan Power',
                 category: 'high-protein',
                 image: '../../images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
-                description: 'Boost your protein intake with this power-packed vegan meal plan featuring protein-rich plant foods.',
-                duration: '7',
-                protein: '25-30g per meal',
-                calories: '1800-2000 cal/day',
-                benefits: 'Muscle building support'
+                duration: '7 days',
+                meals: '21 meals',
+                calories: '1800-2200',
+                price: '$89',
+                description: 'Fuel your workouts with plant-based protein powerhouses.',
+                features: ['25g+ protein per meal', 'Post-workout recipes', 'Muscle-building focus']
             },
             {
-                id: 'high-protein-2',
-                title: 'Protein Smoothie Power Plan',
-                category: 'high-protein',
-                image: '../../images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
-                description: 'Start your day with protein-packed smoothies and maintain high protein throughout the day.',
-                duration: '5',
-                protein: '20-25g per meal',
-                calories: '1600-1800 cal/day',
-                benefits: 'Quick protein absorption'
-            },
-            // Low Carb Plans
-            {
-                id: 'low-carb-1',
+                id: 'low-carb-plan',
                 title: 'Low-Carb Vegan Delights',
                 category: 'low-carb',
                 image: '../../images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
-                description: 'Enjoy delicious low-carb vegan meals that keep you satisfied while maintaining ketosis.',
-                duration: '7',
-                carbs: '20-30g per day',
-                fat: '70-80g per day',
-                nutrition: 'Ketogenic friendly'
+                duration: '7 days',
+                meals: '21 meals',
+                calories: '1400-1800',
+                price: '$79',
+                description: 'Delicious low-carb meals that keep you satisfied.',
+                features: ['<30g carbs per meal', 'High fiber content', 'Blood sugar friendly']
             },
             {
-                id: 'low-carb-2',
-                title: 'Cauliflower Rice Curry Plan',
-                category: 'low-carb',
-                image: '../../images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
-                description: 'Replace traditional rice with cauliflower rice in flavorful curry dishes.',
-                duration: '5',
-                carbs: '15-25g per day',
-                fat: '60-70g per day',
-                nutrition: 'Low glycemic index'
-            },
-            // Budget Friendly Plans
-            {
-                id: 'budget-1',
+                id: 'budget-plan',
                 title: 'Budget-Friendly Vegan Eats',
                 category: 'budget-friendly',
                 image: '../../images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
-                description: 'Nutritious and delicious vegan meals that won\'t break the bank.',
-                duration: '7',
-                cost: '$3-5 per day',
-                savings: 'Save 40% vs eating out',
-                nutrition: 'Complete nutrition on budget'
+                duration: '7 days',
+                meals: '21 meals',
+                calories: '1600-2000',
+                price: '$49',
+                description: 'Nutritious meals that won\'t break the bank.',
+                features: ['Under $7 per day', 'Pantry staples', 'Bulk cooking tips']
             },
             {
-                id: 'budget-2',
-                title: 'Chickpea Power Meals',
-                category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Mealplan/Roasted Chickpeas with Spices.jpg',
-                description: 'Affordable protein-rich meals centered around versatile chickpeas.',
-                duration: '5',
-                cost: '$2-4 per day',
-                savings: 'Bulk buying savings',
-                nutrition: 'High protein, low cost'
-            },
-            // Weight Loss Plans
-            {
-                id: 'weight-loss-1',
+                id: 'weight-loss-plan',
                 title: 'Weight Loss Vegan Plan',
                 category: 'weight-loss',
                 image: '../../images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
-                description: 'Carefully portioned meals designed to support healthy weight loss goals.',
-                duration: '14',
-                calories: '1200-1400 cal/day',
-                benefits: 'Sustainable weight loss',
-                nutrition: 'Nutrient dense, calorie controlled'
+                duration: '7 days',
+                meals: '21 meals',
+                calories: '1200-1600',
+                price: '$69',
+                description: 'Sustainable weight loss with satisfying plant-based meals.',
+                features: ['Calorie controlled', 'High volume foods', 'Metabolism boosting']
+            },
+            
+            // High-Protein Individual Recipes
+            {
+                id: 'chickpea-omelette',
+                title: 'Chickpea Flour Omelette with Veggies',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Mealplan/Chickpea Flour Omelette with Veggies 12.48.16.jpeg',
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '320-380',
+                price: '$3',
+                description: 'Protein-packed breakfast with fresh vegetables.',
+                features: ['18g protein', 'Gluten-free', 'Quick prep']
             },
             {
-                id: 'weight-loss-2',
-                title: 'Green Detox Meal Plan',
+                id: 'quinoa-black-bean-salad',
+                title: 'Quinoa Salad with Black Beans and Avocado',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '420-480',
+                price: '$4',
+                description: 'Complete protein salad with healthy fats.',
+                features: ['22g protein', 'Complete amino acids', 'Heart healthy']
+            },
+            {
+                id: 'tempeh-stir-fry',
+                title: 'Tempeh Stir-Fry with Brown Rice',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Mealplan/Tempeh Stir-Fry with Brown Rice.jpg',
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '450-520',
+                price: '$5',
+                description: 'Fermented protein with wholesome grains.',
+                features: ['24g protein', 'Probiotics', 'Fiber rich']
+            },
+            {
+                id: 'roasted-chickpeas',
+                title: 'Roasted Chickpeas with Spices',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Mealplan/Roasted Chickpeas with Spices.jpg',
+                duration: '1 snack',
+                meals: '1 serving',
+                calories: '180-220',
+                price: '$2',
+                description: 'Crunchy protein-rich snack.',
+                features: ['12g protein', 'Portable', 'Spice blend']
+            },
+            {
+                id: 'protein-smoothie',
+                title: 'Protein Smoothie with Plant-Based Protein Powder',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
+                duration: '1 drink',
+                meals: '1 serving',
+                calories: '280-340',
+                price: '$4',
+                description: 'Post-workout protein boost.',
+                features: ['25g protein', 'Quick absorption', 'Customizable']
+            },
+            
+            // Low-Carb Individual Recipes
+            {
+                id: 'chickpea-curry-cauliflower',
+                title: 'Chickpea Curry with Cauliflower Rice',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '280-340',
+                price: '$4',
+                description: 'Spicy curry with low-carb rice alternative.',
+                features: ['8g net carbs', 'High fiber', 'Anti-inflammatory spices']
+            },
+            {
+                id: 'zucchini-noodles-pesto',
+                title: 'Zucchini Noodles with Pesto',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Mealplan/Zucchini Noodles with Pesto.jpg',
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '220-280',
+                price: '$5',
+                description: 'Fresh spiralized vegetables with herb pesto.',
+                features: ['6g net carbs', 'Raw option', 'Nutrient dense']
+            },
+            
+            // Budget-Friendly Individual Recipes
+            {
+                id: 'lentil-soup',
+                title: 'Lentil Soup with Vegetables',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Mealplan/Lentil Soup with Vegetables.jpg',
+                duration: '1 meal',
+                meals: '4 servings',
+                calories: '280-320',
+                price: '$6 total',
+                description: 'Hearty soup that feeds the family.',
+                features: ['$1.50 per serving', 'Freezer friendly', 'Complete protein']
+            },
+            {
+                id: 'pasta-marinara',
+                title: 'Pasta with Marinara Sauce',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Mealplan/Pasta with Marinara Sauce.jpg',
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '380-450',
+                price: '$2',
+                description: 'Classic comfort food on a budget.',
+                features: ['Pantry staples', 'Kid-friendly', 'Quick prep']
+            },
+            
+            // Weight Loss Individual Recipes
+            {
+                id: 'spinach-mushroom-salad',
+                title: 'Spinach and Mushroom Salad with Lemon Vinaigrette',
                 category: 'weight-loss',
                 image: '../../images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
-                description: 'Fresh, green-focused meals that support natural detoxification and weight management.',
-                duration: '7',
-                calories: '1000-1200 cal/day',
-                benefits: 'Detox and cleanse',
-                nutrition: 'High fiber, low calorie'
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '180-220',
+                price: '$4',
+                description: 'Light, nutrient-dense salad.',
+                features: ['Low calorie', 'High volume', 'Metabolism boosting']
             },
-            // Gluten Free Plans
             {
-                id: 'gluten-free-1',
-                title: 'Gluten-Free Buckwheat Delights',
+                id: 'vegetable-stir-fry',
+                title: 'Vegetable Stir-Fry with Tofu',
+                category: 'weight-loss',
+                image: '../../images/stories/Recipes/All Mealplan/Vegetable Stir-Fry with Tofu.jpg',
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '250-300',
+                price: '$4',
+                description: 'Colorful vegetables with lean protein.',
+                features: ['Portion controlled', 'High protein', 'Low calorie density']
+            },
+            
+            // Gluten-Free Individual Recipes
+            {
+                id: 'buckwheat-pancakes',
+                title: 'Gluten-Free Buckwheat Pancakes',
                 category: 'gluten-free',
                 image: '../../images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
-                description: 'Delicious gluten-free meals featuring buckwheat and other safe grains.',
-                duration: '7',
-                certification: '100% Gluten-Free',
-                nutrition: 'Celiac safe options'
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '320-380',
+                price: '$3',
+                description: 'Fluffy pancakes without the gluten.',
+                features: ['Certified GF', 'High fiber', 'Mineral rich']
             },
             {
-                id: 'gluten-free-2',
-                title: 'Quinoa Power Bowl Plan',
+                id: 'rice-bowl-vegetables',
+                title: 'Rice Bowl with Vegetables',
                 category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
-                description: 'Nutritious quinoa-based meals that are naturally gluten-free and protein-rich.',
-                duration: '5',
-                certification: 'Certified GF',
-                nutrition: 'Complete amino acids'
+                image: '../../images/stories/Recipes/All Mealplan/Rice Bowl with Vegetables.jpg',
+                duration: '1 meal',
+                meals: '1 serving',
+                calories: '380-450',
+                price: '$4',
+                description: 'Wholesome grain bowl with fresh vegetables.',
+                features: ['Naturally GF', 'Customizable', 'Balanced nutrition']
             }
         ];
     }

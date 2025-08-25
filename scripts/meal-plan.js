@@ -477,26 +477,6 @@ class MealPlanManager {
         });
     }
 
-    filterMealPlans(filter) {
-        this.currentFilter = filter;
-        this.displayedCount = 6;
-        this.displayEmptyState();
-        this.updateMealPlanCount();
-    }
-
-    displayEmptyState() {
-        const grid = document.getElementById('mealPlanGrid');
-        if (grid) {
-            grid.innerHTML = `
-                <div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;">
-                    <i class="fas fa-calendar-alt" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
-                    <h3 style="color: #666; margin-bottom: 1rem;">No Meal Plans Available</h3>
-                    <p style="color: #999;">Meal plans have been removed from this section.</p>
-                </div>
-            `;
-        }
-    }
-
     displayMealPlans() {
         const grid = document.getElementById('mealPlanGrid');
         if (!grid) return;

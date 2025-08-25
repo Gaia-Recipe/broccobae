@@ -384,13 +384,16 @@ class MealPlanManager {
     filterMealPlans(category) {
         this.currentFilter = category;
         
+        // Filter out main category plans (those with 'plan' in their id) and only show individual recipes
+        const individualRecipes = this.mealPlans.filter(plan => !plan.id.includes('-plan'));
+        
         if (category === 'all') {
-            this.displayedMealPlans = [...this.mealPlans];
+            this.displayedMealPlans = individualRecipes;
         } else {
-            this.displayedMealPlans = this.mealPlans.filter(plan => plan.category === category);
+            this.displayedMealPlans = individualRecipes.filter(plan => plan.category === category);
         }
         
-        this.displayedCount = 6;
+        this.displayedCount = 12; // Show more recipes initially
         this.displayMealPlans();
         this.updateMealPlanCount();
     }
@@ -526,7 +529,7 @@ class MealPlanManager {
     }
 
     loadMoreMealPlans() {
-        this.displayedCount += 6;
+        this.displayedCount += 8; // Load more recipes at a time
         this.displayMealPlans();
     }
 

@@ -255,30 +255,66 @@ class MealPlanManager {
              },
             
             // Weight Loss Individual Recipes
-            {
-                id: 'spinach-mushroom-salad',
-                title: 'Spinach and Mushroom Salad with Lemon Vinaigrette',
-                category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
-                duration: '1 meal',
-                meals: '1 serving',
-                calories: '180-220',
-                price: '$4',
-                description: 'Light, nutrient-dense salad.',
-                features: ['Low calorie', 'High volume', 'Metabolism boosting']
-            },
-            {
-                id: 'vegetable-stir-fry',
-                title: 'Vegetable Stir-Fry with Tofu',
-                category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Mealplan/Vegetable Stir-Fry with Tofu.jpg',
-                duration: '1 meal',
-                meals: '1 serving',
-                calories: '250-300',
-                price: '$4',
-                description: 'Colorful vegetables with lean protein.',
-                features: ['Portion controlled', 'High protein', 'Low calorie density']
-            },
+             {
+                 id: 'tropical-chia-pudding',
+                 title: 'Tropical Chia Seed Pudding',
+                 category: 'weight-loss',
+                 image: '../../images/stories/Recipes/All Mealplan/Tropical Chia Seed Pudding.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '200-250',
+                 price: '$3',
+                 description: 'Tropical flavors in a filling pudding.',
+                 features: ['High fiber', 'Keeps you full', 'Natural sweetness']
+             },
+             {
+                 id: 'mediterranean-chickpea-salad',
+                 title: 'Mediterranean Chickpea Salad',
+                 category: 'weight-loss',
+                 image: '../../images/stories/Recipes/All Mealplan/Mediterranean Chickpea Salad.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '280-320',
+                 price: '$4',
+                 description: 'Fresh Mediterranean flavors with protein.',
+                 features: ['High protein', 'Low calorie', 'Satisfying']
+             },
+             {
+                 id: 'spiced-tofu-stir-fry',
+                 title: 'Spiced Tofu Stir-Fry',
+                 category: 'weight-loss',
+                 image: '../../images/stories/Recipes/All Mealplan/Spiced Tofu Stir-Fry.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '250-300',
+                 price: '$4',
+                 description: 'Flavorful tofu with metabolism-boosting spices.',
+                 features: ['Lean protein', 'Thermogenic spices', 'Low calorie']
+             },
+             {
+                 id: 'cucumber-hummus-bites',
+                 title: 'Cucumber and Hummus Bites',
+                 category: 'weight-loss',
+                 image: '../../images/stories/Recipes/All Mealplan/Cucumber and Hummus Bites.jpg',
+                 duration: '1 snack',
+                 meals: '1 serving',
+                 calories: '120-150',
+                 price: '$2',
+                 description: 'Light, refreshing snack.',
+                 features: ['Very low calorie', 'Hydrating', 'Portion controlled']
+             },
+             {
+                 id: 'mixed-nuts-handful',
+                 title: 'Handful of Mixed Nuts',
+                 category: 'weight-loss',
+                 image: '../../images/stories/Recipes/All Mealplan/Handful of Mixed Nuts.jpg',
+                 duration: '1 snack',
+                 meals: '1 serving',
+                 calories: '160-200',
+                 price: '$2',
+                 description: 'Portion-controlled healthy fats.',
+                 features: ['Healthy fats', 'Protein', 'Portion controlled']
+             },
             
             // Gluten-Free Individual Recipes
             {

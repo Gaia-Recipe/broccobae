@@ -317,30 +317,66 @@ class MealPlanManager {
              },
             
             // Gluten-Free Individual Recipes
-            {
-                id: 'buckwheat-pancakes',
-                title: 'Gluten-Free Buckwheat Pancakes',
-                category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
-                duration: '1 meal',
-                meals: '1 serving',
-                calories: '320-380',
-                price: '$3',
-                description: 'Fluffy pancakes without the gluten.',
-                features: ['Certified GF', 'High fiber', 'Mineral rich']
-            },
-            {
-                id: 'rice-bowl-vegetables',
-                title: 'Rice Bowl with Vegetables',
-                category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Mealplan/Rice Bowl with Vegetables.jpg',
-                duration: '1 meal',
-                meals: '1 serving',
-                calories: '380-450',
-                price: '$4',
-                description: 'Wholesome grain bowl with fresh vegetables.',
-                features: ['Naturally GF', 'Customizable', 'Balanced nutrition']
-            }
+             {
+                 id: 'buckwheat-pancakes',
+                 title: 'Gluten-Free Buckwheat Pancakes',
+                 category: 'gluten-free',
+                 image: '../../images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '320-380',
+                 price: '$3',
+                 description: 'Fluffy pancakes without the gluten.',
+                 features: ['Certified GF', 'High fiber', 'Mineral rich']
+             },
+             {
+                 id: 'rainbow-veggie-wraps',
+                 title: 'Rainbow Veggie Wraps',
+                 category: 'gluten-free',
+                 image: '../../images/stories/Recipes/All Mealplan/Rainbow Veggie Wraps.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '280-340',
+                 price: '$4',
+                 description: 'Colorful vegetables in gluten-free wraps.',
+                 features: ['GF tortillas', 'Rainbow nutrition', 'Fresh and crisp']
+             },
+             {
+                 id: 'chickpea-curry-cauliflower',
+                 title: 'Chickpea Curry with Cauliflower Rice',
+                 category: 'gluten-free',
+                 image: '../../images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '320-380',
+                 price: '$4',
+                 description: 'Spicy curry with grain-free rice.',
+                 features: ['Naturally GF', 'Anti-inflammatory', 'Protein rich']
+             },
+             {
+                 id: 'trail-mix-nuts',
+                 title: 'Trail Mix with Dried Fruits and Nuts',
+                 category: 'gluten-free',
+                 image: '../../images/stories/Recipes/All Mealplan/Trail Mix with Dried Fruits and Nuts.webp',
+                 duration: '1 snack',
+                 meals: '1 serving',
+                 calories: '180-220',
+                 price: '$2',
+                 description: 'Energy-boosting snack mix.',
+                 features: ['Naturally GF', 'Portable', 'Energy dense']
+             },
+             {
+                 id: 'coconut-chia-pudding',
+                 title: 'Coconut Chia Seed Pudding',
+                 category: 'gluten-free',
+                 image: '../../images/stories/Recipes/All Mealplan/Coconut Chia Seed Pudding.jpg',
+                 duration: '1 dessert',
+                 meals: '1 serving',
+                 calories: '220-280',
+                 price: '$3',
+                 description: 'Creamy coconut pudding with chia seeds.',
+                 features: ['Naturally GF', 'Omega-3 rich', 'Make ahead']
+             }
         ];
     }
 

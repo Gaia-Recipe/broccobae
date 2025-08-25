@@ -847,7 +847,16 @@ class CuisineManager {
     filterRecipes(filter) {
         this.currentFilter = filter;
         this.displayedCount = 10;
-        this.displayEmptyState();
+        
+        if (filter === 'all') {
+            this.filteredRecipes = [...this.recipes];
+        } else {
+            this.filteredRecipes = this.recipes.filter(recipe => 
+                recipe.category.toLowerCase() === filter.toLowerCase()
+            );
+        }
+        
+        this.displayRecipes();
         this.updateRecipeCount();
     }
 

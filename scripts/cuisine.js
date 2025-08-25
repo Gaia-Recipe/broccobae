@@ -474,18 +474,332 @@ class CuisineManager {
                  description: 'Steamed rice cakes served with fresh coconut chutney.'
              },
              {
-                 id: 'vegan-pani-puri',
-                 title: 'Vegan Pani Puri (Gol Gappa)',
-                 category: 'indian',
-                 image: '../../images/stories/Recipes/All Cuisines/Vegan Pani Puri (Gol Gappa).avif',
-                 duration: '40 mins',
-                 difficulty: 'Medium',
-                 rating: 4.8,
-                 description: 'Crispy hollow puris filled with spiced water, chutneys, and potatoes.'
-             }
-         ];
-         this.totalRecipes = this.recipes.length;
-     }
+                  id: 'vegan-pani-puri',
+                  title: 'Vegan Pani Puri (Gol Gappa)',
+                  category: 'indian',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Pani Puri (Gol Gappa).avif',
+                  duration: '40 mins',
+                  difficulty: 'Medium',
+                  rating: 4.8,
+                  description: 'Crispy hollow puris filled with spiced water, chutneys, and potatoes.'
+              },
+              
+              // American Vegan Recipes
+              {
+                  id: 'vegan-mac-and-cheese',
+                  title: 'Vegan Mac and Cheese',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Mac and Cheese.jpg',
+                  duration: '25 mins',
+                  difficulty: 'Easy',
+                  rating: 4.8,
+                  description: 'Creamy and cheesy pasta made with cashew-based cheese sauce.'
+              },
+              {
+                  id: 'bbq-jackfruit-sandwich',
+                  title: 'BBQ Jackfruit Sandwich',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/BBQ Jackfruit Sandwich.jpg',
+                  duration: '30 mins',
+                  difficulty: 'Medium',
+                  rating: 4.9,
+                  description: 'Pulled jackfruit in tangy BBQ sauce served on a toasted bun.'
+              },
+              {
+                  id: 'vegan-chili',
+                  title: 'Vegan Chili',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Chili 19.17.56.jpg',
+                  duration: '45 mins',
+                  difficulty: 'Easy',
+                  rating: 4.7,
+                  description: 'Hearty and warming chili with beans, vegetables, and spices.'
+              },
+              {
+                  id: 'sweet-potato-black-bean-burgers',
+                  title: 'Sweet Potato Black Bean Burgers',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Sweet Potato Black Bean Burgers.jpg',
+                  duration: '35 mins',
+                  difficulty: 'Medium',
+                  rating: 4.8,
+                  description: 'Nutritious and flavorful burgers with sweet potato and black beans.'
+              },
+              {
+                  id: 'vegan-cornbread',
+                  title: 'Vegan Cornbread',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Cornbread.jpg',
+                  duration: '30 mins',
+                  difficulty: 'Easy',
+                  rating: 4.6,
+                  description: 'Moist and slightly sweet cornbread perfect as a side dish.'
+              },
+              {
+                  id: 'vegan-pancakes',
+                  title: 'Vegan Pancakes',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Pancakes.jpg',
+                  duration: '20 mins',
+                  difficulty: 'Easy',
+                  rating: 4.7,
+                  description: 'Fluffy and delicious pancakes made without eggs or dairy.'
+              },
+              {
+                  id: 'vegan-sloppy-joes',
+                  title: 'Vegan Sloppy Joes',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Sloppy Joes.jpg',
+                  duration: '25 mins',
+                  difficulty: 'Easy',
+                  rating: 4.5,
+                  description: 'Classic comfort food with lentils in tangy tomato sauce.'
+              },
+              {
+                  id: 'vegan-buffalo-cauliflower-wings',
+                  title: 'Vegan Buffalo Cauliflower Wings',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Buffalo Cauliflower Wings.webp',
+                  duration: '35 mins',
+                  difficulty: 'Medium',
+                  rating: 4.8,
+                  description: 'Spicy and crispy cauliflower wings with buffalo sauce.'
+              },
+              {
+                  id: 'vegan-mashed-potatoes',
+                  title: 'Vegan Mashed Potatoes',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Mashed Potatoes.jpg',
+                  duration: '25 mins',
+                  difficulty: 'Easy',
+                  rating: 4.6,
+                  description: 'Creamy and buttery mashed potatoes made with plant-based milk.'
+              },
+              {
+                  id: 'vegan-gravy',
+                  title: 'Vegan Gravy',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Gravy.jpg',
+                  duration: '15 mins',
+                  difficulty: 'Easy',
+                  rating: 4.5,
+                  description: 'Rich and savory gravy perfect for mashed potatoes and roasts.'
+              },
+              {
+                  id: 'vegan-gumbo',
+                  title: 'Vegan Gumbo',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Gumbo.jpg',
+                  duration: '60 mins',
+                  difficulty: 'Hard',
+                  rating: 4.9,
+                  description: 'Louisiana-style stew with okra, vegetables, and Creole spices.'
+              },
+              {
+                  id: 'vegan-baked-beans',
+                  title: 'Vegan Baked Beans',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Baked Beans.jpeg',
+                  duration: '40 mins',
+                  difficulty: 'Easy',
+                  rating: 4.6,
+                  description: 'Sweet and smoky baked beans perfect for BBQs and picnics.'
+              },
+              {
+                  id: 'vegan-collard-greens',
+                  title: 'Vegan Collard Greens',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Collard Greens.jpg',
+                  duration: '45 mins',
+                  difficulty: 'Easy',
+                  rating: 4.5,
+                  description: 'Southern-style collard greens cooked with onions and spices.'
+              },
+              {
+                  id: 'vegan-apple-pie',
+                  title: 'Vegan Apple Pie',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Apple Pie.jpg',
+                  duration: '90 mins',
+                  difficulty: 'Hard',
+                  rating: 4.8,
+                  description: 'Classic American apple pie with flaky crust and cinnamon filling.'
+              },
+              {
+                  id: 'vegan-creamy-garlic-pasta',
+                  title: 'Vegan Creamy Garlic Pasta',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Creamy Garlic Pasta.jpg',
+                  duration: '20 mins',
+                  difficulty: 'Easy',
+                  rating: 4.7,
+                  description: 'Rich and creamy pasta with roasted garlic and herbs.'
+              },
+              {
+                  id: 'vegan-stuffed-bell-peppers',
+                  title: 'Vegan Stuffed Bell Peppers',
+                  category: 'american',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Stuffed Bell Peppers.jpg',
+                  duration: '50 mins',
+                  difficulty: 'Medium',
+                  rating: 4.7,
+                  description: 'Bell peppers stuffed with quinoa, vegetables, and herbs.'
+              },
+              
+              // Mexican Vegan Recipes
+              {
+                  id: 'vegan-tacos-de-nopales',
+                  title: 'Vegan Tacos de Nopales',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Tacos de Nopales (Cactus Tacos).jpg',
+                  duration: '25 mins',
+                  difficulty: 'Medium',
+                  rating: 4.7,
+                  description: 'Traditional Mexican cactus tacos with onions and spices.'
+              },
+              {
+                  id: 'vegan-elote',
+                  title: 'Vegan Elote (Mexican Street Corn)',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Elote (Mexican Street Corn).jpg',
+                  duration: '15 mins',
+                  difficulty: 'Easy',
+                  rating: 4.8,
+                  description: 'Grilled corn with vegan mayo, chili powder, and lime.'
+              },
+              {
+                  id: 'vegan-chiles-rellenos',
+                  title: 'Vegan Chiles Rellenos',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Chiles Rellenos.jpg',
+                  duration: '45 mins',
+                  difficulty: 'Hard',
+                  rating: 4.9,
+                  description: 'Roasted poblano peppers stuffed with vegan cheese and battered.'
+              },
+              {
+                  id: 'vegan-pozole-rojo',
+                  title: 'Vegan Pozole Rojo',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Pozole Rojo.jpg',
+                  duration: '60 mins',
+                  difficulty: 'Medium',
+                  rating: 4.8,
+                  description: 'Traditional Mexican hominy soup with red chili broth.'
+              },
+              {
+                  id: 'vegan-tostadas',
+                  title: 'Vegan Tostadas',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Tostadas.jpg',
+                  duration: '20 mins',
+                  difficulty: 'Easy',
+                  rating: 4.6,
+                  description: 'Crispy tortillas topped with beans, vegetables, and salsa.'
+              },
+              {
+                  id: 'vegan-tamales',
+                  title: 'Vegan Tamales',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Tamales.jpg',
+                  duration: '120 mins',
+                  difficulty: 'Hard',
+                  rating: 4.9,
+                  description: 'Traditional steamed corn masa filled with vegetables and spices.'
+              },
+              {
+                  id: 'vegan-sopa-de-tortilla',
+                  title: 'Vegan Sopa de Tortilla',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Sopa de Tortilla (Tortilla Soup).jpg',
+                  duration: '35 mins',
+                  difficulty: 'Medium',
+                  rating: 4.7,
+                  description: 'Mexican tortilla soup with tomatoes, chilies, and crispy tortilla strips.'
+              },
+              {
+                  id: 'vegan-quesadillas-cashew-cheese',
+                  title: 'Vegan Quesadillas with Cashew Cheese',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Quesadillas with Cashew Cheese.jpg',
+                  duration: '20 mins',
+                  difficulty: 'Easy',
+                  rating: 4.8,
+                  description: 'Crispy quesadillas filled with homemade cashew cheese and vegetables.'
+              },
+              {
+                  id: 'vegan-enchiladas-verdes',
+                  title: 'Vegan Enchiladas Verdes',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Enchiladas Verdes.jpg',
+                  duration: '40 mins',
+                  difficulty: 'Medium',
+                  rating: 4.8,
+                  description: 'Corn tortillas filled with vegetables and topped with green salsa.'
+              },
+              {
+                  id: 'vegan-gorditas',
+                  title: 'Vegan Gorditas',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Gorditas.jpg',
+                  duration: '35 mins',
+                  difficulty: 'Medium',
+                  rating: 4.6,
+                  description: 'Thick corn tortillas stuffed with beans and vegetables.'
+              },
+              {
+                  id: 'vegan-flautas',
+                  title: 'Vegan Flautas',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Flautas.jpg',
+                  duration: '30 mins',
+                  difficulty: 'Medium',
+                  rating: 4.7,
+                  description: 'Crispy rolled tortillas filled with seasoned vegetables.'
+              },
+              {
+                  id: 'vegan-mexican-rice',
+                  title: 'Vegan Mexican Rice',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Mexican Rice.jpg',
+                  duration: '25 mins',
+                  difficulty: 'Easy',
+                  rating: 4.5,
+                  description: 'Flavorful rice cooked with tomatoes, onions, and Mexican spices.'
+              },
+              {
+                  id: 'vegan-churros',
+                  title: 'Vegan Churros',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Churros.jpg',
+                  duration: '30 mins',
+                  difficulty: 'Medium',
+                  rating: 4.8,
+                  description: 'Crispy fried dough pastries rolled in cinnamon sugar.'
+              },
+              {
+                  id: 'vegan-esquites',
+                  title: 'Vegan Esquites (Corn in a Cup)',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Esquites (Corn in a Cup).jpg',
+                  duration: '15 mins',
+                  difficulty: 'Easy',
+                  rating: 4.6,
+                  description: 'Mexican street corn served in a cup with lime and chili.'
+              },
+              {
+                  id: 'vegan-mole-poblano-tofu',
+                  title: 'Vegan Mole Poblano with Tofu',
+                  category: 'mexican',
+                  image: '../../images/stories/Recipes/All Cuisines/Vegan Mole Poblano with Tofu.jpeg',
+                  duration: '90 mins',
+                  difficulty: 'Hard',
+                  rating: 4.9,
+                  description: 'Complex Mexican sauce with chocolate and chilies served over tofu.'
+              }
+          ];
+          this.totalRecipes = this.recipes.length;
+      }
 
     setupEventListeners() {
         // Filter buttons

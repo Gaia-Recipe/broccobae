@@ -10,13 +10,185 @@ class MealPlanManager {
     }
 
     init() {
-        // Meal plans removed - no longer generating meal plans
+        this.generateMealPlans();
         this.setupEventListeners();
-        this.displayEmptyState();
+        this.filterMealPlans('all');
         this.updateMealPlanCount();
     }
 
-    // Meal plan generation removed
+    generateMealPlans() {
+        this.mealPlans = [
+            // High Protein Plans
+            {
+                id: 'high-protein-1',
+                title: 'High-Protein Vegan Power',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
+                description: 'Boost your protein intake with this power-packed vegan meal plan featuring protein-rich plant foods.',
+                duration: '7',
+                protein: '25-30g per meal',
+                calories: '1800-2000 cal/day',
+                benefits: 'Muscle building support'
+            },
+            {
+                id: 'high-protein-2',
+                title: 'Protein Smoothie Power Plan',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
+                description: 'Start your day with protein-packed smoothies and maintain high protein throughout the day.',
+                duration: '5',
+                protein: '20-25g per meal',
+                calories: '1600-1800 cal/day',
+                benefits: 'Quick protein absorption'
+            },
+            // Low Carb Plans
+            {
+                id: 'low-carb-1',
+                title: 'Low-Carb Vegan Delights',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
+                description: 'Enjoy delicious low-carb vegan meals that keep you satisfied while maintaining ketosis.',
+                duration: '7',
+                carbs: '20-30g per day',
+                fat: '70-80g per day',
+                nutrition: 'Ketogenic friendly'
+            },
+            {
+                id: 'low-carb-2',
+                title: 'Cauliflower Rice Curry Plan',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
+                description: 'Replace traditional rice with cauliflower rice in flavorful curry dishes.',
+                duration: '5',
+                carbs: '15-25g per day',
+                fat: '60-70g per day',
+                nutrition: 'Low glycemic index'
+            },
+            // Budget Friendly Plans
+            {
+                id: 'budget-1',
+                title: 'Budget-Friendly Vegan Eats',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
+                description: 'Nutritious and delicious vegan meals that won\'t break the bank.',
+                duration: '7',
+                cost: '$3-5 per day',
+                savings: 'Save 40% vs eating out',
+                nutrition: 'Complete nutrition on budget'
+            },
+            {
+                id: 'budget-2',
+                title: 'Chickpea Power Meals',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Mealplan/Roasted Chickpeas with Spices.jpg',
+                description: 'Affordable protein-rich meals centered around versatile chickpeas.',
+                duration: '5',
+                cost: '$2-4 per day',
+                savings: 'Bulk buying savings',
+                nutrition: 'High protein, low cost'
+            },
+            // Weight Loss Plans
+            {
+                id: 'weight-loss-1',
+                title: 'Weight Loss Vegan Plan',
+                category: 'weight-loss',
+                image: '../../images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
+                description: 'Carefully portioned meals designed to support healthy weight loss goals.',
+                duration: '14',
+                calories: '1200-1400 cal/day',
+                benefits: 'Sustainable weight loss',
+                nutrition: 'Nutrient dense, calorie controlled'
+            },
+            {
+                id: 'weight-loss-2',
+                title: 'Green Detox Meal Plan',
+                category: 'weight-loss',
+                image: '../../images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
+                description: 'Fresh, green-focused meals that support natural detoxification and weight management.',
+                duration: '7',
+                calories: '1000-1200 cal/day',
+                benefits: 'Detox and cleanse',
+                nutrition: 'High fiber, low calorie'
+            },
+            // Gluten Free Plans
+            {
+                id: 'gluten-free-1',
+                title: 'Gluten-Free Buckwheat Delights',
+                category: 'gluten-free',
+                image: '../../images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
+                description: 'Delicious gluten-free meals featuring buckwheat and other safe grains.',
+                duration: '7',
+                certification: '100% Gluten-Free',
+                nutrition: 'Celiac safe options'
+            },
+            {
+                id: 'gluten-free-2',
+                title: 'Quinoa Power Bowl Plan',
+                category: 'gluten-free',
+                image: '../../images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
+                description: 'Nutritious quinoa-based meals that are naturally gluten-free and protein-rich.',
+                duration: '5',
+                certification: 'Certified GF',
+                nutrition: 'Complete amino acids'
+            }
+        ];
+    }
+
+    filterMealPlans(category) {
+        this.currentFilter = category;
+        
+        if (category === 'all') {
+            this.displayedMealPlans = [...this.mealPlans];
+        } else {
+            this.displayedMealPlans = this.mealPlans.filter(plan => plan.category === category);
+        }
+        
+        this.displayedCount = 6;
+        this.displayMealPlans();
+        this.updateMealPlanCount();
+    }
+
+    displayEmptyState() {
+        const grid = document.getElementById('mealPlanGrid');
+        if (!grid) return;
+        
+        grid.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-state-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="empty-state-title">No Meal Plans Found</h3>
+                <p class="empty-state-description">Try selecting a different category or check back later for new meal plans!</p>
+            </div>
+        `;
+    }
+
+    showNotification(message, type = 'info') {
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <span>${message}</span>
+            <button class="notification-close">&times;</button>
+        `;
+        
+        // Add to page
+        document.body.appendChild(notification);
+        
+        // Auto remove after 3 seconds
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        }, 3000);
+        
+        // Close button functionality
+        notification.querySelector('.notification-close').addEventListener('click', () => {
+            if (notification.parentNode) {
+                notification.parentNode.removeChild(notification);
+            }
+        });
+    }
 
     setupEventListeners() {
         // Filter buttons
@@ -80,7 +252,30 @@ class MealPlanManager {
     }
 
     displayMealPlans() {
-        this.displayEmptyState();
+        const grid = document.getElementById('mealPlanGrid');
+        if (!grid) return;
+
+        if (this.displayedMealPlans.length === 0) {
+            this.displayEmptyState();
+            return;
+        }
+
+        grid.innerHTML = '';
+        
+        this.displayedMealPlans.slice(0, this.displayedCount).forEach(plan => {
+            const card = this.createMealPlanCard(plan);
+            grid.appendChild(card);
+        });
+
+        // Show/hide load more button
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            if (this.displayedCount >= this.displayedMealPlans.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+            }
+        }
     }
 
     createMealPlanCard(plan) {
@@ -164,20 +359,35 @@ class MealPlanManager {
     }
 
     loadMoreMealPlans() {
-        // Load more functionality removed - no meal plans to load
-        console.log('Load more meal plans functionality has been removed');
+        this.displayedCount += 6;
+        this.displayMealPlans();
     }
 
     updateMealPlanCount() {
         const countElement = document.querySelector('.meal-plan-count');
         if (countElement) {
-            countElement.textContent = 'No meal plans available';
+            const count = this.displayedMealPlans ? this.displayedMealPlans.length : this.mealPlans.length;
+            countElement.textContent = `${count} meal plans available`;
         }
     }
 
     generateCustomMealPlan() {
-        // Custom meal plan generation removed
-        this.showNotification('Meal plan generation is no longer available.', 'info');
+        const formData = new FormData(document.getElementById('mealPlanForm'));
+        const planType = formData.get('planType');
+        const duration = formData.get('duration');
+        const servings = formData.get('servings');
+        
+        // Filter meal plans based on selected type
+        if (planType && planType !== '') {
+            this.filterMealPlans(planType);
+            
+            // Scroll to meal plans section
+            document.getElementById('meal-plan-categories').scrollIntoView({
+                behavior: 'smooth'
+            });
+            
+            this.showNotification(`Generated ${planType} meal plan for ${duration} days!`, 'success');
+        }
     }
 
     showMealPlanDetails(mealPlanId) {

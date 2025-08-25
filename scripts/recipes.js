@@ -1,9 +1,8 @@
-// Recipe data generator and management
 class RecipeManager {
     constructor() {
-        this.allRecipes = [];
-        this.displayedRecipes = [];
-        this.currentFilter = 'all';
+        this.recipes = [];
+        this.filteredRecipes = [];
+        this.currentCategory = 'all';
         this.recipesPerPage = 12;
         this.currentPage = 1;
         this.init();
@@ -11,334 +10,314 @@ class RecipeManager {
 
     init() {
         this.generateRecipes();
+        this.filteredRecipes = [...this.recipes];
         this.setupEventListeners();
-        this.filterRecipes('all');
+        this.displayRecipes();
         this.updateRecipeCount();
     }
 
     generateRecipes() {
-        this.allRecipes = [
-            // Breakfast Recipes
+        this.recipes = [
+            // High-Protein Recipes
             {
-                id: 'breakfast-1',
-                title: 'Fresh Vegan Salad',
-                category: 'breakfast',
-                image: '../../images/stories/Recipes/All/Fresh Vegan Salad.png',
+                id: 'high-protein-1',
+                title: 'Chickpea Flour Omelette with Veggies',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Recipes/Chickpea Flour Omelette.jpg',
                 prepTime: '15 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
-                ingredients: ['Mixed greens', 'Cherry tomatoes', 'Cucumber', 'Bell peppers', 'Red onion', 'Lemon juice', 'Olive oil', 'Salt', 'Pepper']
+                description: 'Protein-rich chickpea flour omelette packed with fresh vegetables.',
+                ingredients: ['Chickpea flour', 'Bell peppers', 'Onions', 'Spinach', 'Nutritional yeast', 'Turmeric', 'Plant milk']
             },
             {
-                 id: 'breakfast-2',
-                 title: 'Vegan Pancakes',
-                 category: 'breakfast',
-                 image: '../../images/stories/Recipes/All/Vegan Pancake.jpg',
-                 prepTime: '20 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Easy',
-                 ingredients: ['2 cups oat flour', '2 tbsp sugar', '2 tsp baking powder', '1 cup almond milk', '2 tbsp coconut oil', 'Fresh berries', 'Maple syrup']
-             },
-             {
-                 id: 'breakfast-3',
-                 title: 'Tofu Scramble',
-                 category: 'breakfast',
-                 image: '../../images/stories/Recipes/All/Tofu Scramble.jpg',
-                 prepTime: '15 minutes',
-                 servings: '3 servings',
-                 difficulty: 'Medium',
-                 ingredients: ['1 block firm tofu', '1 bell pepper', '1 onion', '2 cloves garlic', 'Nutritional yeast', 'Turmeric', 'Spinach', 'Olive oil']
-             },
-             {
-                 id: 'breakfast-4',
-                 title: 'Smoothie Bowl',
-                 category: 'breakfast',
-                 image: '../../images/stories/Recipes/All/Smoothie Bowl.jpg',
-                 prepTime: '10 minutes',
-                 servings: '1 serving',
-                 difficulty: 'Easy',
-                 ingredients: ['1 frozen banana', '1/2 cup berries', '1/2 cup almond milk', 'Granola', 'Chia seeds', 'Fresh fruits', 'Coconut flakes']
-             },
+                id: 'high-protein-2',
+                title: 'Quinoa Salad with Black Beans and Avocado',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Recipes/Quinoa Black Bean Salad.jpg',
+                prepTime: '20 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                description: 'Nutritious quinoa salad with protein-rich black beans and creamy avocado.',
+                ingredients: ['Quinoa', 'Black beans', 'Avocado', 'Cherry tomatoes', 'Cilantro', 'Lime juice', 'Olive oil']
+            },
             {
-                id: 'breakfast-5',
-                title: 'Avocado Toast',
-                category: 'breakfast',
-                image: '../../images/stories/Recipes/All/Avocado Toast.jpg',
+                id: 'high-protein-3',
+                title: 'Tempeh Stir-Fry with Brown Rice',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Recipes/Tempeh Stir Fry.jpg',
+                prepTime: '25 minutes',
+                servings: '3 servings',
+                difficulty: 'Medium',
+                description: 'High-protein tempeh stir-fry served over nutritious brown rice.',
+                ingredients: ['Tempeh', 'Brown rice', 'Broccoli', 'Carrots', 'Snap peas', 'Soy sauce', 'Ginger', 'Garlic']
+            },
+            {
+                id: 'high-protein-4',
+                title: 'Roasted Chickpeas with Spices',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Recipes/Roasted Chickpeas.jpg',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                description: 'Crispy roasted chickpeas seasoned with aromatic spices.',
+                ingredients: ['Chickpeas', 'Cumin', 'Paprika', 'Garlic powder', 'Olive oil', 'Sea salt', 'Cayenne pepper']
+            },
+            {
+                id: 'high-protein-5',
+                title: 'Protein Smoothie with Plant-Based Protein Powder',
+                category: 'high-protein',
+                image: '../../images/stories/Recipes/All Recipes/Protein Smoothie.jpg',
+                prepTime: '5 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                description: 'Power-packed protein smoothie perfect for post-workout nutrition.',
+                ingredients: ['Plant protein powder', 'Banana', 'Spinach', 'Almond milk', 'Peanut butter', 'Chia seeds']
+            },
+
+            // Low-Carb Recipes
+            {
+                id: 'low-carb-1',
+                title: 'Chia Seed Pudding with Berries',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Recipes/Chia Seed Pudding.jpg',
                 prepTime: '10 minutes',
                 servings: '2 servings',
                 difficulty: 'Easy',
-                ingredients: ['2 slices whole grain bread', '1 ripe avocado', 'Everything bagel seasoning', 'Lemon juice', 'Salt', 'Red pepper flakes']
+                description: 'Low-carb chia pudding topped with fresh berries.',
+                ingredients: ['Chia seeds', 'Coconut milk', 'Mixed berries', 'Vanilla extract', 'Stevia', 'Coconut flakes']
             },
             {
-                 id: 'breakfast-6',
-                 title: 'Chia Seed Pudding',
-                 category: 'breakfast',
-                 image: '../../images/stories/Recipes/All/Chia Seed Pudding.jpg',
-                 prepTime: '5 minutes',
-                 servings: '2 servings',
-                 difficulty: 'Easy',
-                 ingredients: ['1/4 cup chia seeds', '1 cup almond milk', '2 tbsp maple syrup', '1 tsp vanilla extract', 'Fresh berries', 'Nuts']
-             },
-            // Lunch Recipes
-            {
-                id: 'lunch-1',
-                title: 'Mediterranean Quinoa Salad',
-        category: 'lunch',
-        image: '../../images/stories/Recipes/All/Mediterranean Quinoa Salad.jpg',
-                prepTime: '25 minutes',
-                servings: '4 servings',
-                difficulty: 'Medium',
-                ingredients: ['1 cup quinoa', 'Cherry tomatoes', 'Cucumber', 'Kalamata olives', 'Red onion', 'Fresh herbs', 'Lemon juice', 'Olive oil']
+                id: 'low-carb-2',
+                title: 'Spinach and Mushroom Salad with Lemon Vinaigrette',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Recipes/Spinach Mushroom Salad.jpg',
+                prepTime: '15 minutes',
+                servings: '3 servings',
+                difficulty: 'Easy',
+                description: 'Fresh spinach and mushroom salad with zesty lemon dressing.',
+                ingredients: ['Baby spinach', 'Mushrooms', 'Lemon juice', 'Olive oil', 'Dijon mustard', 'Garlic', 'Herbs']
             },
             {
-                 id: 'lunch-2',
-                 title: 'Spicy Tofu Scramble',
-                 category: 'lunch',
-                 image: '../../images/stories/Recipes/All/Spicy Tofu Scramble.jpg',
-                 prepTime: '20 minutes',
-                 servings: '3 servings',
-                 difficulty: 'Medium',
-                 ingredients: ['1 block firm tofu', 'Jalapeños', 'Bell peppers', 'Onion', 'Garlic', 'Cumin', 'Paprika', 'Nutritional yeast']
-             },
-             {
-                 id: 'lunch-3',
-                 title: 'Avocado & Chickpea Sandwich',
-                 category: 'lunch',
-                 image: '../../images/stories/Recipes/All/Avocado & Chickpea Sandwich.jpg',
-                 prepTime: '15 minutes',
-                 servings: '2 servings',
-                 difficulty: 'Easy',
-                 ingredients: ['1 can chickpeas', '1 ripe avocado', 'Whole grain bread', 'Lettuce', 'Tomato', 'Red onion', 'Lemon juice', 'Dijon mustard']
-             },
-             {
-                 id: 'lunch-4',
-                 title: 'Lentil Soup with Kale',
-                 category: 'lunch',
-                 image: '../../images/stories/Recipes/All/Lentil Soup with Kale.avif',
-                 prepTime: '35 minutes',
-                 servings: '6 servings',
-                 difficulty: 'Medium',
-                 ingredients: ['1 cup red lentils', 'Kale', 'Carrots', 'Celery', 'Onion', 'Garlic', 'Vegetable broth', 'Bay leaves', 'Thyme']
-             },
-             {
-                 id: 'lunch-5',
-                 title: 'Vegan Burrito Bowl',
-                 category: 'lunch',
-                 image: '../../images/stories/Recipes/All/Vegan Burrito Bowl.jpg',
-                 prepTime: '30 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Medium',
-                 ingredients: ['Black beans', 'Quinoa', 'Brown rice', 'Corn', 'Bell peppers', 'Avocado', 'Salsa', 'Lime', 'Cilantro']
-             },
-            {
-                id: 'lunch-6',
-                title: 'The Ultimate Vegan Burger',
-                category: 'lunch',
-                image: '../../images/stories/Recipes/All/The Ultimate Vegan Burger.png',
-                prepTime: '25 minutes',
+                id: 'low-carb-3',
+                title: 'Grilled Eggplant Steaks with Roasted Vegetables',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Recipes/Grilled Eggplant.jpg',
+                prepTime: '35 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
-                 ingredients: ['Black beans', 'Quinoa', 'Mushrooms', 'Onion', 'Garlic', 'Burger buns', 'Lettuce', 'Tomato', 'Vegan mayo']
-             },
-             // Dinner Recipes
-             {
-                 id: 'dinner-1',
-                 title: 'Creamy Tomato Pasta',
-        category: 'dinner',
-        image: '../../images/stories/Recipes/All/Creamy Tomato Pasta .jpg',
-                 prepTime: '25 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Easy',
-                 description: 'Rich and creamy tomato pasta with fresh basil and nutritional yeast.',
-                 ingredients: ['Pasta', 'Canned tomatoes', 'Coconut cream', 'Garlic', 'Onion', 'Fresh basil', 'Nutritional yeast', 'Olive oil']
-             },
-             {
-                 id: 'dinner-2',
-                 title: 'Lentil Shepherd\'s Pie',
-                 category: 'dinner',
-                 image: '../../images/stories/Recipes/All/Lentil Shepherd\'s Pie.jpg',
-                 prepTime: '45 minutes',
-                 servings: '6 servings',
-                 difficulty: 'Medium',
-                 description: 'Hearty lentil shepherd\'s pie topped with creamy mashed potatoes.',
-                 ingredients: ['Green lentils', 'Potatoes', 'Carrots', 'Peas', 'Onion', 'Garlic', 'Vegetable broth', 'Thyme', 'Rosemary']
-             },
-             {
-                 id: 'dinner-3',
-                 title: 'Spicy Tofu Stir-Fry',
-                 category: 'dinner',
-                 image: '../../images/stories/Recipes/All/Spicy Tofu Stir-fry.jpg',
-                 prepTime: '20 minutes',
-                 servings: '3 servings',
-                 difficulty: 'Medium',
-                 description: 'Quick and flavorful tofu stir-fry with mixed vegetables and spicy sauce.',
-                 ingredients: ['Firm tofu', 'Bell peppers', 'Broccoli', 'Snap peas', 'Garlic', 'Ginger', 'Soy sauce', 'Chili flakes']
-             },
-             {
-                 id: 'dinner-4',
-                 title: 'Black Bean Burgers',
-                 category: 'dinner',
-                 image: '../../images/stories/Recipes/All/Spicy Black Bean Burgers .png',
-                 prepTime: '30 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Medium',
-                 description: 'Protein-rich black bean burgers with spices and fresh herbs.',
-                 ingredients: ['Black beans', 'Breadcrumbs', 'Onion', 'Garlic', 'Cumin', 'Paprika', 'Fresh cilantro', 'Burger buns']
-             },
-             {
-                 id: 'dinner-5',
-                 title: 'Vegan Lasagna',
-                 category: 'dinner',
-                 image: '../../images/stories/Recipes/All/Vegan Lasagna .jpg',
-                 prepTime: '60 minutes',
-                 servings: '8 servings',
-                 difficulty: 'Hard',
-                 description: 'Layered vegan lasagna with cashew ricotta and marinara sauce.',
-                 ingredients: ['Lasagna noodles', 'Cashews', 'Spinach', 'Marinara sauce', 'Nutritional yeast', 'Garlic', 'Herbs']
-             },
-             {
-                 id: 'dinner-6',
-                 title: 'Creamy Vegan Pasta',
-                 category: 'dinner',
-                 image: '../../images/stories/Recipes/All/Creamy Vgean Pasta.png',
-                 prepTime: '25 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Easy',
-                 description: 'Silky smooth vegan pasta with cashew cream sauce and herbs.',
-                 ingredients: ['Pasta', 'Cashews', 'Nutritional yeast', 'Garlic', 'Lemon juice', 'Fresh herbs', 'Olive oil']
-             },
-             // Dessert Recipes
-             {
-                 id: 'dessert-1',
-                 title: 'Chocolate Avocado Mousse',
-                 category: 'dessert',
-                 image: '../../images/stories/Recipes/All/Chocolate Avocado Mousse .png',
-                 prepTime: '15 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Easy',
-                 description: 'Rich and creamy chocolate mousse made with ripe avocados.',
-                 ingredients: ['Ripe avocados', 'Cocoa powder', 'Maple syrup', 'Vanilla extract', 'Coconut cream', 'Dark chocolate']
-             },
-             {
-                 id: 'dessert-2',
-                 title: 'Berry Coconut Panna Cotta',
-                 category: 'dessert',
-                 image: '../../images/stories/Recipes/All/Berry Coconut Panna Cotta.webp',
-                 prepTime: '20 minutes',
-                 servings: '6 servings',
-                 difficulty: 'Medium',
-                 description: 'Silky coconut panna cotta topped with fresh mixed berries.',
-                 ingredients: ['Coconut milk', 'Agar powder', 'Maple syrup', 'Vanilla', 'Mixed berries', 'Mint leaves']
-             },
-             {
-                 id: 'dessert-3',
-                 title: 'Mango Sticky Rice',
-                 category: 'dessert',
-                 image: '../../images/stories/Recipes/All/Mango Sticky Rice.webp',
-                 prepTime: '40 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Medium',
-                 description: 'Traditional Thai-inspired mango sticky rice with coconut sauce.',
-                 ingredients: ['Glutinous rice', 'Coconut milk', 'Palm sugar', 'Fresh mango', 'Salt', 'Toasted sesame seeds']
-             },
-             {
-                 id: 'dessert-4',
-                 title: 'Banana Nice Cream',
-                 category: 'dessert',
-                 image: '../../images/stories/Recipes/All/Banana Nice Cream.png',
-                 prepTime: '5 minutes',
-                 servings: '2 servings',
-                 difficulty: 'Easy',
-                 description: 'Healthy frozen banana ice cream with natural sweetness.',
-                 ingredients: ['Frozen bananas', 'Almond milk', 'Vanilla extract', 'Cinnamon', 'Chopped nuts', 'Dark chocolate chips']
-             },
-             {
-                 id: 'dessert-5',
-                 title: 'Vegan Chocolate Chip Cookies',
-                 category: 'dessert',
-                 image: '../../images/stories/Recipes/All/Vegan Chocolate Chip Cookies.webp',
-                 prepTime: '25 minutes',
-                 servings: '12 cookies',
-                 difficulty: 'Easy',
-                 description: 'Soft and chewy vegan chocolate chip cookies with perfect texture.',
-                 ingredients: ['Flour', 'Vegan butter', 'Brown sugar', 'Vanilla', 'Baking soda', 'Vegan chocolate chips', 'Almond milk']
-             },
-             // Smoothie Recipes
-             {
-                 id: 'smoothie-1',
-                 title: 'Green Detox Smoothie',
-                 category: 'smoothie',
-                 image: '../../images/stories/Recipes/All/Green Detox Smoothie .webp',
-                 prepTime: '5 minutes',
-                 servings: '1 serving',
-                 difficulty: 'Easy',
-                 description: 'Refreshing green smoothie packed with nutrients and natural detox ingredients.',
-                 ingredients: ['Spinach', 'Cucumber', 'Green apple', 'Lemon juice', 'Ginger', 'Coconut water', 'Mint']
-             },
-             {
-                 id: 'smoothie-2',
-                 title: 'Berry Blast Smoothie',
-                 category: 'smoothie',
-                 image: '../../images/stories/Recipes/All/Berry Blast Smoothie.avif',
-                 prepTime: '5 minutes',
-                 servings: '1 serving',
-                 difficulty: 'Easy',
-                 description: 'Antioxidant-rich berry smoothie with creamy banana base.',
-                 ingredients: ['Mixed berries', 'Banana', 'Almond milk', 'Chia seeds', 'Maple syrup', 'Vanilla extract']
-             },
-             {
-                 id: 'smoothie-3',
-                 title: 'Tropical Sunrise Smoothie',
-                 category: 'smoothie',
-                 image: '../../images/stories/Recipes/All/Tropical Sunrise Smoothie.jpg',
-                 prepTime: '7 minutes',
-                 servings: '1 serving',
-                 difficulty: 'Easy',
-                 description: 'Tropical smoothie with mango, pineapple, and coconut flavors.',
-                 ingredients: ['Mango', 'Pineapple', 'Coconut milk', 'Banana', 'Lime juice', 'Coconut flakes']
-             },
-             {
-                 id: 'smoothie-4',
-                 title: 'Chocolate Peanut Butter Smoothie',
-                 category: 'smoothie',
-                 image: '../../images/stories/Recipes/All/Chocolate Peanut Butter Smoothie.jpg',
-                 prepTime: '5 minutes',
-                 servings: '1 serving',
-                 difficulty: 'Easy',
-                 description: 'Indulgent chocolate peanut butter smoothie that tastes like dessert.',
-                 ingredients: ['Banana', 'Peanut butter', 'Cocoa powder', 'Almond milk', 'Dates', 'Ice cubes']
-             },
-             {
-                 id: 'smoothie-5',
-                 title: 'Mango Lassi Smoothie',
-                 category: 'smoothie',
-                 image: '../../images/stories/Recipes/All/Mango Lassi.jpg',
-                 prepTime: '5 minutes',
-                 servings: '1 serving',
-                 difficulty: 'Easy',
-                 description: 'Creamy mango lassi-inspired smoothie with cardamom and coconut.',
-                 ingredients: ['Mango', 'Coconut yogurt', 'Coconut milk', 'Cardamom', 'Honey or maple syrup', 'Ice']
-             }
-         ];
-     }
+                description: 'Hearty grilled eggplant steaks with colorful roasted vegetables.',
+                ingredients: ['Eggplant', 'Zucchini', 'Bell peppers', 'Cherry tomatoes', 'Olive oil', 'Herbs', 'Balsamic vinegar']
+            },
+            {
+                id: 'low-carb-4',
+                title: 'Celery Sticks with Almond Butter',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Recipes/Celery Almond Butter.jpg',
+                prepTime: '5 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                description: 'Simple and satisfying low-carb snack with protein-rich almond butter.',
+                ingredients: ['Celery stalks', 'Almond butter', 'Hemp seeds', 'Cinnamon']
+            },
+            {
+                id: 'low-carb-5',
+                title: 'Coconut Cream with Raspberries',
+                category: 'low-carb',
+                image: '../../images/stories/Recipes/All Recipes/Coconut Cream Raspberries.jpg',
+                prepTime: '10 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Rich coconut cream dessert topped with fresh raspberries.',
+                ingredients: ['Coconut cream', 'Fresh raspberries', 'Vanilla extract', 'Stevia', 'Mint leaves']
+            },
 
-     setupEventListeners() {
-        // Set up filter buttons
+            // Gluten-Free Recipes
+            {
+                id: 'gluten-free-1',
+                title: 'Gluten-Free Buckwheat Pancakes',
+                category: 'gluten-free',
+                image: '../../images/stories/Recipes/All Recipes/Buckwheat Pancakes.jpg',
+                prepTime: '20 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                description: 'Fluffy gluten-free pancakes made with nutritious buckwheat flour.',
+                ingredients: ['Buckwheat flour', 'Plant milk', 'Baking powder', 'Vanilla extract', 'Maple syrup', 'Coconut oil']
+            },
+            {
+                id: 'gluten-free-2',
+                title: 'Rainbow Veggie Wraps',
+                category: 'gluten-free',
+                image: '../../images/stories/Recipes/All Recipes/Rainbow Veggie Wraps.jpg',
+                prepTime: '15 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Colorful vegetable wraps using gluten-free tortillas.',
+                ingredients: ['Gluten-free tortillas', 'Bell peppers', 'Carrots', 'Cucumber', 'Avocado', 'Hummus', 'Sprouts']
+            },
+            {
+                id: 'gluten-free-3',
+                title: 'Chickpea Curry with Cauliflower Rice',
+                category: 'gluten-free',
+                image: '../../images/stories/Recipes/All Recipes/Chickpea Curry.jpg',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                description: 'Aromatic chickpea curry served over low-carb cauliflower rice.',
+                ingredients: ['Chickpeas', 'Cauliflower', 'Coconut milk', 'Curry powder', 'Turmeric', 'Ginger', 'Garlic']
+            },
+            {
+                id: 'gluten-free-4',
+                title: 'Trail Mix with Dried Fruits and Nuts',
+                category: 'gluten-free',
+                image: '../../images/stories/Recipes/All Recipes/Trail Mix.jpg',
+                prepTime: '5 minutes',
+                servings: '8 servings',
+                difficulty: 'Easy',
+                description: 'Energy-boosting trail mix with nuts, seeds, and dried fruits.',
+                ingredients: ['Almonds', 'Walnuts', 'Pumpkin seeds', 'Dried cranberries', 'Dried apricots', 'Dark chocolate chips']
+            },
+            {
+                id: 'gluten-free-5',
+                title: 'Coconut Chia Seed Pudding',
+                category: 'gluten-free',
+                image: '../../images/stories/Recipes/All Recipes/Coconut Chia Pudding.jpg',
+                prepTime: '10 minutes',
+                servings: '3 servings',
+                difficulty: 'Easy',
+                description: 'Creamy coconut chia pudding that\'s naturally gluten-free.',
+                ingredients: ['Chia seeds', 'Coconut milk', 'Shredded coconut', 'Vanilla extract', 'Maple syrup', 'Fresh fruit']
+            },
+
+            // Budget-Friendly Recipes
+            {
+                id: 'budget-friendly-1',
+                title: 'Vegan Chili',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Recipes/Vegan Chili.jpg',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Easy',
+                description: 'Hearty and affordable vegan chili packed with beans and vegetables.',
+                ingredients: ['Kidney beans', 'Black beans', 'Diced tomatoes', 'Onions', 'Bell peppers', 'Chili powder', 'Cumin']
+            },
+            {
+                id: 'budget-friendly-2',
+                title: 'Vegetable Stir-Fry',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Recipes/Vegetable Stir Fry.jpg',
+                prepTime: '20 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                description: 'Quick and economical vegetable stir-fry with seasonal vegetables.',
+                ingredients: ['Mixed vegetables', 'Soy sauce', 'Garlic', 'Ginger', 'Sesame oil', 'Rice', 'Green onions']
+            },
+            {
+                id: 'budget-friendly-3',
+                title: 'Vegan Tacos',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Recipes/Vegan Tacos.jpg',
+                prepTime: '25 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                description: 'Delicious and affordable vegan tacos with seasoned lentils.',
+                ingredients: ['Lentils', 'Taco shells', 'Lettuce', 'Tomatoes', 'Onions', 'Avocado', 'Lime', 'Spices']
+            },
+            {
+                id: 'budget-friendly-4',
+                title: 'Pasta Primavera',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Recipes/Pasta Primavera.jpg',
+                prepTime: '30 minutes',
+                servings: '5 servings',
+                difficulty: 'Easy',
+                description: 'Colorful pasta dish with fresh seasonal vegetables.',
+                ingredients: ['Pasta', 'Zucchini', 'Cherry tomatoes', 'Broccoli', 'Garlic', 'Olive oil', 'Basil', 'Nutritional yeast']
+            },
+            {
+                id: 'budget-friendly-5',
+                title: 'Vegan Shepherd\'s Pie',
+                category: 'budget-friendly',
+                image: '../../images/stories/Recipes/All Recipes/Vegan Shepherds Pie.jpg',
+                prepTime: '60 minutes',
+                servings: '8 servings',
+                difficulty: 'Medium',
+                description: 'Comforting shepherd\'s pie with lentils and mashed potatoes.',
+                ingredients: ['Lentils', 'Potatoes', 'Carrots', 'Peas', 'Onions', 'Vegetable broth', 'Herbs', 'Plant milk']
+            },
+
+            // Weight Loss Recipes
+            {
+                id: 'weight-loss-1',
+                title: 'Tropical Chia Seed Pudding',
+                category: 'weight-loss',
+                image: '../../images/stories/Recipes/All Recipes/Tropical Chia Pudding.jpg',
+                prepTime: '10 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Low-calorie tropical chia pudding perfect for weight management.',
+                ingredients: ['Chia seeds', 'Coconut water', 'Mango', 'Pineapple', 'Lime juice', 'Coconut flakes']
+            },
+            {
+                id: 'weight-loss-2',
+                title: 'Mediterranean Chickpea Salad',
+                category: 'weight-loss',
+                image: '../../images/stories/Recipes/All Recipes/Mediterranean Chickpea Salad.jpg',
+                prepTime: '15 minutes',
+                servings: '3 servings',
+                difficulty: 'Easy',
+                description: 'Light and filling Mediterranean-style chickpea salad.',
+                ingredients: ['Chickpeas', 'Cucumber', 'Cherry tomatoes', 'Red onion', 'Olives', 'Lemon juice', 'Herbs']
+            },
+            {
+                id: 'weight-loss-3',
+                title: 'Spiced Tofu Stir-Fry',
+                category: 'weight-loss',
+                image: '../../images/stories/Recipes/All Recipes/Spiced Tofu Stir Fry.jpg',
+                prepTime: '20 minutes',
+                servings: '3 servings',
+                difficulty: 'Medium',
+                description: 'Low-calorie spiced tofu stir-fry with plenty of vegetables.',
+                ingredients: ['Firm tofu', 'Broccoli', 'Bell peppers', 'Snap peas', 'Ginger', 'Garlic', 'Low-sodium soy sauce']
+            },
+            {
+                id: 'weight-loss-4',
+                title: 'Cucumber and Hummus Bites',
+                category: 'weight-loss',
+                image: '../../images/stories/Recipes/All Recipes/Cucumber Hummus Bites.jpg',
+                prepTime: '10 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                description: 'Light and refreshing cucumber bites with protein-rich hummus.',
+                ingredients: ['Cucumber', 'Hummus', 'Cherry tomatoes', 'Fresh herbs', 'Paprika', 'Lemon zest']
+            },
+            {
+                id: 'weight-loss-5',
+                title: 'Handful of Mixed Nuts',
+                category: 'weight-loss',
+                image: '../../images/stories/Recipes/All Recipes/Mixed Nuts.jpg',
+                prepTime: '2 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                description: 'Portion-controlled mixed nuts for healthy snacking.',
+                ingredients: ['Almonds', 'Walnuts', 'Cashews', 'Brazil nuts', 'Pecans']
+            }
+        ];
+    }
+
+    setupEventListeners() {
+        // Category filter buttons
         const filterButtons = document.querySelectorAll('.filter-btn');
         filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const filter = button.getAttribute('data-filter');
-                
-                // Update active button
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                // Filter recipes
-                this.filterRecipes(filter);
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const category = button.getAttribute('data-category');
+                this.filterRecipes(category);
+                this.updateActiveFilter(button);
             });
         });
-        
-        // Set up load more button
+
+        // Load more button
         const loadMoreBtn = document.getElementById('loadMoreBtn');
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener('click', () => {
@@ -347,188 +326,121 @@ class RecipeManager {
         }
     }
 
-    renderEmptyState() {
-        const recipeGrid = document.getElementById('recipeGrid');
-        if (recipeGrid) {
-            recipeGrid.innerHTML = `
-                <div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;">
-                    <i class="fas fa-utensils" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
-                    <h3 style="color: #666; margin-bottom: 1rem;">No Recipes Available</h3>
-                    <p style="color: #999;">Recipes have been removed from this section.</p>
-                </div>
-            `;
-        }
-    }
-
-    shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-    }
-
     filterRecipes(category) {
-        this.currentFilter = category;
+        this.currentCategory = category;
         this.currentPage = 1;
         
         if (category === 'all') {
-            this.displayedRecipes = [...this.allRecipes];
+            this.filteredRecipes = [...this.recipes];
         } else {
-            this.displayedRecipes = this.allRecipes.filter(recipe => recipe.category === category);
+            this.filteredRecipes = this.recipes.filter(recipe => recipe.category === category);
         }
         
-        this.shuffleArray(this.displayedRecipes);
-        this.renderRecipes();
+        this.displayRecipes();
         this.updateRecipeCount();
+    }
+
+    updateActiveFilter(activeButton) {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => button.classList.remove('active'));
+        activeButton.classList.add('active');
+    }
+
+    displayRecipes() {
+        const recipeGrid = document.getElementById('recipeGrid');
+        if (!recipeGrid) return;
+
+        const startIndex = 0;
+        const endIndex = this.currentPage * this.recipesPerPage;
+        const recipesToShow = this.filteredRecipes.slice(startIndex, endIndex);
+
+        if (recipesToShow.length === 0) {
+            this.displayEmptyState();
+            return;
+        }
+
+        recipeGrid.innerHTML = recipesToShow.map(recipe => `
+            <div class="recipe-card" data-recipe-id="${recipe.id}">
+                <div class="recipe-image">
+                    <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
+                    <div class="recipe-overlay">
+                        <button class="view-recipe-btn" onclick="window.location.href='recipe-detail.html?id=${recipe.id}'">
+                            View Recipe
+                        </button>
+                    </div>
+                </div>
+                <div class="recipe-content">
+                    <h3 class="recipe-title">${recipe.title}</h3>
+                    <div class="recipe-meta">
+                        <span class="prep-time">
+                            <i class="icon-clock"></i>
+                            ${recipe.prepTime}
+                        </span>
+                        <span class="servings">
+                            <i class="icon-users"></i>
+                            ${recipe.servings}
+                        </span>
+                        <span class="difficulty ${recipe.difficulty.toLowerCase()}">
+                            ${recipe.difficulty}
+                        </span>
+                    </div>
+                    <p class="recipe-description">${recipe.description}</p>
+                </div>
+            </div>
+        `).join('');
+
+        this.updateLoadMoreButton();
+    }
+
+    displayEmptyState() {
+        const recipeGrid = document.getElementById('recipeGrid');
+        recipeGrid.innerHTML = `
+            <div class="empty-state">
+                <h3>No recipes found</h3>
+                <p>Try selecting a different category or check back later for new recipes.</p>
+            </div>
+        `;
+        this.updateLoadMoreButton();
     }
 
     loadMoreRecipes() {
-        const recipeGrid = document.getElementById('recipeGrid');
-        if (!recipeGrid) return;
-        
-        const startIndex = this.currentPage * this.recipesPerPage;
-        const endIndex = startIndex + this.recipesPerPage;
-        const newRecipes = this.displayedRecipes.slice(startIndex, endIndex);
-        
-        if (newRecipes.length === 0) return;
-        
-        // Store current scroll position
-        const scrollPosition = window.pageYOffset;
-        
-        // Add new recipes
-        newRecipes.forEach(recipe => {
-            const recipeCard = this.createRecipeCard(recipe);
-            recipeGrid.appendChild(recipeCard);
-        });
-        
         this.currentPage++;
-        
-        // Smooth scroll to new content
-        setTimeout(() => {
-            const newCards = recipeGrid.querySelectorAll('.recipe-card');
-            if (newCards.length > startIndex) {
-                newCards[startIndex].scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start' 
-                });
-            }
-        }, 100);
-        
-        this.updateRecipeCount();
-        this.updateLoadMoreButton();
-        loadFavoriteStates();
-    }
-
-    createRecipeCard(recipe) {
-        const recipeCard = document.createElement('div');
-        recipeCard.className = 'recipe-card';
-        recipeCard.onclick = () => this.showRecipeDetails(recipe);
-        
-        const categoryText = `RECIPE / ${recipe.category.toUpperCase()}`;
-        
-        recipeCard.innerHTML = `
-            <div class="recipe-image-container">
-                <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
-            </div>
-            <div class="recipe-content">
-                <div class="recipe-category-text">${categoryText}</div>
-                <h3 class="recipe-title">${recipe.title}</h3>
-            </div>
-        `;
-        return recipeCard;
+        this.displayRecipes();
     }
 
     updateLoadMoreButton() {
         const loadMoreBtn = document.getElementById('loadMoreBtn');
-        if (loadMoreBtn) {
-            const totalShown = this.currentPage * this.recipesPerPage;
-            if (totalShown >= this.displayedRecipes.length) {
-                loadMoreBtn.style.display = 'none';
-            } else {
-                loadMoreBtn.style.display = 'block';
-            }
-        }
-    }
+        if (!loadMoreBtn) return;
 
-    renderRecipes(clearExisting = true) {
-        const recipeGrid = document.getElementById('recipeGrid');
-        if (!recipeGrid) return;
+        const totalShown = this.currentPage * this.recipesPerPage;
+        const hasMore = totalShown < this.filteredRecipes.length;
         
-        if (clearExisting) {
-            recipeGrid.innerHTML = '';
-            this.currentPage = 1;
-        }
-        
-        if (this.displayedRecipes.length === 0) {
-            this.renderEmptyState();
-            return;
-        }
-        
-        const recipesToShow = this.displayedRecipes.slice(0, this.recipesPerPage);
-        
-        recipesToShow.forEach(recipe => {
-            const recipeCard = this.createRecipeCard(recipe);
-            recipeGrid.appendChild(recipeCard);
-        });
-        
-        this.updateLoadMoreButton();
-        loadFavoriteStates();
-    }
-
-    showRecipeDetails(recipe) {
-        // Navigate to the recipe detail page with the recipe ID
-        const recipeSlug = recipe.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        window.location.href = `../../recipe-detail.html?recipe=${recipeSlug}&id=${recipe.id}`;
+        loadMoreBtn.style.display = hasMore ? 'block' : 'none';
     }
 
     updateRecipeCount() {
-        const recipeCount = document.querySelector('.recipe-count');
-        if (recipeCount) {
-            const showing = Math.min(this.currentPage * this.recipesPerPage, this.displayedRecipes.length);
-            const total = this.displayedRecipes.length;
-            recipeCount.textContent = `Showing ${showing} of ${total} recipes`;
+        const countElement = document.querySelector('.recipe-count');
+        if (countElement) {
+            const total = this.filteredRecipes.length;
+            const categoryText = this.currentCategory === 'all' ? 'recipes' : `${this.currentCategory} recipes`;
+            countElement.textContent = `Showing ${total} ${categoryText}`;
         }
     }
 
-    searchRecipes(query) {
-        const searchTerm = query.toLowerCase();
-        this.displayedRecipes = this.allRecipes.filter(recipe => 
-            recipe.title.toLowerCase().includes(searchTerm) ||
-            recipe.description.toLowerCase().includes(searchTerm) ||
-            recipe.category.toLowerCase().includes(searchTerm) ||
-            recipe.ingredients.some(ingredient => ingredient.toLowerCase().includes(searchTerm))
-        );
-        
-        this.currentPage = 1;
-        this.renderRecipes();
-        this.updateRecipeCount();
+    getRecipeById(id) {
+        return this.recipes.find(recipe => recipe.id === id);
     }
 }
 
-function loadFavoriteStates() {
-    const favorites = JSON.parse(localStorage.getItem('favoriteRecipes') || '[]');
-    
-    document.querySelectorAll('.recipe-card').forEach(card => {
-        const recipeId = card.dataset.id;
-        const favoriteBtn = card.querySelector('.favorite-btn');
-        const icon = favoriteBtn?.querySelector('i');
-        
-        if (favorites.includes(recipeId) && icon) {
-            icon.className = 'fas fa-heart';
-            favoriteBtn.classList.add('active');
-        }
-    });
-}
-
-// Initialize recipe manager when page loads
-let recipeManager;
-
-document.addEventListener('DOMContentLoaded', function() {
-    recipeManager = new RecipeManager();
-    
-    // Initialize with all recipes
-    recipeManager.filterRecipes('all');
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new RecipeManager();
 });
+
+// Export for use in other files
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = RecipeManager;
+}
 
 
 

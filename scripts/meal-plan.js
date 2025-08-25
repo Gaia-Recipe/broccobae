@@ -184,7 +184,7 @@ class MealPlanManager {
                  id: 'coconut-cream-raspberries',
                  title: 'Coconut Cream with Raspberries',
                  category: 'low-carb',
-                 image: '../../images/stories/Recipes/All Mealplan/Coconut Cream with Raspberries.jpeg',
+                 image: '../../images/stories/Recipes/All Mealplan/Coconut Cream with Raspberries 15.14.10.jpg',
                  duration: '1 dessert',
                  meals: '1 serving',
                  calories: '180-220',

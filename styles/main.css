@@ -315,6 +315,7 @@ section {
     height: 200px;
     overflow: hidden;
     position: relative;
+    flex-shrink: 0;
 }
 
 .recipe-image {
@@ -326,26 +327,42 @@ section {
     image-rendering: -webkit-optimize-contrast;
     backface-visibility: hidden;
     transform: translateZ(0);
+    transition: opacity 0.3s ease;
+    transform-origin: center;
 }
 
-.recipe-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: white;
-    padding: 1.5rem;
+.recipe-card:hover .recipe-image {
+    opacity: 0.9;
+}
+
+.recipe-content {
+    padding: 1rem 1.5rem 1.5rem 1.5rem;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
     text-align: center;
+    min-height: 0;
 }
 
 .recipe-title {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    color: #2d5a3d;
+    margin: 0.5rem 0 0 0;
+    line-height: 1.2;
+    flex-shrink: 0;
+}
+
+.recipe-category-text {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #09713D;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1.1;
+    flex-shrink: 0;
 }
 
 .recipe-link {

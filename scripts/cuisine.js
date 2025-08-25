@@ -419,16 +419,6 @@ class CuisineManager {
                  description: 'Creamy spinach curry with cubes of marinated tofu.'
              },
              {
-                 id: 'chole-bhature-vegan',
-                 title: 'Chole Bhature (Vegan Version)',
-                 category: 'indian',
-                 image: '../../images/stories/Recipes/All Cuisines/Chana Masala (Chickpea Curry).jpg',
-                 duration: '50 mins',
-                 difficulty: 'Hard',
-                 rating: 4.9,
-                 description: 'Spicy chickpea curry served with fluffy fried bread.'
-             },
-             {
                  id: 'vegan-malai-kofta',
                  title: 'Vegan Malai Kofta',
                  category: 'indian',
@@ -539,16 +529,6 @@ class CuisineManager {
                   difficulty: 'Easy',
                   rating: 4.6,
                   description: 'Moist and slightly sweet cornbread perfect as a side dish.'
-              },
-              {
-                  id: 'vegan-pancakes',
-                  title: 'Vegan Pancakes',
-                  category: 'american',
-                  image: '../../images/stories/Recipes/All Cuisines/Vegan Pancakes.jpg',
-                  duration: '20 mins',
-                  difficulty: 'Easy',
-                  rating: 4.7,
-                  description: 'Fluffy and delicious pancakes made without eggs or dairy.'
               },
               {
                   id: 'vegan-sloppy-joes',

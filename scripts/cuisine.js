@@ -312,18 +312,180 @@ class CuisineManager {
                 description: 'Toasted bread topped with fresh tomatoes, basil, and garlic.'
             },
             {
-                id: 'vegan-roasted-vegetable-couscous',
-                title: 'Vegan Roasted Vegetable Couscous',
-                category: 'mediterranean',
-                image: '../../images/stories/Recipes/All Cuisines/Vegan Roasted Vegetable Couscous.webp',
-                duration: '35 mins',
-                difficulty: 'Easy',
-                rating: 4.7,
-                description: 'Fluffy couscous with roasted Mediterranean vegetables and herbs.'
-            }
-        ];
-        this.totalRecipes = this.recipes.length;
-    }
+                 id: 'vegan-roasted-vegetable-couscous',
+                 title: 'Vegan Roasted Vegetable Couscous',
+                 category: 'mediterranean',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegan Roasted Vegetable Couscous.webp',
+                 duration: '35 mins',
+                 difficulty: 'Easy',
+                 rating: 4.7,
+                 description: 'Fluffy couscous with roasted Mediterranean vegetables and herbs.'
+             },
+             
+             // Indian Vegan Recipes
+             {
+                 id: 'chana-masala',
+                 title: 'Chana Masala',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Chana Masala (Chickpea Curry).jpg',
+                 duration: '30 mins',
+                 difficulty: 'Medium',
+                 rating: 4.9,
+                 description: 'Spicy and aromatic chickpea curry with traditional Indian spices.'
+             },
+             {
+                 id: 'aloo-gobi',
+                 title: 'Aloo Gobi',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Aloo Gobi (Potato & Cauliflower Curry).jpg',
+                 duration: '25 mins',
+                 difficulty: 'Easy',
+                 rating: 4.7,
+                 description: 'Classic Indian potato and cauliflower curry with turmeric and spices.'
+             },
+             {
+                 id: 'baingan-bharta',
+                 title: 'Baingan Bharta',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Baingan Bharta (Smoky Mashed Eggplant).jpg',
+                 duration: '40 mins',
+                 difficulty: 'Medium',
+                 rating: 4.8,
+                 description: 'Smoky roasted eggplant mash with onions, tomatoes, and spices.'
+             },
+             {
+                 id: 'tofu-paneer-butter-masala',
+                 title: 'Tofu "Paneer" Butter Masala',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Tofu "Paneer" Butter Masala.jpg',
+                 duration: '35 mins',
+                 difficulty: 'Medium',
+                 rating: 4.9,
+                 description: 'Creamy tomato-based curry with marinated tofu in rich butter masala sauce.'
+             },
+             {
+                 id: 'vegan-biryani',
+                 title: 'Vegan Biryani',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegan Biryani.webp',
+                 duration: '60 mins',
+                 difficulty: 'Hard',
+                 rating: 4.8,
+                 description: 'Fragrant basmati rice layered with vegetables and aromatic spices.'
+             },
+             {
+                 id: 'masoor-dal',
+                 title: 'Masoor Dal',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Masoor Dal (Red Lentil Curry).jpg',
+                 duration: '25 mins',
+                 difficulty: 'Easy',
+                 rating: 4.6,
+                 description: 'Comforting red lentil curry with turmeric, cumin, and fresh herbs.'
+             },
+             {
+                 id: 'tofu-tikka-masala',
+                 title: 'Tofu Tikka Masala',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Tofu Tikka Masala.jpg',
+                 duration: '40 mins',
+                 difficulty: 'Medium',
+                 rating: 4.8,
+                 description: 'Marinated tofu in creamy tomato-based tikka masala sauce.'
+             },
+             {
+                 id: 'vegetable-samosas',
+                 title: 'Vegetable Samosas',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegetable Samosas.jpg',
+                 duration: '45 mins',
+                 difficulty: 'Medium',
+                 rating: 4.7,
+                 description: 'Crispy pastry triangles filled with spiced potatoes and peas.'
+             },
+             {
+                 id: 'vegan-palak-tofu',
+                 title: 'Vegan Palak Tofu',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegan Palak Tofu (Spinach Curry).jpg',
+                 duration: '30 mins',
+                 difficulty: 'Medium',
+                 rating: 4.8,
+                 description: 'Creamy spinach curry with cubes of marinated tofu.'
+             },
+             {
+                 id: 'chole-bhature-vegan',
+                 title: 'Chole Bhature (Vegan Version)',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Chana Masala (Chickpea Curry).jpg',
+                 duration: '50 mins',
+                 difficulty: 'Hard',
+                 rating: 4.9,
+                 description: 'Spicy chickpea curry served with fluffy fried bread.'
+             },
+             {
+                 id: 'vegan-malai-kofta',
+                 title: 'Vegan Malai Kofta',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegan Malai Kofta.jpg',
+                 duration: '45 mins',
+                 difficulty: 'Hard',
+                 rating: 4.8,
+                 description: 'Vegetable and cashew dumplings in rich creamy tomato sauce.'
+             },
+             {
+                 id: 'vegetable-pakoras',
+                 title: 'Vegetable Pakoras',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegetable Pakoras (Fritters).jpg',
+                 duration: '20 mins',
+                 difficulty: 'Easy',
+                 rating: 4.6,
+                 description: 'Crispy chickpea flour fritters with mixed vegetables and spices.'
+             },
+             {
+                 id: 'vegan-korma',
+                 title: 'Vegan Korma',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegan Korma (Creamy Curry).jpg',
+                 duration: '35 mins',
+                 difficulty: 'Medium',
+                 rating: 4.7,
+                 description: 'Mild and creamy curry with vegetables in coconut and cashew sauce.'
+             },
+             {
+                 id: 'tamarind-rice',
+                 title: 'Tamarind Rice (Puliyodarai)',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Tamarind Rice (Puliyodarai).jpg',
+                 duration: '25 mins',
+                 difficulty: 'Easy',
+                 rating: 4.5,
+                 description: 'Tangy South Indian rice dish with tamarind and aromatic spices.'
+             },
+             {
+                 id: 'vegan-idli-coconut-chutney',
+                 title: 'Vegan Idli with Coconut Chutney',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegan Idli with Coconut Chutney.webp',
+                 duration: '30 mins',
+                 difficulty: 'Medium',
+                 rating: 4.7,
+                 description: 'Steamed rice cakes served with fresh coconut chutney.'
+             },
+             {
+                 id: 'vegan-pani-puri',
+                 title: 'Vegan Pani Puri (Gol Gappa)',
+                 category: 'indian',
+                 image: '../../images/stories/Recipes/All Cuisines/Vegan Pani Puri (Gol Gappa).avif',
+                 duration: '40 mins',
+                 difficulty: 'Medium',
+                 rating: 4.8,
+                 description: 'Crispy hollow puris filled with spiced water, chutneys, and potatoes.'
+             }
+         ];
+         this.totalRecipes = this.recipes.length;
+     }
 
     setupEventListeners() {
         // Filter buttons

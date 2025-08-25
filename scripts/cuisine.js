@@ -4,7 +4,10 @@ class CuisineManager {
     constructor() {
         this.recipes = [];
         this.filteredRecipes = [];
+        this.displayedRecipes = [];
         this.currentFilter = 'all';
+        this.recipesPerPage = 12;
+        this.currentPage = 1;
         this.displayedCount = 10;
         this.totalRecipes = 0;
         this.init();
@@ -92,14 +95,14 @@ class CuisineManager {
                 description: 'Aromatic Thai green curry with coconut milk and fresh vegetables.'
             },
             {
-                id: 'vegan-fried-rice',
-                title: 'Vegan Fried Rice',
+                id: 'vegan-pho',
+                title: 'Vegan Pho (Vietnamese Noodle Soup)',
                 category: 'asian',
-                image: '../../images/stories/Recipes/All Cuisines/Vegan Pad Thai.jpg',
-                duration: '20 mins',
-                difficulty: 'Easy',
-                rating: 4.7,
-                description: 'Classic fried rice with vegetables and plant-based protein.'
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Pho (Vietnamese Noodle Soup).jpg',
+                duration: '60 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Aromatic Vietnamese noodle soup with herbs and vegetables in rich broth.'
             },
             {
                 id: 'kimchi-fried-rice',
@@ -863,25 +866,50 @@ class CuisineManager {
     }
 
     displayRecipes() {
+        this.currentPage = 1;
+        this.displayedRecipes = this.filteredRecipes.slice(0, this.recipesPerPage);
+        this.renderRecipes();
+        this.updateRecipeCount();
+        
+        // Show/hide load more button
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (loadMoreBtn) {
+            loadMoreBtn.style.display = this.filteredRecipes.length > this.recipesPerPage ? 'block' : 'none';
+        }
+    }
+
+    renderRecipes() {
         const grid = document.querySelector('.cuisine-grid');
         if (!grid) return;
 
         // Clear existing content
         grid.innerHTML = '';
 
-        if (this.filteredRecipes.length === 0) {
+        if (this.displayedRecipes.length === 0) {
             this.displayEmptyState();
             return;
         }
 
         // Create recipe cards
-        this.filteredRecipes.forEach(recipe => {
+        this.displayedRecipes.forEach(recipe => {
             const card = this.createRecipeCard(recipe);
             grid.appendChild(card);
         });
 
         // Load favorite states after rendering
         setTimeout(() => loadFavoriteStates(), 100);
+    }
+
+    displayEmptyState() {
+        const grid = document.querySelector('.cuisine-grid');
+        if (!grid) return;
+        
+        grid.innerHTML = `
+            <div class="empty-state">
+                <h3>No recipes found</h3>
+                <p>Try selecting a different cuisine category.</p>
+            </div>
+        `;
     }
 
     createRecipeCard(recipe) {
@@ -904,16 +932,36 @@ class CuisineManager {
     }
 
     loadMoreRecipes() {
-        // Load more functionality removed - showing empty state
-        this.displayEmptyState();
+        this.currentPage++;
+        const startIndex = (this.currentPage - 1) * this.recipesPerPage;
+        const endIndex = startIndex + this.recipesPerPage;
+        
+        const newRecipes = this.filteredRecipes.slice(startIndex, endIndex);
+        
+        if (newRecipes.length > 0) {
+            this.displayedRecipes = [...this.displayedRecipes, ...newRecipes];
+            this.renderRecipes();
+            
+            // Hide load more button if no more recipes
+            if (endIndex >= this.filteredRecipes.length) {
+                const loadMoreBtn = document.getElementById('loadMoreBtn');
+                if (loadMoreBtn) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
+        }
     }
 
     updateRecipeCount() {
         const countElement = document.querySelector('.cuisine-count');
         if (countElement) {
-            const total = this.recipes.length;
-            const showing = this.filteredRecipes.length;
-            countElement.textContent = `Showing ${showing} of ${total} recipes`;
+            const total = this.filteredRecipes.length;
+            const showing = this.displayedRecipes;
+            if (total > 0) {
+                countElement.textContent = `Showing ${showing} of ${total} recipes`;
+            } else {
+                countElement.textContent = `${this.recipes.length} recipes available`;
+            }
         }
     }
 

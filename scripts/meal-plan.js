@@ -193,30 +193,66 @@ class MealPlanManager {
              },
             
             // Budget-Friendly Individual Recipes
-            {
-                id: 'lentil-soup',
-                title: 'Lentil Soup with Vegetables',
-                category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Mealplan/Lentil Soup with Vegetables.jpg',
-                duration: '1 meal',
-                meals: '4 servings',
-                calories: '280-320',
-                price: '$6 total',
-                description: 'Hearty soup that feeds the family.',
-                features: ['$1.50 per serving', 'Freezer friendly', 'Complete protein']
-            },
-            {
-                id: 'pasta-marinara',
-                title: 'Pasta with Marinara Sauce',
-                category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Mealplan/Pasta with Marinara Sauce.jpg',
-                duration: '1 meal',
-                meals: '1 serving',
-                calories: '380-450',
-                price: '$2',
-                description: 'Classic comfort food on a budget.',
-                features: ['Pantry staples', 'Kid-friendly', 'Quick prep']
-            },
+             {
+                 id: 'vegan-chili',
+                 title: 'Vegan Chili',
+                 category: 'budget-friendly',
+                 image: '../../images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
+                 duration: '1 meal',
+                 meals: '6 servings',
+                 calories: '320-380',
+                 price: '$8 total',
+                 description: 'Hearty chili that feeds the whole family.',
+                 features: ['$1.30 per serving', 'Freezer friendly', 'High protein']
+             },
+             {
+                 id: 'vegetable-stir-fry',
+                 title: 'Vegetable Stir-Fry',
+                 category: 'budget-friendly',
+                 image: '../../images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '280-340',
+                 price: '$3',
+                 description: 'Quick and nutritious vegetable medley.',
+                 features: ['Seasonal vegetables', 'One pan meal', 'Versatile']
+             },
+             {
+                 id: 'vegan-tacos',
+                 title: 'Vegan Tacos',
+                 category: 'budget-friendly',
+                 image: '../../images/stories/Recipes/All Mealplan/Vegan Tacos.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '350-420',
+                 price: '$3',
+                 description: 'Flavorful tacos with plant-based fillings.',
+                 features: ['Bean protein', 'Fresh toppings', 'Family favorite']
+             },
+             {
+                 id: 'pasta-primavera',
+                 title: 'Pasta Primavera',
+                 category: 'budget-friendly',
+                 image: '../../images/stories/Recipes/All Mealplan/Pasta Primavera.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '380-450',
+                 price: '$2',
+                 description: 'Classic pasta with seasonal vegetables.',
+                 features: ['Pantry staples', 'Colorful', 'Quick prep']
+             },
+             {
+                 id: 'vegan-shepherds-pie',
+                 title: 'Vegan Shepherd\'s Pie',
+                 category: 'budget-friendly',
+                 image: '../../images/stories/Recipes/All Mealplan/Vegan Shepherd\'s Pie.jpg',
+                 duration: '1 meal',
+                 meals: '8 servings',
+                 calories: '420-480',
+                 price: '$12 total',
+                 description: 'Comfort food that feeds a crowd.',
+                 features: ['$1.50 per serving', 'Make ahead', 'Satisfying']
+             },
             
             // Weight Loss Individual Recipes
             {

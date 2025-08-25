@@ -885,47 +885,22 @@ class CuisineManager {
     }
 
     createRecipeCard(recipe) {
-        const card = document.createElement('div');
-        card.className = 'cuisine-card';
-        card.dataset.id = recipe.id;
-        card.dataset.category = recipe.category;
-
-        card.innerHTML = `
-            <div class="recipe-image">
-                <img src="${recipe.image}" alt="${recipe.title}" loading="lazy">
-                <div class="recipe-overlay">
-                    <button class="favorite-btn" onclick="toggleFavorite(this)">
-                        <i class="far fa-heart"></i>
-                    </button>
-                    <div class="recipe-category-text">${recipe.category.toUpperCase().replace('-', ' ')}</div>
-                    <div class="recipe-actions">
-                        <button class="recipe-btn view-recipe" onclick="window.location.href='recipe.html?id=${recipe.id}'">
-                            View Recipe
-                        </button>
-                    </div>
-                </div>
+        const recipeCard = document.createElement('div');
+        recipeCard.className = 'recipe-card';
+        recipeCard.onclick = () => this.showRecipeDetails(recipe.id);
+        
+        const categoryText = `RECIPE / ${recipe.category.toUpperCase().replace('-', ' ')}`;
+        
+        recipeCard.innerHTML = `
+            <div class="recipe-image-container">
+                <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
             </div>
             <div class="recipe-content">
+                <div class="recipe-category-text">${categoryText}</div>
                 <h3 class="recipe-title">${recipe.title}</h3>
-                <div class="recipe-meta">
-                    <span class="recipe-duration">
-                        <i class="far fa-clock"></i>
-                        ${recipe.duration}
-                    </span>
-                    <span class="recipe-difficulty">
-                        <i class="fas fa-signal"></i>
-                        ${recipe.difficulty}
-                    </span>
-                    <span class="recipe-rating">
-                        <i class="fas fa-star"></i>
-                        ${recipe.rating}
-                    </span>
-                </div>
-                <p class="recipe-description">${recipe.description}</p>
             </div>
         `;
-
-        return card;
+        return recipeCard;
     }
 
     loadMoreRecipes() {

@@ -131,30 +131,66 @@ class MealPlanManager {
             },
             
             // Low-Carb Individual Recipes
-            {
-                id: 'chickpea-curry-cauliflower',
-                title: 'Chickpea Curry with Cauliflower Rice',
-                category: 'low-carb',
-                image: '../../images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
-                duration: '1 meal',
-                meals: '1 serving',
-                calories: '280-340',
-                price: '$4',
-                description: 'Spicy curry with low-carb rice alternative.',
-                features: ['8g net carbs', 'High fiber', 'Anti-inflammatory spices']
-            },
-            {
-                id: 'zucchini-noodles-pesto',
-                title: 'Zucchini Noodles with Pesto',
-                category: 'low-carb',
-                image: '../../images/stories/Recipes/All Mealplan/Zucchini Noodles with Pesto.jpg',
-                duration: '1 meal',
-                meals: '1 serving',
-                calories: '220-280',
-                price: '$5',
-                description: 'Fresh spiralized vegetables with herb pesto.',
-                features: ['6g net carbs', 'Raw option', 'Nutrient dense']
-            },
+             {
+                 id: 'chia-seed-pudding-berries',
+                 title: 'Chia Seed Pudding with Berries',
+                 category: 'low-carb',
+                 image: '../../images/stories/Recipes/All Mealplan/Chia Seed Pudding with Berries.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '220-280',
+                 price: '$3',
+                 description: 'Creamy pudding with antioxidant-rich berries.',
+                 features: ['8g net carbs', 'Omega-3 rich', 'Make ahead']
+             },
+             {
+                 id: 'spinach-mushroom-salad',
+                 title: 'Spinach and Mushroom Salad with Lemon Vinaigrette',
+                 category: 'low-carb',
+                 image: '../../images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '180-220',
+                 price: '$4',
+                 description: 'Fresh salad with tangy dressing.',
+                 features: ['5g net carbs', 'High iron', 'Light meal']
+             },
+             {
+                 id: 'grilled-eggplant-steaks',
+                 title: 'Grilled Eggplant Steaks with Roasted Vegetables',
+                 category: 'low-carb',
+                 image: '../../images/stories/Recipes/All Mealplan/Grilled Eggplant Steaks with Roasted Vegetables.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '250-300',
+                 price: '$4',
+                 description: 'Hearty grilled vegetables with Mediterranean flavors.',
+                 features: ['10g net carbs', 'High fiber', 'Satisfying']
+             },
+             {
+                 id: 'celery-almond-butter',
+                 title: 'Celery Sticks with Almond Butter',
+                 category: 'low-carb',
+                 image: '../../images/stories/Recipes/All Mealplan/Celery Sticks with Almond Butter.jpg',
+                 duration: '1 snack',
+                 meals: '1 serving',
+                 calories: '150-180',
+                 price: '$2',
+                 description: 'Crunchy snack with healthy fats.',
+                 features: ['3g net carbs', 'Portable', 'Protein rich']
+             },
+             {
+                 id: 'coconut-cream-raspberries',
+                 title: 'Coconut Cream with Raspberries',
+                 category: 'low-carb',
+                 image: '../../images/stories/Recipes/All Mealplan/Coconut Cream with Raspberries.jpeg',
+                 duration: '1 dessert',
+                 meals: '1 serving',
+                 calories: '180-220',
+                 price: '$3',
+                 description: 'Rich dessert with fresh berries.',
+                 features: ['6g net carbs', 'Keto friendly', 'Antioxidants']
+             },
             
             // Budget-Friendly Individual Recipes
             {

@@ -514,7 +514,7 @@ class MealPlanManager {
         recipeCard.dataset.category = plan.category;
         recipeCard.onclick = () => this.showMealPlanDetails(plan.id);
         
-        const categoryText = `RECIPE / ${plan.category.toUpperCase().replace('-', ' ')}`;
+        const categoryText = `MEAL PLAN / ${plan.category.toUpperCase().replace('-', ' ')}`;
         
         recipeCard.innerHTML = `
             <div class="recipe-image-container">

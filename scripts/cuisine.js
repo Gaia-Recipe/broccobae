@@ -10,26 +10,165 @@ class CuisineManager {
     }
 
     init() {
-        // Recipes removed - no longer generating recipes
+        this.generateRecipes();
         this.setupEventListeners();
-        this.displayEmptyState();
+        this.displayRecipes();
         this.updateRecipeCount();
     }
 
-    displayEmptyState() {
-        const grid = document.getElementById('cuisineGrid');
-        if (grid) {
-            grid.innerHTML = `
-                <div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;">
-                    <i class="fas fa-globe" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
-                    <h3 style="color: #666; margin-bottom: 1rem;">No Cuisine Recipes Available</h3>
-                    <p style="color: #999;">Cuisine recipes have been removed from this section.</p>
-                </div>
-            `;
-        }
-    }
-
-    // Recipe generation removed
+    generateRecipes() {
+        this.recipes = [
+            // Asian Vegan Recipes
+            {
+                id: 'vegan-vegetable-stir-fry',
+                title: 'Vegan Vegetable Stir-Fry',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegetable Stir-Fry.avif',
+                duration: '20 mins',
+                difficulty: 'Easy',
+                rating: 4.8,
+                description: 'A colorful and nutritious stir-fry packed with fresh vegetables and Asian flavors.'
+            },
+            {
+                id: 'tofu-teriyaki',
+                title: 'Tofu Teriyaki',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Teriyaki Tofu.webp',
+                duration: '25 mins',
+                difficulty: 'Easy',
+                rating: 4.7,
+                description: 'Crispy tofu glazed with homemade teriyaki sauce, perfect over rice.'
+            },
+            {
+                id: 'vegan-sushi-rolls',
+                title: 'Vegan Sushi Rolls',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Sushi Rolls.jpg',
+                duration: '45 mins',
+                difficulty: 'Medium',
+                rating: 4.9,
+                description: 'Fresh and colorful sushi rolls filled with vegetables and avocado.'
+            },
+            {
+                id: 'vegetable-spring-rolls',
+                title: 'Vegetable Spring Rolls',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Spring Rolls (Vietnamese).jpg',
+                duration: '30 mins',
+                difficulty: 'Medium',
+                rating: 4.6,
+                description: 'Light and refreshing Vietnamese spring rolls with fresh herbs and vegetables.'
+            },
+            {
+                id: 'vegan-ramen',
+                title: 'Vegan Ramen',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Ramen.jpg',
+                duration: '40 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Rich and flavorful ramen with plant-based broth and fresh toppings.'
+            },
+            {
+                id: 'miso-soup-tofu',
+                title: 'Miso Soup with Tofu',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Miso Soup.jpg',
+                duration: '15 mins',
+                difficulty: 'Easy',
+                rating: 4.5,
+                description: 'Traditional Japanese miso soup with silky tofu and wakame seaweed.'
+            },
+            {
+                id: 'thai-green-curry',
+                title: 'Thai Green Curry with Vegetables',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Thai Green Curry.jpg',
+                duration: '35 mins',
+                difficulty: 'Medium',
+                rating: 4.9,
+                description: 'Aromatic Thai green curry with coconut milk and fresh vegetables.'
+            },
+            {
+                id: 'vegan-fried-rice',
+                title: 'Vegan Fried Rice',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Fried Rice.jpg',
+                duration: '20 mins',
+                difficulty: 'Easy',
+                rating: 4.7,
+                description: 'Classic fried rice with vegetables and plant-based protein.'
+            },
+            {
+                id: 'kimchi-fried-rice',
+                title: 'Kimchi Fried Rice (Vegan)',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Bibimbap (Korean).webp',
+                duration: '25 mins',
+                difficulty: 'Easy',
+                rating: 4.6,
+                description: 'Spicy and tangy Korean fried rice with fermented kimchi.'
+            },
+            {
+                id: 'vegan-pad-thai',
+                title: 'Vegan Pad Thai',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Pad Thai.jpg',
+                duration: '30 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Sweet and tangy Thai noodle dish with tamarind and peanuts.'
+            },
+            {
+                id: 'vegan-adobo',
+                title: 'Vegan Adobo (Tofu & Mushroom Adobo)',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Adobo (Tofu & Mushroom Adobo).avif',
+                duration: '45 mins',
+                difficulty: 'Medium',
+                rating: 4.7,
+                description: 'Filipino-style adobo with tofu and mushrooms in savory sauce.'
+            },
+            {
+                id: 'vegan-sinigang',
+                title: 'Vegan Sinigang (Tamarind Soup with Vegetables)',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Pho (Vietnamese Noodle Soup).jpg',
+                duration: '40 mins',
+                difficulty: 'Medium',
+                rating: 4.6,
+                description: 'Sour and savory Filipino soup with tamarind and fresh vegetables.'
+            },
+            {
+                id: 'vegan-kare-kare',
+                title: 'Vegan Kare-Kare (Peanut Stew)',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Kare-Kare (Peanut Stew).avif',
+                duration: '50 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Rich Filipino peanut stew with vegetables and savory sauce.'
+            },
+            {
+                id: 'vegan-laing',
+                title: 'Vegan Laing (Taro Leaves in Coconut Milk)',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Laing (Taro Leaves in Coconut Milk).jpg',
+                duration: '35 mins',
+                difficulty: 'Medium',
+                rating: 4.5,
+                description: 'Creamy Filipino dish with taro leaves cooked in coconut milk.'
+            },
+            {
+                id: 'vegan-pancit-bihon',
+                title: 'Vegan Pancit Bihon (Rice Noodle Stir-Fry)',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Pancit Bihon (Rice Noodle Stir-Fry).webp',
+                duration: '30 mins',
+                difficulty: 'Easy',
+                rating: 4.7,
+                description: 'Filipino rice noodle stir-fry with vegetables and savory seasonings.'
+            },
 
     setupEventListeners() {
         // Filter buttons

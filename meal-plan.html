@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vegan Recipes - Broccobae | </title>
-    <meta name="keywords" content="vegan recipes, plant-based cooking, breakfast recipes, lunch recipes, dinner recipes, vegan desserts, smoothie recipes">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/recipes.css?v=2">
+    <title>Vegan Meal Plans - Broccobae | Personalized Plant-Based Meal Planning</title>
+    <meta name="description" content="Create personalized vegan meal plans with 500+ recipes. High protein, low carb, gluten-free, budget-friendly, and weight loss meal plans available.">
+    <meta name="keywords" content="vegan meal plans, plant-based meal planning, high protein vegan, low carb vegan, gluten-free vegan, budget vegan meals, weight loss vegan">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/meal-plan.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,13 +19,13 @@
         <nav class="navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="images/stories/Logo.png?v=1" alt="Broccobae Logo" class="logo">
+                    <img src="../../images/stories/Logo.png" alt="Broccobae Logo" class="logo">
                     <span class="logo-text">broccobae</span>
                 </div>
                 <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="recipes.html" class="nav-link active">Recipes</a></li>
-                    <li class="nav-item"><a href="meal-plan.html" class="nav-link">Meal Plan</a></li>
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="recipes.html" class="nav-link">Recipes</a></li>
+                    <li class="nav-item"><a href="meal-plan.html" class="nav-link active">Meal Plan</a></li>
                     <li class="nav-item"><a href="cuisine.html" class="nav-link">Cuisine</a></li>
                     <li class="nav-item"><a href="community.html" class="nav-link">Community</a></li>
 
@@ -41,21 +42,21 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="recipes-hero">
+        <section class="meal-plan-hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Vegan Recipes</h1>
-                    <p class="hero-description">Discover our curated collection of delicious plant-based recipes that will transform your kitchen into a vegan paradise!</p>
+                    <h1 class="hero-title">Vegan Meal Plans</h1>
+                    <p class="hero-description">Transform your health with our expertly crafted vegan meal plans. Nutritionally balanced, deliciously satisfying, and perfectly tailored to your lifestyle and dietary goals.</p>
                     
 
                     
                     <div class="hero-buttons">
-                        <a href="#recipe-categories" class="btn btn-primary">Browse Recipes</a>
+                        <a href="#meal-plan-categories" class="btn btn-primary">Browse Plans</a>
                         <a href="../../community.html" class="btn btn-outline">Join Community</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="../../images/vegan_recipes.jpeg" alt="Delicious Vegan Recipes Collection" class="hero-img">
+                    <img src="../../images/vegan_meal-plan.jpg" alt="Healthy Vegan Meal Planning" class="hero-img">
                 </div>
             </div>
         </section>
@@ -74,36 +75,115 @@
             </div>
         </section>
 
-        <!-- Recipe Categories -->
-        <section class="recipe-categories" id="recipe-categories">
+        <!-- Meal Plan Categories -->
+        <section class="meal-plan-categories" id="meal-plan-categories">
             <div class="container">
+                <h2 class="section-title">Choose Your Meal Plan Type</h2>
                 <div class="category-filters">
-                    <button class="filter-btn active" data-filter="all">All Recipes</button>
-                    <button class="filter-btn" data-filter="breakfast">Breakfast</button>
-                    <button class="filter-btn" data-filter="lunch">Lunch</button>
-                    <button class="filter-btn" data-filter="dinner">Dinner</button>
-                    <button class="filter-btn" data-filter="dessert">Desserts</button>
-                    <button class="filter-btn" data-filter="smoothie">Smoothies</button>
+                    <button class="filter-btn active" data-filter="all">All Plans</button>
+                    <button class="filter-btn" data-filter="high-protein">High Protein</button>
+                    <button class="filter-btn" data-filter="low-carb">Low Carb</button>
+                    <button class="filter-btn" data-filter="gluten-free">Gluten Free</button>
+                    <button class="filter-btn" data-filter="budget-friendly">Budget Friendly</button>
+                    <button class="filter-btn" data-filter="weight-loss">Weight Loss</button>
                 </div>
 
-                <!-- Recipe Grid -->
-                <div class="recipe-grid" id="recipeGrid">
+                <!-- Meal Plan Grid -->
+                <div class="meal-plan-grid" id="mealPlanGrid">
                     <div class="empty-state">
                         <div class="empty-state-icon">
-                            <i class="fas fa-utensils"></i>
+                            <i class="fas fa-calendar-alt"></i>
                         </div>
-                        <h3 class="empty-state-title">No Recipes Available</h3>
-                        <p class="empty-state-description">We're currently updating our recipe collection. Please check back soon for delicious plant-based recipes!</p>
+                        <h3 class="empty-state-title">No Meal Plans Available</h3>
+                        <p class="empty-state-description">We're currently updating our meal plan collection. Please check back soon for personalized plant-based meal plans!</p>
                     </div>
                 </div>
 
-                <!-- Load More Button -->
-                <div class="load-more-container">
-                    <button class="btn btn-outline" id="loadMoreBtn" style="display: none;">Load More Recipes</button>
-                    <p class="recipe-count">No recipes available</p>
+
+            </div>
+        </section>
+
+        <!-- Meal Plan Builder -->
+        <section class="meal-plan-builder">
+            <div class="container">
+                <h2 class="section-title">Create Your Custom Meal Plan</h2>
+                <div class="builder-content">
+                    <div class="builder-form">
+                        <h3>Personalize Your Plan</h3>
+                        <form id="mealPlanForm">
+                            <div class="form-group">
+                                <label for="planType">Plan Type</label>
+                                <select id="planType" name="planType" required>
+                                    <option value="">Select plan type</option>
+                                    <option value="high-protein">High Protein</option>
+                                    <option value="low-carb">Low Carb</option>
+                                    <option value="gluten-free">Gluten Free</option>
+                                    <option value="budget-friendly">Budget Friendly</option>
+                                    <option value="weight-loss">Weight Loss</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="duration">Plan Duration</label>
+                                <select id="duration" name="duration" required>
+                                    <option value="">Select duration</option>
+                                    <option value="3">3 Days</option>
+                                    <option value="7">1 Week</option>
+                                    <option value="14">2 Weeks</option>
+                                    <option value="30">1 Month</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="servings">Number of Servings</label>
+                                <select id="servings" name="servings" required>
+                                    <option value="">Select servings</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="6">6 People</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="allergies">Allergies/Restrictions</label>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="allergies" value="nuts"> Nuts</label>
+                                    <label><input type="checkbox" name="allergies" value="soy"> Soy</label>
+                                    <label><input type="checkbox" name="allergies" value="gluten"> Gluten</label>
+                                    <label><input type="checkbox" name="allergies" value="seeds"> Seeds</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Generate My Meal Plan</button>
+                        </form>
+                    </div>
+                    <div class="builder-preview">
+                        <h3>What You'll Get</h3>
+                        <div class="preview-features">
+                            <div class="preview-feature">
+                                <i class="fas fa-calendar-week"></i>
+                                <h4>Weekly Calendar</h4>
+                                <p>Organized meal schedule with breakfast, lunch, and dinner</p>
+                            </div>
+                            <div class="preview-feature">
+                                <i class="fas fa-list-ul"></i>
+                                <h4>Shopping List</h4>
+                                <p>Automatically generated grocery list with quantities</p>
+                            </div>
+                            <div class="preview-feature">
+                                <i class="fas fa-chart-pie"></i>
+                                <h4>Nutrition Info</h4>
+                                <p>Complete nutritional breakdown for each meal</p>
+                            </div>
+                            <div class="preview-feature">
+                                <i class="fas fa-clock"></i>
+                                <h4>Prep Times</h4>
+                                <p>Estimated preparation and cooking times</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+
     </main>
 
     <!-- Footer -->
@@ -111,7 +191,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <div class="footer-logo">
-                    <img src="../../images/stories/Logo.png?v=1" alt="Broccobae Logo" class="footer-logo-img">
+                    <img src="../../images/stories/Logo.png" alt="Broccobae Logo" class="footer-logo-img">
                     <span class="footer-logo-text">broccobae</span>
                 </div>
                 <p class="footer-description">Your ultimate destination for delicious vegan recipes, meal planning, and plant-based community.</p>
@@ -200,7 +280,7 @@
         </div>
     </footer>
 
-    <script src="../../scripts/main.js"></script>
-    <script src="../../scripts/recipes.js?v=2"></script>
+    <script src="../../scripts/main.js?v=4"></script>
+    <script src="../../scripts/meal-plan.js?v=4"></script>
 </body>
 </html>

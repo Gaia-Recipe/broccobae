@@ -3,6 +3,7 @@
 class MealPlanManager {
     constructor() {
         this.mealPlans = [];
+        this.displayedMealPlans = [];
         this.currentFilter = 'all';
         this.displayedCount = 6;
         this.totalPlans = 500;

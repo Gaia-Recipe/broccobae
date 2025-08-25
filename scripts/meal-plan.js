@@ -1,206 +1,174 @@
-// Meal Plan Page JavaScript
-
 class MealPlanManager {
     constructor() {
         this.mealPlans = [];
-        this.currentFilter = 'all';
-        this.displayedCount = 6;
-        this.totalPlans = 500;
+        this.filteredMealPlans = [];
+        this.currentCategory = 'all';
+        this.mealPlansPerPage = 12;
+        this.currentPage = 1;
         this.init();
     }
 
     init() {
         this.generateMealPlans();
+        this.filteredMealPlans = [...this.mealPlans];
         this.setupEventListeners();
-        this.filterMealPlans('all');
+        this.displayMealPlans();
         this.updateMealPlanCount();
     }
 
     generateMealPlans() {
         this.mealPlans = [
-            // High Protein Plans
+            // High-Protein Vegan Power
             {
-                id: 'high-protein-1',
+                id: 'high-protein-vegan-power',
                 title: 'High-Protein Vegan Power',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
-                description: 'Boost your protein intake with this power-packed vegan meal plan featuring protein-rich plant foods.',
-                duration: '7',
-                protein: '25-30g per meal',
-                calories: '1800-2000 cal/day',
-                benefits: 'Muscle building support'
+                image: '../../images/stories/Recipes/All Mealplan/High-Protein Vegan Power.jpg',
+                duration: '7 days',
+                meals: '21 meals',
+                difficulty: 'Medium',
+                description: 'Power-packed meal plan focused on plant-based proteins to fuel your active lifestyle.',
+                features: ['High protein content', 'Plant-based nutrition', 'Muscle building support', 'Energy boosting meals'],
+                price: '$89',
+                calories: '2200-2500 per day'
             },
             {
-                id: 'high-protein-2',
-                title: 'Protein Smoothie Power Plan',
+                id: 'high-protein-vegan-power-2',
+                title: 'High-Protein Vegan Power Plus',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
-                description: 'Start your day with protein-packed smoothies and maintain high protein throughout the day.',
-                duration: '5',
-                protein: '20-25g per meal',
-                calories: '1600-1800 cal/day',
-                benefits: 'Quick protein absorption'
+                image: '../../images/stories/Recipes/All Mealplan/High-Protein Vegan Power Plus.jpg',
+                duration: '14 days',
+                meals: '42 meals',
+                difficulty: 'Medium',
+                description: 'Extended high-protein vegan meal plan for serious fitness enthusiasts.',
+                features: ['Extended protein support', 'Variety of protein sources', 'Workout nutrition', 'Recovery meals'],
+                price: '$169',
+                calories: '2300-2600 per day'
             },
-            // Low Carb Plans
+
+            // Low-Carb Vegan Delights
             {
-                id: 'low-carb-1',
+                id: 'low-carb-vegan-delights',
                 title: 'Low-Carb Vegan Delights',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
-                description: 'Enjoy delicious low-carb vegan meals that keep you satisfied while maintaining ketosis.',
-                duration: '7',
-                carbs: '20-30g per day',
-                fat: '70-80g per day',
-                nutrition: 'Ketogenic friendly'
+                image: '../../images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.jpg',
+                duration: '7 days',
+                meals: '21 meals',
+                difficulty: 'Easy',
+                description: 'Delicious low-carb vegan meals that satisfy without the carbs.',
+                features: ['Low carbohydrate content', 'High fiber meals', 'Weight management', 'Blood sugar friendly'],
+                price: '$79',
+                calories: '1800-2100 per day'
             },
             {
-                id: 'low-carb-2',
-                title: 'Cauliflower Rice Curry Plan',
+                id: 'low-carb-vegan-delights-2',
+                title: 'Low-Carb Vegan Delights Premium',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
-                description: 'Replace traditional rice with cauliflower rice in flavorful curry dishes.',
-                duration: '5',
-                carbs: '15-25g per day',
-                fat: '60-70g per day',
-                nutrition: 'Low glycemic index'
+                image: '../../images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights Premium.jpg',
+                duration: '14 days',
+                meals: '42 meals',
+                difficulty: 'Easy',
+                description: 'Premium low-carb vegan meal plan with gourmet recipes.',
+                features: ['Gourmet low-carb meals', 'Premium ingredients', 'Ketogenic friendly', 'Sustained energy'],
+                price: '$149',
+                calories: '1900-2200 per day'
             },
-            // Budget Friendly Plans
+
+            // Budget-Friendly Vegan Eats
             {
-                id: 'budget-1',
+                id: 'budget-friendly-vegan-eats',
                 title: 'Budget-Friendly Vegan Eats',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
-                description: 'Nutritious and delicious vegan meals that won\'t break the bank.',
-                duration: '7',
-                cost: '$3-5 per day',
-                savings: 'Save 40% vs eating out',
-                nutrition: 'Complete nutrition on budget'
+                image: '../../images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.jpg',
+                duration: '7 days',
+                meals: '21 meals',
+                difficulty: 'Easy',
+                description: 'Affordable vegan meals that don\'t compromise on nutrition or taste.',
+                features: ['Cost-effective ingredients', 'Bulk cooking friendly', 'Nutritious meals', 'Simple preparation'],
+                price: '$49',
+                calories: '2000-2300 per day'
             },
             {
-                id: 'budget-2',
-                title: 'Chickpea Power Meals',
+                id: 'budget-friendly-vegan-eats-2',
+                title: 'Budget-Friendly Vegan Eats Family',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Mealplan/Roasted Chickpeas with Spices.jpg',
-                description: 'Affordable protein-rich meals centered around versatile chickpeas.',
-                duration: '5',
-                cost: '$2-4 per day',
-                savings: 'Bulk buying savings',
-                nutrition: 'High protein, low cost'
+                image: '../../images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats Family.jpg',
+                duration: '14 days',
+                meals: '42 meals',
+                difficulty: 'Easy',
+                description: 'Family-sized budget-friendly vegan meal plan for larger households.',
+                features: ['Family portions', 'Bulk savings', 'Kid-friendly options', 'Meal prep friendly'],
+                price: '$89',
+                calories: '2100-2400 per day'
             },
-            // Weight Loss Plans
+
+            // Weight Loss Vegan Plan
             {
-                id: 'weight-loss-1',
+                id: 'weight-loss-vegan-plan',
                 title: 'Weight Loss Vegan Plan',
                 category: 'weight-loss',
                 image: '../../images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
-                description: 'Carefully portioned meals designed to support healthy weight loss goals.',
-                duration: '14',
-                calories: '1200-1400 cal/day',
-                benefits: 'Sustainable weight loss',
-                nutrition: 'Nutrient dense, calorie controlled'
+                duration: '7 days',
+                meals: '21 meals',
+                difficulty: 'Medium',
+                description: 'Scientifically designed vegan meal plan for healthy weight loss.',
+                features: ['Calorie controlled', 'Nutrient dense', 'Metabolism boosting', 'Sustainable weight loss'],
+                price: '$69',
+                calories: '1500-1800 per day'
             },
             {
-                id: 'weight-loss-2',
-                title: 'Green Detox Meal Plan',
+                id: 'weight-loss-vegan-plan-2',
+                title: 'Weight Loss Vegan Plan Intensive',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
-                description: 'Fresh, green-focused meals that support natural detoxification and weight management.',
-                duration: '7',
-                calories: '1000-1200 cal/day',
-                benefits: 'Detox and cleanse',
-                nutrition: 'High fiber, low calorie'
+                image: '../../images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan Intensive.jpg',
+                duration: '14 days',
+                meals: '42 meals',
+                difficulty: 'Medium',
+                description: 'Intensive 14-day vegan weight loss program with coaching support.',
+                features: ['Intensive program', 'Coaching included', 'Progress tracking', 'Rapid results'],
+                price: '$129',
+                calories: '1400-1700 per day'
             },
-            // Gluten Free Plans
+
+            // All Recipe Plans
             {
-                id: 'gluten-free-1',
-                title: 'Gluten-Free Buckwheat Delights',
-                category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
-                description: 'Delicious gluten-free meals featuring buckwheat and other safe grains.',
-                duration: '7',
-                certification: '100% Gluten-Free',
-                nutrition: 'Celiac safe options'
+                id: 'all-recipe-complete',
+                title: 'Complete Vegan Recipe Collection',
+                category: 'all',
+                image: '../../images/stories/Recipes/All Mealplan/Complete Vegan Collection.jpg',
+                duration: '30 days',
+                meals: '90 meals',
+                difficulty: 'Varied',
+                description: 'Comprehensive collection of all our vegan recipes across all categories.',
+                features: ['All recipe categories', 'Maximum variety', 'Flexible planning', 'Complete nutrition'],
+                price: '$199',
+                calories: '1800-2500 per day'
             },
             {
-                id: 'gluten-free-2',
-                title: 'Quinoa Power Bowl Plan',
-                category: 'gluten-free',
-                image: '../../images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
-                description: 'Nutritious quinoa-based meals that are naturally gluten-free and protein-rich.',
-                duration: '5',
-                certification: 'Certified GF',
-                nutrition: 'Complete amino acids'
+                id: 'all-recipe-starter',
+                title: 'Vegan Recipe Starter Pack',
+                category: 'all',
+                image: '../../images/stories/Recipes/All Mealplan/Vegan Starter Pack.jpg',
+                duration: '7 days',
+                meals: '21 meals',
+                difficulty: 'Easy',
+                description: 'Perfect introduction to vegan cooking with recipes from all categories.',
+                features: ['Beginner friendly', 'Recipe variety', 'Easy preparation', 'Nutritional guidance'],
+                price: '$59',
+                calories: '2000-2300 per day'
             }
         ];
     }
 
-    filterMealPlans(category) {
-        this.currentFilter = category;
-        
-        if (category === 'all') {
-            this.displayedMealPlans = [...this.mealPlans];
-        } else {
-            this.displayedMealPlans = this.mealPlans.filter(plan => plan.category === category);
-        }
-        
-        this.displayedCount = 6;
-        this.displayMealPlans();
-        this.updateMealPlanCount();
-    }
-
-    displayEmptyState() {
-        const grid = document.getElementById('mealPlanGrid');
-        if (!grid) return;
-        
-        grid.innerHTML = `
-            <div class="empty-state">
-                <div class="empty-state-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <h3 class="empty-state-title">No Meal Plans Found</h3>
-                <p class="empty-state-description">Try selecting a different category or check back later for new meal plans!</p>
-            </div>
-        `;
-    }
-
-    showNotification(message, type = 'info') {
-        // Create notification element
-        const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.innerHTML = `
-            <span>${message}</span>
-            <button class="notification-close">&times;</button>
-        `;
-        
-        // Add to page
-        document.body.appendChild(notification);
-        
-        // Auto remove after 3 seconds
-        setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 3000);
-        
-        // Close button functionality
-        notification.querySelector('.notification-close').addEventListener('click', () => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        });
-    }
-
     setupEventListeners() {
-        // Filter buttons
+        // Category filter buttons
         const filterButtons = document.querySelectorAll('.filter-btn');
-        filterButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const filter = e.target.dataset.filter;
-                this.filterMealPlans(filter);
-                
-                // Update active button
-                filterButtons.forEach(b => b.classList.remove('active'));
-                e.target.classList.add('active');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const category = button.getAttribute('data-category');
+                this.filterMealPlans(category);
+                this.updateActiveFilter(button);
             });
         });
 
@@ -212,321 +180,177 @@ class MealPlanManager {
             });
         }
 
-        // Meal plan form
-        const mealPlanForm = document.getElementById('mealPlanForm');
-        if (mealPlanForm) {
-            mealPlanForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                this.generateCustomMealPlan();
-            });
-        }
-
-        // Meal plan card clicks
+        // Customize meal plan buttons
         document.addEventListener('click', (e) => {
-            if (e.target.closest('.meal-plan-card') && !e.target.closest('.favorite-btn')) {
-                const card = e.target.closest('.meal-plan-card');
-                const mealPlanId = card.dataset.id;
-                this.showMealPlanDetails(mealPlanId);
+            if (e.target.classList.contains('customize-btn')) {
+                const mealPlanId = e.target.getAttribute('data-meal-plan-id');
+                this.generateCustomMealPlan(mealPlanId);
             }
         });
     }
 
-    filterMealPlans(filter) {
-        this.currentFilter = filter;
-        this.displayedCount = 6;
-        this.displayEmptyState();
+    filterMealPlans(category) {
+        this.currentCategory = category;
+        this.currentPage = 1;
+        
+        if (category === 'all') {
+            this.filteredMealPlans = [...this.mealPlans];
+        } else {
+            this.filteredMealPlans = this.mealPlans.filter(plan => plan.category === category);
+        }
+        
+        this.displayMealPlans();
         this.updateMealPlanCount();
     }
 
-    displayEmptyState() {
-        const grid = document.getElementById('mealPlanGrid');
-        if (grid) {
-            grid.innerHTML = `
-                <div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem;">
-                    <i class="fas fa-calendar-alt" style="font-size: 4rem; color: #ccc; margin-bottom: 1rem;"></i>
-                    <h3 style="color: #666; margin-bottom: 1rem;">No Meal Plans Available</h3>
-                    <p style="color: #999;">Meal plans have been removed from this section.</p>
-                </div>
-            `;
-        }
+    updateActiveFilter(activeButton) {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => button.classList.remove('active'));
+        activeButton.classList.add('active');
     }
 
     displayMealPlans() {
-        const grid = document.getElementById('mealPlanGrid');
-        if (!grid) return;
+        const mealPlanGrid = document.getElementById('mealPlanGrid');
+        if (!mealPlanGrid) return;
 
-        if (this.displayedMealPlans.length === 0) {
+        const startIndex = 0;
+        const endIndex = this.currentPage * this.mealPlansPerPage;
+        const plansToShow = this.filteredMealPlans.slice(startIndex, endIndex);
+
+        if (plansToShow.length === 0) {
             this.displayEmptyState();
             return;
         }
 
-        grid.innerHTML = '';
-        
-        this.displayedMealPlans.slice(0, this.displayedCount).forEach(plan => {
-            const card = this.createMealPlanCard(plan);
-            grid.appendChild(card);
-        });
+        mealPlanGrid.innerHTML = plansToShow.map(plan => `
+            <div class="meal-plan-card" data-plan-id="${plan.id}">
+                <div class="meal-plan-image">
+                    <img src="${plan.image}" alt="${plan.title}" loading="lazy">
+                    <div class="meal-plan-overlay">
+                        <button class="view-plan-btn" onclick="window.location.href='meal-plan-detail.html?id=${plan.id}'">
+                            View Plan
+                        </button>
+                    </div>
+                </div>
+                <div class="meal-plan-content">
+                    <h3 class="meal-plan-title">${plan.title}</h3>
+                    <div class="meal-plan-meta">
+                        <span class="duration">
+                            <i class="icon-calendar"></i>
+                            ${plan.duration}
+                        </span>
+                        <span class="meals">
+                            <i class="icon-utensils"></i>
+                            ${plan.meals}
+                        </span>
+                        <span class="difficulty ${plan.difficulty.toLowerCase()}">
+                            ${plan.difficulty}
+                        </span>
+                    </div>
+                    <p class="meal-plan-description">${plan.description}</p>
+                    <div class="meal-plan-features">
+                        ${plan.features.slice(0, 2).map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                    </div>
+                    <div class="meal-plan-footer">
+                        <span class="price">${plan.price}</span>
+                        <button class="customize-btn" data-meal-plan-id="${plan.id}">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
 
-        // Show/hide load more button
-        const loadMoreBtn = document.getElementById('loadMoreBtn');
-        if (loadMoreBtn) {
-            if (this.displayedCount >= this.displayedMealPlans.length) {
-                loadMoreBtn.style.display = 'none';
-            } else {
-                loadMoreBtn.style.display = 'block';
-            }
-        }
+        this.updateLoadMoreButton();
     }
 
-    createMealPlanCard(plan) {
-        const card = document.createElement('div');
-        card.className = 'meal-plan-card';
-        card.dataset.category = plan.category;
-        card.dataset.id = plan.id;
-
-        let metaContent = '';
-        let nutritionContent = '';
-
-        // Generate category-specific content
-        if (plan.category === 'high-protein') {
-            metaContent = `
-                <span class="protein-content"><i class="fas fa-dumbbell"></i> ${plan.protein}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">High Protein</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">Protein: ${plan.protein}</span>
-                <span class="nutrition-item">Calories: ${plan.calories}</span>
-            `;
-        } else if (plan.category === 'low-carb') {
-            metaContent = `
-                <span class="carb-content"><i class="fas fa-leaf"></i> ${plan.carbs}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">Low Carb</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">Carbs: ${plan.carbs}</span>
-                <span class="nutrition-item">Fat: ${plan.fat}</span>
-            `;
-        } else if (plan.category === 'gluten-free') {
-            metaContent = `
-                <span class="gluten-free"><i class="fas fa-check-circle"></i> ${plan.certification}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">Gluten Free</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">${plan.certification}</span>
-                <span class="nutrition-item">${plan.nutrition}</span>
-            `;
-        } else if (plan.category === 'budget-friendly') {
-            metaContent = `
-                <span class="cost"><i class="fas fa-dollar-sign"></i> ${plan.cost}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">Budget Friendly</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">Cost: ${plan.cost}</span>
-                <span class="nutrition-item">${plan.savings}</span>
-            `;
-        } else if (plan.category === 'weight-loss') {
-            metaContent = `
-                <span class="calories"><i class="fas fa-fire"></i> ${plan.calories}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">Weight Loss</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">${plan.benefits}</span>
-                <span class="nutrition-item">${plan.calories}</span>
-            `;
-        }
-
-        card.innerHTML = `
-            <img src="${plan.image}" alt="${plan.title}" class="meal-plan-image">
-            <div class="meal-plan-content">
-                <h3 class="meal-plan-title">${plan.title}</h3>
-                <p class="meal-plan-description">${plan.description}</p>
-                <div class="meal-plan-meta">
-                    ${metaContent}
-                </div>
-                <div class="nutrition-highlights">
-                    ${nutritionContent}
-                </div>
-                <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+    displayEmptyState() {
+        const mealPlanGrid = document.getElementById('mealPlanGrid');
+        mealPlanGrid.innerHTML = `
+            <div class="empty-state">
+                <h3>No meal plans found</h3>
+                <p>Try selecting a different category or check back later for new meal plans.</p>
             </div>
         `;
-
-        return card;
+        this.updateLoadMoreButton();
     }
 
     loadMoreMealPlans() {
-        this.displayedCount += 6;
+        this.currentPage++;
         this.displayMealPlans();
+    }
+
+    updateLoadMoreButton() {
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        if (!loadMoreBtn) return;
+
+        const totalShown = this.currentPage * this.mealPlansPerPage;
+        const hasMore = totalShown < this.filteredMealPlans.length;
+        
+        loadMoreBtn.style.display = hasMore ? 'block' : 'none';
     }
 
     updateMealPlanCount() {
         const countElement = document.querySelector('.meal-plan-count');
         if (countElement) {
-            const count = this.displayedMealPlans ? this.displayedMealPlans.length : this.mealPlans.length;
-            countElement.textContent = `${count} meal plans available`;
+            const total = this.filteredMealPlans.length;
+            const categoryText = this.currentCategory === 'all' ? 'meal plans' : `${this.currentCategory} meal plans`;
+            countElement.textContent = `Showing ${total} ${categoryText}`;
         }
     }
 
-    generateCustomMealPlan() {
-        const formData = new FormData(document.getElementById('mealPlanForm'));
-        const planType = formData.get('planType');
-        const duration = formData.get('duration');
-        const servings = formData.get('servings');
+    generateCustomMealPlan(mealPlanId) {
+        const plan = this.mealPlans.find(p => p.id === mealPlanId);
+        if (!plan) return;
+
+        // Show customization modal or redirect to customization page
+        this.showNotification(`Customizing ${plan.title}...`);
         
-        // Filter meal plans based on selected type
-        if (planType && planType !== '') {
-            this.filterMealPlans(planType);
-            
-            // Scroll to meal plans section
-            document.getElementById('meal-plan-categories').scrollIntoView({
-                behavior: 'smooth'
-            });
-            
-            this.showNotification(`Generated ${planType} meal plan for ${duration} days!`, 'success');
-        }
+        // Simulate customization process
+        setTimeout(() => {
+            this.showNotification(`${plan.title} has been added to your meal plan!`);
+        }, 1500);
     }
 
-    showMealPlanDetails(mealPlanId) {
-        // Meal plan details removed
-        console.log('Meal plan details functionality has been removed');
-    }
-
-    showNotification(message, type = 'info') {
+    showNotification(message) {
         // Create notification element
         const notification = document.createElement('div');
-        notification.className = `notification notification-${type}`;
-        notification.innerHTML = `
-            <span>${message}</span>
-            <button class="notification-close">&times;</button>
+        notification.className = 'notification';
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
         `;
 
-        // Add to page
         document.body.appendChild(notification);
 
-        // Auto remove after 5 seconds
+        // Remove notification after 3 seconds
         setTimeout(() => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        }, 5000);
-
-        // Close button functionality
-        notification.querySelector('.notification-close').addEventListener('click', () => {
-            if (notification.parentNode) {
-                notification.parentNode.removeChild(notification);
-            }
-        });
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => {
+                document.body.removeChild(notification);
+            }, 300);
+        }, 3000);
     }
-}
 
-// Favorite functionality
-function toggleFavorite(button) {
-    const card = button.closest('.meal-plan-card');
-    const mealPlanId = card.dataset.id;
-    const icon = button.querySelector('i');
-    
-    let favorites = JSON.parse(localStorage.getItem('favoriteMealPlans') || '[]');
-    
-    if (favorites.includes(mealPlanId)) {
-        // Remove from favorites
-        favorites = favorites.filter(id => id !== mealPlanId);
-        icon.className = 'far fa-heart';
-        button.classList.remove('active');
-    } else {
-        // Add to favorites
-        favorites.push(mealPlanId);
-        icon.className = 'fas fa-heart';
-        button.classList.add('active');
+    getMealPlanById(id) {
+        return this.mealPlans.find(plan => plan.id === id);
     }
-    
-    localStorage.setItem('favoriteMealPlans', JSON.stringify(favorites));
-}
-
-// Load favorite states
-function loadFavoriteStates() {
-    const favorites = JSON.parse(localStorage.getItem('favoriteMealPlans') || '[]');
-    
-    document.querySelectorAll('.meal-plan-card').forEach(card => {
-        const mealPlanId = card.dataset.id;
-        const favoriteBtn = card.querySelector('.favorite-btn');
-        const icon = favoriteBtn?.querySelector('i');
-        
-        if (favorites.includes(mealPlanId) && icon) {
-            icon.className = 'fas fa-heart';
-            favoriteBtn.classList.add('active');
-        }
-    });
 }
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    const mealPlanManager = new MealPlanManager();
-    
-    // Load favorite states after a short delay to ensure cards are rendered
-    setTimeout(loadFavoriteStates, 100);
+    new MealPlanManager();
 });
 
-// Add notification styles
-const mealPlanNotificationStyles = `
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    color: white;
-    font-weight: 500;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    min-width: 300px;
-    animation: slideInRight 0.3s ease;
+// Export for use in other files
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = MealPlanManager;
 }
-
-.notification-success {
-    background: #4CAF50;
-}
-
-.notification-error {
-    background: #f44336;
-}
-
-.notification-info {
-    background: #2196F3;
-}
-
-.notification-close {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-`;
-
-// Inject notification styles
-const mealPlanStyleSheet = document.createElement('style');
-mealPlanStyleSheet.textContent = mealPlanNotificationStyles;
-document.head.appendChild(mealPlanStyleSheet);

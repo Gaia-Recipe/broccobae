@@ -917,7 +917,7 @@ class CuisineManager {
         recipeCard.className = 'recipe-card';
         recipeCard.onclick = () => this.showRecipeDetails(recipe.id);
         
-        const categoryText = `RECIPE / ${recipe.category.toUpperCase().replace('-', ' ')}`;
+        const categoryText = `CUISINE / ${recipe.category.toUpperCase().replace('-', ' ')}`;
         
         recipeCard.innerHTML = `
             <div class="recipe-image-container">
@@ -956,7 +956,7 @@ class CuisineManager {
         const countElement = document.querySelector('.cuisine-count');
         if (countElement) {
             const total = this.filteredRecipes.length;
-            const showing = this.displayedRecipes;
+            const showing = this.displayedRecipes.length;
             if (total > 0) {
                 countElement.textContent = `Showing ${showing} of ${total} recipes`;
             } else {

@@ -23,7 +23,7 @@ class MealPlanManager {
                 id: 'high-protein-vegan-power',
                 title: 'High-Protein Vegan Power',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Mealplan/High-Protein Vegan Power.jpg',
+                image: 'images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
                 duration: '7 days',
                 meals: '21 meals',
                 difficulty: 'Medium',
@@ -36,7 +36,7 @@ class MealPlanManager {
                 id: 'high-protein-vegan-power-2',
                 title: 'High-Protein Vegan Power Plus',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Mealplan/High-Protein Vegan Power Plus.jpg',
+                image: 'images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
                 duration: '14 days',
                 meals: '42 meals',
                 difficulty: 'Medium',
@@ -51,7 +51,7 @@ class MealPlanManager {
                 id: 'low-carb-vegan-delights',
                 title: 'Low-Carb Vegan Delights',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
                 duration: '7 days',
                 meals: '21 meals',
                 difficulty: 'Easy',
@@ -62,14 +62,14 @@ class MealPlanManager {
             },
             {
                 id: 'low-carb-vegan-delights-2',
-                title: 'Low-Carb Vegan Delights Premium',
+                title: 'Low-Carb Vegan Delights Extended',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights Premium.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
                 duration: '14 days',
                 meals: '42 meals',
                 difficulty: 'Easy',
-                description: 'Premium low-carb vegan meal plan with gourmet recipes.',
-                features: ['Gourmet low-carb meals', 'Premium ingredients', 'Ketogenic friendly', 'Sustained energy'],
+                description: 'Extended low-carb vegan meal plan for sustained healthy eating.',
+                features: ['Sustained low-carb nutrition', 'Variety of vegetables', 'Healthy fats focus', 'Metabolic support'],
                 price: '$149',
                 calories: '1900-2200 per day'
             },
@@ -79,12 +79,12 @@ class MealPlanManager {
                 id: 'budget-friendly-vegan-eats',
                 title: 'Budget-Friendly Vegan Eats',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
                 duration: '7 days',
                 meals: '21 meals',
                 difficulty: 'Easy',
                 description: 'Affordable vegan meals that don\'t compromise on nutrition or taste.',
-                features: ['Cost-effective ingredients', 'Bulk cooking friendly', 'Nutritious meals', 'Simple preparation'],
+                features: ['Cost-effective ingredients', 'Bulk cooking friendly', 'Nutritious and filling', 'Simple preparation'],
                 price: '$49',
                 calories: '2000-2300 per day'
             },
@@ -92,12 +92,12 @@ class MealPlanManager {
                 id: 'budget-friendly-vegan-eats-2',
                 title: 'Budget-Friendly Vegan Eats Family',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats Family.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
                 duration: '14 days',
                 meals: '42 meals',
                 difficulty: 'Easy',
-                description: 'Family-sized budget-friendly vegan meal plan for larger households.',
-                features: ['Family portions', 'Bulk savings', 'Kid-friendly options', 'Meal prep friendly'],
+                description: 'Extended budget-friendly meal plan perfect for families.',
+                features: ['Family-sized portions', 'Economical shopping lists', 'Kid-friendly options', 'Meal prep friendly'],
                 price: '$89',
                 calories: '2100-2400 per day'
             },
@@ -107,12 +107,12 @@ class MealPlanManager {
                 id: 'weight-loss-vegan-plan',
                 title: 'Weight Loss Vegan Plan',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
                 duration: '7 days',
                 meals: '21 meals',
                 difficulty: 'Medium',
-                description: 'Scientifically designed vegan meal plan for healthy weight loss.',
-                features: ['Calorie controlled', 'Nutrient dense', 'Metabolism boosting', 'Sustainable weight loss'],
+                description: 'Carefully crafted meal plan designed to support healthy weight loss goals.',
+                features: ['Calorie controlled', 'High fiber content', 'Metabolism boosting', 'Satisfying portions'],
                 price: '$69',
                 calories: '1500-1800 per day'
             },
@@ -120,72 +120,70 @@ class MealPlanManager {
                 id: 'weight-loss-vegan-plan-2',
                 title: 'Weight Loss Vegan Plan Intensive',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan Intensive.jpg',
+                image: 'images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
                 duration: '14 days',
                 meals: '42 meals',
                 difficulty: 'Medium',
-                description: 'Intensive 14-day vegan weight loss program with coaching support.',
-                features: ['Intensive program', 'Coaching included', 'Progress tracking', 'Rapid results'],
+                description: 'Intensive weight loss meal plan with structured nutrition and portion control.',
+                features: ['Structured meal timing', 'Portion control guidance', 'Exercise meal pairing', 'Progress tracking'],
                 price: '$129',
                 calories: '1400-1700 per day'
             },
 
             // All Recipe Plans
             {
-                id: 'all-recipe-complete',
-                title: 'Complete Vegan Recipe Collection',
+                id: 'complete-vegan-collection',
+                title: 'Complete Vegan Collection',
                 category: 'all',
-                image: '../../images/stories/Recipes/All Mealplan/Complete Vegan Collection.jpg',
+                image: 'images/stories/Recipes/All Recipes/Fresh Vegan Salad.png',
                 duration: '30 days',
                 meals: '90 meals',
                 difficulty: 'Varied',
-                description: 'Comprehensive collection of all our vegan recipes across all categories.',
-                features: ['All recipe categories', 'Maximum variety', 'Flexible planning', 'Complete nutrition'],
-                price: '$199',
-                calories: '1800-2500 per day'
+                description: 'Comprehensive collection of all our vegan meal plans for the ultimate variety.',
+                features: ['All meal plan types', 'Maximum variety', 'Flexible scheduling', 'Complete nutrition'],
+                price: '$299',
+                calories: '1500-2500 per day'
             },
             {
-                id: 'all-recipe-starter',
-                title: 'Vegan Recipe Starter Pack',
+                id: 'vegan-starter-pack',
+                title: 'Vegan Starter Pack',
                 category: 'all',
-                image: '../../images/stories/Recipes/All Mealplan/Vegan Starter Pack.jpg',
-                duration: '7 days',
-                meals: '21 meals',
+                image: 'images/stories/Recipes/All Recipes/Smoothie Bowl.jpg',
+                duration: '14 days',
+                meals: '42 meals',
                 difficulty: 'Easy',
-                description: 'Perfect introduction to vegan cooking with recipes from all categories.',
-                features: ['Beginner friendly', 'Recipe variety', 'Easy preparation', 'Nutritional guidance'],
-                price: '$59',
-                calories: '2000-2300 per day'
+                description: 'Perfect introduction to vegan meal planning with easy-to-follow recipes.',
+                features: ['Beginner friendly', 'Simple ingredients', 'Step-by-step guides', 'Gradual transition'],
+                price: '$99',
+                calories: '1800-2200 per day'
             }
         ];
     }
 
     setupEventListeners() {
-        // Category filter buttons
         const filterButtons = document.querySelectorAll('.filter-btn');
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const generateButtons = document.querySelectorAll('.generate-btn');
+
         filterButtons.forEach(button => {
             button.addEventListener('click', (e) => {
-                e.preventDefault();
-                const category = button.getAttribute('data-category');
+                const category = e.target.dataset.category;
                 this.filterMealPlans(category);
-                this.updateActiveFilter(button);
+                this.updateActiveFilter(e.target);
             });
         });
 
-        // Load more button
-        const loadMoreBtn = document.getElementById('loadMoreBtn');
         if (loadMoreBtn) {
             loadMoreBtn.addEventListener('click', () => {
                 this.loadMoreMealPlans();
             });
         }
 
-        // Customize meal plan buttons
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('customize-btn')) {
-                const mealPlanId = e.target.getAttribute('data-meal-plan-id');
+        generateButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const mealPlanId = e.target.closest('.meal-plan-card').dataset.mealPlanId;
                 this.generateCustomMealPlan(mealPlanId);
-            }
+            });
         });
     }
 
@@ -204,14 +202,13 @@ class MealPlanManager {
     }
 
     updateActiveFilter(activeButton) {
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        filterButtons.forEach(button => button.classList.remove('active'));
+        document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
         activeButton.classList.add('active');
     }
 
     displayMealPlans() {
-        const mealPlanGrid = document.getElementById('mealPlanGrid');
-        if (!mealPlanGrid) return;
+        const mealPlansGrid = document.getElementById('mealPlansGrid');
+        if (!mealPlansGrid) return;
 
         const startIndex = 0;
         const endIndex = this.currentPage * this.mealPlansPerPage;
@@ -222,13 +219,13 @@ class MealPlanManager {
             return;
         }
 
-        mealPlanGrid.innerHTML = plansToShow.map(plan => `
-            <div class="meal-plan-card" data-plan-id="${plan.id}">
+        mealPlansGrid.innerHTML = plansToShow.map(plan => `
+            <div class="meal-plan-card" data-meal-plan-id="${plan.id}">
                 <div class="meal-plan-image">
                     <img src="${plan.image}" alt="${plan.title}" loading="lazy">
                     <div class="meal-plan-overlay">
-                        <button class="view-plan-btn" onclick="window.location.href='meal-plan-detail.html?id=${plan.id}'">
-                            View Plan
+                        <button class="generate-btn">
+                            Generate Plan
                         </button>
                     </div>
                 </div>
@@ -236,26 +233,25 @@ class MealPlanManager {
                     <h3 class="meal-plan-title">${plan.title}</h3>
                     <div class="meal-plan-meta">
                         <span class="duration">
-                            <i class="icon-calendar"></i>
+                            <i class="fas fa-calendar"></i>
                             ${plan.duration}
                         </span>
                         <span class="meals">
-                            <i class="icon-utensils"></i>
+                            <i class="fas fa-utensils"></i>
                             ${plan.meals}
                         </span>
                         <span class="difficulty ${plan.difficulty.toLowerCase()}">
+                            <i class="fas fa-signal"></i>
                             ${plan.difficulty}
                         </span>
                     </div>
                     <p class="meal-plan-description">${plan.description}</p>
                     <div class="meal-plan-features">
-                        ${plan.features.slice(0, 2).map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
+                        ${plan.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
                     </div>
                     <div class="meal-plan-footer">
-                        <span class="price">${plan.price}</span>
-                        <button class="customize-btn" data-meal-plan-id="${plan.id}">
-                            Customize
-                        </button>
+                        <div class="price">${plan.price}</div>
+                        <div class="calories">${plan.calories}</div>
                     </div>
                 </div>
             </div>
@@ -265,14 +261,13 @@ class MealPlanManager {
     }
 
     displayEmptyState() {
-        const mealPlanGrid = document.getElementById('mealPlanGrid');
-        mealPlanGrid.innerHTML = `
+        const mealPlansGrid = document.getElementById('mealPlansGrid');
+        mealPlansGrid.innerHTML = `
             <div class="empty-state">
                 <h3>No meal plans found</h3>
                 <p>Try selecting a different category or check back later for new meal plans.</p>
             </div>
         `;
-        this.updateLoadMoreButton();
     }
 
     loadMoreMealPlans() {
@@ -291,49 +286,48 @@ class MealPlanManager {
     }
 
     updateMealPlanCount() {
-        const countElement = document.querySelector('.meal-plan-count');
+        const countElement = document.getElementById('mealPlanCount');
         if (countElement) {
-            const total = this.filteredMealPlans.length;
+            const count = this.filteredMealPlans.length;
             const categoryText = this.currentCategory === 'all' ? 'meal plans' : `${this.currentCategory} meal plans`;
-            countElement.textContent = `Showing ${total} ${categoryText}`;
+            countElement.textContent = `${count} ${categoryText} found`;
         }
     }
 
     generateCustomMealPlan(mealPlanId) {
-        const plan = this.mealPlans.find(p => p.id === mealPlanId);
-        if (!plan) return;
+        const mealPlan = this.getMealPlanById(mealPlanId);
+        if (!mealPlan) return;
 
-        // Show customization modal or redirect to customization page
-        this.showNotification(`Customizing ${plan.title}...`);
+        // Simulate meal plan generation
+        this.showNotification(`Generating your ${mealPlan.title}...`);
         
-        // Simulate customization process
         setTimeout(() => {
-            this.showNotification(`${plan.title} has been added to your meal plan!`);
-        }, 1500);
+            this.showNotification(`Your ${mealPlan.title} has been generated! Check your email for details.`);
+        }, 2000);
     }
 
     showNotification(message) {
         // Create notification element
         const notification = document.createElement('div');
         notification.className = 'notification';
-        notification.textContent = message;
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #4CAF50;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            z-index: 1000;
-            animation: slideIn 0.3s ease;
+        notification.innerHTML = `
+            <div class="notification-content">
+                <i class="fas fa-check-circle"></i>
+                <span>${message}</span>
+            </div>
         `;
 
+        // Add to page
         document.body.appendChild(notification);
 
-        // Remove notification after 3 seconds
+        // Show notification
         setTimeout(() => {
-            notification.style.animation = 'slideOut 0.3s ease';
+            notification.classList.add('show');
+        }, 100);
+
+        // Hide and remove notification
+        setTimeout(() => {
+            notification.classList.remove('show');
             setTimeout(() => {
                 document.body.removeChild(notification);
             }, 300);
@@ -345,7 +339,7 @@ class MealPlanManager {
     }
 }
 
-// Initialize when DOM is loaded
+// Initialize the meal plan manager when the DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new MealPlanManager();
 });

@@ -377,6 +377,44 @@ class MealPlanManager {
                  price: '$3',
                  description: 'Creamy coconut pudding with chia seeds.',
                  features: ['Naturally GF', 'Omega-3 rich', 'Make ahead']
+             },
+             
+             // Additional Individual Recipes to reach 28 total
+             {
+                 id: 'lentil-protein-bowl',
+                 title: 'Lentil Protein Power Bowl',
+                 category: 'high-protein',
+                 image: '../../images/stories/Recipes/All Mealplan/Lentil Protein Power Bowl.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '380-450',
+                 price: '$4',
+                 description: 'Complete protein bowl with red lentils and quinoa.',
+                 features: ['26g protein', 'Complete amino acids', 'Filling']
+             },
+             {
+                 id: 'zucchini-noodle-pesto',
+                 title: 'Zucchini Noodles with Walnut Pesto',
+                 category: 'low-carb',
+                 image: '../../images/stories/Recipes/All Mealplan/Zucchini Noodles with Walnut Pesto.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '240-300',
+                 price: '$4',
+                 description: 'Fresh zucchini noodles with rich walnut pesto.',
+                 features: ['5g net carbs', 'Raw preparation', 'Nutrient dense']
+             },
+             {
+                 id: 'bean-rice-bowl',
+                 title: 'Simple Bean and Rice Bowl',
+                 category: 'budget-friendly',
+                 image: '../../images/stories/Recipes/All Mealplan/Simple Bean and Rice Bowl.jpg',
+                 duration: '1 meal',
+                 meals: '1 serving',
+                 calories: '340-400',
+                 price: '$2',
+                 description: 'Classic combination of beans and rice.',
+                 features: ['$2 per serving', 'Pantry staples', 'Complete protein']
              }
         ];
     }
@@ -393,7 +431,7 @@ class MealPlanManager {
             this.displayedMealPlans = individualRecipes.filter(plan => plan.category === category);
         }
         
-        this.displayedCount = 12; // Show more recipes initially
+        this.displayedCount = 28; // Show all 28 recipes initially
         this.displayMealPlans();
         this.updateMealPlanCount();
     }

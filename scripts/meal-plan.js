@@ -506,83 +506,23 @@ class MealPlanManager {
     }
 
     createMealPlanCard(plan) {
-        const card = document.createElement('div');
-        card.className = 'meal-plan-card';
-        card.dataset.category = plan.category;
-        card.dataset.id = plan.id;
-
-        let metaContent = '';
-        let nutritionContent = '';
-
-        // Generate category-specific content
-        if (plan.category === 'high-protein') {
-            metaContent = `
-                <span class="protein-content"><i class="fas fa-dumbbell"></i> ${plan.protein}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">High Protein</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">Protein: ${plan.protein}</span>
-                <span class="nutrition-item">Calories: ${plan.calories}</span>
-            `;
-        } else if (plan.category === 'low-carb') {
-            metaContent = `
-                <span class="carb-content"><i class="fas fa-leaf"></i> ${plan.carbs}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">Low Carb</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">Carbs: ${plan.carbs}</span>
-                <span class="nutrition-item">Fat: ${plan.fat}</span>
-            `;
-        } else if (plan.category === 'gluten-free') {
-            metaContent = `
-                <span class="gluten-free"><i class="fas fa-check-circle"></i> ${plan.certification}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">Gluten Free</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">${plan.certification}</span>
-                <span class="nutrition-item">${plan.nutrition}</span>
-            `;
-        } else if (plan.category === 'budget-friendly') {
-            metaContent = `
-                <span class="cost"><i class="fas fa-dollar-sign"></i> ${plan.cost}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">Budget Friendly</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">Cost: ${plan.cost}</span>
-                <span class="nutrition-item">${plan.savings}</span>
-            `;
-        } else if (plan.category === 'weight-loss') {
-            metaContent = `
-                <span class="calories"><i class="fas fa-fire"></i> ${plan.calories}</span>
-                <span class="meal-count"><i class="fas fa-utensils"></i> ${plan.duration} days</span>
-                <span class="category">Weight Loss</span>
-            `;
-            nutritionContent = `
-                <span class="nutrition-item">${plan.benefits}</span>
-                <span class="nutrition-item">${plan.calories}</span>
-            `;
-        }
-
-        card.innerHTML = `
-            <img src="${plan.image}" alt="${plan.title}" class="meal-plan-image">
-            <div class="meal-plan-content">
-                <h3 class="meal-plan-title">${plan.title}</h3>
-                <p class="meal-plan-description">${plan.description}</p>
-                <div class="meal-plan-meta">
-                    ${metaContent}
-                </div>
-                <div class="nutrition-highlights">
-                    ${nutritionContent}
-                </div>
-                <button class="favorite-btn" onclick="toggleFavorite(this)"><i class="far fa-heart"></i></button>
+        const recipeCard = document.createElement('div');
+        recipeCard.className = 'recipe-card';
+        recipeCard.dataset.category = plan.category;
+        recipeCard.onclick = () => this.showMealPlanDetails(plan.id);
+        
+        const categoryText = `RECIPE / ${plan.category.toUpperCase().replace('-', ' ')}`;
+        
+        recipeCard.innerHTML = `
+            <div class="recipe-image-container">
+                <img src="${plan.image}" alt="${plan.title}" class="recipe-image" loading="lazy">
+            </div>
+            <div class="recipe-content">
+                <div class="recipe-category-text">${categoryText}</div>
+                <h3 class="recipe-title">${plan.title}</h3>
             </div>
         `;
-
-        return card;
+        return recipeCard;
     }
 
     loadMoreMealPlans() {

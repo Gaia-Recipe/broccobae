@@ -228,7 +228,14 @@ class RecipeDetailManager {
             recipe.ingredients.forEach(ingredient => {
                 const li = document.createElement('li');
                 li.className = 'ingredient-item';
-                li.innerHTML = `<span class="ingredient-text">${ingredient}</span>`;
+                
+                // Highlight amounts in ingredients
+                const highlightedIngredient = ingredient.replace(
+                    /^([\d\/\s]+(?:cup|cups|tablespoon|tablespoons|tbsp|tsp|teaspoon|teaspoons|slice|slices|can|ounces|oz|clove|cloves|pound|pounds|lb|lbs|gram|grams|g|kilogram|kilograms|kg|liter|liters|l|milliliter|milliliters|ml|inch|inches|piece|pieces)?)\s*/i,
+                    '<strong>$1</strong> '
+                );
+                
+                li.innerHTML = `<span class="ingredient-text">${highlightedIngredient}</span>`;
                 ingredientsList.appendChild(li);
             });
         }

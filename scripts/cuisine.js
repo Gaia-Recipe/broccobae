@@ -25,24 +25,14 @@ class CuisineManager {
         this.recipes = [
             // Asian Vegan Recipes
             {
-                id: 'vegan-vegetable-stir-fry',
-                title: 'Vegan Vegetable Stir-Fry',
+                id: 'vegan-pad-thai',
+                title: 'Vegan Pad Thai',
                 category: 'asian',
-                image: '../../images/stories/Recipes/All Cuisines/Vegan Bibimbap (Korean).webp',
-                duration: '20 mins',
-                difficulty: 'Easy',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Pad Thai.jpg',
+                duration: '30 mins',
+                difficulty: 'Medium',
                 rating: 4.8,
-                description: 'A colorful and nutritious stir-fry packed with fresh vegetables and Asian flavors.'
-            },
-            {
-                id: 'tofu-teriyaki',
-                title: 'Tofu Teriyaki',
-                category: 'asian',
-                image: '../../images/stories/Recipes/All Cuisines/Vegan Teriyaki Tofu.webp',
-                duration: '25 mins',
-                difficulty: 'Easy',
-                rating: 4.7,
-                description: 'Crispy tofu glazed with homemade teriyaki sauce, perfect over rice.'
+                description: 'Sweet and tangy Thai noodle dish with rice noodles, tofu, bean sprouts, and peanuts in tamarind sauce.'
             },
             {
                 id: 'vegan-sushi-rolls',
@@ -52,47 +42,57 @@ class CuisineManager {
                 duration: '45 mins',
                 difficulty: 'Medium',
                 rating: 4.9,
-                description: 'Fresh and colorful sushi rolls filled with vegetables and avocado.'
+                description: 'Fresh sushi rolls with seasoned rice, cucumber, avocado, and carrot wrapped in nori sheets.'
             },
             {
-                id: 'vegetable-spring-rolls',
-                title: 'Vegetable Spring Rolls',
-                category: 'asian',
-                image: '../../images/stories/Recipes/All Cuisines/Vegan Spring Rolls (Vietnamese).jpg',
-                duration: '30 mins',
-                difficulty: 'Medium',
-                rating: 4.6,
-                description: 'Light and refreshing Vietnamese spring rolls with fresh herbs and vegetables.'
-            },
-            {
-                id: 'vegan-ramen',
-                title: 'Vegan Ramen',
-                category: 'asian',
-                image: '../../images/stories/Recipes/All Cuisines/Vegan Ramen.jpg',
-                duration: '40 mins',
-                difficulty: 'Medium',
-                rating: 4.8,
-                description: 'Rich and flavorful ramen with plant-based broth and fresh toppings.'
-            },
-            {
-                id: 'miso-soup-tofu',
-                title: 'Miso Soup with Tofu',
+                id: 'vegan-miso-soup',
+                title: 'Vegan Miso Soup',
                 category: 'asian',
                 image: '../../images/stories/Recipes/All Cuisines/Vegan Miso Soup.jpg',
                 duration: '15 mins',
                 difficulty: 'Easy',
                 rating: 4.5,
-                description: 'Traditional Japanese miso soup with silky tofu and wakame seaweed.'
+                description: 'Traditional Japanese soup with miso paste, tofu cubes, shiitake mushrooms, and nori strips.'
             },
             {
-                id: 'thai-green-curry',
-                title: 'Thai Green Curry with Vegetables',
+                id: 'vegan-thai-green-curry',
+                title: 'Vegan Thai Green Curry',
                 category: 'asian',
                 image: '../../images/stories/Recipes/All Cuisines/Vegan Thai Green Curry.jpg',
                 duration: '35 mins',
                 difficulty: 'Medium',
                 rating: 4.9,
-                description: 'Aromatic Thai green curry with coconut milk and fresh vegetables.'
+                description: 'Aromatic Thai curry with coconut milk, green curry paste, zucchini, eggplant, broccoli, and tofu.'
+            },
+            {
+                id: 'vegan-bibimbap',
+                title: 'Vegan Bibimbap (Korean)',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Bibimbap (Korean).webp',
+                duration: '40 mins',
+                difficulty: 'Medium',
+                rating: 4.7,
+                description: 'Korean rice bowl with sautéed vegetables, spinach, carrots, zucchini, bean sprouts, and gochujang paste.'
+            },
+            {
+                id: 'vegan-spring-rolls',
+                title: 'Vegan Spring Rolls (Vietnamese)',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Spring Rolls (Vietnamese).jpg',
+                duration: '30 mins',
+                difficulty: 'Medium',
+                rating: 4.6,
+                description: 'Fresh Vietnamese spring rolls with rice paper, vermicelli noodles, cucumber, carrot, avocado, and herbs.'
+            },
+            {
+                id: 'vegan-teriyaki-tofu',
+                title: 'Vegan Teriyaki Tofu',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Teriyaki Tofu.webp',
+                duration: '25 mins',
+                difficulty: 'Easy',
+                rating: 4.7,
+                description: 'Pan-fried tofu glazed with homemade teriyaki sauce made from soy sauce, maple syrup, and ginger.'
             },
             {
                 id: 'vegan-pho',
@@ -102,27 +102,27 @@ class CuisineManager {
                 duration: '60 mins',
                 difficulty: 'Medium',
                 rating: 4.8,
-                description: 'Aromatic Vietnamese noodle soup with herbs and vegetables in rich broth.'
+                description: 'Aromatic Vietnamese noodle soup with spiced broth, rice noodles, mushrooms, and fresh herbs.'
             },
             {
-                id: 'kimchi-fried-rice',
-                title: 'Kimchi Fried Rice (Vegan)',
+                id: 'vegan-general-tsos-cauliflower',
+                title: 'Vegan General Tso\'s Cauliflower',
                 category: 'asian',
-                image: '../../images/stories/Recipes/All Cuisines/Kimchi Fried Rice (Vegan).jpg',
-                duration: '25 mins',
-                difficulty: 'Easy',
-                rating: 4.6,
-                description: 'Spicy and tangy Korean fried rice with fermented kimchi.'
-            },
-            {
-                id: 'vegan-pad-thai',
-                title: 'Vegan Pad Thai',
-                category: 'asian',
-                image: '../../images/stories/Recipes/All Cuisines/Vegan Pad Thai.jpg',
-                duration: '30 mins',
+                image: '../../images/stories/Recipes/All Cuisines/General Tsos Cauliflower.jpg',
+                duration: '35 mins',
                 difficulty: 'Medium',
                 rating: 4.8,
-                description: 'Sweet and tangy Thai noodle dish with tamarind and peanuts.'
+                description: 'Crispy battered cauliflower florets tossed in sweet and tangy General Tso\'s sauce.'
+            },
+            {
+                id: 'vegan-ramen',
+                title: 'Vegan Ramen',
+                category: 'asian',
+                image: '../../images/stories/Recipes/All Cuisines/Vegan Ramen.jpg',
+                duration: '40 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Rich ramen with miso-based broth, ramen noodles, mushrooms, corn, tofu, and nori.'
             },
             {
                 id: 'vegan-adobo',

@@ -146,6 +146,280 @@ class RecipeDetailManager {
                     'Add more plant-based milk if needed to reach desired consistency.',
                     'Serve immediately and enjoy!'
                 ]
+            },
+            'vegan-pad-thai': {
+                id: 'asian-1',
+                title: 'Vegan Pad Thai',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Pad Thai.jpg',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '385 kcal',
+                description: 'Sweet and tangy Thai noodle dish with rice noodles, tofu, bean sprouts, and peanuts in tamarind sauce.',
+                ingredients: [
+                    '200g rice noodles',
+                    '1 cup tofu (cubed, pan-fried)',
+                    '1 cup bean sprouts',
+                    '1 carrot (julienned)',
+                    '2 spring onions (chopped)',
+                    '2 tbsp soy sauce',
+                    '1 tbsp tamarind paste',
+                    '1 tbsp maple syrup',
+                    '1 tsp chili flakes',
+                    '2 tbsp peanuts (crushed)',
+                    'Lime wedges'
+                ],
+                instructions: [
+                    'Cook rice noodles according to package instructions.',
+                    'Mix soy sauce, tamarind paste, and maple syrup as sauce.',
+                    'Stir-fry tofu, carrot, and spring onions in a large pan.',
+                    'Add noodles, sauce, and sprouts. Toss well.',
+                    'Top with crushed peanuts and serve with lime wedges.'
+                ]
+            },
+            'vegan-sushi-rolls': {
+                id: 'asian-2',
+                title: 'Vegan Sushi Rolls',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Sushi Rolls.jpg',
+                prepTime: '45 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '320 kcal',
+                description: 'Fresh sushi rolls with seasoned rice, cucumber, avocado, and carrot wrapped in nori sheets.',
+                ingredients: [
+                    '2 cups sushi rice',
+                    '3 tbsp rice vinegar',
+                    '4 nori sheets',
+                    '1 cucumber (julienned)',
+                    '1 avocado (sliced)',
+                    '1 carrot (julienned)',
+                    'Soy sauce for dipping'
+                ],
+                instructions: [
+                    'Cook rice and mix with rice vinegar when cooled.',
+                    'Place rice on nori sheet, add cucumber, carrot, and avocado.',
+                    'Roll tightly using a bamboo mat.',
+                    'Slice with a sharp knife.',
+                    'Serve with soy sauce for dipping.'
+                ]
+            },
+            'vegan-miso-soup': {
+                id: 'asian-3',
+                title: 'Vegan Miso Soup',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Miso Soup.jpg',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '120 kcal',
+                description: 'Traditional Japanese soup with miso paste, tofu cubes, shiitake mushrooms, and nori strips.',
+                ingredients: [
+                    '4 cups vegetable broth',
+                    '2 tbsp miso paste',
+                    '1 cup tofu cubes',
+                    '1 sheet nori (cut into strips)',
+                    '1/2 cup mushrooms (shiitake)',
+                    '2 spring onions'
+                ],
+                instructions: [
+                    'Heat broth and add mushrooms.',
+                    'Stir miso paste in a little warm water, then add to broth.',
+                    'Add tofu and nori strips.',
+                    'Garnish with chopped spring onions and serve hot.'
+                ]
+            },
+            'vegan-thai-green-curry': {
+                id: 'asian-4',
+                title: 'Vegan Thai Green Curry',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Thai Green Curry.jpg',
+                prepTime: '35 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '420 kcal',
+                description: 'Aromatic Thai curry with coconut milk, green curry paste, zucchini, eggplant, broccoli, and tofu.',
+                ingredients: [
+                    '1 can coconut milk',
+                    '2 tbsp green curry paste (vegan)',
+                    '1 zucchini (sliced)',
+                    '1 eggplant (cubed)',
+                    '1 cup broccoli',
+                    '1 cup tofu (cubed, fried)',
+                    'Fresh basil'
+                ],
+                instructions: [
+                    'Heat curry paste with a little coconut milk in a large pan.',
+                    'Add vegetables and simmer until tender.',
+                    'Stir in remaining coconut milk and fried tofu.',
+                    'Add fresh basil and simmer for 2 minutes.',
+                    'Serve with jasmine rice.'
+                ]
+            },
+            'vegan-bibimbap': {
+                id: 'asian-5',
+                title: 'Vegan Bibimbap (Korean)',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Bibimbap (Korean).webp',
+                prepTime: '40 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '450 kcal',
+                description: 'Korean rice bowl with sautéed vegetables, spinach, carrots, zucchini, bean sprouts, and gochujang paste.',
+                ingredients: [
+                    '1 cup rice',
+                    '1 cup spinach (sautéed)',
+                    '1 carrot (julienned, sautéed)',
+                    '1 zucchini (julienned, sautéed)',
+                    '1/2 cup bean sprouts',
+                    '1/2 cup mushrooms',
+                    '1 tbsp gochujang paste'
+                ],
+                instructions: [
+                    'Cook rice and prepare vegetables separately.',
+                    'Sauté each vegetable with a little oil and seasoning.',
+                    'Arrange vegetables over rice in separate sections.',
+                    'Add gochujang paste on top.',
+                    'Mix everything together before eating.'
+                ]
+            },
+            'vegan-spring-rolls': {
+                id: 'asian-6',
+                title: 'Vegan Spring Rolls (Vietnamese)',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Spring Rolls (Vietnamese).jpg',
+                prepTime: '30 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '180 kcal',
+                description: 'Fresh Vietnamese spring rolls with rice paper, vermicelli noodles, cucumber, carrot, avocado, and herbs.',
+                ingredients: [
+                    '6 rice paper sheets',
+                    '1 cup vermicelli noodles',
+                    '1 cucumber (sliced)',
+                    '1 carrot (julienned)',
+                    '1 avocado (sliced)',
+                    'Fresh mint & basil',
+                    'Peanut dipping sauce'
+                ],
+                instructions: [
+                    'Cook vermicelli noodles and let cool.',
+                    'Soak rice paper until soft.',
+                    'Place noodles, vegetables, herbs, and avocado on rice paper.',
+                    'Roll tightly, tucking in sides.',
+                    'Serve with peanut dipping sauce.'
+                ]
+            },
+            'vegan-teriyaki-tofu': {
+                id: 'asian-7',
+                title: 'Vegan Teriyaki Tofu',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Teriyaki Tofu.webp',
+                prepTime: '25 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '280 kcal',
+                description: 'Pan-fried tofu glazed with homemade teriyaki sauce made from soy sauce, maple syrup, and ginger.',
+                ingredients: [
+                    '1 block tofu (pressed, cubed)',
+                    '3 tbsp soy sauce',
+                    '2 tbsp maple syrup',
+                    '1 tbsp rice vinegar',
+                    '1 tsp ginger (grated)',
+                    '1 tsp garlic (minced)',
+                    'Sesame seeds'
+                ],
+                instructions: [
+                    'Pan-fry tofu cubes until golden on all sides.',
+                    'Mix soy sauce, maple syrup, vinegar, ginger, and garlic for sauce.',
+                    'Pour sauce over tofu and simmer until thickened.',
+                    'Sprinkle with sesame seeds.',
+                    'Serve over rice with steamed vegetables.'
+                ]
+            },
+            'vegan-pho': {
+                id: 'asian-8',
+                title: 'Vegan Pho (Vietnamese Noodle Soup)',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Pho (Vietnamese Noodle Soup).jpg',
+                prepTime: '60 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '350 kcal',
+                description: 'Aromatic Vietnamese noodle soup with spiced broth, rice noodles, mushrooms, and fresh herbs.',
+                ingredients: [
+                    '4 cups vegetable broth',
+                    '200g rice noodles',
+                    '1 onion, 1 piece ginger (charred)',
+                    '2 star anise, 2 cloves',
+                    '1 cinnamon stick',
+                    '1 cup mushrooms',
+                    'Fresh basil, bean sprouts, lime'
+                ],
+                instructions: [
+                    'Char onion and ginger over open flame.',
+                    'Simmer broth with charred vegetables and spices for 45 minutes.',
+                    'Strain broth and add mushrooms.',
+                    'Cook rice noodles separately.',
+                    'Serve broth over noodles with fresh herbs, bean sprouts, and lime.'
+                ]
+            },
+            'vegan-general-tsos-cauliflower': {
+                id: 'asian-9',
+                title: 'Vegan General Tso\'s Cauliflower',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/General Tsos Cauliflower.jpg',
+                prepTime: '35 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '320 kcal',
+                description: 'Crispy battered cauliflower florets tossed in sweet and tangy General Tso\'s sauce.',
+                ingredients: [
+                    '1 head cauliflower (florets)',
+                    '1/2 cup flour',
+                    '1/2 cup water',
+                    '3 tbsp soy sauce',
+                    '2 tbsp rice vinegar',
+                    '2 tbsp maple syrup',
+                    '1 tsp garlic, 1 tsp ginger'
+                ],
+                instructions: [
+                    'Mix flour and water to make batter.',
+                    'Dip cauliflower in batter and bake at 450°F for 15 minutes.',
+                    'Mix sauce ingredients (soy, vinegar, maple, garlic, ginger).',
+                    'Toss baked cauliflower in sauce.',
+                    'Serve over rice with green onions.'
+                ]
+            },
+            'vegan-ramen': {
+                id: 'asian-10',
+                title: 'Vegan Ramen',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Ramen.jpg',
+                prepTime: '40 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '380 kcal',
+                description: 'Rich ramen with miso-based broth, ramen noodles, mushrooms, corn, tofu, and nori.',
+                ingredients: [
+                    '4 cups vegetable broth',
+                    '200g ramen noodles',
+                    '1 tbsp miso paste',
+                    '1 tbsp soy sauce',
+                    '1 cup mushrooms',
+                    '1/2 cup corn',
+                    '1 sheet nori',
+                    '1/2 cup tofu cubes',
+                    'Spring onions'
+                ],
+                instructions: [
+                    'Heat broth with miso paste and soy sauce.',
+                    'Add mushrooms, corn, and tofu to broth.',
+                    'Cook ramen noodles separately according to package instructions.',
+                    'Place noodles in bowls and pour hot broth over.',
+                    'Garnish with nori strips and chopped spring onions.'
+                ]
             }
         };
         this.init();

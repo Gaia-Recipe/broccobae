@@ -573,6 +573,378 @@ class RecipeDetailManager {
                     'Toss in noodles until fully coated.',
                     'Garnish with calamansi.'
                 ]
+            },
+            'vegan-falafel': {
+                id: 'vegan-falafel',
+                title: 'Vegan Falafel',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Falafel.jpg',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '320 kcal',
+                description: 'Crispy chickpea fritters seasoned with herbs and spices, served with pita and tahini sauce.',
+                ingredients: [
+                    '2 cups chickpeas (soaked overnight)',
+                    '1 onion (chopped)',
+                    '4 cloves garlic',
+                    '1 cup parsley',
+                    '1 cup cilantro',
+                    '2 tsp cumin',
+                    '1 tsp coriander',
+                    '1 tsp salt, 1/2 tsp pepper',
+                    '2 tbsp flour',
+                    'Oil for frying'
+                ],
+                instructions: [
+                    'Blend chickpeas, onion, garlic, parsley, cilantro, and spices.',
+                    'Mix in flour until dough-like.',
+                    'Shape into balls, fry until golden.',
+                    'Serve with pita and tahini sauce.'
+                ]
+            },
+            'hummus': {
+                id: 'hummus',
+                title: 'Hummus (Classic Chickpea Dip)',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Hummus.jpg',
+                prepTime: '15 minutes',
+                servings: '6 servings',
+                difficulty: 'Easy',
+                calories: '180 kcal',
+                description: 'Creamy chickpea dip with tahini, lemon juice, and garlic.',
+                ingredients: [
+                    '2 cups chickpeas (cooked)',
+                    '1/4 cup tahini',
+                    '2 tbsp lemon juice',
+                    '2 garlic cloves',
+                    '3 tbsp olive oil',
+                    'Salt to taste'
+                ],
+                instructions: [
+                    'Blend chickpeas, tahini, lemon juice, and garlic.',
+                    'Add olive oil and salt. Blend smooth.',
+                    'Serve with pita bread or veggies.'
+                ]
+            },
+            'baba-ganoush': {
+                id: 'baba-ganoush',
+                title: 'Baba Ganoush (Eggplant Dip)',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Baba Ganoush.jpg',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '120 kcal',
+                description: 'Smoky roasted eggplant dip with tahini and lemon.',
+                ingredients: [
+                    '2 large eggplants',
+                    '2 tbsp tahini',
+                    '2 tbsp lemon juice',
+                    '2 garlic cloves',
+                    '2 tbsp olive oil',
+                    'Salt & paprika'
+                ],
+                instructions: [
+                    'Roast eggplants until soft, peel skin.',
+                    'Blend flesh with tahini, lemon juice, garlic, olive oil.',
+                    'Garnish with paprika and parsley.'
+                ]
+            },
+            'vegan-tabbouleh': {
+                id: 'vegan-tabbouleh',
+                title: 'Vegan Tabbouleh',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Tabbouleh.jpg',
+                prepTime: '20 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '150 kcal',
+                description: 'Fresh parsley salad with bulgur wheat, tomatoes, and lemon dressing.',
+                ingredients: [
+                    '1 cup bulgur wheat',
+                    '2 cups parsley (finely chopped)',
+                    '1/2 cup mint (chopped)',
+                    '2 tomatoes (diced)',
+                    '1 cucumber (diced)',
+                    '1/4 cup olive oil',
+                    '2 tbsp lemon juice',
+                    'Salt & pepper'
+                ],
+                instructions: [
+                    'Soak bulgur in hot water until soft.',
+                    'Mix with parsley, mint, tomato, cucumber.',
+                    'Add olive oil, lemon, salt, pepper.'
+                ]
+            },
+            'vegan-stuffed-grape-leaves': {
+                id: 'vegan-stuffed-grape-leaves',
+                title: 'Vegan Stuffed Grape Leaves (Dolmas)',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Stuffed Grape Leaves.jpg',
+                prepTime: '60 minutes',
+                servings: '6 servings',
+                difficulty: 'Hard',
+                calories: '200 kcal',
+                description: 'Grape leaves stuffed with herbed rice and steamed to perfection.',
+                ingredients: [
+                    '20 grape leaves (jarred)',
+                    '1 cup rice (cooked halfway)',
+                    '1 onion (finely chopped)',
+                    '1/4 cup parsley',
+                    '1/4 cup mint',
+                    '2 tbsp olive oil',
+                    '2 tbsp lemon juice',
+                    'Salt & pepper'
+                ],
+                instructions: [
+                    'Mix rice, onion, parsley, mint, oil, lemon, salt, pepper.',
+                    'Place filling in grape leaves, roll tightly.',
+                    'Steam in pot with a little water & lemon until cooked.'
+                ]
+            },
+            'vegan-ratatouille': {
+                id: 'vegan-ratatouille',
+                title: 'Vegan Ratatouille (French Provençal Stew)',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Ratatouille.jpg',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '180 kcal',
+                description: 'Traditional French vegetable stew with eggplant, zucchini, and herbs.',
+                ingredients: [
+                    '1 zucchini (sliced)',
+                    '1 eggplant (sliced)',
+                    '1 bell pepper (sliced)',
+                    '1 onion (chopped)',
+                    '3 tomatoes (diced)',
+                    '2 garlic cloves',
+                    '3 tbsp olive oil',
+                    'Herbs de Provence or thyme'
+                ],
+                instructions: [
+                    'Sauté onion & garlic in olive oil.',
+                    'Add eggplant, zucchini, peppers, tomatoes.',
+                    'Season with herbs, simmer until soft.'
+                ]
+            },
+            'vegan-greek-salad': {
+                id: 'vegan-greek-salad',
+                title: 'Vegan Greek Salad',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Greek Salad.jpg',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '220 kcal',
+                description: 'Fresh Mediterranean salad with vegan feta, olives, and oregano.',
+                ingredients: [
+                    '2 cucumbers (chopped)',
+                    '3 tomatoes (chopped)',
+                    '1 red onion (sliced)',
+                    '1/2 cup kalamata olives',
+                    '1 block vegan feta (cubed)',
+                    '2 tbsp olive oil',
+                    '1 tbsp lemon juice',
+                    'Oregano'
+                ],
+                instructions: [
+                    'Mix cucumbers, tomatoes, onion, olives.',
+                    'Add vegan feta, olive oil, lemon, oregano.',
+                    'Toss and serve.'
+                ]
+            },
+            'vegan-spanakopita': {
+                id: 'vegan-spanakopita',
+                title: 'Vegan Spanakopita (Spinach Pie)',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Spanakopita.jpg',
+                prepTime: '60 minutes',
+                servings: '8 servings',
+                difficulty: 'Hard',
+                calories: '280 kcal',
+                description: 'Flaky phyllo pastry filled with seasoned spinach and tofu.',
+                ingredients: [
+                    '1 pack phyllo pastry',
+                    '2 cups spinach (chopped)',
+                    '1 onion (chopped)',
+                    '2 garlic cloves',
+                    '1 block tofu (crumbled)',
+                    '2 tbsp olive oil',
+                    'Dill, salt, pepper'
+                ],
+                instructions: [
+                    'Sauté onion, garlic, spinach. Mix with tofu and dill.',
+                    'Layer phyllo pastry with olive oil, add filling.',
+                    'Bake at 180°C (350°F) until golden.'
+                ]
+            },
+            'vegan-pita-bread-with-olive-tapenade': {
+                id: 'vegan-pita-bread-with-olive-tapenade',
+                title: 'Vegan Pita Bread with Olive Tapenade',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Pita Bread with Olive Tapenade.jpg',
+                prepTime: '20 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '240 kcal',
+                description: 'Fresh pita bread served with rich olive tapenade spread.',
+                ingredients: [
+                    '1 cup black olives',
+                    '2 tbsp olive oil',
+                    '1 garlic clove',
+                    '1 tbsp lemon juice',
+                    '1 tbsp capers'
+                ],
+                instructions: [
+                    'Blend all tapenade ingredients.',
+                    'Serve with freshly baked pita.'
+                ]
+            },
+            'vegan-fattoush-salad': {
+                id: 'vegan-fattoush-salad',
+                title: 'Vegan Fattoush Salad',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Fattoush Salad.jpg',
+                prepTime: '20 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '180 kcal',
+                description: 'Lebanese mixed salad with toasted pita and sumac dressing.',
+                ingredients: [
+                    '2 cups lettuce',
+                    '1 cucumber',
+                    '2 tomatoes',
+                    '1/2 onion',
+                    '1 pita bread (toasted, broken into pieces)',
+                    '2 tbsp olive oil',
+                    '1 tbsp lemon juice',
+                    'Sumac powder'
+                ],
+                instructions: [
+                    'Mix veggies and toasted pita.',
+                    'Add olive oil, lemon juice, sumac.'
+                ]
+            },
+            'mujadara': {
+                id: 'mujadara',
+                title: 'Mujadara (Lentils & Rice with Caramelized Onions)',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Mujadara.jpg',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '320 kcal',
+                description: 'Comforting Middle Eastern dish with lentils, rice, and caramelized onions.',
+                ingredients: [
+                    '1 cup brown lentils',
+                    '1 cup rice',
+                    '3 onions (sliced)',
+                    '4 tbsp olive oil',
+                    'Salt & pepper'
+                ],
+                instructions: [
+                    'Cook lentils until tender.',
+                    'Cook rice separately.',
+                    'Caramelize onions in olive oil.',
+                    'Mix lentils, rice, and onions.'
+                ]
+            },
+            'vegan-shawarma': {
+                id: 'vegan-shawarma',
+                title: 'Vegan Shawarma (Chickpea Style)',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Shawarma.jpg',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '380 kcal',
+                description: 'Spiced chickpeas served in pita with fresh vegetables and tahini.',
+                ingredients: [
+                    '2 cups chickpeas (cooked)',
+                    '2 tbsp olive oil',
+                    '1 tsp cumin, paprika, coriander, turmeric',
+                    '1 garlic clove',
+                    'Pita bread, veggies, tahini sauce'
+                ],
+                instructions: [
+                    'Roast chickpeas with olive oil & spices.',
+                    'Serve in pita with salad and tahini sauce.'
+                ]
+            },
+            'vegan-paella': {
+                id: 'vegan-paella',
+                title: 'Vegan Paella (Spanish Rice Dish)',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Paella.jpg',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Hard',
+                calories: '350 kcal',
+                description: 'Traditional Spanish rice dish with vegetables and aromatic saffron.',
+                ingredients: [
+                    '1 cup arborio or paella rice',
+                    '1 onion, 2 garlic cloves',
+                    '1 red bell pepper',
+                    '1 zucchini',
+                    '1 tomato',
+                    '2 cups vegetable broth',
+                    '1 tsp smoked paprika, saffron (optional)'
+                ],
+                instructions: [
+                    'Sauté onion, garlic, peppers, zucchini.',
+                    'Add rice, paprika, saffron, tomato.',
+                    'Pour broth, simmer until rice cooked.'
+                ]
+            },
+            'vegan-bruschetta': {
+                id: 'vegan-bruschetta',
+                title: 'Vegan Bruschetta',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Bruschetta.jpg',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '160 kcal',
+                description: 'Toasted bread topped with fresh tomato, garlic, and basil.',
+                ingredients: [
+                    '1 baguette (sliced)',
+                    '2 tomatoes (diced)',
+                    '2 garlic cloves',
+                    '2 tbsp olive oil',
+                    'Fresh basil',
+                    'Salt & pepper'
+                ],
+                instructions: [
+                    'Toast baguette slices.',
+                    'Mix tomatoes, garlic, olive oil, basil.',
+                    'Spoon onto bread, serve fresh.'
+                ]
+            },
+            'vegan-roasted-vegetable-couscous': {
+                id: 'vegan-roasted-vegetable-couscous',
+                title: 'Vegan Roasted Vegetable Couscous',
+                category: 'mediterranean',
+                image: './images/stories/Recipes/All Cuisines/Vegan Roasted Vegetable Couscous.jpg',
+                prepTime: '40 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '280 kcal',
+                description: 'Fluffy couscous with roasted Mediterranean vegetables and fresh herbs.',
+                ingredients: [
+                    '1 cup couscous',
+                    '1 zucchini, 1 eggplant, 1 bell pepper (roasted)',
+                    '1 onion (chopped)',
+                    '3 tbsp olive oil',
+                    '1 tbsp lemon juice',
+                    'Fresh parsley'
+                ],
+                instructions: [
+                    'Roast vegetables in olive oil.',
+                    'Prepare couscous by steaming with hot water.',
+                    'Mix couscous with veggies, lemon, parsley.'
+                ]
             }
         };
         this.init();

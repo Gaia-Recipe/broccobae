@@ -2092,7 +2092,235 @@ class RecipeDetailManager {
                      'Fill crust, cover with top crust.',
                      'Bake at 180°C (350°F) for 45 min.'
                  ]
-             }
+             },
+            'vegan-pancakes': {
+                id: 'vegan-pancakes',
+                title: 'Vegan Pancakes',
+                category: 'breakfast',
+                image: './images/stories/Recipes/All Recipes/Vegan Pancake.jpg',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '180 kcal',
+                description: 'Fluffy and delicious vegan pancakes made with plant-based milk and simple ingredients. Perfect for a weekend breakfast.',
+                ingredients: [
+                    '1 cup all-purpose flour',
+                    '2 tablespoons sugar',
+                    '2 teaspoons baking powder',
+                    '1/2 teaspoon salt',
+                    '1 cup plant-based milk',
+                    '2 tablespoons vegetable oil',
+                    '1 teaspoon vanilla extract'
+                ],
+                instructions: [
+                    'In a large bowl, whisk together the flour, sugar, baking powder, and salt.',
+                    'In a separate bowl, combine the plant-based milk, vegetable oil, and vanilla extract.',
+                    'Pour the wet ingredients into the dry ingredients and stir until just combined. Do not overmix.',
+                    'Heat a lightly oiled griddle or frying pan over medium heat.',
+                    'Pour 1/4 cup of batter onto the hot surface for each pancake.',
+                    'Cook for 2-3 minutes per side, or until golden brown and cooked through.',
+                    'Serve immediately with your favorite toppings.'
+                ]
+            },
+            'tofu-scramble': {
+                id: 'tofu-scramble',
+                title: 'Tofu Scramble',
+                category: 'breakfast',
+                image: './images/stories/Recipes/All Recipes/Tofu Scramble.jpg',
+                prepTime: '15 minutes',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                calories: '220 kcal',
+                description: 'A protein-rich vegan alternative to scrambled eggs, made with crumbled tofu and flavorful spices.',
+                ingredients: [
+                    '1 block of firm tofu',
+                    '1/4 cup plant-based milk',
+                    '1 tbsp nutritional yeast',
+                    '1/2 tsp turmeric',
+                    '1/4 tsp black salt (kala namak)',
+                    '1/4 tsp garlic powder',
+                    '1/4 tsp onion powder',
+                    'Salt and pepper to taste',
+                    '1 tbsp olive oil',
+                    '1/2 cup chopped vegetables (e.g., bell peppers, onions, spinach)'
+                ],
+                instructions: [
+                    'Press the tofu to remove excess water. Crumble the tofu into a bowl.',
+                    'In a separate bowl, whisk together plant-based milk, nutritional yeast, turmeric, black salt, garlic powder, onion powder, salt, and pepper.',
+                    'Heat olive oil in a pan over medium heat. Add the chopped vegetables and sauté until softened.',
+                    'Add the crumbled tofu to the pan and cook for about 5 minutes, stirring occasionally.',
+                    'Pour the milk mixture over the tofu and cook for another 5-7 minutes, stirring frequently, until the mixture thickens and the tofu is heated through.',
+                    'Serve hot and enjoy!'
+                ]
+            },
+            'smoothie-bowl': {
+                id: 'smoothie-bowl',
+                title: 'Smoothie Bowl',
+                category: 'breakfast',
+                image: './images/stories/Recipes/All Recipes/Smoothie Bowl.jpg',
+                prepTime: '10 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '320 kcal',
+                description: 'A thick and creamy smoothie bowl topped with fresh fruits, nuts, and seeds for a nutritious breakfast.',
+                ingredients: [
+                    '1 cup frozen mixed berries',
+                    '1/2 banana',
+                    '1/4 cup plant-based milk',
+                    '1 tablespoon chia seeds',
+                    'Toppings: granola, fresh fruit, nuts, seeds'
+                ],
+                instructions: [
+                    'Combine frozen berries, banana, plant-based milk, and chia seeds in a blender.',
+                    'Blend until smooth and creamy.',
+                    'Pour into a bowl and top with granola, fresh fruit, nuts, and seeds.',
+                    'Serve immediately and enjoy!'
+                ]
+            },
+            'chia-seed-pudding': {
+                id: 'chia-seed-pudding',
+                title: 'Chia Seed Pudding',
+                category: 'breakfast',
+                image: './images/stories/Recipes/All Recipes/Chia Seed Pudding.jpg',
+                prepTime: '5 minutes (plus 2 hours chilling)',
+                servings: '2 servings',
+                difficulty: 'Easy',
+                calories: '180 kcal',
+                description: 'A healthy and filling pudding made with chia seeds that absorb liquid to create a creamy, pudding-like texture.',
+                ingredients: [
+                    '1/4 cup chia seeds',
+                    '1 cup plant-based milk (almond, soy, or coconut)',
+                    '1 tablespoon maple syrup or agave nectar',
+                    '1/2 teaspoon vanilla extract',
+                    'Toppings: fresh fruits, nuts, seeds, granola'
+                ],
+                instructions: [
+                    'In a jar or container, combine chia seeds, plant-based milk, maple syrup, and vanilla extract.',
+                    'Stir well to ensure all chia seeds are submerged.',
+                    'Cover the jar and refrigerate for at least 2 hours, or preferably overnight, to allow the chia seeds to absorb the liquid and create a pudding-like consistency.',
+                    'Before serving, stir the pudding to break up any clumps.',
+                    'Layer the chia seed pudding with your favorite toppings such as fresh fruits, nuts, seeds, or granola.',
+                    'Enjoy your delicious and healthy chia seed pudding!'
+                ]
+            },
+            'spicy-tofu-scramble': {
+                id: 'spicy-tofu-scramble',
+                title: 'Spicy Tofu Scramble',
+                category: 'breakfast',
+                image: './images/stories/Recipes/All Recipes/Spicy Tofu Scramble.jpg',
+                prepTime: '20 minutes',
+                servings: '2 servings',
+                difficulty: 'Medium',
+                calories: '250 kcal',
+                description: 'A flavorful and spicy version of tofu scramble with aromatic spices and fresh vegetables.',
+                ingredients: [
+                    '1 block firm tofu, pressed',
+                    '1 tbsp olive oil',
+                    '1/2 onion, diced',
+                    '1 bell pepper, diced',
+                    '2 cloves garlic, minced',
+                    '1 tsp chili powder',
+                    '1/2 tsp cumin',
+                    '1/4 tsp turmeric',
+                    'Salt and pepper to taste',
+                    'Fresh cilantro for garnish'
+                ],
+                instructions: [
+                    'Crumble the pressed tofu into a bowl.',
+                    'Heat olive oil in a pan over medium heat. Add onion and bell pepper, cook until softened.',
+                    'Add garlic, chili powder, cumin, and turmeric. Cook for another minute.',
+                    'Add crumbled tofu to the pan. Season with salt and pepper.',
+                    'Cook, stirring occasionally, until tofu is heated through and slightly browned.',
+                    'Garnish with fresh cilantro before serving.'
+                ]
+            },
+            'avocado-chickpea-sandwich': {
+                id: 'avocado-chickpea-sandwich',
+                title: 'Avocado & Chickpea Sandwich',
+                category: 'lunch',
+                image: './images/stories/Recipes/All Recipes/Avocado & Chickpea Sandwich.jpg',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '380 kcal',
+                description: 'A hearty and nutritious sandwich combining creamy avocado with protein-rich chickpeas for a satisfying meal.',
+                ingredients: [
+                    '1 can (15 ounces) chickpeas, rinsed and drained',
+                    '2 ripe avocados',
+                    '1/4 cup vegan mayonnaise',
+                    '2 tablespoons lemon juice',
+                    '1/4 cup chopped red onion',
+                    '1/4 cup chopped celery',
+                    'Salt and pepper to taste',
+                    '8 slices of whole-grain bread'
+                ],
+                instructions: [
+                    'In a medium bowl, mash the avocados with a fork. Add the chickpeas, vegan mayonnaise, lemon juice, red onion, and celery. Mix well.',
+                    'Season with salt and pepper to taste. Mix again to ensure all ingredients are evenly distributed.',
+                    'Spread the chickpea mixture evenly on four slices of bread. Top with the remaining bread slices to form sandwiches.',
+                    'Serve immediately or wrap in parchment paper for a portable lunch.'
+                ]
+            },
+            'lentil-soup-with-kale': {
+                id: 'lentil-soup-with-kale',
+                title: 'Lentil Soup with Kale',
+                category: 'lunch',
+                image: './images/stories/Recipes/All Recipes/Lentil Soup with Kale.avif',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '280 kcal',
+                description: 'A hearty and nutritious soup packed with protein-rich lentils and nutrient-dense kale.',
+                ingredients: [
+                    '1 cup brown lentils',
+                    '4 cups vegetable broth',
+                    '1 onion, chopped',
+                    '2 carrots, diced',
+                    '2 celery stalks, diced',
+                    '2 cloves garlic, minced',
+                    '1 teaspoon dried thyme',
+                    '1/2 teaspoon smoked paprika',
+                    '4 cups chopped kale',
+                    'Salt and pepper to taste'
+                ],
+                instructions: [
+                    'Sauté the onion, carrots, and celery in a large pot until softened.',
+                    'Add the garlic, thyme, and smoked paprika, and cook for another minute.',
+                    'Stir in the lentils and vegetable broth, and bring to a boil.',
+                    'Reduce the heat and simmer for 20-25 minutes, or until the lentils are tender.',
+                    'Add the kale and cook for another 5 minutes, or until wilted.',
+                    'Season with salt and pepper to taste.'
+                ]
+            },
+            'vegan-burrito-bowl': {
+                id: 'vegan-burrito-bowl',
+                title: 'Vegan Burrito Bowl',
+                category: 'lunch',
+                image: './images/stories/Recipes/All Recipes/Vegan Burrito Bowl.jpg',
+                prepTime: '25 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '420 kcal',
+                description: 'A colorful and nutritious bowl packed with quinoa, black beans, fresh vegetables, and zesty lime dressing.',
+                ingredients: [
+                    '1 cup cooked quinoa',
+                    '1 can black beans, rinsed and drained',
+                    '1 avocado, diced',
+                    '1 cup cherry tomatoes, halved',
+                    '1/2 red onion, finely chopped',
+                    '1/2 cup corn kernels',
+                    '1/4 cup chopped cilantro',
+                    'Juice of 1 lime',
+                    'Salt and pepper to taste',
+                    'Optional: vegan sour cream or salsa'
+                ],
+                instructions: [
+                    'In a large bowl, combine cooked quinoa, black beans, diced avocado, cherry tomatoes, red onion, corn kernels, and chopped cilantro.',
+                    'Squeeze the juice of one lime over the mixture. Season with salt and pepper to taste.',
+                    'Gently toss all ingredients together until well combined.',
+                    'Serve immediately or chill for later. Top with vegan sour cream or salsa if desired.'
+                ]
+            }
          };
         this.init();
     }

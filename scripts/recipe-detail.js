@@ -950,7 +950,7 @@ class RecipeDetailManager {
                 id: 'chana-masala',
                 title: 'Chana Masala (Chickpea Curry)',
                 category: 'indian',
-                image: '/images/stories/Recipes/All Cuisines/Chana Masala (Chickpea Curry).jpg',
+                image: './images/stories/Recipes/All Cuisines/Chana Masala (Chickpea Curry).jpg',
                 prepTime: '30 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
@@ -977,7 +977,7 @@ class RecipeDetailManager {
                 id: 'aloo-gobi',
                 title: 'Aloo Gobi (Potato & Cauliflower Curry)',
                 category: 'indian',
-                image: '/images/stories/Recipes/All Cuisines/Aloo Gobi (Potato & Cauliflower Curry).jpg',
+                image: './images/stories/Recipes/All Cuisines/Aloo Gobi (Potato & Cauliflower Curry).jpg',
                 prepTime: '25 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
@@ -1001,7 +1001,7 @@ class RecipeDetailManager {
                 id: 'baingan-bharta',
                 title: 'Baingan Bharta (Smoky Mashed Eggplant)',
                 category: 'indian',
-                image: '/images/stories/Recipes/All Cuisines/Baingan Bharta (Smoky Mashed Eggplant).jpg',
+                image: './images/stories/Recipes/All Cuisines/Baingan Bharta (Smoky Mashed Eggplant).jpg',
                 prepTime: '40 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
@@ -1026,7 +1026,7 @@ class RecipeDetailManager {
                 id: 'tofu-paneer-butter-masala',
                 title: 'Tofu "Paneer" Butter Masala',
                 category: 'indian',
-                image: '/images/stories/Recipes/All Cuisines/Tofu "Paneer" Butter Masala.jpg',
+                image: './images/stories/Recipes/All Cuisines/Tofu "Paneer" Butter Masala.jpg',
                 prepTime: '35 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
@@ -1052,7 +1052,7 @@ class RecipeDetailManager {
                 id: 'vegan-biryani',
                 title: 'Vegan Biryani',
                 category: 'indian',
-                image: '/images/stories/Recipes/All Cuisines/Vegan Biryani.webp',
+                image: './images/stories/Recipes/All Cuisines/Vegan Biryani.webp',
                 prepTime: '60 minutes',
                 servings: '6 servings',
                 difficulty: 'Hard',
@@ -2865,7 +2865,7 @@ class RecipeDetailManager {
               'grilled-eggplant-steaks': {
                   id: 'grilled-eggplant-steaks',
                   title: 'Grilled Eggplant Steaks with Roasted Vegetables',
-                  image: 'images/stories/Recipes/All Mealplan/Grilled Eggplant Steaks with Roasted Vegetables.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Grilled Eggplant Steaks with Roasted Vegetables.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Mediterranean',
                   difficulty: 'Medium',
@@ -2889,7 +2889,7 @@ class RecipeDetailManager {
               'celery-almond-butter': {
                   id: 'celery-almond-butter',
                   title: 'Celery Sticks with Almond Butter',
-                  image: 'images/stories/Recipes/All Mealplan/Celery Sticks with Almond Butter.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Celery Sticks with Almond Butter.jpg',
                   category: 'Meal Plan',
                   cuisine: 'American',
                   difficulty: 'Easy',
@@ -2909,7 +2909,7 @@ class RecipeDetailManager {
               'coconut-cream-raspberries': {
                   id: 'coconut-cream-raspberries',
                   title: 'Coconut Cream with Raspberries',
-                  image: 'images/stories/Recipes/All Mealplan/Coconut Cream with Raspberries 15.14.10.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Coconut Cream with Raspberries 15.14.10.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Tropical',
                   difficulty: 'Easy',
@@ -2929,7 +2929,7 @@ class RecipeDetailManager {
               'gluten-free-buckwheat-pancakes': {
                   id: 'gluten-free-buckwheat-pancakes',
                   title: 'Gluten-Free Buckwheat Pancakes',
-                  image: 'images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
                   category: 'Meal Plan',
                   cuisine: 'American',
                   difficulty: 'Medium',
@@ -2977,7 +2977,7 @@ class RecipeDetailManager {
               'chickpea-curry-cauliflower': {
                   id: 'chickpea-curry-cauliflower',
                   title: 'Chickpea Curry with Cauliflower Rice',
-                  image: 'images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Indian',
                   difficulty: 'Medium',
@@ -3002,7 +3002,7 @@ class RecipeDetailManager {
               'trail-mix-nuts': {
                   id: 'trail-mix-nuts',
                   title: 'Trail Mix with Dried Fruits and Nuts',
-                  image: 'images/stories/Recipes/All Mealplan/Trail Mix with Dried Fruits and Nuts.webp',
+                  image: './images/stories/Recipes/All Mealplan/Trail Mix with Dried Fruits and Nuts.webp',
                   category: 'Meal Plan',
                   cuisine: 'American',
                   difficulty: 'Easy',
@@ -3024,7 +3024,7 @@ class RecipeDetailManager {
               'coconut-chia-pudding': {
                   id: 'coconut-chia-pudding',
                   title: 'Coconut Chia Seed Pudding',
-                  image: 'images/stories/Recipes/All Mealplan/Coconut Chia Seed Pudding.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Coconut Chia Seed Pudding.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Tropical',
                   difficulty: 'Easy',
@@ -3045,7 +3045,7 @@ class RecipeDetailManager {
               'vegan-chili': {
                   id: 'vegan-chili',
                   title: 'Vegan Chili',
-                  image: 'images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
                   category: 'Meal Plan',
                   cuisine: 'American',
                   difficulty: 'Medium',
@@ -3070,7 +3070,7 @@ class RecipeDetailManager {
               'vegetable-stir-fry': {
                   id: 'vegetable-stir-fry',
                   title: 'Vegetable Stir-Fry',
-                  image: 'images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
+                  image: './images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
                   category: 'Meal Plan',
                   cuisine: 'Asian',
                   difficulty: 'Easy',
@@ -3091,7 +3091,7 @@ class RecipeDetailManager {
               'vegan-tacos': {
                   id: 'vegan-tacos',
                   title: 'Vegan Tacos',
-                  image: 'images/stories/Recipes/All Mealplan/Vegan Tacos.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Vegan Tacos.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Mexican',
                   difficulty: 'Easy',
@@ -3113,7 +3113,7 @@ class RecipeDetailManager {
               'pasta-primavera': {
                   id: 'pasta-primavera',
                   title: 'Pasta Primavera',
-                  image: 'images/stories/Recipes/All Mealplan/Pasta Primavera.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Pasta Primavera.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Italian',
                   difficulty: 'Medium',
@@ -3137,7 +3137,7 @@ class RecipeDetailManager {
               'vegan-shepherds-pie': {
                   id: 'vegan-shepherds-pie',
                   title: 'Vegan Shepherd\'s Pie',
-                  image: 'images/stories/Recipes/All Mealplan/Vegan Shepherd\'s Pie.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Vegan Shepherd\'s Pie.jpg',
                   category: 'Meal Plan',
                   cuisine: 'British',
                   difficulty: 'Medium',
@@ -3162,7 +3162,7 @@ class RecipeDetailManager {
               'tropical-chia-pudding': {
                   id: 'tropical-chia-pudding',
                   title: 'Tropical Chia Seed Pudding',
-                  image: 'images/stories/Recipes/All Mealplan/Tropical Chia Seed Pudding.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Tropical Chia Seed Pudding.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Tropical',
                   difficulty: 'Easy',
@@ -3184,7 +3184,7 @@ class RecipeDetailManager {
               'mediterranean-chickpea-salad': {
                   id: 'mediterranean-chickpea-salad',
                   title: 'Mediterranean Chickpea Salad',
-                  image: 'images/stories/Recipes/All Mealplan/Mediterranean Chickpea Salad.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Mediterranean Chickpea Salad.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Mediterranean',
                   difficulty: 'Easy',
@@ -3207,7 +3207,7 @@ class RecipeDetailManager {
               'spiced-tofu-stir-fry': {
                   id: 'spiced-tofu-stir-fry',
                   title: 'Spiced Tofu Stir-Fry',
-                  image: 'images/stories/Recipes/All Mealplan/Spiced Tofu Stir-Fry.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Spiced Tofu Stir-Fry.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Asian',
                   difficulty: 'Medium',
@@ -3230,7 +3230,7 @@ class RecipeDetailManager {
               'cucumber-hummus-bites': {
                   id: 'cucumber-hummus-bites',
                   title: 'Cucumber and Hummus Bites',
-                  image: 'images/stories/Recipes/All Mealplan/Cucumber and Hummus Bites.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Cucumber and Hummus Bites.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Mediterranean',
                   difficulty: 'Easy',
@@ -3249,7 +3249,7 @@ class RecipeDetailManager {
               'mixed-nuts': {
                   id: 'mixed-nuts',
                   title: 'Handful of Mixed Nuts',
-                  image: 'images/stories/Recipes/All Mealplan/Handful of Mixed Nuts.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Handful of Mixed Nuts.jpg',
                   category: 'Meal Plan',
                   cuisine: 'International',
                   difficulty: 'Easy',
@@ -3267,7 +3267,7 @@ class RecipeDetailManager {
               'quinoa-salad-lemon': {
                   id: 'quinoa-salad-lemon',
                   title: 'Quinoa Salad with Lemon Vinaigrette',
-                  image: 'images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
+                  image: './images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
                   category: 'Meal Plan',
                   cuisine: 'Mediterranean',
                   difficulty: 'Easy',

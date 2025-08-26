@@ -153,6 +153,53 @@ class RecipeDetailManager {
 
     init() {
         this.loadRecipeFromURL();
+        this.initBadgeButtons();
+    }
+
+    initBadgeButtons() {
+        const badgeButtons = document.querySelectorAll('.badge-button');
+        badgeButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const target = e.currentTarget.getAttribute('data-target');
+                const section = e.currentTarget.getAttribute('data-section');
+                this.navigateToSection(target, section);
+            });
+        });
+    }
+
+    navigateToSection(target, section) {
+        let targetUrl = '';
+        
+        switch(target) {
+            case 'recipes':
+                targetUrl = 'src/pages/recipes.html';
+                break;
+            case 'meal-plan':
+                targetUrl = 'src/pages/meal-plan.html';
+                break;
+            case 'cuisine':
+                targetUrl = 'src/pages/cuisine.html';
+                break;
+            case 'community':
+                targetUrl = 'community.html';
+                break;
+            default:
+                return;
+        }
+
+        // Add smooth transition effect
+        document.body.style.transition = 'opacity 0.3s ease';
+        document.body.style.opacity = '0.7';
+        
+        setTimeout(() => {
+            if (section && section !== target) {
+                // Navigate to page with section anchor
+                window.location.href = `${targetUrl}#${section}`;
+            } else {
+                // Navigate to page
+                window.location.href = targetUrl;
+            }
+        }, 150);
     }
 
     loadRecipeFromURL() {

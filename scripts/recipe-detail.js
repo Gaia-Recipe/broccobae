@@ -2699,6 +2699,168 @@ class RecipeDetailManager {
                       'Pour into a glass and garnish with a few saffron threads, if desired.',
                       'Serve immediately and enjoy!'
                   ]
+              },
+
+              'chickpea-flour-omelette': {
+                  id: 'chickpea-flour-omelette',
+                  name: 'Chickpea Flour Omelette with Veggies',
+                  category: 'meal-plan',
+                  cuisine: 'Vegan',
+                  difficulty: 'Easy',
+                  prepTime: '10 minutes',
+                  cookTime: '8 minutes',
+                  totalTime: '18 minutes',
+                  servings: 2,
+                  image: './images/stories/Recipes/All Recipes/Chickpea Flour Omelette.webp',
+                  description: 'A protein-rich vegan omelette made with chickpea flour and loaded with fresh vegetables.',
+                  ingredients: [
+                      '1 cup chickpea flour',
+                      '1 cup water',
+                      '1/2 tsp turmeric',
+                      '1/4 tsp black salt (or regular salt)',
+                      '1/2 cup chopped spinach',
+                      '1/4 cup diced onion',
+                      '1/4 cup diced bell peppers',
+                      'Oil for cooking'
+                  ],
+                  instructions: [
+                      'In a bowl, whisk chickpea flour, water, turmeric, and salt into a smooth batter.',
+                      'Stir in spinach, onion, and bell peppers.',
+                      'Heat oil in a pan and pour batter like a pancake.',
+                      'Cook 3–4 minutes per side until golden. Serve warm.'
+                  ]
+              },
+
+              'tempeh-stir-fry': {
+                  id: 'tempeh-stir-fry',
+                  name: 'Tempeh Stir-Fry with Brown Rice',
+                  category: 'meal-plan',
+                  cuisine: 'Asian',
+                  difficulty: 'Easy',
+                  prepTime: '15 minutes',
+                  cookTime: '15 minutes',
+                  totalTime: '30 minutes',
+                  servings: 3,
+                  image: './images/stories/Recipes/All Recipes/Tempeh Stir-Fry.webp',
+                  description: 'A nutritious and flavorful stir-fry featuring protein-rich tempeh and colorful vegetables.',
+                  ingredients: [
+                      '1 block tempeh, cubed',
+                      '2 tbsp soy sauce',
+                      '1 tbsp sesame oil',
+                      '2 cups mixed veggies (broccoli, carrots, bell peppers)',
+                      '2 cloves garlic, minced',
+                      '1 tbsp grated ginger',
+                      'Cooked brown rice'
+                  ],
+                  instructions: [
+                      'Heat sesame oil in a pan, sauté garlic and ginger.',
+                      'Add tempeh cubes and cook until golden.',
+                      'Toss in veggies and soy sauce, stir-fry for 5 minutes.',
+                      'Serve with brown rice.'
+                  ]
+              },
+
+              'roasted-chickpeas': {
+                  id: 'roasted-chickpeas',
+                  name: 'Roasted Chickpeas with Spices',
+                  category: 'meal-plan',
+                  cuisine: 'Mediterranean',
+                  difficulty: 'Easy',
+                  prepTime: '5 minutes',
+                  cookTime: '30 minutes',
+                  totalTime: '35 minutes',
+                  servings: 4,
+                  image: './images/stories/Recipes/All Recipes/Roasted Chickpeas.webp',
+                  description: 'Crispy, spiced roasted chickpeas that make a perfect protein-packed snack or meal addition.',
+                  ingredients: [
+                      '1 can chickpeas, drained and rinsed',
+                      '1 tbsp olive oil',
+                      '1 tsp paprika',
+                      '1/2 tsp cumin',
+                      'Salt to taste'
+                  ],
+                  instructions: [
+                      'Preheat oven to 200°C (400°F).',
+                      'Pat chickpeas dry and toss with oil and spices.',
+                      'Spread on a baking sheet, roast 25–30 minutes until crispy.'
+                  ]
+              },
+
+              'protein-smoothie': {
+                  id: 'protein-smoothie',
+                  name: 'Protein Smoothie with Plant-Based Protein Powder',
+                  category: 'meal-plan',
+                  cuisine: 'American',
+                  difficulty: 'Easy',
+                  prepTime: '5 minutes',
+                  cookTime: '0 minutes',
+                  totalTime: '5 minutes',
+                  servings: 1,
+                  image: './images/stories/Recipes/All Recipes/Protein Smoothie.webp',
+                  description: 'A creamy, protein-rich smoothie perfect for post-workout recovery or breakfast on-the-go.',
+                  ingredients: [
+                      '1 banana',
+                      '1 cup almond milk',
+                      '1 scoop plant-based protein powder',
+                      '1 tbsp peanut butter',
+                      'Ice cubes'
+                  ],
+                  instructions: [
+                      'Blend all ingredients until smooth.',
+                      'Pour into a glass and enjoy chilled.'
+                  ]
+              },
+
+              'chia-pudding-berries': {
+                  id: 'chia-pudding-berries',
+                  name: 'Chia Seed Pudding with Berries',
+                  category: 'meal-plan',
+                  cuisine: 'American',
+                  difficulty: 'Easy',
+                  prepTime: '5 minutes',
+                  cookTime: '0 minutes',
+                  totalTime: '5 minutes (plus overnight chilling)',
+                  servings: 2,
+                  image: './images/stories/Recipes/All Recipes/Chia Pudding.webp',
+                  description: 'A nutritious overnight pudding packed with omega-3s and topped with fresh berries.',
+                  ingredients: [
+                      '1/4 cup chia seeds',
+                      '1 cup almond milk',
+                      '1 tbsp maple syrup',
+                      '1/2 cup fresh berries'
+                  ],
+                  instructions: [
+                      'Mix chia seeds, almond milk, and syrup in a jar.',
+                      'Refrigerate overnight.',
+                      'Top with berries before serving.'
+                  ]
+              },
+
+              'spinach-mushroom-salad': {
+                  id: 'spinach-mushroom-salad',
+                  name: 'Spinach and Mushroom Salad with Lemon Vinaigrette',
+                  category: 'meal-plan',
+                  cuisine: 'Mediterranean',
+                  difficulty: 'Easy',
+                  prepTime: '10 minutes',
+                  cookTime: '0 minutes',
+                  totalTime: '10 minutes',
+                  servings: 2,
+                  image: './images/stories/Recipes/All Recipes/Spinach Mushroom Salad.webp',
+                  description: 'A fresh, nutrient-dense salad with earthy mushrooms and a bright lemon vinaigrette.',
+                  ingredients: [
+                      '2 cups fresh spinach',
+                      '1 cup sliced mushrooms',
+                      '1/4 cup cherry tomatoes',
+                      '2 tbsp olive oil',
+                      '1 tbsp lemon juice',
+                      'Salt & pepper'
+                  ],
+                  instructions: [
+                      'Toss spinach, mushrooms, and tomatoes in a bowl.',
+                      'Whisk olive oil, lemon juice, salt, and pepper.',
+                      'Drizzle dressing and serve fresh.'
+                  ]
               }
           };
         this.init();

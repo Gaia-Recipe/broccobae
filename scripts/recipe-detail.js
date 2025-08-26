@@ -2293,34 +2293,144 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-burrito-bowl': {
-                id: 'vegan-burrito-bowl',
-                title: 'Vegan Burrito Bowl',
-                category: 'lunch',
-                image: './images/stories/Recipes/All Recipes/Vegan Burrito Bowl.jpg',
-                prepTime: '25 minutes',
-                servings: '4 servings',
-                difficulty: 'Easy',
-                calories: '420 kcal',
-                description: 'A colorful and nutritious bowl packed with quinoa, black beans, fresh vegetables, and zesty lime dressing.',
-                ingredients: [
-                    '1 cup cooked quinoa',
-                    '1 can black beans, rinsed and drained',
-                    '1 avocado, diced',
-                    '1 cup cherry tomatoes, halved',
-                    '1/2 red onion, finely chopped',
-                    '1/2 cup corn kernels',
-                    '1/4 cup chopped cilantro',
-                    'Juice of 1 lime',
-                    'Salt and pepper to taste',
-                    'Optional: vegan sour cream or salsa'
-                ],
-                instructions: [
-                    'In a large bowl, combine cooked quinoa, black beans, diced avocado, cherry tomatoes, red onion, corn kernels, and chopped cilantro.',
-                    'Squeeze the juice of one lime over the mixture. Season with salt and pepper to taste.',
-                    'Gently toss all ingredients together until well combined.',
-                    'Serve immediately or chill for later. Top with vegan sour cream or salsa if desired.'
-                ]
-            }
+                 id: 'vegan-burrito-bowl',
+                 title: 'Vegan Burrito Bowl',
+                 category: 'lunch',
+                 image: './images/stories/Recipes/All Recipes/Vegan Burrito Bowl.jpg',
+                 prepTime: '25 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '420 kcal',
+                 description: 'A colorful and nutritious bowl packed with quinoa, black beans, fresh vegetables, and zesty lime dressing.',
+                 ingredients: [
+                     '1 cup cooked quinoa',
+                     '1 can black beans, rinsed and drained',
+                     '1 avocado, diced',
+                     '1 cup cherry tomatoes, halved',
+                     '1/2 red onion, finely chopped',
+                     '1/2 cup corn kernels',
+                     '1/4 cup chopped cilantro',
+                     'Juice of 1 lime',
+                     'Salt and pepper to taste',
+                     'Optional: vegan sour cream or salsa'
+                 ],
+                 instructions: [
+                     'In a large bowl, combine cooked quinoa, black beans, diced avocado, cherry tomatoes, red onion, corn kernels, and chopped cilantro.',
+                     'Squeeze the juice of one lime over the mixture. Season with salt and pepper to taste.',
+                     'Gently toss all ingredients together until well combined.',
+                     'Serve immediately or chill for later. Top with vegan sour cream or salsa if desired.'
+                 ]
+             },
+             'creamy-tomato-pasta': {
+                 id: 'creamy-tomato-pasta',
+                 title: 'Creamy Tomato Pasta',
+                 category: 'dinner',
+                 image: './images/stories/Recipes/All Recipes/Creamy Tomato Pasta .jpg',
+                 prepTime: '30 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '450 kcal',
+                 description: 'A rich and creamy pasta dish with a luscious tomato sauce made with plant-based cream and fresh basil.',
+                 ingredients: [
+                     '1 lb pasta',
+                     '2 tbsp olive oil',
+                     '1 onion',
+                     '2 cloves garlic',
+                     '28 oz canned tomatoes',
+                     '1 cup vegetable broth',
+                     '1 cup plant-based cream',
+                     'salt and pepper to taste',
+                     'fresh basil for garnish'
+                 ],
+                 instructions: [
+                     'Cook pasta according to package instructions.',
+                     'While pasta cooks, heat olive oil in a large pan over medium heat.',
+                     'Add chopped onion and cook until softened, about 5 minutes.',
+                     'Stir in minced garlic and cook for another minute.',
+                     'Pour in canned tomatoes and vegetable broth, bring to a simmer, and cook for 15 minutes.',
+                     'Stir in plant-based cream, season with salt and pepper.',
+                     'Add cooked pasta to the sauce, toss to coat.',
+                     'Garnish with fresh basil before serving.'
+                 ]
+             },
+             'lentil-shepherds-pie': {
+                 id: 'lentil-shepherds-pie',
+                 title: 'Lentil Shepherd\'s Pie',
+                 category: 'dinner',
+                 image: './images/stories/Recipes/All Recipes/Lentil Shepherd\'s Pie.jpg',
+                 prepTime: '60 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Medium',
+                 calories: '380 kcal',
+                 description: 'A hearty and comforting dish with protein-rich lentils topped with creamy mashed sweet potatoes.',
+                 ingredients: [
+                     'For the Lentil Filling:',
+                     '1 tbsp olive oil',
+                     '1 onion, finely chopped',
+                     '2 carrots, finely chopped',
+                     '2 celery stalks, finely chopped',
+                     '2 cloves garlic, minced',
+                     '1 cup brown or green lentils, rinsed',
+                     '4 cups vegetable broth',
+                     'For the Sweet Potato Topping:',
+                     '4 large sweet potatoes, peeled and cubed',
+                     '1/4 cup plant-based milk',
+                     '2 tbsp vegan butter',
+                     'Salt and pepper to taste'
+                 ],
+                 instructions: [
+                     'Heat olive oil in a large pot over medium heat. Add onion, carrots, and celery, and cook until softened, about 5-7 minutes. Stir in garlic and cook for another minute.',
+                     'Add lentils and vegetable broth to the pot. Bring to a boil, then reduce heat and simmer for 20-25 minutes, or until lentils are tender. Season with salt and pepper.',
+                     'Boil sweet potatoes in salted water until tender, about 15-20 minutes. Drain and mash with plant-based milk, vegan butter, salt, and pepper until smooth and creamy.',
+                     'Preheat oven to 375°F (190°C). Transfer lentil filling to a baking dish. Spread mashed sweet potatoes evenly over the filling.',
+                     'Bake for 20-25 minutes, or until the topping is golden brown and the filling is bubbly. Let it cool slightly before serving.'
+                 ]
+             },
+             'vegan-lasagna': {
+                 id: 'vegan-lasagna',
+                 title: 'Vegan Lasagna',
+                 category: 'dinner',
+                 image: './images/stories/Recipes/All Recipes/Vegan Lasagna .jpg',
+                 prepTime: '90 minutes',
+                 servings: '8 servings',
+                 difficulty: 'Hard',
+                 calories: '520 kcal',
+                 description: 'A delicious layered pasta dish with homemade vegan ricotta, spinach, and rich tomato sauce.',
+                 ingredients: [
+                     'For the vegan ricotta:',
+                     '1 cup raw cashews, soaked for at least 2 hours',
+                     '1/2 cup water',
+                     '2 tablespoons lemon juice',
+                     '1 teaspoon salt',
+                     '1/2 teaspoon garlic powder',
+                     'For the lasagna:',
+                     '1 tablespoon olive oil',
+                     '1 onion, finely chopped',
+                     '2 cloves garlic, minced',
+                     '1 (28-ounce) can crushed tomatoes',
+                     '1 (15-ounce) can tomato sauce',
+                     '1 teaspoon dried oregano',
+                     '1/2 teaspoon salt',
+                     '1/4 teaspoon black pepper',
+                     '9 lasagna noodles',
+                     '2 cups spinach, chopped',
+                     '1 cup vegan mozzarella, shredded'
+                 ],
+                 instructions: [
+                     'Preheat oven to 375°F (190°C). Grease a 9x13 inch baking dish.',
+                     'In a food processor, combine all vegan ricotta ingredients and blend until smooth and creamy. Set aside.',
+                     'Heat olive oil in a large skillet over medium heat. Add onion and cook until softened, about 5 minutes.',
+                     'Add garlic and cook for 1 minute more. Stir in crushed tomatoes, tomato sauce, oregano, salt, and pepper.',
+                     'Bring to a simmer and cook for 10 minutes, stirring occasionally.',
+                     'Cook lasagna noodles according to package directions. Drain and rinse with cold water.',
+                     'Spread a thin layer of tomato sauce in the bottom of the baking dish.',
+                     'Layer 3 lasagna noodles over the sauce. Spread half of the vegan ricotta over the noodles, then top with half of the spinach and a third of the remaining tomato sauce.',
+                     'Repeat layers: noodles, ricotta, spinach, sauce. Top with remaining 3 noodles and sauce.',
+                     'Sprinkle with vegan mozzarella. Cover the baking dish with foil and bake for 30 minutes.',
+                     'Remove foil and bake for another 15-20 minutes, or until the cheese is melted and bubbly.',
+                     'Let stand for 10 minutes before serving.'
+                 ]
+             }
          };
         this.init();
     }

@@ -1664,6 +1664,434 @@ class RecipeDetailManager {
                      'Simmer sauce 15 minutes.',
                      'Add tofu, cook until coated.'
                  ]
+             },
+             
+             // American Vegan Recipes
+             'bbq-jackfruit-sandwich': {
+                title: 'BBQ Jackfruit Sandwich',
+                category: 'american',
+                image: '../../images/stories/Recipes/All Cuisines/BBQ Jackfruit Sandwich.jpg',
+                duration: '30 mins',
+                difficulty: 'Medium',
+                rating: 4.9,
+                description: 'Pulled jackfruit in tangy BBQ sauce served on a toasted bun.',
+                ingredients: [
+                    '2 cans young jackfruit (brined)',
+                    '1 cup vegan BBQ sauce',
+                    '4 burger buns',
+                    'Coleslaw (optional, vegan mayo-based)'
+                ],
+                instructions: [
+                    'Rinse jackfruit, shred with a fork.',
+                    'Cook in a skillet with BBQ sauce until tender.',
+                    'Serve on buns with coleslaw.'
+                ]
+            },
+            'sweet-potato-black-bean-burgers': {
+                title: 'Sweet Potato Black Bean Burgers',
+                category: 'american',
+                image: '../../images/stories/Recipes/All Cuisines/Sweet Potato Black Bean Burgers.jpg',
+                duration: '35 mins',
+                difficulty: 'Medium',
+                rating: 4.8,
+                description: 'Nutritious and flavorful burgers with sweet potato and black beans.',
+                ingredients: [
+                    '1 large sweet potato (roasted & mashed)',
+                    '1 can black beans (mashed)',
+                    '½ cup oats',
+                    '1 tsp smoked paprika',
+                    'Salt & pepper',
+                    'Burger buns'
+                ],
+                instructions: [
+                    'Mix sweet potato, beans, oats, paprika, salt, and pepper.',
+                    'Shape into patties.',
+                    'Pan-fry until golden. Serve on buns.'
+                ]
+            },
+            'vegan-mac-and-cheese': {
+                 id: 'vegan-mac-and-cheese',
+                 title: 'Vegan Mac and Cheese',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Mac and Cheese.jpg',
+                 prepTime: '25 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '380 kcal',
+                 description: 'Creamy and cheesy pasta made with cashew-based cheese sauce.',
+                 ingredients: [
+                     '8 oz elbow macaroni',
+                     '1 cup cashews (soaked)',
+                     '1 cup unsweetened plant milk',
+                     '1 tbsp nutritional yeast',
+                     '1 tbsp lemon juice',
+                     '1 tsp garlic powder',
+                     'Salt & pepper to taste'
+                 ],
+                 instructions: [
+                     'Cook macaroni according to package directions.',
+                     'Blend cashews, milk, nutritional yeast, lemon juice, garlic powder, salt, and pepper until creamy.',
+                     'Heat sauce in a pan, add macaroni, and stir well.'
+                 ]
+             },
+             
+             'bbq-jackfruit-sandwich': {
+                 id: 'bbq-jackfruit-sandwich',
+                 title: 'BBQ Jackfruit Sandwich',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/BBQ Jackfruit Sandwich.jpg',
+                 prepTime: '30 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 calories: '320 kcal',
+                 description: 'Pulled jackfruit in tangy BBQ sauce served on a toasted bun.',
+                 ingredients: [
+                     '2 cans young jackfruit (brined)',
+                     '1 cup vegan BBQ sauce',
+                     '4 burger buns',
+                     'Coleslaw (optional, vegan mayo-based)'
+                 ],
+                 instructions: [
+                     'Rinse jackfruit, shred with a fork.',
+                     'Cook in a skillet with BBQ sauce until tender.',
+                     'Serve on buns with coleslaw.'
+                 ]
+             },
+             
+             'vegan-chili': {
+                 id: 'vegan-chili',
+                 title: 'Vegan Chili',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Chili 19.17.56.jpg',
+                 prepTime: '45 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Easy',
+                 calories: '280 kcal',
+                 description: 'Hearty and warming chili with beans, vegetables, and spices.',
+                 ingredients: [
+                     '1 onion (diced)',
+                     '2 cloves garlic (minced)',
+                     '1 bell pepper (chopped)',
+                     '2 cans kidney beans',
+                     '1 can black beans',
+                     '2 cans diced tomatoes',
+                     '2 tbsp chili powder',
+                     '1 tsp cumin',
+                     'Salt & pepper'
+                 ],
+                 instructions: [
+                     'Sauté onion, garlic, and bell pepper.',
+                     'Add beans, tomatoes, chili powder, cumin.',
+                     'Simmer 30 minutes. Serve hot.'
+                 ]
+             },
+             
+             'sweet-potato-black-bean-burgers': {
+                 id: 'sweet-potato-black-bean-burgers',
+                 title: 'Sweet Potato Black Bean Burgers',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Sweet Potato Black Bean Burgers.jpg',
+                 prepTime: '35 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 calories: '350 kcal',
+                 description: 'Nutritious and flavorful burgers with sweet potato and black beans.',
+                 ingredients: [
+                     '1 large sweet potato (roasted & mashed)',
+                     '1 can black beans (mashed)',
+                     '½ cup oats',
+                     '1 tsp smoked paprika',
+                     'Salt & pepper',
+                     'Burger buns'
+                 ],
+                 instructions: [
+                     'Mix sweet potato, beans, oats, paprika, salt, and pepper.',
+                     'Shape into patties.',
+                     'Pan-fry until golden. Serve on buns.'
+                 ]
+             },
+             
+             'vegan-cornbread': {
+                 id: 'vegan-cornbread',
+                 title: 'Vegan Cornbread',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Cornbread.jpg',
+                 prepTime: '30 minutes',
+                 servings: '8 servings',
+                 difficulty: 'Easy',
+                 calories: '220 kcal',
+                 description: 'Moist and slightly sweet cornbread perfect as a side dish.',
+                 ingredients: [
+                     '1 cup cornmeal',
+                     '1 cup flour',
+                     '1 cup plant milk',
+                     '⅓ cup maple syrup',
+                     '2 tbsp oil',
+                     '1 tbsp baking powder'
+                 ],
+                 instructions: [
+                     'Mix dry and wet ingredients separately.',
+                     'Combine, pour into a greased pan.',
+                     'Bake at 180°C (350°F) for 25–30 min.'
+                 ]
+             },
+             
+             'vegan-creamy-garlic-pasta': {
+                 id: 'vegan-creamy-garlic-pasta',
+                 title: 'Vegan Creamy Garlic Pasta',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Creamy Garlic Pasta.jpg',
+                 prepTime: '20 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '420 kcal',
+                 description: 'Rich and creamy pasta with roasted garlic and herbs.',
+                 ingredients: [
+                     '8 oz spaghetti or your favorite pasta',
+                     '1 cup unsweetened plant milk (almond, oat, soy)',
+                     '3 cloves garlic, minced',
+                     '2 tbsp olive oil',
+                     '2 tbsp nutritional yeast',
+                     '1 tbsp flour (or cornstarch for thickening)',
+                     '1 tsp lemon juice',
+                     'Salt & black pepper, to taste',
+                     'Fresh parsley, chopped, for garnish'
+                 ],
+                 instructions: [
+                     'Cook pasta according to package directions, drain and set aside.',
+                     'In a pan, heat olive oil over medium heat and sauté garlic until fragrant (1–2 minutes).',
+                     'Sprinkle in flour, stir to form a roux.',
+                     'Slowly whisk in plant milk, bring to a gentle simmer.',
+                     'Stir in nutritional yeast, lemon juice, salt, and pepper. Cook until the sauce thickens.',
+                     'Toss pasta in the sauce until evenly coated.',
+                     'Garnish with chopped parsley and serve hot.'
+                 ]
+             },
+             
+             'vegan-sloppy-joes': {
+                 id: 'vegan-sloppy-joes',
+                 title: 'Vegan Sloppy Joes',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Sloppy Joes.jpg',
+                 prepTime: '25 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '290 kcal',
+                 description: 'Classic comfort food with lentils in tangy tomato sauce.',
+                 ingredients: [
+                     '1 cup lentils (cooked)',
+                     '1 onion (diced)',
+                     '1 bell pepper (diced)',
+                     '1 cup tomato sauce',
+                     '1 tbsp soy sauce',
+                     '1 tsp smoked paprika',
+                     'Burger buns'
+                 ],
+                 instructions: [
+                     'Sauté onion and pepper.',
+                     'Add lentils, tomato sauce, soy sauce, paprika.',
+                     'Simmer 10 min, serve on buns.'
+                 ]
+             },
+             
+             'vegan-buffalo-cauliflower-wings': {
+                 id: 'vegan-buffalo-cauliflower-wings',
+                 title: 'Vegan Buffalo Cauliflower Wings',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Buffalo Cauliflower Wings.webp',
+                 prepTime: '35 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 calories: '180 kcal',
+                 description: 'Spicy and crispy cauliflower wings with buffalo sauce.',
+                 ingredients: [
+                     '1 cauliflower head (cut florets)',
+                     '1 cup flour',
+                     '1 cup water',
+                     '1 cup buffalo hot sauce'
+                 ],
+                 instructions: [
+                     'Dip florets in flour-water batter, bake at 200°C (400°F) for 20 min.',
+                     'Toss in hot sauce, bake 10 more min.'
+                 ]
+             },
+             
+             'vegan-mashed-potatoes': {
+                 id: 'vegan-mashed-potatoes',
+                 title: 'Vegan Mashed Potatoes',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Mashed Potatoes.jpg',
+                 prepTime: '25 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Easy',
+                 calories: '160 kcal',
+                 description: 'Creamy and buttery mashed potatoes made with plant-based milk.',
+                 ingredients: [
+                     '4 large potatoes (peeled, boiled)',
+                     '½ cup unsweetened plant milk',
+                     '2 tbsp vegan butter',
+                     'Salt & pepper'
+                 ],
+                 instructions: [
+                     'Mash potatoes with plant milk and butter.',
+                     'Season with salt & pepper.'
+                 ]
+             },
+             
+             'vegan-gravy': {
+                 id: 'vegan-gravy',
+                 title: 'Vegan Gravy',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Gravy.jpg',
+                 prepTime: '15 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '45 kcal',
+                 description: 'Rich and savory gravy perfect for mashed potatoes and roasts.',
+                 ingredients: [
+                     '2 tbsp olive oil',
+                     '2 tbsp flour',
+                     '2 cups veggie broth',
+                     '1 tbsp soy sauce',
+                     '½ tsp garlic powder'
+                 ],
+                 instructions: [
+                     'Heat oil, whisk in flour.',
+                     'Slowly add broth, soy sauce, garlic powder.',
+                     'Simmer until thick.'
+                 ]
+             },
+             
+             'vegan-gumbo': {
+                 id: 'vegan-gumbo',
+                 title: 'Vegan Gumbo',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Gumbo.jpg',
+                 prepTime: '60 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Hard',
+                 calories: '250 kcal',
+                 description: 'Louisiana-style stew with okra, vegetables, and Creole spices.',
+                 ingredients: [
+                     '1 onion, celery, green pepper (diced)',
+                     '2 tbsp flour',
+                     '2 tbsp oil',
+                     '2 cups veggie broth',
+                     '1 can kidney beans',
+                     '1 cup okra',
+                     'Cajun seasoning'
+                 ],
+                 instructions: [
+                     'Make a roux with flour + oil.',
+                     'Add onion, celery, pepper, cook.',
+                     'Add broth, beans, okra, seasoning. Simmer 20 min.'
+                 ]
+             },
+             
+             'vegan-stuffed-bell-peppers': {
+                 id: 'vegan-stuffed-bell-peppers',
+                 title: 'Vegan Stuffed Bell Peppers',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Stuffed Bell Peppers.jpg',
+                 prepTime: '50 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 calories: '280 kcal',
+                 description: 'Bell peppers stuffed with quinoa, vegetables, and herbs.',
+                 ingredients: [
+                     '4 large bell peppers (any color)',
+                     '1 cup cooked quinoa or rice',
+                     '1 can black beans, drained and rinsed',
+                     '1 cup corn kernels',
+                     '1 small onion, diced',
+                     '2 cloves garlic, minced',
+                     '1 tsp smoked paprika',
+                     '1 tsp cumin',
+                     '2 tbsp tomato paste or sauce',
+                     '2 tbsp olive oil',
+                     'Salt & pepper, to taste',
+                     'Fresh cilantro for garnish'
+                 ],
+                 instructions: [
+                     'Preheat oven to 375°F (190°C).',
+                     'Cut tops off bell peppers and remove seeds.',
+                     'In a skillet, heat olive oil and sauté onion and garlic until soft.',
+                     'Add black beans, corn, cooked quinoa, tomato paste, smoked paprika, cumin, salt, and pepper. Cook for 5 minutes.',
+                     'Stuff bell peppers with the mixture and place in a baking dish.',
+                     'Cover with foil and bake 25–30 minutes. Remove foil and bake 5–10 more minutes.',
+                     'Garnish with fresh cilantro and serve warm.'
+                 ]
+             },
+             
+             'vegan-baked-beans': {
+                 id: 'vegan-baked-beans',
+                 title: 'Vegan Baked Beans',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Baked Beans.jpeg',
+                 prepTime: '40 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Easy',
+                 calories: '220 kcal',
+                 description: 'Sweet and smoky baked beans perfect for BBQs and picnics.',
+                 ingredients: [
+                     '2 cans navy beans',
+                     '1 cup tomato sauce',
+                     '2 tbsp maple syrup',
+                     '1 tbsp mustard',
+                     '1 tbsp soy sauce'
+                 ],
+                 instructions: [
+                     'Mix all ingredients in baking dish.',
+                     'Bake at 180°C (350°F) for 40 min.'
+                 ]
+             },
+             
+             'vegan-collard-greens': {
+                 id: 'vegan-collard-greens',
+                 title: 'Vegan Collard Greens',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Collard Greens.jpg',
+                 prepTime: '45 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '80 kcal',
+                 description: 'Southern-style collard greens cooked with onions and spices.',
+                 ingredients: [
+                     '1 bunch collard greens (chopped)',
+                     '2 cloves garlic',
+                     '1 tbsp olive oil',
+                     '1 cup veggie broth',
+                     'Salt & pepper'
+                 ],
+                 instructions: [
+                     'Sauté garlic in oil.',
+                     'Add collards and broth.',
+                     'Simmer until tender.'
+                 ]
+             },
+             
+             'vegan-apple-pie': {
+                 id: 'vegan-apple-pie',
+                 title: 'Vegan Apple Pie',
+                 category: 'american',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Apple Pie.jpg',
+                 prepTime: '90 minutes',
+                 servings: '8 servings',
+                 difficulty: 'Hard',
+                 calories: '320 kcal',
+                 description: 'Classic American apple pie with flaky crust and cinnamon filling.',
+                 ingredients: [
+                     '2 vegan pie crusts',
+                     '6 apples (sliced)',
+                     '½ cup sugar',
+                     '1 tsp cinnamon',
+                     '1 tbsp lemon juice'
+                 ],
+                 instructions: [
+                     'Mix apples with sugar, cinnamon, lemon.',
+                     'Fill crust, cover with top crust.',
+                     'Bake at 180°C (350°F) for 45 min.'
+                 ]
              }
          };
         this.init();

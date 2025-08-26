@@ -947,8 +947,15 @@ class RecipeDetailManager {
                 ]
             },
             'chana-masala': {
+                id: 'chana-masala',
                 title: 'Chana Masala (Chickpea Curry)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Chana Masala (Chickpea Curry).jpg',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '320 kcal',
+                description: 'Spicy and aromatic chickpea curry with traditional Indian spices.',
                 ingredients: [
                     '2 cups chickpeas (cooked)',
                     '2 onions (chopped)',
@@ -967,8 +974,15 @@ class RecipeDetailManager {
                 ]
             },
             'aloo-gobi': {
+                id: 'aloo-gobi',
                 title: 'Aloo Gobi (Potato & Cauliflower Curry)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Aloo Gobi (Potato & Cauliflower Curry).jpg',
+                prepTime: '25 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '180 kcal',
+                description: 'Classic Indian potato and cauliflower curry with turmeric and spices.',
                 ingredients: [
                     '2 potatoes (cubed)',
                     '1 cauliflower (florets)',
@@ -984,8 +998,15 @@ class RecipeDetailManager {
                 ]
             },
             'baingan-bharta': {
+                id: 'baingan-bharta',
                 title: 'Baingan Bharta (Smoky Mashed Eggplant)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Baingan Bharta (Smoky Mashed Eggplant).jpg',
+                prepTime: '40 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '150 kcal',
+                description: 'Smoky roasted eggplant mash with onions, tomatoes, and spices.',
                 ingredients: [
                     '2 eggplants',
                     '2 onions (chopped)',
@@ -1002,8 +1023,15 @@ class RecipeDetailManager {
                 ]
             },
             'tofu-paneer-butter-masala': {
+                id: 'tofu-paneer-butter-masala',
                 title: 'Tofu "Paneer" Butter Masala',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Tofu "Paneer" Butter Masala.jpg',
+                prepTime: '35 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '380 kcal',
+                description: 'Creamy tomato-based curry with marinated tofu in rich butter masala sauce.',
                 ingredients: [
                     '1 block tofu (cubed, pan-fried)',
                     '2 onions (pureed)',
@@ -1021,8 +1049,15 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-biryani': {
+                id: 'vegan-biryani',
                 title: 'Vegan Biryani',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Vegan Biryani.webp',
+                prepTime: '60 minutes',
+                servings: '6 servings',
+                difficulty: 'Hard',
+                calories: '420 kcal',
+                description: 'Fragrant basmati rice layered with vegetables and aromatic spices.',
                 ingredients: [
                     '2 cups basmati rice',
                     '1 carrot, 1 potato, 1 cup cauliflower, 1 cup peas',
@@ -1039,8 +1074,15 @@ class RecipeDetailManager {
                 ]
             },
             'masoor-dal': {
+                id: 'masoor-dal',
                 title: 'Masoor Dal (Red Lentil Curry)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Masoor Dal (Red Lentil Curry).jpg',
+                prepTime: '25 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '220 kcal',
+                description: 'Comforting red lentil curry with turmeric, cumin, and fresh herbs.',
                 ingredients: [
                     '1 cup red lentils',
                     '1 onion, 1 tomato',
@@ -1055,8 +1097,15 @@ class RecipeDetailManager {
                 ]
             },
             'tofu-tikka-masala': {
+                id: 'tofu-tikka-masala',
                 title: 'Tofu Tikka Masala',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Tofu Tikka Masala.jpg',
+                prepTime: '40 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '350 kcal',
+                description: 'Marinated tofu in creamy tomato-based tikka masala sauce.',
                 ingredients: [
                     '1 block tofu (cubed, baked)',
                     '2 onions',
@@ -1072,8 +1121,15 @@ class RecipeDetailManager {
                 ]
             },
             'vegetable-samosas': {
+                id: 'vegetable-samosas',
                 title: 'Vegetable Samosas',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Vegetable Samosas.jpg',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '180 kcal',
+                description: 'Crispy pastry triangles filled with spiced potatoes and peas.',
                 ingredients: [
                     '2 potatoes (boiled, mashed)',
                     '1/2 cup peas',
@@ -1089,8 +1145,15 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-palak-tofu': {
+                id: 'vegan-palak-tofu',
                 title: 'Vegan Palak Tofu (Spinach Curry)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Vegan Palak Tofu (Spinach Curry).jpg',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '280 kcal',
+                description: 'Creamy spinach curry with cubes of marinated tofu.',
                 ingredients: [
                     '1 block tofu (cubed, pan-fried)',
                     '4 cups spinach (blanched & blended)',
@@ -1107,8 +1170,15 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-malai-kofta': {
+                id: 'vegan-malai-kofta',
                 title: 'Vegan Malai Kofta',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Vegan Malai Kofta.jpg',
+                prepTime: '45 minutes',
+                servings: '4 servings',
+                difficulty: 'Hard',
+                calories: '320 kcal',
+                description: 'Vegetable and cashew dumplings in rich creamy tomato sauce.',
                 ingredients: [
                     '2 potatoes (boiled, mashed)',
                     '1/2 cup tofu (crumbled)',
@@ -1123,8 +1193,15 @@ class RecipeDetailManager {
                 ]
             },
             'vegetable-pakoras': {
+                id: 'vegetable-pakoras',
                 title: 'Vegetable Pakoras (Fritters)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Vegetable Pakoras (Fritters).jpg',
+                prepTime: '20 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '150 kcal',
+                description: 'Crispy chickpea flour fritters with mixed vegetables and spices.',
                 ingredients: [
                     '1 cup chickpea flour (besan)',
                     '1 cup mixed veggies (onion, potato, spinach)',
@@ -1138,8 +1215,15 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-korma': {
+                id: 'vegan-korma',
                 title: 'Vegan Korma (Creamy Curry)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Vegan Korma (Creamy Curry).jpg',
+                prepTime: '35 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '290 kcal',
+                description: 'Rich and creamy vegetable curry with cashew cream and aromatic spices.',
                 ingredients: [
                     '1 cup mixed vegetables (carrot, peas, beans)',
                     '1 onion, 1 tomato',
@@ -1154,8 +1238,15 @@ class RecipeDetailManager {
                 ]
             },
             'tamarind-rice': {
+                id: 'tamarind-rice',
                 title: 'Tamarind Rice (Puliyodarai)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Tamarind Rice (Puliyodarai).jpg',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '250 kcal',
+                description: 'Tangy South Indian rice dish with tamarind, peanuts, and aromatic spices.',
                 ingredients: [
                     '2 cups cooked rice',
                     '2 tbsp tamarind paste',
@@ -1171,8 +1262,15 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-idli-coconut-chutney': {
+                id: 'vegan-idli-coconut-chutney',
                 title: 'Vegan Idli with Coconut Chutney',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Vegan Idli with Coconut Chutney.webp',
+                prepTime: '20 minutes (plus fermentation)',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '180 kcal',
+                description: 'Soft steamed rice cakes served with fresh coconut chutney.',
                 ingredients: [
                     '1 cup rice',
                     '1/2 cup urad dal',
@@ -1189,8 +1287,15 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-pani-puri': {
+                id: 'vegan-pani-puri',
                 title: 'Vegan Pani Puri (Gol Gappa)',
+                category: 'indian',
                 image: '/images/stories/Recipes/All Cuisines/Vegan Pani Puri (Gol Gappa).avif',
+                prepTime: '45 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '200 kcal',
+                description: 'Popular Indian street food with crispy puris, spiced water, and savory filling.',
                 ingredients: [
                     '1 cup semolina (sooji)',
                     '1/4 cup all-purpose flour',

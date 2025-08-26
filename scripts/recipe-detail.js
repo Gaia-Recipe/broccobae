@@ -3041,6 +3041,228 @@ class RecipeDetailManager {
                       'Refrigerate 4+ hours.',
                       'Serve chilled.'
                   ]
+              },
+              'vegan-chili': {
+                  id: 'vegan-chili',
+                  title: 'Vegan Chili',
+                  image: 'images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'American',
+                  difficulty: 'Medium',
+                  time: '30 minutes',
+                  servings: 6,
+                  description: 'A hearty and flavorful chili packed with beans, corn, and spices for a satisfying meal.',
+                  ingredients: [
+                      '1 can kidney beans',
+                      '1 can black beans',
+                      '1 cup corn',
+                      '1 can diced tomatoes',
+                      '1 onion, chopped',
+                      '2 cloves garlic',
+                      '1 tbsp chili powder'
+                  ],
+                  instructions: [
+                      'Cook onion and garlic in a pot.',
+                      'Add beans, corn, tomatoes, and chili powder.',
+                      'Simmer 20 minutes.'
+                  ]
+              },
+              'vegetable-stir-fry': {
+                  id: 'vegetable-stir-fry',
+                  title: 'Vegetable Stir-Fry',
+                  image: 'images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
+                  category: 'Meal Plan',
+                  cuisine: 'Asian',
+                  difficulty: 'Easy',
+                  time: '15 minutes',
+                  servings: 4,
+                  description: 'A quick and healthy stir-fry with fresh vegetables and savory seasonings.',
+                  ingredients: [
+                      '2 cups mixed veggies (broccoli, snap peas, carrots)',
+                      '2 tbsp soy sauce',
+                      '1 tbsp sesame oil',
+                      '1 clove garlic, minced'
+                  ],
+                  instructions: [
+                      'Heat oil, sauté garlic and veggies.',
+                      'Add soy sauce, stir-fry 5 minutes.'
+                  ]
+              },
+              'vegan-tacos': {
+                  id: 'vegan-tacos',
+                  title: 'Vegan Tacos',
+                  image: 'images/stories/Recipes/All Mealplan/Vegan Tacos.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Mexican',
+                  difficulty: 'Easy',
+                  time: '15 minutes',
+                  servings: 3,
+                  description: 'Delicious plant-based tacos filled with black beans, corn, and fresh toppings.',
+                  ingredients: [
+                      '6 corn tortillas',
+                      '1 can black beans',
+                      '1/2 cup corn',
+                      '1/2 cup salsa',
+                      'Avocado slices'
+                  ],
+                  instructions: [
+                      'Warm tortillas.',
+                      'Fill with beans, corn, salsa, and avocado.'
+                  ]
+              },
+              'pasta-primavera': {
+                  id: 'pasta-primavera',
+                  title: 'Pasta Primavera',
+                  image: 'images/stories/Recipes/All Mealplan/Pasta Primavera.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Italian',
+                  difficulty: 'Medium',
+                  time: '25 minutes',
+                  servings: 4,
+                  description: 'A colorful pasta dish loaded with fresh seasonal vegetables and bright flavors.',
+                  ingredients: [
+                      '200g pasta',
+                      '1 cup zucchini',
+                      '1 cup bell peppers',
+                      '1/2 cup cherry tomatoes',
+                      '2 tbsp olive oil',
+                      '1 tbsp lemon juice'
+                  ],
+                  instructions: [
+                      'Cook pasta according to package.',
+                      'Sauté veggies in oil.',
+                      'Toss pasta with veggies and lemon juice.'
+                  ]
+              },
+              'vegan-shepherds-pie': {
+                  id: 'vegan-shepherds-pie',
+                  title: 'Vegan Shepherd\'s Pie',
+                  image: 'images/stories/Recipes/All Mealplan/Vegan Shepherd\'s Pie.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'British',
+                  difficulty: 'Medium',
+                  time: '45 minutes',
+                  servings: 6,
+                  description: 'A comforting plant-based version of the classic dish with lentils and creamy mashed potatoes.',
+                  ingredients: [
+                      '2 cups mashed potatoes',
+                      '1 onion, diced',
+                      '2 carrots, diced',
+                      '1 cup peas',
+                      '1 cup lentils, cooked',
+                      '1 cup vegetable broth'
+                  ],
+                  instructions: [
+                      'Sauté onion and carrots.',
+                      'Add lentils, peas, and broth, simmer until thick.',
+                      'Spread in a dish, top with mashed potatoes.',
+                      'Bake at 180°C (350°F) for 20 minutes.'
+                  ]
+              },
+              'tropical-chia-pudding': {
+                  id: 'tropical-chia-pudding',
+                  title: 'Tropical Chia Seed Pudding',
+                  image: 'images/stories/Recipes/All Mealplan/Tropical Chia Seed Pudding.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Tropical',
+                  difficulty: 'Easy',
+                  time: '4+ hours',
+                  servings: 2,
+                  description: 'A refreshing chia pudding topped with tropical fruits for a taste of paradise.',
+                  ingredients: [
+                      '1/4 cup chia seeds',
+                      '1 cup coconut milk',
+                      '1 tbsp maple syrup',
+                      '1/2 cup pineapple + mango chunks'
+                  ],
+                  instructions: [
+                      'Mix chia seeds, coconut milk, and syrup.',
+                      'Refrigerate overnight.',
+                      'Top with tropical fruits.'
+                  ]
+              },
+              'mediterranean-chickpea-salad': {
+                  id: 'mediterranean-chickpea-salad',
+                  title: 'Mediterranean Chickpea Salad',
+                  image: 'images/stories/Recipes/All Mealplan/Mediterranean Chickpea Salad.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Mediterranean',
+                  difficulty: 'Easy',
+                  time: '10 minutes',
+                  servings: 4,
+                  description: 'A fresh and protein-rich salad with Mediterranean flavors and crisp vegetables.',
+                  ingredients: [
+                      '1 can chickpeas',
+                      '1/2 cup cucumber',
+                      '1/2 cup tomatoes',
+                      '1/4 cup red onion',
+                      '2 tbsp olive oil',
+                      '1 tbsp lemon juice'
+                  ],
+                  instructions: [
+                      'Combine chickpeas and veggies.',
+                      'Drizzle olive oil and lemon juice, toss well.'
+                  ]
+              },
+              'spiced-tofu-stir-fry': {
+                  id: 'spiced-tofu-stir-fry',
+                  title: 'Spiced Tofu Stir-Fry',
+                  image: 'images/stories/Recipes/All Mealplan/Spiced Tofu Stir-Fry.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Asian',
+                  difficulty: 'Medium',
+                  time: '20 minutes',
+                  servings: 4,
+                  description: 'A flavorful stir-fry featuring golden tofu and vegetables with a spicy kick.',
+                  ingredients: [
+                      '1 block tofu, cubed',
+                      '2 tbsp soy sauce',
+                      '1 tsp chili flakes',
+                      '2 cups mixed veggies',
+                      '1 tbsp sesame oil'
+                  ],
+                  instructions: [
+                      'Pan-fry tofu until golden.',
+                      'Add veggies, soy sauce, and chili flakes.',
+                      'Stir-fry 5–7 minutes.'
+                  ]
+              },
+              'cucumber-hummus-bites': {
+                  id: 'cucumber-hummus-bites',
+                  title: 'Cucumber and Hummus Bites',
+                  image: 'images/stories/Recipes/All Mealplan/Cucumber and Hummus Bites.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Mediterranean',
+                  difficulty: 'Easy',
+                  time: '5 minutes',
+                  servings: 2,
+                  description: 'Light and refreshing appetizer bites perfect for a healthy snack.',
+                  ingredients: [
+                      '1 cucumber, sliced',
+                      '1/2 cup hummus'
+                  ],
+                  instructions: [
+                      'Slice cucumber into rounds.',
+                      'Top each slice with hummus.'
+                  ]
+              },
+              'mixed-nuts': {
+                  id: 'mixed-nuts',
+                  title: 'Handful of Mixed Nuts',
+                  image: 'images/stories/Recipes/All Mealplan/Handful of Mixed Nuts.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'International',
+                  difficulty: 'Easy',
+                  time: '1 minute',
+                  servings: 1,
+                  description: 'A simple and nutritious snack providing healthy fats and protein.',
+                  ingredients: [
+                      '1/2 cup assorted nuts (almonds, cashews, walnuts, peanuts)'
+                  ],
+                  instructions: [
+                      'Place nuts in a bowl.',
+                      'Eat as a quick snack.'
+                  ]
               }
           };
         this.init();

@@ -148,7 +148,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-pad-thai': {
-                id: 'asian-1',
+                id: 'vegan-pad-thai',
                 title: 'Vegan Pad Thai',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Pad Thai.jpg',
@@ -179,7 +179,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-sushi-rolls': {
-                id: 'asian-2',
+                id: 'vegan-sushi-rolls',
                 title: 'Vegan Sushi Rolls',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Sushi Rolls.jpg',
@@ -206,7 +206,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-miso-soup': {
-                id: 'asian-3',
+                id: 'vegan-miso-soup',
                 title: 'Vegan Miso Soup',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Miso Soup.jpg',
@@ -231,7 +231,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-thai-green-curry': {
-                id: 'asian-4',
+                id: 'vegan-thai-green-curry',
                 title: 'Vegan Thai Green Curry',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Thai Green Curry.jpg',
@@ -258,7 +258,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-bibimbap': {
-                id: 'asian-5',
+                id: 'vegan-bibimbap',
                 title: 'Vegan Bibimbap (Korean)',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Bibimbap (Korean).webp',
@@ -285,7 +285,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-spring-rolls': {
-                id: 'asian-6',
+                id: 'vegan-spring-rolls',
                 title: 'Vegan Spring Rolls (Vietnamese)',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Spring Rolls (Vietnamese).jpg',
@@ -312,7 +312,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-teriyaki-tofu': {
-                id: 'asian-7',
+                id: 'vegan-teriyaki-tofu',
                 title: 'Vegan Teriyaki Tofu',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Teriyaki Tofu.webp',
@@ -339,7 +339,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-pho': {
-                id: 'asian-8',
+                id: 'vegan-pho',
                 title: 'Vegan Pho (Vietnamese Noodle Soup)',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Pho (Vietnamese Noodle Soup).jpg',
@@ -366,7 +366,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-general-tsos-cauliflower': {
-                id: 'asian-9',
+                id: 'vegan-general-tsos-cauliflower',
                 title: 'Vegan General Tso\'s Cauliflower',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/General Tsos Cauliflower.jpg',
@@ -393,7 +393,7 @@ class RecipeDetailManager {
                 ]
             },
             'vegan-ramen': {
-                id: 'asian-10',
+                id: 'vegan-ramen',
                 title: 'Vegan Ramen',
                 category: 'asian',
                 image: './images/stories/Recipes/All Cuisines/Vegan Ramen.jpg',

@@ -3263,6 +3263,38 @@ class RecipeDetailManager {
                       'Place nuts in a bowl.',
                       'Eat as a quick snack.'
                   ]
+              },
+              'quinoa-salad-lemon': {
+                  id: 'quinoa-salad-lemon',
+                  title: 'Quinoa Salad with Lemon Vinaigrette',
+                  image: 'images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Mediterranean',
+                  difficulty: 'Easy',
+                  time: '25 minutes',
+                  servings: 4,
+                  description: 'A fresh and nutritious quinoa salad with crisp vegetables and a zesty lemon vinaigrette.',
+                  ingredients: [
+                      '1 cup quinoa, rinsed',
+                      '2 cups water',
+                      '1/2 cup chopped cucumber',
+                      '1/2 cup cherry tomatoes, halved',
+                      '1/4 cup chopped red onion',
+                      '1/4 cup chopped fresh parsley',
+                      '1/4 cup chopped fresh mint',
+                      '3 tablespoons olive oil',
+                      '2 tablespoons lemon juice',
+                      '1 tablespoon Dijon mustard',
+                      '1 clove garlic, minced',
+                      'Salt and pepper to taste'
+                  ],
+                  instructions: [
+                      'Cook the quinoa: In a medium saucepan, combine the rinsed quinoa and water. Bring to a boil, then reduce heat to low, cover, and simmer for 15 minutes, or until the water is absorbed and the quinoa is cooked. Fluff with a fork and let it cool.',
+                      'Prepare the vinaigrette: In a small bowl, whisk together the olive oil, lemon juice, Dijon mustard, minced garlic, salt, and pepper.',
+                      'Assemble the salad: In a large bowl, combine the cooked quinoa, cucumber, cherry tomatoes, red onion, parsley, and mint.',
+                      'Dress the salad: Pour the lemon vinaigrette over the quinoa mixture and toss gently to combine.',
+                      'Serve: Serve the quinoa salad immediately or chill for later. Garnish with extra herbs if desired.'
+                  ]
               }
           };
         this.init();

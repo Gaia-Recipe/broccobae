@@ -247,7 +247,7 @@ class RecipeDetailManager {
             recipe.instructions.forEach((instruction, index) => {
                 const li = document.createElement('li');
                 li.className = 'instruction-item';
-                li.innerHTML = `<span class="instruction-text">Step ${index + 1}: ${instruction}</span>`;
+                li.innerHTML = `<span class="instruction-text"><strong>Step ${index + 1}:</strong> ${instruction}</span>`;
                 instructionsList.appendChild(li);
             });
         }

@@ -2430,6 +2430,135 @@ class RecipeDetailManager {
                      'Remove foil and bake for another 15-20 minutes, or until the cheese is melted and bubbly.',
                      'Let stand for 10 minutes before serving.'
                  ]
+             },
+
+             'berry-coconut-panna-cotta': {
+                 id: 'berry-coconut-panna-cotta',
+                 title: 'Berry Coconut Panna Cotta',
+                 category: 'dessert',
+                 cuisine: 'international',
+                 difficulty: 'medium',
+                 prepTime: '20 minutes',
+                 cookTime: '15 minutes',
+                 totalTime: '4 hours 35 minutes',
+                 servings: 4,
+                 image: './images/stories/Recipes/All Recipes/Berry Coconut Panna Cotta.webp',
+                 description: 'A creamy, dairy-free panna cotta made with coconut milk and topped with a vibrant berry compote.',
+                 ingredients: [
+                     'For the Panna Cotta:',
+                     '2 cans (13.5 oz each) full-fat coconut milk',
+                     '1/2 cup maple syrup',
+                     '1 teaspoon vanilla extract',
+                     '2 tablespoons agar-agar powder',
+                     'Pinch of salt',
+                     '',
+                     'For the Berry Compote:',
+                     '1 cup mixed berries (fresh or frozen)',
+                     '2 tablespoons maple syrup',
+                     '1 tablespoon lemon juice'
+                 ],
+                 instructions: [
+                     'Prepare the Panna Cotta: In a saucepan, combine coconut milk, maple syrup, vanilla extract, agar-agar powder, and salt. Whisk well to ensure the agar-agar is fully dissolved.',
+                     'Heat the Mixture: Place the saucepan over medium heat and bring to a gentle simmer, stirring constantly. Continue to simmer for 5 minutes, ensuring the mixture thickens slightly.',
+                     'Strain and Pour: Remove from heat and strain the mixture through a fine-mesh sieve into a bowl to remove any lumps. Pour the mixture evenly into serving glasses or ramekins.',
+                     'Chill: Cover the glasses with plastic wrap and refrigerate for at least 4 hours, or until set.',
+                     'Make the Berry Compote: In a small saucepan, combine mixed berries, maple syrup, and lemon juice. Cook over medium heat for 10-15 minutes, stirring occasionally, until the berries soften and the mixture thickens into a compote.',
+                     'Cool: Remove from heat and let the compote cool completely.',
+                     'Assemble and Serve: Once the panna cotta is set, top each serving with a generous spoonful of berry compote. Serve chilled and enjoy!'
+                 ]
+             },
+
+             'mango-sticky-rice': {
+                 id: 'mango-sticky-rice',
+                 title: 'Mango Sticky Rice',
+                 category: 'dessert',
+                 cuisine: 'thai',
+                 difficulty: 'medium',
+                 prepTime: '4 hours 15 minutes',
+                 cookTime: '30 minutes',
+                 totalTime: '4 hours 45 minutes',
+                 servings: 4,
+                 image: './images/stories/Recipes/All Recipes/Mango Sticky Rice.webp',
+                 description: 'A traditional Thai dessert featuring sweet coconut sticky rice paired with fresh mango slices.',
+                 ingredients: [
+                     '1 cup glutinous rice',
+                     '1 1/2 cups water',
+                     '1/2 cup coconut milk',
+                     '1/4 cup sugar',
+                     '1/4 teaspoon salt',
+                     '2 ripe mangoes',
+                     'sesame seeds for garnish'
+                 ],
+                 instructions: [
+                     'Rinse glutinous rice and soak for at least 4 hours.',
+                     'Steam rice until cooked.',
+                     'Heat coconut milk, sugar, and salt until sugar dissolves.',
+                     'Mix cooked rice with coconut mixture.',
+                     'Serve with sliced mangoes and sesame seeds.'
+                 ]
+             },
+
+             'banana-nice-cream': {
+                 id: 'banana-nice-cream',
+                 title: 'Banana Nice Cream',
+                 category: 'dessert',
+                 cuisine: 'international',
+                 difficulty: 'easy',
+                 prepTime: '5 minutes',
+                 cookTime: '0 minutes',
+                 totalTime: '5 minutes',
+                 servings: 2,
+                 image: './images/stories/Recipes/All Recipes/Banana Nice Cream.png',
+                 description: 'A healthy, dairy-free ice cream alternative made with frozen bananas and plant-based milk.',
+                 ingredients: [
+                     '3 ripe bananas, sliced and frozen',
+                     '1/4 cup plant-based milk (almond, soy, or oat)',
+                     'Optional toppings: fresh berries, granola, chocolate chips, nuts'
+                 ],
+                 instructions: [
+                     'Place the frozen banana slices in a high-speed blender or food processor.',
+                     'Add the plant-based milk.',
+                     'Blend until smooth and creamy, scraping down the sides as needed.',
+                     'If the mixture is too thick, add a tablespoon of milk at a time until desired consistency is reached.',
+                     'Serve immediately or transfer to a container and freeze for later.',
+                     'Top with your favorite toppings and enjoy!'
+                 ]
+             },
+
+             'vegan-chocolate-chip-cookies': {
+                 id: 'vegan-chocolate-chip-cookies',
+                 title: 'Vegan Chocolate Chip Cookies',
+                 category: 'dessert',
+                 cuisine: 'american',
+                 difficulty: 'easy',
+                 prepTime: '15 minutes',
+                 cookTime: '12 minutes',
+                 totalTime: '27 minutes',
+                 servings: 24,
+                 image: './images/stories/Recipes/All Recipes/Vegan Chocolate Chip Cookies.webp',
+                 description: 'Classic chocolate chip cookies made vegan with plant-based butter and applesauce.',
+                 ingredients: [
+                     '1 cup all-purpose flour',
+                     '1/2 teaspoon baking soda',
+                     '1/4 teaspoon salt',
+                     '1/2 cup vegan butter, softened',
+                     '1/2 cup granulated sugar',
+                     '1/4 cup brown sugar',
+                     '1 teaspoon vanilla extract',
+                     '1/4 cup unsweetened applesauce',
+                     '1 cup vegan chocolate chips'
+                 ],
+                 instructions: [
+                     'Preheat oven to 350°F (175°C). Line a baking sheet with parchment paper.',
+                     'In a medium bowl, whisk together flour, baking soda, and salt.',
+                     'In a large bowl, cream together vegan butter, granulated sugar, and brown sugar until light and fluffy.',
+                     'Stir in vanilla extract and applesauce.',
+                     'Gradually add dry ingredients to wet ingredients, mixing until just combined.',
+                     'Fold in vegan chocolate chips.',
+                     'Drop rounded tablespoons of dough onto the prepared baking sheet.',
+                     'Bake for 10-12 minutes, or until edges are golden brown.',
+                     'Let cookies cool on the baking sheet for a few minutes before transferring to a wire rack to cool completely.'
+                 ]
              }
          };
         this.init();

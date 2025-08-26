@@ -41,16 +41,12 @@
 
     <!-- Main Content -->
     <main>
-        <!-- Breadcrumb -->
-        <section class="breadcrumb">
-            <div class="container">
-                <nav class="breadcrumb-nav">
-                    <a href="src/pages/recipes.html">Recipes</a>
-                    <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-                    <span class="breadcrumb-current" id="breadcrumb-category">Breakfast</span>
-                </nav>
-            </div>
-        </section>
+        <!-- Back Arrow -->
+        <div class="back-arrow-container">
+            <a href="src/pages/recipes.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
 
         <!-- Recipe Header -->
         <section class="recipe-header">
@@ -60,25 +56,31 @@
                     <h1 class="recipe-title" id="recipe-title">Avocado Toast with Everything Bagel Seasoning</h1>
                     <p class="recipe-description" id="recipe-description">A simple and nutritious breakfast featuring creamy avocado on toasted whole-grain bread, topped with everything bagel seasoning for extra flavor.</p>
                     
-                    <div class="recipe-image-container">
-                        <img src="./images/stories/Breakfast1.png" alt="Avocado Toast with Everything Bagel Seasoning" class="recipe-main-image" id="recipe-image">
-                        <button class="back-btn" onclick="history.back()" title="Go back">
-                            <i class="fas fa-arrow-left"></i>
-                        </button>
-                    </div>
-                    
-                    <div class="recipe-meta-box">
-                        <div class="meta-item">
-                            <i class="fas fa-clock"></i>
-                            <span id="prep-time">10 minutes</span>
+                    <!-- Recipe Content Container -->
+                    <div class="recipe-content-container">
+                        <!-- Recipe Image -->
+                        <div class="recipe-image-container">
+                            <img src="./images/stories/Breakfast1.png" alt="Avocado Toast with Everything Bagel Seasoning" class="recipe-image" id="recipe-image">
                         </div>
-                        <div class="meta-item">
-                            <i class="fas fa-utensils"></i>
-                            <span id="servings">1 serving</span>
-                        </div>
-                        <div class="meta-item">
-                            <i class="fas fa-signal"></i>
-                            <span id="difficulty">Easy</span>
+
+                        <!-- Recipe Meta -->
+                        <div class="recipe-meta-horizontal">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span id="prep-time">10 minutes</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-utensils"></i>
+                                <span id="servings">1 serving</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-signal"></i>
+                                <span id="difficulty">Easy</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-fire"></i>
+                                <span id="recipe-calories">250 kcal</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -92,67 +94,67 @@
                     <div class="recipe-main-content">
                         <div class="ingredients-section">
                             <h2 class="section-title ingredients-title">
+                                <i class="fas fa-list-ul"></i>
                                 Ingredients
                             </h2>
-                            <ul class="ingredients-list" id="ingredients-list">
-                                <li class="ingredient-item">
-                                    <span class="ingredient-amount">1 slice</span>
-                                    <span class="ingredient-name">whole-grain bread</span>
-                                </li>
-                                <li class="ingredient-item">
-                                    <span class="ingredient-amount">1/2</span>
-                                    <span class="ingredient-name">ripe avocado</span>
-                                </li>
-                                <li class="ingredient-item">
-                                    <span class="ingredient-amount">1/4 teaspoon</span>
-                                    <span class="ingredient-name">everything bagel seasoning</span>
-                                </li>
-                                <li class="ingredient-item optional">
-                                    <span class="ingredient-amount">Optional:</span>
-                                    <span class="ingredient-name">red pepper flakes, microgreens</span>
-                                </li>
-                            </ul>
+                            <div class="ingredients-container">
+                                <ul class="ingredients-list" id="ingredients-list">
+                                    <li class="ingredient-item">
+                                        <span class="ingredient-text">1 slice of whole-grain bread</span>
+                                    </li>
+                                    <li class="ingredient-item">
+                                        <span class="ingredient-text">1/2 ripe avocado</span>
+                                    </li>
+                                    <li class="ingredient-item">
+                                        <span class="ingredient-text">1/4 teaspoon everything bagel seasoning</span>
+                                    </li>
+                                    <li class="ingredient-item">
+                                        <span class="ingredient-text">Optional: red pepper flakes, microgreens</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
                         <div class="instructions-section">
                             <h2 class="section-title instructions-title">
+                                <i class="fas fa-clipboard-list"></i>
                                 Instructions
                             </h2>
-                            <ol class="instructions-list" id="instructions-list">
-                                <li class="instruction-step">
-                                    <div class="step-label">Step 1</div>
-                                    <div class="step-content">Toast the bread to your desired level of crispiness.</div>
-                                </li>
-                                <li class="instruction-step">
-                                    <div class="step-label">Step 2</div>
-                                    <div class="step-content">While the bread is toasting, mash the avocado in a small bowl.</div>
-                                </li>
-                                <li class="instruction-step">
-                                    <div class="step-label">Step 3</div>
-                                    <div class="step-content">Spread the mashed avocado evenly over the toasted bread.</div>
-                                </li>
-                                <li class="instruction-step">
-                                    <div class="step-label">Step 4</div>
-                                    <div class="step-content">Sprinkle with everything bagel seasoning.</div>
-                                </li>
-                                <li class="instruction-step">
-                                    <div class="step-label">Step 5</div>
-                                    <div class="step-content">Optional: Garnish with red pepper flakes and microgreens.</div>
-                                </li>
-                                <li class="instruction-step">
-                                    <div class="step-label">Step 6</div>
-                                    <div class="step-content">Serve immediately and enjoy!</div>
-                                </li>
-                            </ol>
+                            <div class="instructions-container">
+                                <ul class="instructions-list" id="instructions-list">
+                                    <li class="instruction-item">
+                                        <span class="instruction-text">Step 1: Toast the bread to your desired level of crispiness.</span>
+                                    </li>
+                                    <li class="instruction-item">
+                                        <span class="instruction-text">Step 2: While the bread is toasting, mash the avocado in a small bowl.</span>
+                                    </li>
+                                    <li class="instruction-item">
+                                        <span class="instruction-text">Step 3: Spread the mashed avocado evenly over the toasted bread.</span>
+                                    </li>
+                                    <li class="instruction-item">
+                                        <span class="instruction-text">Step 4: Sprinkle with everything bagel seasoning.</span>
+                                    </li>
+                                    <li class="instruction-item">
+                                        <span class="instruction-text">Step 5: Optional: Garnish with red pepper flakes and microgreens.</span>
+                                    </li>
+                                    <li class="instruction-item">
+                                        <span class="instruction-text">Step 6: Serve immediately and enjoy!</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+
+                        <!-- Plant-Based Meal Kits Advertisement -->
+                        <section class="meal-kit-advertisement">
+                            <div class="ad-banner">
+                                <h3>Plant-Based Meal Kits Delivered Weekly</h3>
+                                <p>Fresh ingredients and chef-designed recipes delivered to your door</p>
+                                <button class="ad-cta-btn">Order Now</button>
+                            </div>
+                        </section>
                     </div>
                     
-                    <div class="advertisement-space">
-                        <!-- Advertisement placeholder -->
-                        <div class="ad-placeholder">
-                            <p>Advertisement</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

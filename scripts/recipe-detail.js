@@ -11,6 +11,8 @@ class RecipeDetailManager {
                 prepTime: '10 minutes',
                 servings: '1 serving',
                 difficulty: 'Easy',
+                calories: '280 kcal',
+                description: 'A simple and nutritious breakfast featuring creamy avocado on toasted whole-grain bread, topped with everything bagel seasoning for extra flavor and crunch.',
                 ingredients: [
                     '1 slice of whole-grain bread',
                     '1/2 ripe avocado',
@@ -34,6 +36,8 @@ class RecipeDetailManager {
                 prepTime: '25 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
+                calories: '320 kcal',
+                description: 'A refreshing and protein-packed quinoa salad loaded with fresh vegetables and herbs, dressed with a zesty lemon vinaigrette that brings all the flavors together.',
                 ingredients: [
                     '1 cup quinoa, rinsed',
                     '2 cups water',
@@ -65,6 +69,8 @@ class RecipeDetailManager {
                 prepTime: '30 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',
+                calories: '385 kcal',
+                description: 'Hearty and flavorful plant-based burgers made with black beans, quinoa, and aromatic spices that deliver a satisfying kick of heat in every bite.',
                 ingredients: [
                     '1 can (15 ounces) black beans, rinsed and drained',
                     '1/2 cup cooked quinoa',
@@ -97,6 +103,8 @@ class RecipeDetailManager {
                 prepTime: '15 minutes',
                 servings: '4 servings',
                 difficulty: 'Easy',
+                calories: '195 kcal',
+                description: 'A rich and creamy chocolate dessert that secretly uses avocado for an incredibly smooth texture, naturally sweetened and completely guilt-free.',
                 ingredients: [
                     '1 ripe avocado',
                     '1/2 cup unsweetened cocoa powder',
@@ -171,12 +179,6 @@ class RecipeDetailManager {
     }
 
     displayRecipe(recipe) {
-        // Update breadcrumb
-        const breadcrumbCategory = document.getElementById('breadcrumb-category');
-        if (breadcrumbCategory) {
-            breadcrumbCategory.textContent = recipe.category.charAt(0).toUpperCase() + recipe.category.slice(1);
-        }
-
         // Update recipe header
         const recipeImage = document.getElementById('recipe-image');
         if (recipeImage) {
@@ -186,12 +188,17 @@ class RecipeDetailManager {
 
         const recipeCategory = document.getElementById('recipe-category');
         if (recipeCategory) {
-            recipeCategory.textContent = recipe.category.charAt(0).toUpperCase() + recipe.category.slice(1);
+            recipeCategory.textContent = `RECIPE/${recipe.category.toUpperCase()}`;
         }
 
         const recipeTitle = document.getElementById('recipe-title');
         if (recipeTitle) {
             recipeTitle.textContent = recipe.title;
+        }
+
+        const recipeDescription = document.getElementById('recipe-description');
+        if (recipeDescription) {
+            recipeDescription.textContent = recipe.description || 'A delicious and nutritious plant-based recipe.';
         }
 
         const prepTime = document.getElementById('prep-time');
@@ -209,6 +216,11 @@ class RecipeDetailManager {
             difficulty.textContent = recipe.difficulty;
         }
 
+        const calories = document.getElementById('recipe-calories');
+        if (calories) {
+            calories.textContent = recipe.calories || '250 kcal';
+        }
+
         // Update ingredients list
         const ingredientsList = document.getElementById('ingredients-list');
         if (ingredientsList) {
@@ -216,29 +228,7 @@ class RecipeDetailManager {
             recipe.ingredients.forEach(ingredient => {
                 const li = document.createElement('li');
                 li.className = 'ingredient-item';
-                
-                // Check if ingredient contains amount and name
-                const parts = ingredient.split(' ');
-                if (parts.length > 1 && !ingredient.startsWith('Optional:') && !ingredient.startsWith('For the')) {
-                    // Try to separate amount from ingredient name
-                    const amountMatch = ingredient.match(/^([\d\/\s]+(?:cup|cups|tablespoon|tablespoons|teaspoon|teaspoons|slice|slices|can|ounces|clove|cloves)?\s*)/i);
-                    if (amountMatch) {
-                        const amount = amountMatch[1].trim();
-                        const name = ingredient.substring(amountMatch[0].length).trim();
-                        li.innerHTML = `
-                            <span class="ingredient-amount">${amount}</span>
-                            <span class="ingredient-name">${name}</span>
-                        `;
-                    } else {
-                        li.innerHTML = `<span class="ingredient-name">${ingredient}</span>`;
-                    }
-                } else {
-                    li.innerHTML = `<span class="ingredient-name">${ingredient}</span>`;
-                    if (ingredient.startsWith('Optional:')) {
-                        li.classList.add('optional');
-                    }
-                }
-                
+                li.innerHTML = `<span class="ingredient-text">${ingredient}</span>`;
                 ingredientsList.appendChild(li);
             });
         }
@@ -249,11 +239,8 @@ class RecipeDetailManager {
             instructionsList.innerHTML = '';
             recipe.instructions.forEach((instruction, index) => {
                 const li = document.createElement('li');
-                li.className = 'instruction-step';
-                li.innerHTML = `
-                    <div class="step-number">${index + 1}</div>
-                    <div class="step-content">${instruction}</div>
-                `;
+                li.className = 'instruction-item';
+                li.innerHTML = `<span class="instruction-text">Step ${index + 1}: ${instruction}</span>`;
                 instructionsList.appendChild(li);
             });
         }

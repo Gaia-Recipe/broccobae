@@ -222,6 +222,16 @@
     font-size: 1.5rem;
 }
 
+.back-arrow-icon {
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+.back-arrow-icon:hover {
+    color: #09713D;
+}
+
 .recipe-info {
     padding: 1rem 0;
 }

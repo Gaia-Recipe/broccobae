@@ -444,8 +444,17 @@ class RecipeDetailManager {
 
     initBackNavigation() {
         const backBtn = document.querySelector('.back-btn');
+        const backArrowIcon = document.querySelector('.back-arrow-icon');
+        
         if (backBtn) {
             backBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.handleBackNavigation();
+            });
+        }
+        
+        if (backArrowIcon) {
+            backArrowIcon.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.handleBackNavigation();
             });

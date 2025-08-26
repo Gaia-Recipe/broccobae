@@ -1319,8 +1319,353 @@ class RecipeDetailManager {
                     'Make filling: Mix boiled potatoes, chickpeas, chaat masala, and salt.',
                     'Assemble: Crack top of puri, stuff with filling, pour spiced water, and eat immediately.'
                 ]
-            }
-        };
+            },
+            'vegan-tacos-de-nopales': {
+                id: 'vegan-tacos-de-nopales',
+                title: 'Vegan Tacos de Nopales (Cactus Tacos)',
+                category: 'mexican',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Tacos de Nopales.webp',
+                prepTime: '20 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '180 kcal',
+                description: 'Traditional Mexican tacos featuring tender cactus paddles with fresh vegetables.',
+                ingredients: [
+                    '2 cups nopales (cactus paddles), cleaned and sliced',
+                    '1 onion, sliced',
+                    '2 tomatoes, diced',
+                    '2 cloves garlic, minced',
+                    'Corn tortillas',
+                    'Cilantro and lime to garnish'
+                ],
+                instructions: [
+                    'Boil nopales until tender, drain, and rinse.',
+                    'Sauté onion, garlic, and tomato, then add nopales.',
+                    'Cook for 5 minutes, season with salt.',
+                    'Serve in tortillas with cilantro and lime.'
+                ]
+            },
+            'vegan-elote': {
+                id: 'vegan-elote',
+                title: 'Vegan Elote (Mexican Street Corn)',
+                category: 'mexican',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Elote.webp',
+                prepTime: '15 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '220 kcal',
+                description: 'Classic Mexican street corn with vegan mayo and spices.',
+                ingredients: [
+                    '4 corn cobs',
+                    '3 tbsp vegan mayo',
+                    '1 tbsp lime juice',
+                    '1 tsp chili powder',
+                    '2 tbsp vegan parmesan or nutritional yeast'
+                ],
+                instructions: [
+                    'Grill or boil corn until tender.',
+                    'Mix vegan mayo with lime juice.',
+                    'Brush corn with mixture, sprinkle chili powder and vegan cheese.'
+                ]
+            },
+            'vegan-chiles-rellenos': {
+                id: 'vegan-chiles-rellenos',
+                title: 'Vegan Chiles Rellenos',
+                category: 'mexican',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Chiles Rellenos.webp',
+                prepTime: '45 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '280 kcal',
+                description: 'Roasted poblano peppers stuffed with beans, rice, and vegetables.',
+                ingredients: [
+                    '4 poblano peppers, roasted and peeled',
+                    '1 cup cooked black beans',
+                    '1 cup rice',
+                    '½ cup corn',
+                    '1 cup tomato sauce',
+                    '2 cloves garlic'
+                ],
+                instructions: [
+                    'Slice and stuff poblanos with beans, rice, and corn.',
+                    'Place in a baking dish, cover with tomato sauce.',
+                    'Bake for 20 minutes at 180°C (350°F).'
+                ]
+             },
+             'vegan-pozole-rojo': {
+                 id: 'vegan-pozole-rojo',
+                 title: 'Vegan Pozole Rojo',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Pozole Rojo.webp',
+                 prepTime: '40 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Medium',
+                 calories: '250 kcal',
+                 description: 'Traditional Mexican soup with hominy and vegetables in a rich red chili broth.',
+                 ingredients: [
+                     '2 cups hominy (cooked)',
+                     '3 dried guajillo peppers',
+                     '1 onion',
+                     '3 cloves garlic',
+                     '1 zucchini, chopped',
+                     '1 can chickpeas'
+                 ],
+                 instructions: [
+                     'Blend guajillo peppers, garlic, and onion into a sauce.',
+                     'Add to pot with hominy, chickpeas, and zucchini.',
+                     'Simmer 20 minutes, serve with cabbage, lime, and radish.'
+                 ]
+             },
+             'vegan-tostadas': {
+                 id: 'vegan-tostadas',
+                 title: 'Vegan Tostadas',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Tostadas.webp',
+                 prepTime: '15 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Easy',
+                 calories: '200 kcal',
+                 description: 'Crispy corn tostadas topped with refried beans and fresh vegetables.',
+                 ingredients: [
+                     '6 corn tostadas',
+                     '1 cup refried black beans (vegan)',
+                     '1 cup shredded lettuce',
+                     '½ avocado',
+                     'Salsa and pickled onions'
+                 ],
+                 instructions: [
+                     'Spread beans over tostadas.',
+                     'Top with lettuce, avocado, and salsa.'
+                 ]
+             },
+             'vegan-tamales': {
+                 id: 'vegan-tamales',
+                 title: 'Vegan Tamales',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Tamales.webp',
+                 prepTime: '90 minutes',
+                 servings: '8 servings',
+                 difficulty: 'Hard',
+                 calories: '320 kcal',
+                 description: 'Traditional steamed corn masa filled with savory vegetables.',
+                 ingredients: [
+                     '2 cups masa harina',
+                     '½ cup vegetable oil',
+                     '1 tsp baking powder',
+                     '1 ½ cups vegetable broth',
+                     'Filling: sautéed mushrooms, zucchini, and salsa'
+                 ],
+                 instructions: [
+                     'Mix masa with oil, broth, and baking powder.',
+                     'Spread onto corn husks, fill with veggies.',
+                     'Fold and steam 1 hour.'
+                 ]
+             },
+             'vegan-sopa-de-tortilla': {
+                 id: 'vegan-sopa-de-tortilla',
+                 title: 'Vegan Sopa de Tortilla (Tortilla Soup)',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Sopa de Tortilla.webp',
+                 prepTime: '30 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 calories: '180 kcal',
+                 description: 'Hearty Mexican soup with crispy tortilla strips and fresh vegetables.',
+                 ingredients: [
+                     '6 corn tortillas, cut into strips',
+                     '1 onion, diced',
+                     '2 tomatoes, blended',
+                     '1 chili pepper',
+                     '4 cups vegetable broth',
+                     'Avocado and cilantro'
+                 ],
+                 instructions: [
+                     'Fry tortilla strips until crispy.',
+                     'Cook onion, tomato, and chili, add broth.',
+                     'Simmer, serve with tortilla strips and avocado.'
+                 ]
+             },
+             'vegan-quesadillas-cashew-cheese': {
+                 id: 'vegan-quesadillas-cashew-cheese',
+                 title: 'Vegan Quesadillas with Cashew Cheese',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Quesadillas.webp',
+                 prepTime: '25 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 calories: '280 kcal',
+                 description: 'Crispy quesadillas filled with homemade cashew cheese and sautéed vegetables.',
+                 ingredients: [
+                     'Corn tortillas',
+                     'Cashew cheese (blended soaked cashews, lemon juice, garlic, nutritional yeast)',
+                     'Mushrooms and spinach sautéed'
+                 ],
+                 instructions: [
+                     'Spread cashew cheese on tortillas.',
+                     'Add mushrooms and spinach.',
+                     'Cook until crispy.'
+                 ]
+             },
+             'vegan-enchiladas-verdes': {
+                 id: 'vegan-enchiladas-verdes',
+                 title: 'Vegan Enchiladas Verdes',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Enchiladas Verdes.webp',
+                 prepTime: '35 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Medium',
+                 calories: '260 kcal',
+                 description: 'Corn tortillas filled with beans and corn, covered in green salsa.',
+                 ingredients: [
+                     '8 corn tortillas',
+                     '2 cups salsa verde',
+                     '1 cup black beans',
+                     '½ cup corn',
+                     'Cilantro to garnish'
+                 ],
+                 instructions: [
+                     'Dip tortillas in salsa verde.',
+                     'Fill with beans and corn, roll up.',
+                     'Place in baking dish, cover with more salsa verde.',
+                     'Bake 20 minutes.'
+                 ]
+             },
+             'vegan-gorditas': {
+                 id: 'vegan-gorditas',
+                 title: 'Vegan Gorditas',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Gorditas.webp',
+                 prepTime: '30 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Medium',
+                 calories: '240 kcal',
+                 description: 'Thick corn masa cakes split and filled with refried beans and salsa.',
+                 ingredients: [
+                     '2 cups masa harina',
+                     '1 ½ cups warm water',
+                     '1 cup refried beans',
+                     'Salsa and avocado'
+                 ],
+                 instructions: [
+                     'Make dough with masa and water, shape into patties.',
+                     'Cook on skillet, split open, fill with beans and salsa.'
+                 ]
+             },
+             'vegan-flautas': {
+                 id: 'vegan-flautas',
+                 title: 'Vegan Flautas',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Flautas.webp',
+                 prepTime: '25 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Easy',
+                 calories: '220 kcal',
+                 description: 'Crispy rolled tortillas filled with seasoned mashed potatoes.',
+                 ingredients: [
+                     '6 corn tortillas',
+                     '1 cup mashed potatoes',
+                     'Salsa and guacamole'
+                 ],
+                 instructions: [
+                     'Fill tortillas with mashed potatoes.',
+                     'Roll tightly, fry until golden.',
+                     'Serve with salsa and guacamole.'
+                 ]
+             },
+             'vegan-mexican-rice': {
+                 id: 'vegan-mexican-rice',
+                 title: 'Vegan Mexican Rice',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Mexican Rice.webp',
+                 prepTime: '25 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '190 kcal',
+                 description: 'Flavorful Mexican-style rice with tomatoes and spices.',
+                 ingredients: [
+                     '1 cup long-grain rice',
+                     '1 onion',
+                     '1 tomato, blended',
+                     '2 cups vegetable broth',
+                     '1 tsp cumin'
+                 ],
+                 instructions: [
+                     'Sauté rice in oil until golden.',
+                     'Add tomato, onion, cumin, and broth.',
+                     'Simmer until rice is fluffy.'
+                 ]
+             },
+             'vegan-churros': {
+                 id: 'vegan-churros',
+                 title: 'Vegan Churros',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Churros.webp',
+                 prepTime: '30 minutes',
+                 servings: '6 servings',
+                 difficulty: 'Medium',
+                 calories: '160 kcal',
+                 description: 'Crispy fried dough pastries rolled in cinnamon sugar.',
+                 ingredients: [
+                     '1 cup flour',
+                     '1 cup water',
+                     '2 tbsp sugar',
+                     '1 tbsp coconut oil',
+                     'Cinnamon + sugar mix for coating'
+                 ],
+                 instructions: [
+                     'Boil water, sugar, and oil. Add flour to make dough.',
+                     'Pipe strips into hot oil, fry until golden.',
+                     'Roll in cinnamon sugar.'
+                 ]
+             },
+             'vegan-esquites': {
+                 id: 'vegan-esquites',
+                 title: 'Vegan Esquites (Corn in a Cup)',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Esquites.webp',
+                 prepTime: '15 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Easy',
+                 calories: '140 kcal',
+                 description: 'Mexican street corn served in a cup with vegan mayo and spices.',
+                 ingredients: [
+                     '2 cups corn kernels',
+                     '2 tbsp vegan mayo',
+                     '1 tbsp lime juice',
+                     '1 tsp chili powder',
+                     'Vegan cheese'
+                 ],
+                 instructions: [
+                     'Cook corn in salted water.',
+                     'Mix with vegan mayo, lime, and chili powder.',
+                     'Top with vegan cheese.'
+                 ]
+             },
+             'vegan-mole-poblano-tofu': {
+                 id: 'vegan-mole-poblano-tofu',
+                 title: 'Vegan Mole Poblano with Tofu',
+                 category: 'mexican',
+                 image: '/images/stories/Recipes/All Cuisines/Vegan Mole Poblano.webp',
+                 prepTime: '45 minutes',
+                 servings: '4 servings',
+                 difficulty: 'Hard',
+                 calories: '320 kcal',
+                 description: 'Rich and complex Mexican sauce with chocolate and chilies served over tofu.',
+                 ingredients: [
+                     '2 dried ancho chilies',
+                     '2 dried pasilla chilies',
+                     '1 onion, garlic',
+                     '2 tbsp cocoa powder',
+                     '1 tbsp peanut butter',
+                     '1 block tofu, cubed'
+                 ],
+                 instructions: [
+                     'Blend chilies, onion, garlic, cocoa, and peanut butter into sauce.',
+                     'Simmer sauce 15 minutes.',
+                     'Add tofu, cook until coated.'
+                 ]
+             }
+         };
         this.init();
     }
 

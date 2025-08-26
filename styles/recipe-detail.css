@@ -498,8 +498,8 @@
     border: 2px solid #f1f3f4;
     margin-bottom: 2rem;
     position: relative;
-    max-height: 400px;
-    overflow: hidden;
+    max-height: 600px;
+    overflow: auto;
     width: 100%;
     max-width: 100%;
     z-index: 5;

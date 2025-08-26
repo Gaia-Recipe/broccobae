@@ -420,6 +420,159 @@ class RecipeDetailManager {
                     'Place noodles in bowls and pour hot broth over.',
                     'Garnish with nori strips and chopped spring onions.'
                 ]
+            },
+            'vegan-adobo': {
+                id: 'vegan-adobo',
+                title: 'Vegan Adobo (Tofu & Mushroom Adobo)',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Adobo (Tofu & Mushroom Adobo).avif',
+                prepTime: '30 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '280 kcal',
+                description: 'Filipino-style adobo with tofu and mushrooms in savory soy sauce and vinegar.',
+                ingredients: [
+                    '1 block tofu (cubed & fried)',
+                    '1 cup mushrooms (sliced)',
+                    '4 cloves garlic (minced)',
+                    '1 onion (chopped)',
+                    '1/3 cup soy sauce',
+                    '1/4 cup cane vinegar',
+                    '1 bay leaf',
+                    '1/2 tsp black pepper',
+                    '1 cup water',
+                    '1 tbsp oil'
+                ],
+                instructions: [
+                    'Sauté garlic and onion in oil.',
+                    'Add tofu and mushrooms, cook until slightly browned.',
+                    'Pour soy sauce, vinegar, water, bay leaf, pepper.',
+                    'Simmer 10–15 minutes until sauce reduces.',
+                    'Serve with steamed rice.'
+                ]
+            },
+            'vegan-sinigang': {
+                id: 'vegan-sinigang',
+                title: 'Vegan Sinigang (Tamarind Soup with Vegetables)',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Sinigang (Tamarind Soup with Vegetables).webp',
+                prepTime: '40 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '150 kcal',
+                description: 'Sour and savory Filipino soup with tamarind and fresh vegetables.',
+                ingredients: [
+                    '6 cups water',
+                    '1 packet tamarind soup base (or fresh tamarind)',
+                    '1 tomato (quartered)',
+                    '1 onion (quartered)',
+                    '1 cup kangkong (water spinach)',
+                    '1 cup eggplant (sliced)',
+                    '1 cup sitaw (string beans)',
+                    '1 radish (sliced)',
+                    '1 okra (sliced)',
+                    'Salt & pepper to taste'
+                ],
+                instructions: [
+                    'Boil water with tomato and onion.',
+                    'Add tamarind mix (or tamarind pulp).',
+                    'Add radish, eggplant, okra, and sitaw. Cook until tender.',
+                    'Season with salt and pepper.',
+                    'Add kangkong last, simmer 1–2 minutes.',
+                    'Serve hot with rice.'
+                ]
+            },
+            'vegan-kare-kare': {
+                id: 'vegan-kare-kare',
+                title: 'Vegan Kare-Kare (Peanut Stew)',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Kare-Kare (Peanut Stew).avif',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '320 kcal',
+                description: 'Rich Filipino peanut stew with vegetables in creamy peanut sauce.',
+                ingredients: [
+                    '1 eggplant (sliced)',
+                    '1 banana heart (sliced) or cabbage',
+                    '1 cup string beans (cut)',
+                    '1 cup pechay (bok choy)',
+                    '1/2 cup peanut butter (unsweetened)',
+                    '2 tbsp annatto powder (for color)',
+                    '1 onion (chopped)',
+                    '3 cloves garlic (minced)',
+                    '4 cups vegetable broth',
+                    '1 tbsp oil',
+                    'Vegan bagoong (made from mushrooms or soy, optional)'
+                ],
+                instructions: [
+                    'Sauté garlic and onion in oil.',
+                    'Add vegetables (except pechay) and sauté briefly.',
+                    'Stir peanut butter into broth until smooth. Add annatto for color.',
+                    'Add vegetables, simmer until tender.',
+                    'Add pechay last and cook 2 minutes.',
+                    'Serve with vegan bagoong.'
+                ]
+            },
+            'vegan-laing': {
+                id: 'vegan-laing',
+                title: 'Vegan Laing (Taro Leaves in Coconut Milk)',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Laing (Taro Leaves in Coconut Milk).jpg',
+                prepTime: '35 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                calories: '250 kcal',
+                description: 'Traditional Filipino dish with taro leaves cooked in rich coconut milk.',
+                ingredients: [
+                    '2 cups dried taro leaves',
+                    '2 cups coconut milk',
+                    '1 cup coconut cream',
+                    '1 onion (chopped)',
+                    '3 cloves garlic (minced)',
+                    '1 thumb ginger (sliced)',
+                    '2–3 chili peppers (optional)',
+                    'Salt to taste'
+                ],
+                instructions: [
+                    'In a pot, sauté garlic, onion, ginger.',
+                    'Add coconut milk and bring to simmer.',
+                    'Add taro leaves without stirring (to prevent itchiness).',
+                    'Simmer gently until leaves soften.',
+                    'Add coconut cream, chili, and salt. Cook until creamy.',
+                    'Serve with rice.'
+                ]
+            },
+            'vegan-pancit-bihon': {
+                id: 'vegan-pancit-bihon',
+                title: 'Vegan Pancit Bihon (Rice Noodle Stir-Fry)',
+                category: 'asian',
+                image: './images/stories/Recipes/All Cuisines/Vegan Pancit Bihon (Rice Noodle Stir-Fry).jpg',
+                prepTime: '25 minutes',
+                servings: '4 servings',
+                difficulty: 'Easy',
+                calories: '300 kcal',
+                description: 'Filipino rice noodle stir-fry with vegetables and savory soy sauce.',
+                ingredients: [
+                    '200g bihon (rice noodles)',
+                    '1 carrot (julienned)',
+                    '1 cabbage (shredded)',
+                    '1/2 cup mushrooms (sliced)',
+                    '1/2 cup snow peas',
+                    '1 onion (sliced)',
+                    '3 cloves garlic (minced)',
+                    '3 tbsp soy sauce',
+                    '2 tbsp oil',
+                    'Calamansi or lemon for garnish'
+                ],
+                instructions: [
+                    'Soak noodles in warm water until soft. Drain.',
+                    'Sauté garlic and onion in oil.',
+                    'Add vegetables and mushrooms, stir-fry.',
+                    'Add soy sauce and a little water.',
+                    'Toss in noodles until fully coated.',
+                    'Garnish with calamansi.'
+                ]
             }
         };
         this.init();

@@ -2861,6 +2861,186 @@ class RecipeDetailManager {
                       'Whisk olive oil, lemon juice, salt, and pepper.',
                       'Drizzle dressing and serve fresh.'
                   ]
+              },
+              'grilled-eggplant-steaks': {
+                  id: 'grilled-eggplant-steaks',
+                  title: 'Grilled Eggplant Steaks with Roasted Vegetables',
+                  image: 'images/stories/Recipes/All Mealplan/Grilled Eggplant Steaks with Roasted Vegetables.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Mediterranean',
+                  difficulty: 'Medium',
+                  time: '30 minutes',
+                  servings: 4,
+                  description: 'Hearty grilled eggplant steaks served with colorful roasted vegetables for a satisfying plant-based meal.',
+                  ingredients: [
+                      '2 eggplants, sliced into thick rounds',
+                      '2 tbsp olive oil',
+                      '1 tsp garlic powder',
+                      'Salt & pepper',
+                      '2 cups mixed veggies (zucchini, carrots, bell peppers)'
+                  ],
+                  instructions: [
+                      'Preheat grill and brush eggplant slices with oil and seasoning.',
+                      'Grill 3–4 minutes per side.',
+                      'Roast veggies at 200°C (400°F) for 20 minutes.',
+                      'Serve eggplant with roasted vegetables.'
+                  ]
+              },
+              'celery-almond-butter': {
+                  id: 'celery-almond-butter',
+                  title: 'Celery Sticks with Almond Butter',
+                  image: 'images/stories/Recipes/All Mealplan/Celery Sticks with Almond Butter.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'American',
+                  difficulty: 'Easy',
+                  time: '5 minutes',
+                  servings: 1,
+                  description: 'A simple and nutritious snack combining crunchy celery with creamy almond butter.',
+                  ingredients: [
+                      '4 celery stalks',
+                      '3 tbsp almond butter'
+                  ],
+                  instructions: [
+                      'Wash and cut celery into sticks.',
+                      'Spread almond butter inside celery grooves.',
+                      'Enjoy as a snack.'
+                  ]
+              },
+              'coconut-cream-raspberries': {
+                  id: 'coconut-cream-raspberries',
+                  title: 'Coconut Cream with Raspberries',
+                  image: 'images/stories/Recipes/All Mealplan/Coconut Cream with Raspberries 15.14.10.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Tropical',
+                  difficulty: 'Easy',
+                  time: '10 minutes',
+                  servings: 2,
+                  description: 'A light and refreshing dessert featuring rich coconut cream topped with fresh raspberries.',
+                  ingredients: [
+                      '1/2 cup coconut cream',
+                      '1 tbsp maple syrup',
+                      '1/2 cup fresh raspberries'
+                  ],
+                  instructions: [
+                      'Whisk coconut cream with maple syrup.',
+                      'Spoon into a bowl and top with raspberries.'
+                  ]
+              },
+              'gluten-free-buckwheat-pancakes': {
+                  id: 'gluten-free-buckwheat-pancakes',
+                  title: 'Gluten-Free Buckwheat Pancakes',
+                  image: 'images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'American',
+                  difficulty: 'Medium',
+                  time: '20 minutes',
+                  servings: 4,
+                  description: 'Fluffy and nutritious gluten-free pancakes made with buckwheat flour and plant-based ingredients.',
+                  ingredients: [
+                      '1 cup buckwheat flour',
+                      '1 cup almond milk',
+                      '1 tbsp flaxseed meal + 3 tbsp water (flax egg)',
+                      '1 tbsp maple syrup',
+                      '1 tsp baking powder'
+                  ],
+                  instructions: [
+                      'Mix flaxseed + water, let sit 5 minutes.',
+                      'Whisk all ingredients into a batter.',
+                      'Pour onto a hot pan, cook until bubbles form, flip.',
+                      'Serve with fruit or syrup.'
+                  ]
+              },
+              'rainbow-veggie-wraps': {
+                  id: 'rainbow-veggie-wraps',
+                  title: 'Rainbow Veggie Wraps',
+                  image: 'images/stories/Recipes/All Recipes/Vegan Burrito Bowl.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'International',
+                  difficulty: 'Easy',
+                  time: '15 minutes',
+                  servings: 2,
+                  description: 'Colorful and nutritious wraps packed with fresh vegetables and creamy hummus.',
+                  ingredients: [
+                      '2 large tortillas',
+                      '1/2 cup hummus',
+                      '1/4 cup shredded carrots',
+                      '1/4 cup bell peppers (red, yellow, green)',
+                      '1/4 cup purple cabbage',
+                      '1/4 cup cucumber slices'
+                  ],
+                  instructions: [
+                      'Spread hummus on tortillas.',
+                      'Layer colorful veggies.',
+                      'Roll tightly and slice.'
+                  ]
+              },
+              'chickpea-curry-cauliflower': {
+                  id: 'chickpea-curry-cauliflower',
+                  title: 'Chickpea Curry with Cauliflower Rice',
+                  image: 'images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Indian',
+                  difficulty: 'Medium',
+                  time: '25 minutes',
+                  servings: 4,
+                  description: 'A flavorful and aromatic curry with tender chickpeas served over nutritious cauliflower rice.',
+                  ingredients: [
+                      '1 can chickpeas',
+                      '1 onion, diced',
+                      '2 cloves garlic, minced',
+                      '1 tbsp curry powder',
+                      '1 can coconut milk',
+                      '1 cauliflower, grated (for rice)'
+                  ],
+                  instructions: [
+                      'Sauté onion and garlic in oil.',
+                      'Add curry powder, chickpeas, and coconut milk. Simmer 10 minutes.',
+                      'Cook grated cauliflower in a pan 5 minutes for rice.',
+                      'Serve curry over cauliflower rice.'
+                  ]
+              },
+              'trail-mix-nuts': {
+                  id: 'trail-mix-nuts',
+                  title: 'Trail Mix with Dried Fruits and Nuts',
+                  image: 'images/stories/Recipes/All Mealplan/Trail Mix with Dried Fruits and Nuts.webp',
+                  category: 'Meal Plan',
+                  cuisine: 'American',
+                  difficulty: 'Easy',
+                  time: '5 minutes',
+                  servings: 8,
+                  description: 'A perfect on-the-go snack combining various nuts and dried fruits for sustained energy.',
+                  ingredients: [
+                      '1/2 cup almonds',
+                      '1/2 cup walnuts',
+                      '1/2 cup cashews',
+                      '1/2 cup raisins',
+                      '1/4 cup dried cranberries'
+                  ],
+                  instructions: [
+                      'Mix nuts and dried fruits in a bowl.',
+                      'Store in an airtight jar.'
+                  ]
+              },
+              'coconut-chia-pudding': {
+                  id: 'coconut-chia-pudding',
+                  title: 'Coconut Chia Seed Pudding',
+                  image: 'images/stories/Recipes/All Mealplan/Coconut Chia Seed Pudding.jpg',
+                  category: 'Meal Plan',
+                  cuisine: 'Tropical',
+                  difficulty: 'Easy',
+                  time: '4+ hours',
+                  servings: 2,
+                  description: 'A creamy and nutritious pudding made with chia seeds and coconut milk, perfect for breakfast or dessert.',
+                  ingredients: [
+                      '1/4 cup chia seeds',
+                      '1 cup coconut milk',
+                      '1 tbsp maple syrup'
+                  ],
+                  instructions: [
+                      'Mix chia seeds, coconut milk, and syrup.',
+                      'Refrigerate 4+ hours.',
+                      'Serve chilled.'
+                  ]
               }
           };
         this.init();

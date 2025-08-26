@@ -1331,9 +1331,9 @@ class RecipeDetailManager {
         // Try to find recipe by slug first, then by ID
         if (recipeSlug && this.recipes[recipeSlug]) {
             recipe = this.recipes[recipeSlug];
-        } else if (recipeId) {
-            // Find recipe by ID
-            recipe = Object.values(this.recipes).find(r => r.id === recipeId);
+        } else if (recipeId && this.recipes[recipeId]) {
+            // Find recipe by ID directly using the ID as key
+            recipe = this.recipes[recipeId];
         }
         
         // If no specific recipe found, default to avocado toast

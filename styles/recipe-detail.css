@@ -34,29 +34,62 @@
     font-weight: 500;
 }
 
+/* Recipe Page Layout */
+.recipe-page-layout {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recipe-main-area {
+    flex: 0 0 75%; /* 3/4 width */
+}
+
+.recipe-sidebar-area {
+    flex: 0 0 25%; /* 1/4 width */
+    /* Reserved for future advertisements */
+}
+
 /* Recipe Header */
 .recipe-header {
     padding: 2rem 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: #fff;
 }
 
 .recipe-header-content {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Category with Arrow */
+.recipe-category-with-arrow {
+    display: flex;
     align-items: center;
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recipe-category-with-arrow i {
+    font-size: 1.2rem;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.recipe-category-with-arrow i:hover {
+    color: #09713D;
 }
 
 /* Category Format */
 .recipe-category-format {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #6c757d;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
 }
 
 /* Recipe Title */
@@ -74,7 +107,7 @@
     color: #6c757d;
     line-height: 1.6;
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 100%;
 }
 
 /* Meta Box */
@@ -227,6 +260,8 @@
     align-items: center;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
 }
 
 .meta-item {
@@ -235,6 +270,8 @@
     gap: 0.5rem;
     font-size: 0.9rem;
     color: #333;
+    background: none;
+    padding: 0;
 }
 
 .meta-item i {
@@ -276,6 +313,20 @@
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 2rem;
+}
+
+/* Recipe Image Container */
+.recipe-image-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.recipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
 
 /* Advertisement Space */

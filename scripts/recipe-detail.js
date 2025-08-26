@@ -945,6 +945,275 @@ class RecipeDetailManager {
                     'Prepare couscous by steaming with hot water.',
                     'Mix couscous with veggies, lemon, parsley.'
                 ]
+            },
+            'chana-masala': {
+                title: 'Chana Masala (Chickpea Curry)',
+                image: '/images/stories/Recipes/All Cuisines/Chana Masala (Chickpea Curry).jpg',
+                ingredients: [
+                    '2 cups chickpeas (cooked)',
+                    '2 onions (chopped)',
+                    '2 tomatoes (pureed)',
+                    '2 garlic cloves (minced)',
+                    '1 tsp ginger (grated)',
+                    '1 tsp cumin, 1 tsp coriander, 1 tsp garam masala',
+                    '1 tsp chili powder, salt',
+                    '2 tbsp oil'
+                ],
+                instructions: [
+                    'Heat oil, sauté onion, garlic, ginger.',
+                    'Add spices, then tomato puree. Cook until thick.',
+                    'Add chickpeas + 1 cup water. Simmer 15 min.',
+                    'Garnish with cilantro.'
+                ]
+            },
+            'aloo-gobi': {
+                title: 'Aloo Gobi (Potato & Cauliflower Curry)',
+                image: '/images/stories/Recipes/All Cuisines/Aloo Gobi (Potato & Cauliflower Curry).jpg',
+                ingredients: [
+                    '2 potatoes (cubed)',
+                    '1 cauliflower (florets)',
+                    '1 onion (chopped)',
+                    '2 tomatoes (chopped)',
+                    '2 tsp turmeric, cumin, coriander',
+                    '2 tbsp oil, salt'
+                ],
+                instructions: [
+                    'Sauté onion in oil. Add spices.',
+                    'Add potatoes, cauliflower, tomatoes.',
+                    'Cover & cook until tender.'
+                ]
+            },
+            'baingan-bharta': {
+                title: 'Baingan Bharta (Smoky Mashed Eggplant)',
+                image: '/images/stories/Recipes/All Cuisines/Baingan Bharta (Smoky Mashed Eggplant).jpg',
+                ingredients: [
+                    '2 eggplants',
+                    '2 onions (chopped)',
+                    '2 tomatoes (chopped)',
+                    '2 garlic cloves',
+                    '1 tsp cumin, chili powder, turmeric',
+                    '2 tbsp oil'
+                ],
+                instructions: [
+                    'Roast eggplants until charred, peel skin.',
+                    'Mash flesh.',
+                    'Sauté onion, garlic, spices. Add tomato.',
+                    'Stir in mashed eggplant. Cook 10 min.'
+                ]
+            },
+            'tofu-paneer-butter-masala': {
+                title: 'Tofu "Paneer" Butter Masala',
+                image: '/images/stories/Recipes/All Cuisines/Tofu "Paneer" Butter Masala.jpg',
+                ingredients: [
+                    '1 block tofu (cubed, pan-fried)',
+                    '2 onions (pureed)',
+                    '2 tomatoes (pureed)',
+                    '1 tsp ginger-garlic paste',
+                    '1 tsp cumin, garam masala',
+                    '1/2 cup coconut cream',
+                    '2 tbsp oil'
+                ],
+                instructions: [
+                    'Fry tofu until golden.',
+                    'Cook onion & ginger-garlic paste in oil.',
+                    'Add spices & tomato puree.',
+                    'Stir in tofu & coconut cream.'
+                ]
+            },
+            'vegan-biryani': {
+                title: 'Vegan Biryani',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Biryani.webp',
+                ingredients: [
+                    '2 cups basmati rice',
+                    '1 carrot, 1 potato, 1 cup cauliflower, 1 cup peas',
+                    '1 onion (sliced)',
+                    '2 cloves garlic, 1 tsp ginger',
+                    '1 tsp cumin, cardamom, cinnamon, garam masala',
+                    '3 tbsp oil'
+                ],
+                instructions: [
+                    'Fry onion until golden.',
+                    'Add garlic, ginger, spices.',
+                    'Add vegetables. Cook 5 min.',
+                    'Add soaked rice + 4 cups water. Cover, cook until rice done.'
+                ]
+            },
+            'masoor-dal': {
+                title: 'Masoor Dal (Red Lentil Curry)',
+                image: '/images/stories/Recipes/All Cuisines/Masoor Dal (Red Lentil Curry).jpg',
+                ingredients: [
+                    '1 cup red lentils',
+                    '1 onion, 1 tomato',
+                    '1 garlic clove, 1 tsp ginger',
+                    '1 tsp turmeric, cumin, chili powder',
+                    '3 cups water, salt'
+                ],
+                instructions: [
+                    'Boil lentils with turmeric until soft.',
+                    'In oil, sauté onion, garlic, ginger, spices.',
+                    'Add tomato. Stir into lentils.'
+                ]
+            },
+            'tofu-tikka-masala': {
+                title: 'Tofu Tikka Masala',
+                image: '/images/stories/Recipes/All Cuisines/Tofu Tikka Masala.jpg',
+                ingredients: [
+                    '1 block tofu (cubed, baked)',
+                    '2 onions',
+                    '2 tomatoes',
+                    '1 tsp cumin, coriander, garam masala',
+                    '1/2 cup coconut milk',
+                    '2 tbsp oil'
+                ],
+                instructions: [
+                    'Marinate tofu in spices, bake.',
+                    'Make sauce with onion, tomato, spices.',
+                    'Add coconut milk. Stir tofu in.'
+                ]
+            },
+            'vegetable-samosas': {
+                title: 'Vegetable Samosas',
+                image: '/images/stories/Recipes/All Cuisines/Vegetable Samosas.jpg',
+                ingredients: [
+                    '2 potatoes (boiled, mashed)',
+                    '1/2 cup peas',
+                    '1 onion (chopped)',
+                    '1 tsp cumin, coriander, chili powder',
+                    'Salt, oil',
+                    'Spring roll sheets or homemade dough'
+                ],
+                instructions: [
+                    'Make filling by sautéing onion, spices, potatoes, peas.',
+                    'Fill wrappers, fold into triangles.',
+                    'Fry until golden.'
+                ]
+            },
+            'vegan-palak-tofu': {
+                title: 'Vegan Palak Tofu (Spinach Curry)',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Palak Tofu (Spinach Curry).jpg',
+                ingredients: [
+                    '1 block tofu (cubed, pan-fried)',
+                    '4 cups spinach (blanched & blended)',
+                    '1 onion, 1 tomato',
+                    '1 tsp ginger-garlic paste',
+                    '1 tsp cumin, garam masala',
+                    '2 tbsp oil'
+                ],
+                instructions: [
+                    'Fry tofu, set aside.',
+                    'Sauté onion, ginger-garlic, tomato, spices.',
+                    'Add spinach puree, simmer.',
+                    'Stir in tofu.'
+                ]
+            },
+            'vegan-malai-kofta': {
+                title: 'Vegan Malai Kofta',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Malai Kofta.jpg',
+                ingredients: [
+                    '2 potatoes (boiled, mashed)',
+                    '1/2 cup tofu (crumbled)',
+                    '1/4 cup flour',
+                    'Spices: cumin, chili powder',
+                    'Tomato-onion curry sauce (same as butter masala base)'
+                ],
+                instructions: [
+                    'Mix potato, tofu, flour, spices. Make balls, fry.',
+                    'Make creamy tomato curry sauce.',
+                    'Add kofta balls before serving.'
+                ]
+            },
+            'vegetable-pakoras': {
+                title: 'Vegetable Pakoras (Fritters)',
+                image: '/images/stories/Recipes/All Cuisines/Vegetable Pakoras (Fritters).jpg',
+                ingredients: [
+                    '1 cup chickpea flour (besan)',
+                    '1 cup mixed veggies (onion, potato, spinach)',
+                    '1 tsp turmeric, chili powder, cumin',
+                    'Salt, water',
+                    'Oil for frying'
+                ],
+                instructions: [
+                    'Mix flour, water, spices to make thick batter.',
+                    'Dip vegetables, fry until golden.'
+                ]
+            },
+            'vegan-korma': {
+                title: 'Vegan Korma (Creamy Curry)',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Korma (Creamy Curry).jpg',
+                ingredients: [
+                    '1 cup mixed vegetables (carrot, peas, beans)',
+                    '1 onion, 1 tomato',
+                    '1/2 cup cashews (blended into cream)',
+                    '1 tsp cumin, coriander, turmeric, garam masala',
+                    '2 tbsp oil'
+                ],
+                instructions: [
+                    'Fry onion, garlic, spices.',
+                    'Add vegetables + tomato.',
+                    'Stir in cashew cream. Simmer until thick.'
+                ]
+            },
+            'tamarind-rice': {
+                title: 'Tamarind Rice (Puliyodarai)',
+                image: '/images/stories/Recipes/All Cuisines/Tamarind Rice (Puliyodarai).jpg',
+                ingredients: [
+                    '2 cups cooked rice',
+                    '2 tbsp tamarind paste',
+                    '2 tbsp peanuts',
+                    '1 tsp mustard seeds, curry leaves',
+                    '2 dried chilies',
+                    '2 tbsp oil'
+                ],
+                instructions: [
+                    'Heat oil, fry peanuts, mustard seeds, curry leaves, chilies.',
+                    'Stir in tamarind paste.',
+                    'Mix with rice.'
+                ]
+            },
+            'vegan-idli-coconut-chutney': {
+                title: 'Vegan Idli with Coconut Chutney',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Idli with Coconut Chutney.webp',
+                ingredients: [
+                    '1 cup rice',
+                    '1/2 cup urad dal',
+                    'Salt',
+                    '1 cup grated coconut',
+                    '1 chili',
+                    '1 tsp ginger',
+                    '1 tbsp roasted chana dal'
+                ],
+                instructions: [
+                    'Soak rice & dal overnight, grind into batter. Ferment 8 hrs.',
+                    'Steam batter into idlis.',
+                    'Blend chutney ingredients with water. Serve.'
+                ]
+            },
+            'vegan-pani-puri': {
+                title: 'Vegan Pani Puri (Gol Gappa)',
+                image: '/images/stories/Recipes/All Cuisines/Vegan Pani Puri (Gol Gappa).avif',
+                ingredients: [
+                    '1 cup semolina (sooji)',
+                    '1/4 cup all-purpose flour',
+                    '1/4 tsp salt',
+                    'Water (as needed)',
+                    'Oil for frying',
+                    '1 cup mint leaves',
+                    '1/2 cup coriander leaves',
+                    '2 green chilies',
+                    '1-inch ginger',
+                    '1 tsp roasted cumin powder',
+                    '1 tbsp tamarind paste',
+                    '4 cups cold water',
+                    '1 cup boiled potatoes (mashed)',
+                    '1/2 cup boiled chickpeas or moong beans',
+                    '1/2 tsp chaat masala'
+                ],
+                instructions: [
+                    'Make puris: Knead semolina, flour, salt, and water into stiff dough. Roll thin, cut small rounds, and deep-fry until puffed.',
+                    'Make pani: Blend mint, coriander, green chilies, ginger, cumin, tamarind, and salt with water. Chill.',
+                    'Make filling: Mix boiled potatoes, chickpeas, chaat masala, and salt.',
+                    'Assemble: Crack top of puri, stuff with filling, pour spiced water, and eat immediately.'
+                ]
             }
         };
         this.init();

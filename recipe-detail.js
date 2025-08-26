@@ -140,6 +140,7 @@ class RecipeDetailManager {
 
     init() {
         this.loadRecipeFromURL();
+        this.initNavigationBadges();
     }
 
     loadRecipeFromURL() {
@@ -207,6 +208,58 @@ class RecipeDetailManager {
             `;
             
             instructionsList.appendChild(li);
+        });
+    }
+
+    initNavigationBadges() {
+        const badges = document.querySelectorAll('.nav-badge');
+        badges.forEach(badge => {
+            badge.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                const targetId = badge.getAttribute('href').substring(1); // Remove the '#'
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    // Add slide-up class to trigger animation
+                    targetSection.classList.add('slide-up');
+                    
+                    // Smooth scroll to the target section
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Optional: Add a slight delay before showing the section
+                    setTimeout(() => {
+                        targetSection.style.opacity = '1';
+                        targetSection.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+            });
+        });
+        
+        // Initialize target sections on page load
+        this.initTargetSections();
+    }
+    
+    initTargetSections() {
+        const targetSections = document.querySelectorAll('.target-section');
+        
+        // Set up intersection observer for slide-up animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-up');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        targetSections.forEach(section => {
+            observer.observe(section);
         });
     }
 }

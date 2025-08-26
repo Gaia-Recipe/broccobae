@@ -2559,8 +2559,148 @@ class RecipeDetailManager {
                      'Bake for 10-12 minutes, or until edges are golden brown.',
                      'Let cookies cool on the baking sheet for a few minutes before transferring to a wire rack to cool completely.'
                  ]
-             }
-         };
+             },
+
+              'green-detox-smoothie': {
+                  id: 'green-detox-smoothie',
+                  title: 'Green Detox Smoothie',
+                  category: 'smoothie',
+                  cuisine: 'international',
+                  difficulty: 'easy',
+                  prepTime: '5 minutes',
+                  cookTime: '0 minutes',
+                  totalTime: '5 minutes',
+                  servings: 1,
+                  image: './images/stories/Recipes/All Recipes/Green Detox Smoothie .webp',
+                  description: 'A nutrient-packed green smoothie with spinach, avocado, and chia seeds for a healthy detox boost.',
+                  ingredients: [
+                      '1 cup spinach',
+                      '1/2 frozen banana',
+                      '1/2 cup almond milk',
+                      '1 tablespoon chia seeds',
+                      '1/2 avocado',
+                      '1/4 cup water',
+                      '1 tablespoon lemon juice'
+                  ],
+                  instructions: [
+                      'Combine all ingredients in a blender.',
+                      'Blend until smooth and creamy.',
+                      'Add more water if needed to reach desired consistency.',
+                      'Serve immediately and enjoy!'
+                  ]
+              },
+
+              'berry-blast-smoothie': {
+                  id: 'berry-blast-smoothie',
+                  title: 'Berry Blast Smoothie',
+                  category: 'smoothie',
+                  cuisine: 'international',
+                  difficulty: 'easy',
+                  prepTime: '5 minutes',
+                  cookTime: '0 minutes',
+                  totalTime: '5 minutes',
+                  servings: 1,
+                  image: './images/stories/Recipes/All Recipes/Berry Blast Smoothie.avif',
+                  description: 'A vibrant berry smoothie packed with antioxidants from mixed berries, spinach, and chia seeds.',
+                  ingredients: [
+                      '1 cup mixed berries (strawberries, blueberries, raspberries)',
+                      '1 banana',
+                      '1/2 cup spinach',
+                      '1/2 cup almond milk',
+                      '1 tablespoon chia seeds',
+                      '1 tablespoon maple syrup (optional)'
+                  ],
+                  instructions: [
+                      'Combine all ingredients in a blender.',
+                      'Blend until smooth and creamy.',
+                      'Pour into a glass and enjoy immediately.'
+                  ]
+              },
+
+              'tropical-sunrise-smoothie': {
+                  id: 'tropical-sunrise-smoothie',
+                  title: 'Tropical Sunrise Smoothie',
+                  category: 'smoothie',
+                  cuisine: 'international',
+                  difficulty: 'easy',
+                  prepTime: '5 minutes',
+                  cookTime: '0 minutes',
+                  totalTime: '5 minutes',
+                  servings: 1,
+                  image: './images/stories/Recipes/All Recipes/Tropical Sunrise Smoothie.jpg',
+                  description: 'A tropical paradise in a glass with mango, pineapple, and coconut milk for a refreshing treat.',
+                  ingredients: [
+                      '1 cup frozen mango chunks',
+                      '1 cup frozen pineapple chunks',
+                      '1/2 cup coconut milk',
+                      '1/4 cup water',
+                      '1 tablespoon chia seeds (optional)',
+                      '1 tablespoon maple syrup or agave nectar (optional, for extra sweetness)'
+                  ],
+                  instructions: [
+                      'Combine all ingredients in a high-speed blender.',
+                      'Blend until smooth and creamy, adding more water if needed to reach desired consistency.',
+                      'Pour into a glass and enjoy immediately!'
+                  ]
+              },
+
+              'chocolate-peanut-butter-smoothie': {
+                  id: 'chocolate-peanut-butter-smoothie',
+                  title: 'Chocolate Peanut Butter Smoothie',
+                  category: 'smoothie',
+                  cuisine: 'international',
+                  difficulty: 'easy',
+                  prepTime: '5 minutes',
+                  cookTime: '0 minutes',
+                  totalTime: '5 minutes',
+                  servings: 1,
+                  image: './images/stories/Recipes/All Recipes/Chocolate Peanut Butter Smoothie.jpg',
+                  description: 'A rich and creamy smoothie combining chocolate and peanut butter flavors for a satisfying treat.',
+                  ingredients: [
+                      '1 cup unsweetened almond milk',
+                      '1 frozen banana',
+                      '2 tablespoons peanut butter',
+                      '2 tablespoons cocoa powder',
+                      '1 tablespoon maple syrup',
+                      '1/2 teaspoon vanilla extract'
+                  ],
+                  instructions: [
+                      'Combine all ingredients in a blender.',
+                      'Blend until smooth and creamy.',
+                      'Pour into a glass and enjoy!'
+                  ]
+              },
+
+              'mango-lassi-smoothie': {
+                  id: 'mango-lassi-smoothie',
+                  title: 'Mango Lassi Smoothie',
+                  category: 'smoothie',
+                  cuisine: 'indian',
+                  difficulty: 'easy',
+                  prepTime: '5 minutes',
+                  cookTime: '0 minutes',
+                  totalTime: '5 minutes',
+                  servings: 1,
+                  image: './images/stories/Recipes/All Recipes/Mango Lassi.jpg',
+                  description: 'A vegan version of the classic Indian mango lassi with plant-based yogurt and aromatic cardamom.',
+                  ingredients: [
+                      '1 cup frozen mango chunks',
+                      '1/2 cup plant-based yogurt (e.g., coconut or almond)',
+                      '1/4 cup plant-based milk (e.g., almond or soy)',
+                      '1 tablespoon maple syrup or agave nectar',
+                      '1/4 teaspoon ground cardamom',
+                      'A pinch of saffron threads (optional, for color and flavor)',
+                      'Ice cubes (optional, for a thicker smoothie)'
+                  ],
+                  instructions: [
+                      'Combine all ingredients in a high-speed blender.',
+                      'Blend until smooth and creamy, adding more plant-based milk if needed to reach desired consistency.',
+                      'If using, add ice cubes and blend again until smooth.',
+                      'Pour into a glass and garnish with a few saffron threads, if desired.',
+                      'Serve immediately and enjoy!'
+                  ]
+              }
+          };
         this.init();
     }
 

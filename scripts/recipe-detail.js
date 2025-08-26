@@ -154,6 +154,7 @@ class RecipeDetailManager {
     init() {
         this.loadRecipeFromURL();
         this.initBadgeButtons();
+        this.initBackNavigation();
     }
 
     initBadgeButtons() {
@@ -167,7 +168,48 @@ class RecipeDetailManager {
         });
     }
 
+    initBackNavigation() {
+        const backBtn = document.querySelector('.back-btn');
+        if (backBtn) {
+            backBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.handleBackNavigation();
+            });
+        }
+    }
+
+    handleBackNavigation() {
+        // Check if there's a stored previous page
+        const previousPage = localStorage.getItem('previousPage');
+        const referrer = document.referrer;
+        
+        // Determine the appropriate back destination
+        let backUrl = 'src/pages/recipes.html'; // default
+        
+        if (previousPage) {
+            backUrl = previousPage;
+        } else if (referrer) {
+            // Parse referrer to determine appropriate page
+            if (referrer.includes('meal-plan')) {
+                backUrl = 'meal-plan.html';
+            } else if (referrer.includes('cuisine')) {
+                backUrl = 'cuisine.html';
+            } else if (referrer.includes('recipes')) {
+                backUrl = 'src/pages/recipes.html';
+            }
+        }
+        
+        // Add smooth transition
+        document.body.style.opacity = '0.8';
+        setTimeout(() => {
+            window.location.href = backUrl;
+        }, 200);
+    }
+
     navigateToSection(target, section) {
+        // Store current page for back navigation
+        localStorage.setItem('previousPage', window.location.pathname);
+        
         let targetUrl = '';
         
         switch(target) {

@@ -582,6 +582,12 @@
         font-size: 2.5rem;
     }
     
+    .hero-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+    
     .hero-stats {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
@@ -661,6 +667,12 @@
     
     .page-title {
         font-size: 2rem;
+    }
+    
+    .hero-img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
     }
     
     .hero-features {

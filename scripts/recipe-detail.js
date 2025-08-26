@@ -2711,7 +2711,7 @@ class RecipeDetailManager {
                   cookTime: '8 minutes',
                   totalTime: '18 minutes',
                   servings: 2,
-                  image: './images/stories/Recipes/All Recipes/Chickpea Flour Omelette.webp',
+                  image: './images/stories/Recipes/All Recipes/Spicy Tofu Scramble.jpg',
                   description: 'A protein-rich vegan omelette made with chickpea flour and loaded with fresh vegetables.',
                   ingredients: [
                       '1 cup chickpea flour',
@@ -2741,7 +2741,7 @@ class RecipeDetailManager {
                   cookTime: '15 minutes',
                   totalTime: '30 minutes',
                   servings: 3,
-                  image: './images/stories/Recipes/All Recipes/Tempeh Stir-Fry.webp',
+                  image: './images/stories/Recipes/All Recipes/Spicy Tofu Stir-fry.jpg',
                   description: 'A nutritious and flavorful stir-fry featuring protein-rich tempeh and colorful vegetables.',
                   ingredients: [
                       '1 block tempeh, cubed',
@@ -2770,7 +2770,7 @@ class RecipeDetailManager {
                   cookTime: '30 minutes',
                   totalTime: '35 minutes',
                   servings: 4,
-                  image: './images/stories/Recipes/All Recipes/Roasted Chickpeas.webp',
+                  image: './images/stories/Recipes/All Recipes/Avocado & Chickpea Sandwich.jpg',
                   description: 'Crispy, spiced roasted chickpeas that make a perfect protein-packed snack or meal addition.',
                   ingredients: [
                       '1 can chickpeas, drained and rinsed',
@@ -2796,7 +2796,7 @@ class RecipeDetailManager {
                   cookTime: '0 minutes',
                   totalTime: '5 minutes',
                   servings: 1,
-                  image: './images/stories/Recipes/All Recipes/Protein Smoothie.webp',
+                  image: './images/stories/Recipes/All Recipes/Chocolate Peanut Butter Smoothie.jpg',
                   description: 'A creamy, protein-rich smoothie perfect for post-workout recovery or breakfast on-the-go.',
                   ingredients: [
                       '1 banana',
@@ -2821,7 +2821,7 @@ class RecipeDetailManager {
                   cookTime: '0 minutes',
                   totalTime: '5 minutes (plus overnight chilling)',
                   servings: 2,
-                  image: './images/stories/Recipes/All Recipes/Chia Pudding.webp',
+                  image: './images/stories/Recipes/All Recipes/Chia Seed Pudding.jpg',
                   description: 'A nutritious overnight pudding packed with omega-3s and topped with fresh berries.',
                   ingredients: [
                       '1/4 cup chia seeds',
@@ -2846,7 +2846,7 @@ class RecipeDetailManager {
                   cookTime: '0 minutes',
                   totalTime: '10 minutes',
                   servings: 2,
-                  image: './images/stories/Recipes/All Recipes/Spinach Mushroom Salad.webp',
+                  image: './images/stories/Recipes/All Recipes/Fresh Vegan Salad.png',
                   description: 'A fresh, nutrient-dense salad with earthy mushrooms and a bright lemon vinaigrette.',
                   ingredients: [
                       '2 cups fresh spinach',

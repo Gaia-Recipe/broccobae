@@ -153,6 +153,33 @@ class RecipeDetailManager {
 
     init() {
         this.loadRecipeFromURL();
+        this.initNavigationBadges();
+    }
+
+    initNavigationBadges() {
+        const navBadges = document.querySelectorAll('.nav-badge');
+        navBadges.forEach(badge => {
+            badge.addEventListener('click', (e) => {
+                e.preventDefault();
+                const href = badge.getAttribute('href');
+                const section = badge.getAttribute('data-section');
+                
+                // Add pull-up transition effect
+                document.body.style.transform = 'translateY(-20px)';
+                document.body.style.opacity = '0.8';
+                document.body.style.transition = 'all 0.3s ease';
+                
+                setTimeout(() => {
+                    if (section) {
+                        // Navigate to page with section anchor
+                        window.location.href = href;
+                    } else {
+                        // Direct navigation
+                        window.location.href = href;
+                    }
+                }, 300);
+            });
+        });
     }
 
     loadRecipeFromURL() {

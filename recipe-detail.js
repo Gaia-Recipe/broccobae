@@ -33,25 +33,61 @@ class RecipeDetailManager {
                 description: 'A refreshing and protein-packed quinoa salad with fresh vegetables and a zesty lemon vinaigrette dressing.',
                 image: './images/stories/Recipes/All/Quinoa Salad with Lemon Vinaigrette.jpg',
                 prepTime: '20 minutes',
-                servings: '2 servings',
+                servings: '4 servings',
                 difficulty: 'Easy',
                 ingredients: [
-                    { amount: '1 cup', name: 'cooked quinoa' },
+                    { amount: '1 cup', name: 'quinoa, rinsed' },
+                    { amount: '2 cups', name: 'water' },
+                    { amount: '1/2 cup', name: 'chopped cucumber' },
                     { amount: '1/2 cup', name: 'cherry tomatoes, halved' },
-                    { amount: '1/4 cup', name: 'red onion, diced' },
-                    { amount: '1/4 cup', name: 'cucumber, diced' },
-                    { amount: '2 tablespoons', name: 'fresh lemon juice' },
-                    { amount: '2 tablespoons', name: 'olive oil' },
-                    { amount: '1 teaspoon', name: 'Dijon mustard' },
+                    { amount: '1/4 cup', name: 'chopped red onion' },
+                    { amount: '1/4 cup', name: 'chopped fresh parsley' },
+                    { amount: '1/4 cup', name: 'chopped fresh mint' },
+                    { amount: '3 tablespoons', name: 'olive oil' },
+                    { amount: '2 tablespoons', name: 'lemon juice' },
+                    { amount: '1 tablespoon', name: 'Dijon mustard' },
+                    { amount: '1 clove', name: 'garlic, minced' },
                     { amount: 'To taste', name: 'salt and pepper' }
                 ],
                 instructions: [
-                    'Cook quinoa according to package instructions and let cool.',
-                    'In a large bowl, combine cooled quinoa, cherry tomatoes, red onion, and cucumber.',
-                    'In a small bowl, whisk together lemon juice, olive oil, and Dijon mustard.',
-                    'Pour the vinaigrette over the quinoa mixture and toss to combine.',
+                    'Cook the quinoa: In a medium saucepan, combine the rinsed quinoa and water. Bring to a boil, then reduce heat to low, cover, and simmer for 15 minutes, or until the water is absorbed and the quinoa is cooked. Fluff with a fork and let it cool.',
+                    'Prepare the vinaigrette: In a small bowl, whisk together the olive oil, lemon juice, Dijon mustard, minced garlic, salt, and pepper.',
+                    'Assemble the salad: In a large bowl, combine the cooked quinoa, cucumber, cherry tomatoes, red onion, parsley, and mint.',
+                    'Dress the salad: Pour the lemon vinaigrette over the quinoa mixture and toss gently to combine.',
+                    'Serve: Serve the quinoa salad immediately or chill for later. Garnish with extra herbs if desired.'
+                ]
+            },
+            'spicy-black-bean-burgers': {
+                id: 'spicy-black-bean-burgers',
+                title: 'Spicy Black Bean Burgers',
+                category: 'Dinner',
+                description: 'Flavorful and protein-rich black bean burgers with a perfect blend of spices and herbs.',
+                image: './images/stories/Recipes/All/Spicy Black Bean Burgers.jpg',
+                prepTime: '25 minutes',
+                servings: '4 servings',
+                difficulty: 'Medium',
+                ingredients: [
+                    { amount: '1 can (15 ounces)', name: 'black beans, rinsed and drained' },
+                    { amount: '1/2 cup', name: 'cooked quinoa' },
+                    { amount: '1/4 cup', name: 'chopped red onion' },
+                    { amount: '2 cloves', name: 'garlic, minced' },
+                    { amount: '1 tablespoon', name: 'chili powder' },
+                    { amount: '1 teaspoon', name: 'cumin' },
+                    { amount: '1/2 teaspoon', name: 'smoked paprika' },
+                    { amount: '1/4 teaspoon', name: 'cayenne pepper (optional, for extra spice)' },
+                    { amount: '1/4 cup', name: 'chopped fresh cilantro' },
+                    { amount: '2 tablespoons', name: 'breadcrumbs' },
+                    { amount: '1 tablespoon', name: 'olive oil' },
+                    { amount: 'To taste', name: 'salt and pepper' }
+                ],
+                instructions: [
+                    'In a large bowl, mash the black beans with a fork or potato masher until mostly smooth. Some chunks are okay.',
+                    'Add the cooked quinoa, red onion, garlic, chili powder, cumin, smoked paprika, cayenne pepper (if using), cilantro, and breadcrumbs to the bowl. Mix well to combine.',
+                    'Heat the olive oil in a large skillet over medium heat.',
+                    'Form the mixture into patties, about 1/2 inch thick.',
+                    'Cook the patties for 4-5 minutes per side, or until heated through and slightly crispy on the outside.',
                     'Season with salt and pepper to taste.',
-                    'Chill for at least 30 minutes before serving.'
+                    'Serve on buns with your favorite toppings, such as lettuce, tomato, avocado, and a vegan sauce.'
                 ]
             },
             'lentil-curry-with-coconut-milk': {
@@ -92,44 +128,45 @@ class RecipeDetailManager {
                 servings: '4 servings',
                 difficulty: 'Easy',
                 ingredients: [
-                    { amount: '2', name: 'ripe avocados' },
-                    { amount: '1/4 cup', name: 'cocoa powder' },
-                    { amount: '1/4 cup', name: 'maple syrup' },
+                    { amount: '1', name: 'ripe avocado' },
+                    { amount: '1/2 cup', name: 'unsweetened cocoa powder' },
+                    { amount: '1/2 cup', name: 'maple syrup or agave nectar' },
+                    { amount: '1/4 cup', name: 'plant-based milk (almond, soy, or oat)' },
                     { amount: '1 teaspoon', name: 'vanilla extract' },
                     { amount: 'Pinch', name: 'salt' },
-                    { amount: 'Optional:', name: 'berries for garnish' }
+                    { amount: 'Optional:', name: 'fresh berries, chocolate shavings, or cocoa powder for garnish' }
                 ],
                 instructions: [
-                    'Scoop avocado flesh into a food processor.',
-                    'Add cocoa powder, maple syrup, vanilla, and salt.',
-                    'Process until smooth and creamy.',
-                    'Taste and adjust sweetness if needed.',
-                    'Chill for at least 2 hours before serving.',
-                    'Garnish with berries if desired.'
+                    'In a blender or food processor, combine the ripe avocado, cocoa powder, maple syrup or agave nectar, plant-based milk, vanilla extract, and salt.',
+                    'Blend until completely smooth and creamy, scraping down the sides as needed to ensure all ingredients are fully incorporated.',
+                    'Taste and adjust sweetness if necessary, adding more maple syrup or agave nectar to your preference.',
+                    'Transfer the mousse to serving dishes or ramekins.',
+                    'Refrigerate for at least 30 minutes to allow the mousse to set and chill.',
+                    'Before serving, garnish with fresh berries, chocolate shavings, or a sprinkle of cocoa powder, if desired.',
+                    'Enjoy this delightful and healthy chocolate avocado mousse!'
                 ]
             },
-            'green-smoothie-bowl': {
-                id: 'green-smoothie-bowl',
-                title: 'Green Smoothie Bowl',
+            'avocado-banana-smoothie': {
+                id: 'avocado-banana-smoothie',
+                title: 'Avocado Banana Smoothie',
                 category: 'Smoothie',
-                description: 'A nutritious and energizing smoothie bowl packed with leafy greens, fruits, and topped with crunchy granola.',
-                image: './images/stories/Recipes/All/Green Smoothie Bowl.jpg',
-                prepTime: '10 minutes',
+                description: 'A creamy and nutritious smoothie packed with healthy fats, fiber, and natural sweetness.',
+                image: './images/stories/Recipes/All/Avocado Banana Smoothie.jpg',
+                prepTime: '5 minutes',
                 servings: '1 serving',
                 difficulty: 'Easy',
                 ingredients: [
-                    { amount: '1 cup', name: 'spinach' },
+                    { amount: '1', name: 'ripe avocado' },
                     { amount: '1', name: 'frozen banana' },
-                    { amount: '1/2 cup', name: 'mango chunks' },
-                    { amount: '1/2 cup', name: 'coconut milk' },
+                    { amount: '1 cup', name: 'spinach' },
+                    { amount: '1/2 cup', name: 'plant-based milk' },
                     { amount: '1 tablespoon', name: 'chia seeds' },
-                    { amount: 'For topping:', name: 'granola, berries, coconut flakes' }
+                    { amount: '1 teaspoon', name: 'maple syrup (optional)' }
                 ],
                 instructions: [
-                    'Add spinach, banana, mango, and coconut milk to blender.',
+                    'Combine all ingredients in a blender.',
                     'Blend until smooth and creamy.',
-                    'Pour into a bowl.',
-                    'Top with chia seeds, granola, berries, and coconut flakes.',
+                    'Add more plant-based milk if needed to reach desired consistency.',
                     'Serve immediately and enjoy!'
                 ]
             }

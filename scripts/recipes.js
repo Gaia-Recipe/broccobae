@@ -508,9 +508,13 @@ class RecipeManager {
     }
 
     showRecipeDetails(recipe) {
+        // Store the source page for breadcrumb navigation
+        localStorage.setItem('recipeSource', 'recipes');
+        localStorage.setItem('previousPage', window.location.pathname);
+        
         // Navigate to the recipe detail page with the recipe ID
         const recipeSlug = recipe.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        window.location.href = `../../recipe-detail.html?recipe=${recipeSlug}&id=${recipe.id}`;
+        window.location.href = `../../recipe-detail.html?recipe=${recipeSlug}&id=${recipe.id}&source=recipes`;
     }
 
     updateRecipeCount() {

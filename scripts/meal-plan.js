@@ -561,8 +561,12 @@ class MealPlanManager {
     }
 
     showMealPlanDetails(mealPlanId) {
-        // Meal plan details removed
-        console.log('Meal plan details functionality has been removed');
+        // Store the source page for breadcrumb navigation
+        localStorage.setItem('recipeSource', 'meal-plan');
+        localStorage.setItem('previousPage', window.location.pathname);
+        
+        // Navigate to recipe detail page with meal plan ID
+        window.location.href = `recipe-detail.html?id=${mealPlanId}&source=meal-plan`;
     }
 
     showNotification(message, type = 'info') {

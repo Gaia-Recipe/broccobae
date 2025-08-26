@@ -266,37 +266,13 @@ class CommunityManager {
         const recipe = this.recipes.find(r => r.id === recipeId);
         if (!recipe) return;
 
-        // Create modal or navigate to detail page
-        const details = `
-            Recipe: ${recipe.title}
-            Author: ${recipe.author.name}
-            Category: ${recipe.category}
-            Posted: ${recipe.postTime}
-            
-            Prep Time: ${recipe.prepTime}
-            Cook Time: ${recipe.cookTime}
-            Total Time: ${recipe.totalTime}
-            Servings: ${recipe.servings}
-            Difficulty: ${recipe.difficulty}
-            
-            Nutrition (per serving):
-            Calories: ${recipe.calories}
-            Protein: ${recipe.protein}
-            Carbs: ${recipe.carbs}
-            Fat: ${recipe.fat}
-            
-            ${recipe.description}
-            
-            Engagement:
-            ❤️ ${recipe.likes} likes
-            💬 ${recipe.comments} comments
-            📤 ${recipe.shares} shares
-        `;
+        // Store the source page for breadcrumb navigation
+        localStorage.setItem('recipeSource', 'community');
+        localStorage.setItem('previousPage', window.location.pathname);
         
-        alert(details);
-        
-        // In a real application, you would navigate to a detailed page
-        // window.location.href = `recipe-detail.html?id=${recipeId}`;
+        // Navigate to the recipe detail page with the recipe ID
+        const recipeSlug = recipe.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+        window.location.href = `../../recipe-detail.html?recipe=${recipeSlug}&id=${recipe.id}&source=community`;
     }
 
     showNotification(message, type = 'info') {

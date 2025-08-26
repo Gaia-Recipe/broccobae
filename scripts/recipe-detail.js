@@ -551,7 +551,28 @@ class RecipeDetailManager {
 
         const recipeCategory = document.getElementById('recipe-category');
         if (recipeCategory) {
-            recipeCategory.textContent = `RECIPE/${recipe.category.toUpperCase()}`;
+            // Get source from URL parameters or localStorage
+            const urlParams = new URLSearchParams(window.location.search);
+            const source = urlParams.get('source') || localStorage.getItem('recipeSource') || 'recipes';
+            
+            let categoryFormat = '';
+            switch(source) {
+                case 'meal-plan':
+                    categoryFormat = `MEAL PLAN / RECIPE`;
+                    break;
+                case 'cuisine':
+                    categoryFormat = `CUISINE / RECIPE`;
+                    break;
+                case 'community':
+                    categoryFormat = `COMMUNITY / RECIPE`;
+                    break;
+                case 'recipes':
+                default:
+                    categoryFormat = `RECIPE / ${recipe.category.toUpperCase()}`;
+                    break;
+            }
+            
+            recipeCategory.textContent = categoryFormat;
         }
 
         const recipeTitle = document.getElementById('recipe-title');

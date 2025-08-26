@@ -947,8 +947,12 @@ class CuisineManager {
     }
 
     showRecipeDetails(recipeId) {
-        // Recipe details removed
-        console.log('Recipe details not available');
+        // Store the source page for breadcrumb navigation
+        localStorage.setItem('recipeSource', 'cuisine');
+        localStorage.setItem('previousPage', window.location.pathname);
+        
+        // Navigate to recipe detail page with recipe ID
+        window.location.href = `../../recipe-detail.html?id=${recipeId}&source=cuisine`;
     }
 
     showNotification(message, type = 'info') {

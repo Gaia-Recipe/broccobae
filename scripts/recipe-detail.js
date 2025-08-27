@@ -369,7 +369,7 @@ class RecipeDetailManager {
                 id: 'vegan-general-tsos-cauliflower',
                 title: 'Vegan General Tso\'s Cauliflower',
                 category: 'asian',
-                image: './images/stories/Recipes/All Cuisines/General Tsos Cauliflower.jpg',
+                image: './images/stories/Recipes/All Cuisines/Vegan General Tso\'s Cauliflower.jpg',
                 prepTime: '35 minutes',
                 servings: '4 servings',
                 difficulty: 'Medium',

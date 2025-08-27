@@ -120,17 +120,6 @@ class RecipeManager {
                 ingredients: ['1 cup quinoa', 'Mixed greens', 'Cherry tomatoes', 'Cucumber', 'Lemon juice', 'Olive oil', 'Fresh herbs']
             },
             {
-                id: 'lunch-4',
-                title: 'Fresh Vegan Salad',
-                category: 'lunch',
-                image: '../../images/stories/Recipes/All Recipes/Fresh Vegan Salad.png',
-                prepTime: '15 minutes',
-                servings: '2 servings',
-                difficulty: 'Easy',
-                description: 'Crisp and colorful salad with seasonal vegetables.',
-                ingredients: ['Mixed greens', 'Cherry tomatoes', 'Cucumber', 'Bell peppers', 'Red onion', 'Balsamic vinaigrette']
-            },
-            {
                 id: 'lunch-5',
                 title: 'Vegan Burrito Bowl',
                 category: 'lunch',
@@ -150,26 +139,6 @@ class RecipeManager {
                  servings: '6 servings',
                  difficulty: 'Medium',
                  ingredients: ['1 cup red lentils', 'Kale', 'Carrots', 'Celery', 'Onion', 'Garlic', 'Vegetable broth', 'Bay leaves', 'Thyme']
-             },
-             {
-                 id: 'lunch-5',
-                 title: 'Vegan Burrito Bowl',
-                 category: 'lunch',
-                 image: '../../images/stories/Recipes/All Recipes/Vegan Burrito Bowl.jpg',
-                 prepTime: '30 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Medium',
-                 ingredients: ['Black beans', 'Quinoa', 'Brown rice', 'Corn', 'Bell peppers', 'Avocado', 'Salsa', 'Lime', 'Cilantro']
-             },
-            {
-                id: 'lunch-6',
-                title: 'The Ultimate Vegan Burger',
-                category: 'lunch',
-                image: '../../images/stories/Recipes/All Recipes/The Ultimate Vegan Burger.png',
-                prepTime: '25 minutes',
-                servings: '4 servings',
-                difficulty: 'Medium',
-                 ingredients: ['Black beans', 'Quinoa', 'Mushrooms', 'Onion', 'Garlic', 'Burger buns', 'Lettuce', 'Tomato', 'Vegan mayo']
              },
              // Dinner Recipes
              // Dinner Recipes
@@ -227,17 +196,6 @@ class RecipeManager {
                  difficulty: 'Hard',
                  description: 'Layered vegan lasagna with cashew ricotta and marinara sauce.',
                  ingredients: ['Lasagna noodles', 'Cashews', 'Spinach', 'Marinara sauce', 'Nutritional yeast', 'Garlic', 'Herbs']
-             },
-             {
-                 id: 'dinner-6',
-                 title: 'Creamy Vegan Pasta',
-                 category: 'dinner',
-                 image: '../../images/stories/Recipes/All Recipes/Creamy Vgean Pasta.png',
-                 prepTime: '25 minutes',
-                 servings: '4 servings',
-                 difficulty: 'Easy',
-                 description: 'Silky smooth vegan pasta with cashew cream sauce and herbs.',
-                 ingredients: ['Pasta', 'Cashews', 'Nutritional yeast', 'Garlic', 'Lemon juice', 'Fresh herbs', 'Olive oil']
              },
              // Dessert Recipes
              {

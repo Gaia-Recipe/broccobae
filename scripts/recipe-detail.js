@@ -3,6 +3,175 @@
 class RecipeDetailManager {
     constructor() {
         this.recipes = {
+            // Meal Plan Recipes
+            'high-protein-plan': {
+                id: 'high-protein-plan',
+                title: 'High-Protein Vegan Power',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
+                prepTime: '7 days',
+                servings: '21 meals',
+                difficulty: 'Medium',
+                calories: '1800-2200 kcal',
+                description: 'Fuel your workouts with plant-based protein powerhouses.',
+                ingredients: [
+                    'Various high-protein plant foods',
+                    'Legumes and beans',
+                    'Quinoa and other complete proteins',
+                    'Nuts and seeds',
+                    'Plant-based protein powder'
+                ],
+                instructions: [
+                    'Follow the 7-day meal plan',
+                    'Prepare protein-rich meals',
+                    'Focus on post-workout nutrition',
+                    'Maintain 25g+ protein per meal'
+                ]
+            },
+            'low-carb-plan': {
+                id: 'low-carb-plan',
+                title: 'Low-Carb Vegan Delights',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
+                prepTime: '7 days',
+                servings: '21 meals',
+                difficulty: 'Medium',
+                calories: '1400-1800 kcal',
+                description: 'Delicious low-carb meals that keep you satisfied.',
+                ingredients: [
+                    'Low-carb vegetables',
+                    'Healthy fats',
+                    'Plant-based proteins',
+                    'Nuts and seeds',
+                    'Leafy greens'
+                ],
+                instructions: [
+                    'Follow the 7-day meal plan',
+                    'Keep carbs under 30g per meal',
+                    'Focus on high fiber content',
+                    'Maintain blood sugar friendly options'
+                ]
+            },
+            'budget-plan': {
+                id: 'budget-plan',
+                title: 'Budget-Friendly Vegan Eats',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
+                prepTime: '7 days',
+                servings: '21 meals',
+                difficulty: 'Easy',
+                calories: '1600-2000 kcal',
+                description: 'Nutritious meals that won\'t break the bank.',
+                ingredients: [
+                    'Pantry staples',
+                    'Seasonal vegetables',
+                    'Dried beans and lentils',
+                    'Rice and grains',
+                    'Basic spices'
+                ],
+                instructions: [
+                    'Follow the 7-day meal plan',
+                    'Use bulk cooking techniques',
+                    'Shop for seasonal produce',
+                    'Keep costs under $7 per day'
+                ]
+            },
+            'weight-loss-plan': {
+                id: 'weight-loss-plan',
+                title: 'Weight Loss Vegan Plan',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
+                prepTime: '7 days',
+                servings: '21 meals',
+                difficulty: 'Medium',
+                calories: '1200-1600 kcal',
+                description: 'Sustainable weight loss with satisfying plant-based meals.',
+                ingredients: [
+                    'High volume, low calorie foods',
+                    'Metabolism boosting spices',
+                    'Lean plant proteins',
+                    'Fiber-rich vegetables',
+                    'Portion-controlled snacks'
+                ],
+                instructions: [
+                    'Follow the 7-day meal plan',
+                    'Focus on calorie control',
+                    'Include metabolism boosting foods',
+                    'Maintain high volume, low calorie approach'
+                ]
+            },
+            'chickpea-flour-omelette': {
+                id: 'chickpea-flour-omelette',
+                title: 'Chickpea Flour Omelette with Veggies',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Chickpea Flour Omelette with Veggies 12.48.16.jpeg',
+                prepTime: '15 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '320-380 kcal',
+                description: 'Protein-packed breakfast with fresh vegetables.',
+                ingredients: [
+                    '1/2 cup chickpea flour',
+                    '1/2 cup water',
+                    '1/4 cup mixed vegetables',
+                    '1 tbsp nutritional yeast',
+                    'Salt and pepper to taste'
+                ],
+                instructions: [
+                    'Mix chickpea flour with water',
+                    'Add vegetables and seasonings',
+                    'Cook like a regular omelette',
+                    'Serve hot'
+                ]
+            },
+            'quinoa-black-bean-salad': {
+                id: 'quinoa-black-bean-salad',
+                title: 'Quinoa Salad with Black Beans and Avocado',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
+                prepTime: '20 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '420-480 kcal',
+                description: 'Complete protein salad with healthy fats.',
+                ingredients: [
+                    '1/2 cup cooked quinoa',
+                    '1/3 cup black beans',
+                    '1/2 avocado',
+                    'Mixed greens',
+                    'Lime vinaigrette'
+                ],
+                instructions: [
+                    'Cook quinoa according to package directions',
+                    'Mix with black beans and greens',
+                    'Top with avocado',
+                    'Dress with lime vinaigrette'
+                ]
+            },
+            'tempeh-stir-fry': {
+                id: 'tempeh-stir-fry',
+                title: 'Tempeh Stir-Fry with Brown Rice',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Tempeh Stir-Fry with Brown Rice.jpg',
+                prepTime: '25 minutes',
+                servings: '1 serving',
+                difficulty: 'Medium',
+                calories: '450-520 kcal',
+                description: 'Fermented protein with wholesome grains.',
+                ingredients: [
+                    '3 oz tempeh',
+                    '1/2 cup brown rice',
+                    'Mixed stir-fry vegetables',
+                    'Soy sauce',
+                    'Ginger and garlic'
+                ],
+                instructions: [
+                    'Cook brown rice',
+                    'Sauté tempeh until golden',
+                    'Add vegetables and seasonings',
+                    'Serve over rice'
+                ]
+            },
             'avocado-toast-with-everything-bagel-seasoning': {
                 id: 'breakfast-1',
                 title: 'Avocado Toast with Everything Bagel Seasoning',
@@ -26,6 +195,524 @@ class RecipeDetailManager {
                     'Sprinkle with everything bagel seasoning.',
                     'Optional: Garnish with red pepper flakes and microgreens.',
                     'Serve immediately and enjoy!'
+                ]
+            },
+            'roasted-chickpeas': {
+                id: 'roasted-chickpeas',
+                title: 'Roasted Chickpeas with Spices',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Roasted Chickpeas with Spices.jpg',
+                prepTime: '30 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '180-220 kcal',
+                description: 'Crunchy protein-rich snack.',
+                ingredients: [
+                    '1 cup chickpeas',
+                    '1 tbsp olive oil',
+                    'Spice blend',
+                    'Salt to taste'
+                ],
+                instructions: [
+                    'Drain and dry chickpeas',
+                    'Toss with oil and spices',
+                    'Roast until crispy',
+                    'Cool before serving'
+                ]
+            },
+            'protein-smoothie': {
+                id: 'protein-smoothie',
+                title: 'Protein Smoothie with Plant-Based Protein Powder',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
+                prepTime: '5 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '280-340 kcal',
+                description: 'Post-workout protein boost.',
+                ingredients: [
+                    '1 scoop plant protein powder',
+                    '1 cup plant milk',
+                    '1/2 banana',
+                    '1 tbsp nut butter',
+                    'Ice cubes'
+                ],
+                instructions: [
+                    'Add all ingredients to blender',
+                    'Blend until smooth',
+                    'Serve immediately',
+                    'Enjoy post-workout'
+                ]
+            },
+            'chia-pudding-berries': {
+                id: 'chia-pudding-berries',
+                title: 'Chia Seed Pudding with Berries',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Chia Seed Pudding with Berries.jpg',
+                prepTime: '10 minutes + overnight',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '220-280 kcal',
+                description: 'Creamy pudding with antioxidant-rich berries.',
+                ingredients: [
+                    '3 tbsp chia seeds',
+                    '1 cup plant milk',
+                    '1 tbsp maple syrup',
+                    '1/2 cup mixed berries',
+                    'Vanilla extract'
+                ],
+                instructions: [
+                    'Mix chia seeds with milk and sweetener',
+                    'Refrigerate overnight',
+                    'Top with berries',
+                    'Serve chilled'
+                ]
+            },
+            'spinach-mushroom-salad': {
+                id: 'spinach-mushroom-salad',
+                title: 'Spinach and Mushroom Salad with Lemon Vinaigrette',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
+                prepTime: '15 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '180-220 kcal',
+                description: 'Fresh salad with tangy dressing.',
+                ingredients: [
+                    '2 cups fresh spinach',
+                    '1 cup sliced mushrooms',
+                    'Lemon vinaigrette',
+                    'Cherry tomatoes',
+                    'Red onion'
+                ],
+                instructions: [
+                    'Wash and prepare vegetables',
+                    'Sauté mushrooms lightly',
+                    'Combine with spinach',
+                    'Dress with vinaigrette'
+                ]
+            },
+            'grilled-eggplant-steaks': {
+                id: 'grilled-eggplant-steaks',
+                title: 'Grilled Eggplant Steaks with Roasted Vegetables',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Grilled Eggplant Steaks with Roasted Vegetables.jpg',
+                prepTime: '35 minutes',
+                servings: '1 serving',
+                difficulty: 'Medium',
+                calories: '250-300 kcal',
+                description: 'Hearty grilled vegetables with Mediterranean flavors.',
+                ingredients: [
+                    '1 large eggplant',
+                    'Mixed vegetables',
+                    'Olive oil',
+                    'Mediterranean herbs',
+                    'Balsamic glaze'
+                ],
+                instructions: [
+                    'Slice eggplant into steaks',
+                    'Grill until tender',
+                    'Roast vegetables separately',
+                    'Serve with herbs and glaze'
+                ]
+            },
+            'celery-almond-butter': {
+                id: 'celery-almond-butter',
+                title: 'Celery Sticks with Almond Butter',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Celery Sticks with Almond Butter.jpg',
+                prepTime: '5 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '150-180 kcal',
+                description: 'Crunchy snack with healthy fats.',
+                ingredients: [
+                    '3 celery stalks',
+                    '2 tbsp almond butter',
+                    'Optional: raisins'
+                ],
+                instructions: [
+                    'Wash and cut celery',
+                    'Fill with almond butter',
+                    'Add raisins if desired',
+                    'Serve immediately'
+                ]
+            },
+            'coconut-cream-raspberries': {
+                id: 'coconut-cream-raspberries',
+                title: 'Coconut Cream with Raspberries',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Coconut Cream with Raspberries 15.14.10.jpg',
+                prepTime: '10 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '180-220 kcal',
+                description: 'Rich dessert with fresh berries.',
+                ingredients: [
+                    '1/2 cup coconut cream',
+                    '1/2 cup fresh raspberries',
+                    '1 tbsp maple syrup',
+                    'Vanilla extract'
+                ],
+                instructions: [
+                    'Whip coconut cream',
+                    'Add sweetener and vanilla',
+                    'Top with raspberries',
+                    'Serve chilled'
+                ]
+            },
+            'vegan-chili': {
+                id: 'vegan-chili',
+                title: 'Vegan Chili',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Medium',
+                calories: '320-380 kcal',
+                description: 'Hearty chili that feeds the whole family.',
+                ingredients: [
+                    '2 cups mixed beans',
+                    '1 can diced tomatoes',
+                    'Chili spices',
+                    'Vegetables',
+                    'Vegetable broth'
+                ],
+                instructions: [
+                    'Sauté vegetables',
+                    'Add beans and tomatoes',
+                    'Season with spices',
+                    'Simmer until thick'
+                ]
+            },
+            'vegetable-stir-fry': {
+                id: 'vegetable-stir-fry',
+                title: 'Vegetable Stir-Fry',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
+                prepTime: '20 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '280-340 kcal',
+                description: 'Quick and nutritious vegetable medley.',
+                ingredients: [
+                    'Mixed seasonal vegetables',
+                    'Soy sauce',
+                    'Garlic and ginger',
+                    'Sesame oil',
+                    'Green onions'
+                ],
+                instructions: [
+                    'Heat oil in wok',
+                    'Add vegetables in order of cooking time',
+                    'Season with soy sauce and aromatics',
+                    'Serve hot'
+                ]
+            },
+            'vegan-tacos': {
+                id: 'vegan-tacos',
+                title: 'Vegan Tacos',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Vegan Tacos.jpg',
+                prepTime: '25 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '350-420 kcal',
+                description: 'Flavorful tacos with plant-based fillings.',
+                ingredients: [
+                    'Corn tortillas',
+                    'Black beans',
+                    'Fresh vegetables',
+                    'Avocado',
+                    'Lime and cilantro'
+                ],
+                instructions: [
+                    'Warm tortillas',
+                    'Prepare bean filling',
+                    'Add fresh toppings',
+                    'Serve with lime'
+                ]
+            },
+            'pasta-primavera': {
+                id: 'pasta-primavera',
+                title: 'Pasta Primavera',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Pasta Primavera.jpg',
+                prepTime: '30 minutes',
+                servings: '1 serving',
+                difficulty: 'Medium',
+                calories: '380-450 kcal',
+                description: 'Classic pasta with seasonal vegetables.',
+                ingredients: [
+                    'Whole grain pasta',
+                    'Seasonal vegetables',
+                    'Olive oil',
+                    'Garlic',
+                    'Fresh herbs'
+                ],
+                instructions: [
+                    'Cook pasta al dente',
+                    'Sauté vegetables',
+                    'Combine with pasta',
+                    'Finish with herbs'
+                ]
+            },
+            'vegan-shepherds-pie': {
+                id: 'vegan-shepherds-pie',
+                title: 'Vegan Shepherd\'s Pie',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Vegan Shepherd\'s Pie.jpg',
+                prepTime: '60 minutes',
+                servings: '8 servings',
+                difficulty: 'Medium',
+                calories: '420-480 kcal',
+                description: 'Comfort food that feeds a crowd.',
+                ingredients: [
+                    'Lentils and vegetables',
+                    'Mashed potatoes',
+                    'Vegetable broth',
+                    'Herbs and spices',
+                    'Nutritional yeast'
+                ],
+                instructions: [
+                    'Prepare lentil filling',
+                    'Make mashed potato topping',
+                    'Layer in baking dish',
+                    'Bake until golden'
+                ]
+            },
+            'tropical-chia-pudding': {
+                id: 'tropical-chia-pudding',
+                title: 'Tropical Chia Seed Pudding',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Tropical Chia Seed Pudding.jpg',
+                prepTime: '10 minutes + overnight',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '200-250 kcal',
+                description: 'Tropical flavors in a filling pudding.',
+                ingredients: [
+                    '3 tbsp chia seeds',
+                    'Coconut milk',
+                    'Tropical fruits',
+                    'Coconut flakes',
+                    'Natural sweetener'
+                ],
+                instructions: [
+                    'Mix chia with coconut milk',
+                    'Refrigerate overnight',
+                    'Top with tropical fruits',
+                    'Garnish with coconut'
+                ]
+            },
+            'mediterranean-chickpea-salad': {
+                id: 'mediterranean-chickpea-salad',
+                title: 'Mediterranean Chickpea Salad',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Mediterranean Chickpea Salad.jpg',
+                prepTime: '15 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '280-320 kcal',
+                description: 'Fresh Mediterranean flavors with protein.',
+                ingredients: [
+                    'Chickpeas',
+                    'Mediterranean vegetables',
+                    'Olive oil',
+                    'Lemon juice',
+                    'Fresh herbs'
+                ],
+                instructions: [
+                    'Combine chickpeas and vegetables',
+                    'Make lemon dressing',
+                    'Toss with herbs',
+                    'Let flavors meld'
+                ]
+            },
+            'spiced-tofu-stir-fry': {
+                id: 'spiced-tofu-stir-fry',
+                title: 'Spiced Tofu Stir-Fry',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Spiced Tofu Stir-Fry.jpg',
+                prepTime: '25 minutes',
+                servings: '1 serving',
+                difficulty: 'Medium',
+                calories: '250-300 kcal',
+                description: 'Flavorful tofu with metabolism-boosting spices.',
+                ingredients: [
+                    'Firm tofu',
+                    'Thermogenic spices',
+                    'Low-calorie vegetables',
+                    'Minimal oil',
+                    'Fresh herbs'
+                ],
+                instructions: [
+                    'Press and cube tofu',
+                    'Season with spices',
+                    'Stir-fry with vegetables',
+                    'Serve hot'
+                ]
+            },
+            'cucumber-hummus-bites': {
+                id: 'cucumber-hummus-bites',
+                title: 'Cucumber and Hummus Bites',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Cucumber and Hummus Bites.jpg',
+                prepTime: '10 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '120-150 kcal',
+                description: 'Light, refreshing snack.',
+                ingredients: [
+                    'Cucumber slices',
+                    'Hummus',
+                    'Cherry tomatoes',
+                    'Fresh herbs',
+                    'Paprika'
+                ],
+                instructions: [
+                    'Slice cucumber into rounds',
+                    'Top with hummus',
+                    'Garnish with tomatoes and herbs',
+                    'Sprinkle with paprika'
+                ]
+            },
+            'mixed-nuts-handful': {
+                id: 'mixed-nuts-handful',
+                title: 'Handful of Mixed Nuts',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Handful of Mixed Nuts.jpg',
+                prepTime: '0 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '160-200 kcal',
+                description: 'Portion-controlled healthy fats.',
+                ingredients: [
+                    'Mixed raw nuts',
+                    'Portion control (1 oz)'
+                ],
+                instructions: [
+                    'Measure 1 oz portion',
+                    'Eat mindfully',
+                    'Store remainder properly'
+                ]
+            },
+            'buckwheat-pancakes': {
+                id: 'buckwheat-pancakes',
+                title: 'Gluten-Free Buckwheat Pancakes',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Gluten-Free Buckwheat Pancakes.jpg',
+                prepTime: '20 minutes',
+                servings: '1 serving',
+                difficulty: 'Medium',
+                calories: '320-380 kcal',
+                description: 'Fluffy pancakes without the gluten.',
+                ingredients: [
+                    'Buckwheat flour',
+                    'Plant milk',
+                    'Baking powder',
+                    'Natural sweetener',
+                    'Vanilla extract'
+                ],
+                instructions: [
+                    'Mix dry ingredients',
+                    'Combine wet ingredients',
+                    'Cook on griddle',
+                    'Serve with toppings'
+                ]
+            },
+            'rainbow-veggie-wraps': {
+                id: 'rainbow-veggie-wraps',
+                title: 'Rainbow Veggie Wraps',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
+                prepTime: '15 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '280-340 kcal',
+                description: 'Colorful vegetables in gluten-free wraps.',
+                ingredients: [
+                    'Gluten-free tortillas',
+                    'Rainbow vegetables',
+                    'Hummus spread',
+                    'Fresh herbs',
+                    'Avocado'
+                ],
+                instructions: [
+                    'Prepare vegetables',
+                    'Spread hummus on tortilla',
+                    'Add vegetables and herbs',
+                    'Roll tightly'
+                ]
+            },
+            'chickpea-curry-cauliflower': {
+                id: 'chickpea-curry-cauliflower',
+                title: 'Chickpea Curry with Cauliflower Rice',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Chickpea Curry with Cauliflower Rice.jpg',
+                prepTime: '30 minutes',
+                servings: '1 serving',
+                difficulty: 'Medium',
+                calories: '320-380 kcal',
+                description: 'Spicy curry with grain-free rice.',
+                ingredients: [
+                    'Chickpeas',
+                    'Cauliflower rice',
+                    'Curry spices',
+                    'Coconut milk',
+                    'Fresh cilantro'
+                ],
+                instructions: [
+                    'Prepare cauliflower rice',
+                    'Make chickpea curry',
+                    'Serve curry over rice',
+                    'Garnish with cilantro'
+                ]
+            },
+            'trail-mix-nuts': {
+                id: 'trail-mix-nuts',
+                title: 'Trail Mix with Dried Fruits and Nuts',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Trail Mix with Dried Fruits and Nuts.webp',
+                prepTime: '5 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '180-220 kcal',
+                description: 'Energy-boosting snack mix.',
+                ingredients: [
+                    'Mixed nuts',
+                    'Dried fruits',
+                    'Seeds',
+                    'Dark chocolate chips (optional)'
+                ],
+                instructions: [
+                    'Combine all ingredients',
+                    'Store in airtight container',
+                    'Portion control servings'
+                ]
+            },
+            'coconut-chia-pudding': {
+                id: 'coconut-chia-pudding',
+                title: 'Coconut Chia Seed Pudding',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Coconut Chia Seed Pudding.jpg',
+                prepTime: '10 minutes + overnight',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '220-280 kcal',
+                description: 'Creamy coconut pudding with chia seeds.',
+                ingredients: [
+                    '3 tbsp chia seeds',
+                    'Coconut milk',
+                    'Coconut flakes',
+                    'Natural sweetener',
+                    'Vanilla extract'
+                ],
+                instructions: [
+                    'Mix chia with coconut milk',
+                    'Add sweetener and vanilla',
+                    'Refrigerate overnight',
+                    'Top with coconut flakes'
                 ]
             },
             'quinoa-salad-with-lemon-vinaigrette': {
@@ -3651,15 +4338,19 @@ class RecipeDetailManager {
         const urlParams = new URLSearchParams(window.location.search);
         const recipeSlug = urlParams.get('recipe');
         const recipeId = urlParams.get('id');
+        const mealPlanId = urlParams.get('mealPlanId');
         
         let recipe = null;
         
-        // Try to find recipe by slug first, then by ID
+        // Try to find recipe by slug first, then by ID, then by mealPlanId
         if (recipeSlug && this.recipes[recipeSlug]) {
             recipe = this.recipes[recipeSlug];
         } else if (recipeId && this.recipes[recipeId]) {
             // Find recipe by ID directly using the ID as key
             recipe = this.recipes[recipeId];
+        } else if (mealPlanId && this.recipes[mealPlanId]) {
+            // Find recipe by meal plan ID
+            recipe = this.recipes[mealPlanId];
         }
         
         // If no specific recipe found, default to avocado toast

@@ -3295,7 +3295,252 @@ class RecipeDetailManager {
                       'Dress the salad: Pour the lemon vinaigrette over the quinoa mixture and toss gently to combine.',
                       'Serve: Serve the quinoa salad immediately or chill for later. Garnish with extra herbs if desired.'
                   ]
-              }
+              },
+            // Meal Plan Entries
+            'high-protein-plan': {
+                id: 'high-protein-plan',
+                title: 'High-Protein Vegan Power',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
+                prepTime: '7 days',
+                servings: '21 meals',
+                difficulty: 'Medium',
+                calories: '1800-2200 kcal',
+                description: 'Fuel your workouts with plant-based protein powerhouses. This comprehensive 7-day meal plan provides 25g+ protein per meal with post-workout recipes and muscle-building focus.',
+                ingredients: [
+                    'Chickpea flour for protein-rich omelettes',
+                    'Quinoa and black beans for complete proteins',
+                    'Tempeh for fermented protein benefits',
+                    'Roasted chickpeas for crunchy snacks',
+                    'Plant-based protein powder for smoothies',
+                    'Chia seeds for omega-3s and protein',
+                    'Fresh vegetables and herbs for nutrients'
+                ],
+                instructions: [
+                    'Start each day with a protein-rich breakfast like chickpea flour omelette.',
+                    'Include quinoa and black bean combinations for complete amino acid profiles.',
+                    'Add tempeh stir-fries for fermented protein benefits and probiotics.',
+                    'Snack on roasted chickpeas between meals for sustained energy.',
+                    'Blend protein smoothies post-workout for muscle recovery.',
+                    'Incorporate chia seed puddings for omega-3 fatty acids.',
+                    'Focus on whole food sources of plant-based proteins throughout the week.'
+                ]
+            },
+            'low-carb-plan': {
+                id: 'low-carb-plan',
+                title: 'Low-Carb Vegan Delights',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
+                prepTime: '7 days',
+                servings: '21 meals',
+                difficulty: 'Medium',
+                calories: '1400-1800 kcal',
+                description: 'Delicious low-carb meals that keep you satisfied with less than 30g carbs per meal, high fiber content, and blood sugar friendly options.',
+                ingredients: [
+                    'Leafy greens and low-carb vegetables',
+                    'Avocados for healthy fats',
+                    'Nuts and seeds for protein and fats',
+                    'Coconut products for MCT oils',
+                    'Zucchini and cauliflower as grain substitutes',
+                    'Mushrooms for umami and nutrients',
+                    'Herbs and spices for flavor without carbs'
+                ],
+                instructions: [
+                    'Replace grains with spiralized vegetables like zucchini noodles.',
+                    'Use cauliflower rice as a base for stir-fries and bowls.',
+                    'Include plenty of leafy greens in every meal.',
+                    'Add healthy fats from avocados, nuts, and seeds.',
+                    'Focus on fiber-rich vegetables to maintain satiety.',
+                    'Use herbs and spices liberally for flavor enhancement.',
+                    'Keep net carbs under 30g per meal for optimal results.'
+                ]
+            },
+            'budget-plan': {
+                id: 'budget-plan',
+                title: 'Budget-Friendly Vegan Eats',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
+                prepTime: '7 days',
+                servings: '21 meals',
+                difficulty: 'Easy',
+                calories: '1600-2000 kcal',
+                description: 'Nutritious meals that won\'t break the bank, featuring pantry staples and bulk cooking tips for under $7 per day.',
+                ingredients: [
+                    'Dried beans and lentils in bulk',
+                    'Rice, oats, and pasta as affordable grains',
+                    'Seasonal vegetables for best prices',
+                    'Frozen vegetables for convenience',
+                    'Peanut butter for affordable protein',
+                    'Bananas and seasonal fruits',
+                    'Basic spices and herbs for flavor'
+                ],
+                instructions: [
+                    'Buy dried beans and lentils in bulk and cook large batches.',
+                    'Use seasonal vegetables when they\'re most affordable.',
+                    'Prepare grain-based meals like rice and bean combinations.',
+                    'Make large portions and use leftovers creatively.',
+                    'Shop sales and stock up on non-perishable staples.',
+                    'Use frozen vegetables when fresh is expensive.',
+                    'Plan meals around what\'s on sale each week.'
+                ]
+            },
+            'weight-loss-plan': {
+                id: 'weight-loss-plan',
+                title: 'Weight Loss Vegan Plan',
+                category: 'meal-plan',
+                image: './images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
+                prepTime: '7 days',
+                servings: '21 meals',
+                difficulty: 'Medium',
+                calories: '1200-1600 kcal',
+                description: 'Sustainable weight loss with satisfying plant-based meals featuring calorie controlled portions, high volume foods, and metabolism boosting ingredients.',
+                ingredients: [
+                    'High-volume, low-calorie vegetables',
+                    'Lean plant proteins like tofu and tempeh',
+                    'Fiber-rich foods for satiety',
+                    'Metabolism-boosting spices like ginger and cayenne',
+                    'Green tea and herbal teas',
+                    'Fresh fruits for natural sweetness',
+                    'Whole grains in controlled portions'
+                ],
+                instructions: [
+                    'Fill half your plate with non-starchy vegetables.',
+                    'Include lean plant proteins at every meal.',
+                    'Drink green tea between meals to boost metabolism.',
+                    'Use spices like ginger, cayenne, and turmeric liberally.',
+                    'Eat high-fiber foods to increase satiety.',
+                    'Control portions of calorie-dense foods like nuts and oils.',
+                    'Stay hydrated and eat mindfully to support weight loss goals.'
+                 ]
+             },
+            // Individual Meal Plan Recipes
+            'chickpea-flour-omelette': {
+                id: 'chickpea-flour-omelette',
+                title: 'Chickpea Flour Omelette with Veggies',
+                category: 'high-protein',
+                image: './images/stories/Recipes/All Mealplan/Chickpea Flour Omelette with Veggies 12.48.16.jpeg',
+                prepTime: '15 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '320-380 kcal',
+                description: 'Protein-packed breakfast with fresh vegetables, providing 18g of plant-based protein in a gluten-free, quick-prep meal.',
+                ingredients: [
+                    '1/2 cup chickpea flour (besan)',
+                    '1/2 cup water',
+                    '1/4 cup diced bell peppers',
+                    '1/4 cup diced onions',
+                    '2 tablespoons chopped spinach',
+                    '1 tablespoon nutritional yeast',
+                    '1/2 teaspoon turmeric',
+                    '1/4 teaspoon black pepper',
+                    'Salt to taste',
+                    '1 tablespoon olive oil'
+                ],
+                instructions: [
+                    'In a bowl, whisk together chickpea flour, water, nutritional yeast, turmeric, salt, and pepper until smooth.',
+                    'Let the batter rest for 5 minutes to thicken.',
+                    'Heat olive oil in a non-stick pan over medium heat.',
+                    'Add diced vegetables and sauté for 2-3 minutes until softened.',
+                    'Pour the chickpea batter over the vegetables, spreading evenly.',
+                    'Cook for 3-4 minutes until the bottom is set and golden.',
+                    'Carefully flip and cook for another 2-3 minutes.',
+                    'Serve hot with fresh herbs or avocado slices.'
+                ]
+            },
+            'quinoa-black-bean-salad': {
+                id: 'quinoa-black-bean-salad',
+                title: 'Quinoa Salad with Black Beans and Avocado',
+                category: 'high-protein',
+                image: './images/stories/Recipes/All Mealplan/Quinoa Salad with Black Beans and Avocado.jpg',
+                prepTime: '25 minutes',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '420-480 kcal',
+                description: 'Complete protein salad with healthy fats, providing 22g of protein with complete amino acids and heart-healthy nutrients.',
+                ingredients: [
+                    '1/2 cup cooked quinoa',
+                    '1/2 cup black beans, rinsed and drained',
+                    '1/2 avocado, diced',
+                    '1/4 cup cherry tomatoes, halved',
+                    '2 tablespoons red onion, finely diced',
+                    '2 tablespoons fresh cilantro, chopped',
+                    '1 tablespoon lime juice',
+                    '1 tablespoon olive oil',
+                    'Salt and pepper to taste'
+                ],
+                instructions: [
+                    'Cook quinoa according to package directions and let cool.',
+                    'In a large bowl, combine cooked quinoa and black beans.',
+                    'Add diced avocado, cherry tomatoes, and red onion.',
+                    'Whisk together lime juice, olive oil, salt, and pepper.',
+                    'Pour dressing over the salad and toss gently.',
+                    'Garnish with fresh cilantro.',
+                    'Serve immediately or chill for 30 minutes for better flavor.'
+                ]
+            },
+            'chia-pudding-berries': {
+                id: 'chia-pudding-berries',
+                title: 'Chia Seed Pudding with Berries',
+                category: 'low-carb',
+                image: './images/stories/Recipes/All Mealplan/Chia Seed Pudding with Berries.jpg',
+                prepTime: '10 minutes + 4 hours chilling',
+                servings: '1 serving',
+                difficulty: 'Easy',
+                calories: '220-280 kcal',
+                description: 'Creamy pudding with antioxidant-rich berries, featuring only 8g net carbs and omega-3 rich chia seeds.',
+                ingredients: [
+                    '3 tablespoons chia seeds',
+                    '1 cup unsweetened almond milk',
+                    '1 tablespoon maple syrup or stevia to taste',
+                    '1/2 teaspoon vanilla extract',
+                    '1/4 cup mixed berries (strawberries, blueberries, raspberries)',
+                    '1 tablespoon chopped almonds (optional)'
+                ],
+                instructions: [
+                    'In a bowl, whisk together chia seeds, almond milk, maple syrup, and vanilla.',
+                    'Let sit for 5 minutes, then whisk again to prevent clumping.',
+                    'Cover and refrigerate for at least 4 hours or overnight.',
+                    'Stir the pudding before serving to ensure smooth consistency.',
+                    'Top with fresh berries and chopped almonds if desired.',
+                    'Serve chilled as breakfast or a healthy dessert.'
+                ]
+            },
+            'vegan-chili': {
+                id: 'vegan-chili',
+                title: 'Vegan Chili',
+                category: 'budget-friendly',
+                image: './images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
+                prepTime: '45 minutes',
+                servings: '6 servings',
+                difficulty: 'Easy',
+                calories: '320-380 kcal',
+                description: 'Hearty chili that feeds the whole family for just $1.30 per serving. Freezer-friendly and high in protein.',
+                ingredients: [
+                    '2 cans (15 oz each) kidney beans, drained and rinsed',
+                    '1 can (15 oz) black beans, drained and rinsed',
+                    '1 can (28 oz) crushed tomatoes',
+                    '1 large onion, diced',
+                    '3 cloves garlic, minced',
+                    '1 bell pepper, diced',
+                    '2 tablespoons chili powder',
+                    '1 tablespoon cumin',
+                    '1 teaspoon smoked paprika',
+                    '1/2 teaspoon cayenne pepper (optional)',
+                    '2 cups vegetable broth',
+                    'Salt and pepper to taste',
+                    '2 tablespoons olive oil'
+                ],
+                instructions: [
+                    'Heat olive oil in a large pot over medium heat.',
+                    'Add onion and bell pepper, cook for 5 minutes until softened.',
+                    'Add garlic and cook for another minute.',
+                    'Stir in chili powder, cumin, paprika, and cayenne.',
+                    'Add crushed tomatoes, beans, and vegetable broth.',
+                    'Bring to a boil, then reduce heat and simmer for 30 minutes.',
+                    'Season with salt and pepper to taste.',
+                    'Serve hot with cornbread or over rice.'
+                ]
+            }
           };
         this.init();
     }

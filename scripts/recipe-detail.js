@@ -3388,64 +3388,7 @@ class RecipeDetailManager {
                   ]
               },
 
-              'chickpea-flour-omelette': {
-                  id: 'chickpea-flour-omelette',
-                  name: 'Chickpea Flour Omelette with Veggies',
-                  category: 'meal-plan',
-                  cuisine: 'Vegan',
-                  difficulty: 'Easy',
-                  prepTime: '10 minutes',
-                  cookTime: '8 minutes',
-                  totalTime: '18 minutes',
-                  servings: 2,
-                  image: './images/stories/Recipes/All Recipes/Spicy Tofu Scramble.jpg',
-                  description: 'A protein-rich vegan omelette made with chickpea flour and loaded with fresh vegetables.',
-                  ingredients: [
-                      '1 cup chickpea flour',
-                      '1 cup water',
-                      '1/2 tsp turmeric',
-                      '1/4 tsp black salt (or regular salt)',
-                      '1/2 cup chopped spinach',
-                      '1/4 cup diced onion',
-                      '1/4 cup diced bell peppers',
-                      'Oil for cooking'
-                  ],
-                  instructions: [
-                      'In a bowl, whisk chickpea flour, water, turmeric, and salt into a smooth batter.',
-                      'Stir in spinach, onion, and bell peppers.',
-                      'Heat oil in a pan and pour batter like a pancake.',
-                      'Cook 3–4 minutes per side until golden. Serve warm.'
-                  ]
-              },
 
-              'tempeh-stir-fry': {
-                  id: 'tempeh-stir-fry',
-                  name: 'Tempeh Stir-Fry with Brown Rice',
-                  category: 'meal-plan',
-                  cuisine: 'Asian',
-                  difficulty: 'Easy',
-                  prepTime: '15 minutes',
-                  cookTime: '15 minutes',
-                  totalTime: '30 minutes',
-                  servings: 3,
-                  image: './images/stories/Recipes/All Recipes/Spicy Tofu Stir-fry.jpg',
-                  description: 'A nutritious and flavorful stir-fry featuring protein-rich tempeh and colorful vegetables.',
-                  ingredients: [
-                      '1 block tempeh, cubed',
-                      '2 tbsp soy sauce',
-                      '1 tbsp sesame oil',
-                      '2 cups mixed veggies (broccoli, carrots, bell peppers)',
-                      '2 cloves garlic, minced',
-                      '1 tbsp grated ginger',
-                      'Cooked brown rice'
-                  ],
-                  instructions: [
-                      'Heat sesame oil in a pan, sauté garlic and ginger.',
-                      'Add tempeh cubes and cook until golden.',
-                      'Toss in veggies and soy sauce, stir-fry for 5 minutes.',
-                      'Serve with brown rice.'
-                  ]
-              },
 
               'roasted-chickpeas': {
                   id: 'roasted-chickpeas',
@@ -4101,39 +4044,6 @@ class RecipeDetailManager {
                  ]
              },
             // Individual Meal Plan Recipes
-            'chickpea-flour-omelette': {
-                id: 'chickpea-flour-omelette',
-                title: 'Chickpea Flour Omelette with Veggies',
-                category: 'high-protein',
-                image: './images/stories/Recipes/All Mealplan/Chickpea Flour Omelette with Veggies 12.48.16.jpeg',
-                prepTime: '15 minutes',
-                servings: '1 serving',
-                difficulty: 'Easy',
-                calories: '320-380 kcal',
-                description: 'Protein-packed breakfast with fresh vegetables, providing 18g of plant-based protein in a gluten-free, quick-prep meal.',
-                ingredients: [
-                    '1/2 cup chickpea flour (besan)',
-                    '1/2 cup water',
-                    '1/4 cup diced bell peppers',
-                    '1/4 cup diced onions',
-                    '2 tablespoons chopped spinach',
-                    '1 tablespoon nutritional yeast',
-                    '1/2 teaspoon turmeric',
-                    '1/4 teaspoon black pepper',
-                    'Salt to taste',
-                    '1 tablespoon olive oil'
-                ],
-                instructions: [
-                    'In a bowl, whisk together chickpea flour, water, nutritional yeast, turmeric, salt, and pepper until smooth.',
-                    'Let the batter rest for 5 minutes to thicken.',
-                    'Heat olive oil in a non-stick pan over medium heat.',
-                    'Add diced vegetables and sauté for 2-3 minutes until softened.',
-                    'Pour the chickpea batter over the vegetables, spreading evenly.',
-                    'Cook for 3-4 minutes until the bottom is set and golden.',
-                    'Carefully flip and cook for another 2-3 minutes.',
-                    'Serve hot with fresh herbs or avocado slices.'
-                ]
-            },
             'quinoa-black-bean-salad': {
                 id: 'quinoa-black-bean-salad',
                 title: 'Quinoa Salad with Black Beans and Avocado',

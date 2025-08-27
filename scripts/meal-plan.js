@@ -566,7 +566,10 @@ class MealPlanManager {
         localStorage.setItem('previousPage', window.location.pathname);
         
         // Navigate to recipe detail page with meal plan ID
-        window.location.href = `recipe-detail.html?id=${mealPlanId}&source=meal-plan`;
+        // Check if we're in src/pages/ directory and adjust path accordingly
+        const currentPath = window.location.pathname;
+        const recipeDetailPath = currentPath.includes('/src/pages/') ? '../../recipe-detail.html' : 'recipe-detail.html';
+        window.location.href = `${recipeDetailPath}?id=${mealPlanId}&source=meal-plan`;
     }
 
     showNotification(message, type = 'info') {

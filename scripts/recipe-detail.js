@@ -8,7 +8,7 @@ class RecipeDetailManager {
                 id: 'high-protein-plan',
                 title: 'High-Protein Vegan Power',
                 category: 'meal-plan',
-                image: './images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
+                image: './images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
                 prepTime: '7 days',
                 servings: '21 meals',
                 difficulty: 'Medium',
@@ -32,7 +32,7 @@ class RecipeDetailManager {
                 id: 'low-carb-plan',
                 title: 'Low-Carb Vegan Delights',
                 category: 'meal-plan',
-                image: './images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
+                image: './images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
                 prepTime: '7 days',
                 servings: '21 meals',
                 difficulty: 'Medium',
@@ -56,7 +56,7 @@ class RecipeDetailManager {
                 id: 'budget-plan',
                 title: 'Budget-Friendly Vegan Eats',
                 category: 'meal-plan',
-                image: './images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
+                image: './images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
                 prepTime: '7 days',
                 servings: '21 meals',
                 difficulty: 'Easy',
@@ -80,7 +80,7 @@ class RecipeDetailManager {
                 id: 'weight-loss-plan',
                 title: 'Weight Loss Vegan Plan',
                 category: 'meal-plan',
-                image: './images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
+                image: './images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
                 prepTime: '7 days',
                 servings: '21 meals',
                 difficulty: 'Medium',
@@ -3931,7 +3931,7 @@ class RecipeDetailManager {
                 id: 'high-protein-plan',
                 title: 'High-Protein Vegan Power',
                 category: 'meal-plan',
-                image: './images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
+                image: './images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
                 prepTime: '7 days',
                 servings: '21 meals',
                 difficulty: 'Medium',
@@ -3960,7 +3960,7 @@ class RecipeDetailManager {
                 id: 'low-carb-plan',
                 title: 'Low-Carb Vegan Delights',
                 category: 'meal-plan',
-                image: './images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
+                image: './images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
                 prepTime: '7 days',
                 servings: '21 meals',
                 difficulty: 'Medium',
@@ -3989,7 +3989,7 @@ class RecipeDetailManager {
                 id: 'budget-plan',
                 title: 'Budget-Friendly Vegan Eats',
                 category: 'meal-plan',
-                image: './images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
+                image: './images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
                 prepTime: '7 days',
                 servings: '21 meals',
                 difficulty: 'Easy',
@@ -4018,7 +4018,7 @@ class RecipeDetailManager {
                 id: 'weight-loss-plan',
                 title: 'Weight Loss Vegan Plan',
                 category: 'meal-plan',
-                image: './images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
+                image: './images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
                 prepTime: '7 days',
                 servings: '21 meals',
                 difficulty: 'Medium',
@@ -4275,8 +4275,19 @@ class RecipeDetailManager {
         // Update recipe header
         const recipeImage = document.getElementById('recipe-image');
         if (recipeImage) {
+            recipeImage.style.opacity = '0';
             recipeImage.src = recipe.image;
             recipeImage.alt = recipe.title;
+            
+            // Add error handling and smooth loading
+            recipeImage.onerror = function() {
+                this.src = './images/stories/placeholder-recipe.jpg';
+                this.alt = 'Recipe image not available';
+            };
+            
+            recipeImage.onload = function() {
+                this.style.opacity = '1';
+            };
         }
 
         const recipeCategory = document.getElementById('recipe-category');

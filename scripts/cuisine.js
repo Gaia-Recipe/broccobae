@@ -901,7 +901,8 @@ class CuisineManager {
         
         recipeCard.innerHTML = `
             <div class="recipe-image-container">
-                <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy">
+                <img src="${recipe.image}" alt="${recipe.title}" class="recipe-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="image-placeholder" style="display:none; width:100%; height:200px; background:#f0f0f0; align-items:center; justify-content:center; color:#666; font-size:14px;">Image not available</div>
             </div>
             <div class="recipe-content">
                 <div class="recipe-category-text">${categoryText}</div>

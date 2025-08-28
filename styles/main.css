@@ -322,13 +322,14 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     image-rendering: auto;
     image-rendering: high-quality;
     image-rendering: -webkit-optimize-contrast;
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: opacity 0.3s ease;
-    transform-origin: center;
+    will-change: opacity;
 }
 
 .recipe-card:hover .recipe-image {
@@ -503,6 +504,14 @@ section {
     width: 100%;
     height: 220px;
     object-fit: cover;
+    object-position: center;
+    image-rendering: auto;
+    image-rendering: high-quality;
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: opacity 0.3s ease;
+    will-change: opacity;
 }
 
 .meal-plan-overlay {

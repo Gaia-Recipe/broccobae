@@ -24,7 +24,7 @@ class MealPlanManager {
                 id: 'high-protein-plan',
                 title: 'High-Protein Vegan Power',
                 category: 'high-protein',
-                image: '../../images/stories/Recipes/All Mealplan/High-Protein Vegan Power.png',
+                image: '../../images/stories/Recipes/All Mealplan/Protein Smoothie with Plant-Based Protein Powder.webp',
                 duration: '7 days',
                 meals: '21 meals',
                 calories: '1800-2200',
@@ -36,7 +36,7 @@ class MealPlanManager {
                 id: 'low-carb-plan',
                 title: 'Low-Carb Vegan Delights',
                 category: 'low-carb',
-                image: '../../images/stories/Recipes/All Mealplan/Low-Carb Vegan Delights.png',
+                image: '../../images/stories/Recipes/All Mealplan/Spinach and Mushroom Salad with Lemon Vinaigrette.jpg',
                 duration: '7 days',
                 meals: '21 meals',
                 calories: '1400-1800',
@@ -48,7 +48,7 @@ class MealPlanManager {
                 id: 'budget-plan',
                 title: 'Budget-Friendly Vegan Eats',
                 category: 'budget-friendly',
-                image: '../../images/stories/Recipes/All Mealplan/Budget-Friendly Vegan Eats.png',
+                image: '../../images/stories/Recipes/All Mealplan/Vegan Chili.jpg',
                 duration: '7 days',
                 meals: '21 meals',
                 calories: '1600-2000',
@@ -60,7 +60,7 @@ class MealPlanManager {
                 id: 'weight-loss-plan',
                 title: 'Weight Loss Vegan Plan',
                 category: 'weight-loss',
-                image: '../../images/stories/Recipes/All Mealplan/Weight Loss Vegan Plan.jpg',
+                image: '../../images/stories/Recipes/All Mealplan/Vegetable Stir-Fry.avif',
                 duration: '7 days',
                 meals: '21 meals',
                 calories: '1200-1600',
@@ -518,13 +518,21 @@ class MealPlanManager {
         
         recipeCard.innerHTML = `
             <div class="recipe-image-container">
-                <img src="${plan.image}" alt="${plan.title}" class="recipe-image" loading="lazy">
+                <img src="${plan.image}" alt="${plan.title}" class="recipe-image" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="image-placeholder" style="display:none; width:100%; height:200px; background:#f0f0f0; align-items:center; justify-content:center; color:#666; font-size:14px;">Image not available</div>
             </div>
             <div class="recipe-content">
                 <div class="recipe-category-text">${categoryText}</div>
                 <h3 class="recipe-title">${plan.title}</h3>
             </div>
         `;
+        
+        // Add image load event listener for better handling
+        const img = recipeCard.querySelector('.recipe-image');
+        img.addEventListener('load', function() {
+            this.style.opacity = '1';
+        });
+        
         return recipeCard;
     }
 

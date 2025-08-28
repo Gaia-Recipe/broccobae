@@ -4276,12 +4276,23 @@ class RecipeDetailManager {
         const recipeImage = document.getElementById('recipe-image');
         if (recipeImage) {
             recipeImage.style.opacity = '0';
-            recipeImage.src = recipe.image;
+            
+            // Adjust image path based on current location
+            let imagePath = recipe.image;
+            const currentPath = window.location.pathname;
+            
+            // If we're in a subdirectory (like src/pages/), adjust the path
+            if (currentPath.includes('/src/pages/') && imagePath.startsWith('./images/')) {
+                imagePath = imagePath.replace('./images/', '../../images/');
+            }
+            
+            recipeImage.src = imagePath;
             recipeImage.alt = recipe.title;
             
             // Add error handling and smooth loading
             recipeImage.onerror = function() {
-                this.src = './images/stories/placeholder-recipe.jpg';
+                const fallbackPath = currentPath.includes('/src/pages/') ? '../../images/placeholder-recipe.svg' : './images/placeholder-recipe.svg';
+                this.src = fallbackPath;
                 this.alt = 'Recipe image not available';
             };
             

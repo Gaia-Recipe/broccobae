@@ -1,0 +1,41 @@
+{
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "rewrites": [
+        {
+            "source": "/recipes",
+            "destination": "/src/pages/recipes.html"
+        },
+        {
+            "source": "/meal-plan",
+            "destination": "/src/pages/meal-plan.html"
+        },
+        {
+            "source": "/cuisine",
+            "destination": "/src/pages/cuisine.html"
+        },
+        {
+            "source": "/community",
+            "destination": "/src/pages/community.html"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                },
+                {
+                    "key": "X-Frame-Options",
+                    "value": "DENY"
+                },
+                {
+                    "key": "X-XSS-Protection",
+                    "value": "1; mode=block"
+                }
+            ]
+        }
+    ]
+}
